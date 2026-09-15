@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keep — Your own AI. Under your desk.</title>
+<meta name="description" content="Keep turns the data your business already owns into AI that actually works. A fictional concept site.">
+<script>document.documentElement.dataset.theme = "atlas";</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/keep.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cpath d=%27M5 30V11h4V6h4v5h6V6h4v5h4v19z%27 fill=%27%23246a8e%27/%3E%3Cpath d=%27M13 30v-9h6v9%27 fill=%27%23fff%27/%3E%3C/svg%3E">
+
+
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><svg class="k-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 30V11h4V6h4v5h6V6h4v5h4v19z" fill="currentColor"/><path d="M13 30v-9h6v9" fill="var(--bg)"/></svg><span class="brand-name">Keep</span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#anatomy">How it works</a><a href="models.html">Models</a><a href="solutions.html">Custom AI</a><a href="index.html#pilot">Pilot</a><a href="about.html">About</a><a href="faq.html">FAQ</a></nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-coral nav-cta">Talk to Sam <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"><i id="scrollProgress"></i></div>
+</header>
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose">CLOSE ✕</button>
+  <a href="index.html#anatomy">How it works</a><a href="models.html">Models</a><a href="solutions.html">Custom AI</a><a href="index.html#pilot">Pilot</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
+  <a href="contact.html">Talk to Sam</a>
+</div>
+
+<main id="main">
+<!-- hero -->
+<section class="sh" id="top" aria-label="Keep">
+  <div class="sh-bg" id="shBg"></div>
+  <div class="sh-stage" id="shStage">
+    <div class="sc-under" id="scUnder"><div class="sc-board" id="obBoard" style="width:min(96vw, 96vh * 1.714); aspect-ratio:1200/700;">
+      <svg class="ob-svg" id="elS" viewBox="0 0 1200 700" aria-hidden="true" style="opacity:0"><polyline class="sc-line el el-floor" points="80.0,470.0 1120.0,470.0" pathLength="1" /><polygon class="sc-line el el-desk" points="300.0,300.0 900.0,300.0 900.0,316.0 300.0,316.0" pathLength="1"/><polyline class="sc-line el el-desk" points="320.0,316.0 320.0,470.0" pathLength="1" /><polyline class="sc-line el el-desk" points="880.0,316.0 880.0,470.0" pathLength="1" /><rect class="sc-line el el-mon" x="470.0" y="150.0" width="260.0" height="150.0" rx="10" pathLength="1" /><polyline class="sc-line el el-mon" points="600.0,300.0 600.0,282.0" pathLength="1" /><polyline class="sc-line el el-mon" points="540.0,282.0 660.0,282.0" pathLength="1" /><polyline class="sc-line dim el el-wall" points="1040.0,90.0 1040.0,470.0" pathLength="1" /><rect class="sc-line dim el el-wall" x="1070.0" y="130.0" width="90.0" height="170.0" rx="2" pathLength="1" /><polyline class="sc-line dim el el-wall" points="1115.0,130.0 1115.0,300.0" pathLength="1" /><polyline class="sc-line dim el el-wall" points="160.0,90.0 160.0,470.0" pathLength="1" /><rect class="sc-line el-tw" x="760.0" y="336.0" width="90.0" height="134.0" rx="6" pathLength="1" /><polyline class="sc-line dim el-tw" points="776.0,352.0 834.0,352.0" pathLength="1" /><polyline class="sc-line dim el-tw" points="776.0,362.0 834.0,362.0" pathLength="1" /><polyline class="sc-line dim el-tw" points="776.0,372.0 834.0,372.0" pathLength="1" /><circle class="el-led" cx="805" cy="452" r="4"/><text class="sc-label el-tw-t" x="805" y="425" text-anchor="middle">LOCAL-01</text><polyline class="sc-line el-cable" points="850.0,420.0 1000.0,420.0 1000.0,300.0" pathLength="1" /><rect class="sc-line el-cable" x="992.0" y="282.0" width="16.0" height="18.0" rx="2" pathLength="1" /><rect class="sc-line el-panel" x="740.0" y="336.0" width="130.0" height="134.0" rx="4" pathLength="1" id="elPanel"/><polyline class="sc-line el-panel" points="800.0,400.0 810.0,400.0" pathLength="1" /><polyline class="sc-line el-ld ld1" points="300.0,525.0 300.0,225.0 470.0,225.0" pathLength="1" /><polyline class="sc-line el-ld ld2" points="600.0,525.0 600.0,500.0 805.0,500.0 805.0,470.0" pathLength="1" /><polyline class="sc-line el-ld ld3" points="900.0,525.0 925.0,525.0 925.0,420.0" pathLength="1" /></svg>
+      <svg class="ob-svg" id="plS" viewBox="0 0 1200 700" aria-hidden="true" style="opacity:0"><rect class="sc-line pl pl-bld" x="250.0" y="110.0" width="620.0" height="300.0" rx="6" pathLength="1" /><polyline class="sc-line dim pl pl-wall" points="640.0,110.0 640.0,410.0" pathLength="1" /><rect class="sc-line dim pl pl-wall pl-dash" x="670" y="185" width="170" height="150" rx="8" pathLength="1" stroke-dasharray="0.02 0.012"/><rect class="sc-line pl-ws" x="290.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="312" cy="188" r="6" pathLength="1"/><rect class="sc-line pl-ws pl-you" x="360.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="382" cy="188" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="430.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="452" cy="188" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="500.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="522" cy="188" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="290.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="312" cy="268" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="360.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="382" cy="268" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="430.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="452" cy="268" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="500.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="522" cy="268" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="290.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="312" cy="348" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="360.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="382" cy="348" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="430.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="452" cy="348" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="500.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="522" cy="348" r="6" pathLength="1"/><polyline class="sc-line dim pl-link" points="312.0,163.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="382.0,163.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="452.0,163.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="522.0,163.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="312.0,243.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="382.0,243.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="452.0,243.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="522.0,243.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="312.0,323.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="382.0,323.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="452.0,323.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="522.0,323.0 755.0,260.0" pathLength="1" /><circle class="pl-node" cx="755" cy="260" r="9"/><circle class="pl-pulse" cx="755" cy="260" r="9"/><text class="sc-label pl-t" x="755" y="290" text-anchor="middle">LOCAL MODEL</text><rect class="sc-line pl-gate" x="241.0" y="291.0" width="18.0" height="18.0" rx="2" pathLength="1" /><text class="sc-label pl-t" x="234" y="330" text-anchor="middle">VPN</text><rect class="sc-line pl-gate" x="861.0" y="291.0" width="18.0" height="18.0" rx="2" pathLength="1" /><text class="sc-label pl-t" x="886" y="330" text-anchor="middle">VPN</text><rect class="sc-line pl-gate" x="746.0" y="401.0" width="18.0" height="18.0" rx="2" pathLength="1" /><text class="sc-label pl-t" x="789" y="415" text-anchor="middle">GUARD</text><polyline class="sc-line dim pl-glink" points="250.0,300.0 290.0,300.0 640.0,260.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-glink" points="870.0,300.0 830.0,300.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-glink" points="755.0,260.0 755.0,410.0" pathLength="1" /><path class="sc-line pl-rlink" d="M110 170 Q180 110 250 300" pathLength="1"/><rect class="sc-line pl-rn" x="88.0" y="148.0" width="44.0" height="44.0" rx="6" pathLength="1" /><polygon class="sc-line pl-rn" points="97.0,181.0 97.0,167.0 110.0,156.0 123.0,167.0 123.0,181.0" pathLength="1"/><rect class="sc-line pl-rn" x="106.0" y="171.0" width="8.0" height="10.0" rx="0" pathLength="1" /><text class="sc-label pl-t" x="110" y="214" text-anchor="middle">WORKING FROM HOME</text><path class="sc-line pl-rlink" d="M95 400 Q172 240 250 300" pathLength="1"/><rect class="sc-line pl-rn" x="73.0" y="378.0" width="44.0" height="44.0" rx="6" pathLength="1" /><polygon class="sc-line pl-rn" points="81.0,402.0 109.0,392.0 97.0,401.0 99.0,412.0 94.0,402.0" pathLength="1"/><text class="sc-label pl-t" x="95" y="444" text-anchor="middle">TRAVELING</text><path class="sc-line pl-rlink" d="M1090 170 Q980 110 870 300" pathLength="1"/><rect class="sc-line pl-rn" x="1068.0" y="148.0" width="44.0" height="44.0" rx="6" pathLength="1" /><path class="sc-line pl-rn" d="M1090 184 C1080 172 1079 167 1079 165 A11 11 0 0 1 1101 165 C1101 167 1100 172 1090 184 Z" pathLength="1"/><circle class="sc-line pl-rn" cx="1090" cy="165" r="4" pathLength="1"/><text class="sc-label pl-t" x="1090" y="214" text-anchor="middle">ON SITE</text><path class="sc-line pl-rlink" d="M1105 400 Q988 240 870 300" pathLength="1"/><rect class="sc-line pl-rn" x="1083.0" y="378.0" width="44.0" height="44.0" rx="6" pathLength="1" /><rect class="sc-line pl-rn" x="1093.0" y="388.0" width="24.0" height="26.0" rx="1" pathLength="1" /><polyline class="sc-line pl-rn" points="1093.0,388.0 1105.0,382.0 1117.0,388.0" pathLength="1" /><rect class="sc-line pl-rn" x="1097.0" y="393.0" width="6.0" height="6.0" rx="0" pathLength="1" /><rect class="sc-line pl-rn" x="1107.0" y="393.0" width="6.0" height="6.0" rx="0" pathLength="1" /><rect class="sc-line pl-rn" x="1097.0" y="402.0" width="6.0" height="6.0" rx="0" pathLength="1" /><rect class="sc-line pl-rn" x="1107.0" y="402.0" width="6.0" height="6.0" rx="0" pathLength="1" /><text class="sc-label pl-t" x="1105" y="444" text-anchor="middle">SATELLITE OFFICE</text><rect class="sc-line dim pl pl-band pl-dash" x="250" y="470" width="620" height="130" rx="8" pathLength="1" stroke-dasharray="0.01 0.008"/><text class="sc-label pl-t" x="560" y="458" text-anchor="middle">THE BIG CLOUD MODELS · ONLY THROUGH OUR GUARD</text><polyline class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 310.0,505.0" pathLength="1" /><rect class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(0 310 525)"/><rect class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(60 310 525)"/><rect class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(120 310 525)"/><rect class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(180 310 525)"/><rect class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(240 310 525)"/><rect class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(300 310 525)"/><text class="sc-label pl-t" x="310" y="559" text-anchor="middle">OPENAI</text><polyline class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 410.0,505.0" pathLength="1" /><polyline class="sc-line pl-fm" points="397.0,537.0 406.0,513.0 414.0,513.0 423.0,537.0" pathLength="1" /><polyline class="sc-line pl-fm" points="403.0,528.0 417.0,528.0" pathLength="1" /><text class="sc-label pl-t" x="410" y="559" text-anchor="middle">ANTHROPIC</text><polyline class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 510.0,505.0" pathLength="1" /><path class="sc-line pl-fm" d="M510 509 Q510 525 526 525 Q510 525 510 541 Q510 525 494 525 Q510 525 510 509 Z" pathLength="1"/><text class="sc-label pl-t" x="510" y="559" text-anchor="middle">GEMINI</text><polyline class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 610.0,505.0" pathLength="1" /><path class="sc-line pl-fm" d="M596 533 C596 511 608 511 610 525 C612 539 624 539 624 517" pathLength="1"/><path class="sc-line pl-fm" d="M596 533 C596 539 604 539 607 531" pathLength="1"/><path class="sc-line pl-fm" d="M624 517 C624 511 616 511 613 519" pathLength="1"/><text class="sc-label pl-t" x="610" y="559" text-anchor="middle">META LLAMA</text><polyline class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 710.0,505.0" pathLength="1" /><rect class="sc-line pl-fm" x="695.0" y="510.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="719.0" y="510.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="695.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="701.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="713.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="719.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="695.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="701.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="707.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="713.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="719.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="695.0" y="528.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="707.0" y="528.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="719.0" y="528.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="695.0" y="534.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="719.0" y="534.0" width="5.4" height="5.4" rx="0" pathLength="1" /><text class="sc-label pl-t" x="710" y="559" text-anchor="middle">MISTRAL</text><polyline class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 810.0,505.0" pathLength="1" /><polyline class="sc-line pl-fm" points="797.0,511.0 823.0,539.0" pathLength="1" /><polyline class="sc-line pl-fm" points="823.0,511.0 812.0,523.0" pathLength="1" /><polyline class="sc-line pl-fm" points="797.0,539.0 808.0,527.0" pathLength="1" /><text class="sc-label pl-t" x="810" y="559" text-anchor="middle">XAI</text><text class="sc-label pl-t" x="250" y="96" text-anchor="start">YOUR OFFICE · 12 SEATS</text><text class="sc-label pl-t" x="870" y="96" text-anchor="end">ONE LOCAL MODEL</text></svg>
+      <div class="sc-dock centered" id="dockB" style="left:50.00%; top:32.14%; width:21.67%; transform:translate(-50%,-50%); aspect-ratio:1.733;"></div>
+      <div class="sc-dock centered" id="dockC" style="left:31.83%; top:23.29%; width:3.67%; transform:translate(-50%,-50%); aspect-ratio:1.69;"></div>
+      <div class="sc-step-head" style="left:14%; top:70%;">WHAT GOES WHERE</div><div class="sc-step" id="st1" style="left:14%; top:76%; width:22%;"><b>01</b><strong>The screen</strong><p>Nothing changes for your team. Same computer, same apps, one new address on the office network.</p></div><div class="sc-step" id="st2" style="left:41%; top:76%; width:22%;"><b>02</b><strong>The box</strong><p>Under the desk: the model, your files, and our guard. One power cord. No per-seat subscription.</p></div><div class="sc-step" id="st3" style="left:66%; top:76%; width:22%;"><b>03</b><strong>The cable</strong><p>It talks to your office network and nothing else. No internet round trip, no per-message bill.</p></div>
+    </div></div>
+    <div class="sh-rig" id="shRig">
+      
+      <div class="sh-frame" id="shFrame">
+        <video data-vid="ledger" class="sh-video on" autoplay muted loop playsinline preload="auto" poster="https://images.pexels.com/videos/8298004/pexels-photo-8298004.jpeg?auto=compress&w=1600"><source src="https://videos.pexels.com/video-files/8298004/8298004-hd_1920_1080_25fps.mp4" type="video/mp4"></video><video data-vid="bakery" class="sh-video" autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/7405931/pexels-photo-7405931.jpeg?auto=compress&w=1600"><source src="https://videos.pexels.com/video-files/7405931/7405931-hd_1920_1080_24fps.mp4" type="video/mp4"></video><video data-vid="coffee" class="sh-video" autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/25311041/barista-beverage-breakfast-cafe-25311041.jpeg?auto=compress&w=1600"><source src="https://videos.pexels.com/video-files/25311041/11900460_1920_1080_25fps.mp4" type="video/mp4"></video><video data-vid="garage" class="sh-video" autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/8986894/auto-automobile-automotive-car-8986894.jpeg?auto=compress&w=1600"><source src="https://videos.pexels.com/video-files/8986894/8986894-hd_1920_1080_30fps.mp4" type="video/mp4"></video><video data-vid="florist" class="sh-video" autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/6764464/bouquet-dream-flower-shop-flowers-6764464.jpeg?auto=compress&w=1600"><source src="https://videos.pexels.com/video-files/6764464/6764464-hd_1920_1080_30fps.mp4" type="video/mp4"></video><video data-vid="dentist" class="sh-video" autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/7803281/adult-chair-clinic-dental-7803281.jpeg?auto=compress&w=1600"><source src="https://videos.pexels.com/video-files/7803281/7803281-hd_1920_1078_30fps.mp4" type="video/mp4"></video><div class="sh-vnav" id="shVnav" role="group" aria-label="Hero footage"><button type="button" data-dir="-1" aria-label="Previous footage">←</button><span id="shVidLbl"></span><button type="button" data-dir="1" aria-label="Next footage">→</button></div>
+        <div class="sh-scrim"></div>
+        <div class="sh-scrim2"></div>
+        <h1 class="sh-h1"><span>Your own AI. <span class="amber">Under your desk.</span></span><small class="sh-sub">Keep puts a private AI box in your business, tests every model on your real work, and keeps it learning overnight. Nothing leaves the building.</small></h1>
+        <div class="rx rx-ui"><svg viewBox="0 0 320 205" preserveAspectRatio="none" aria-hidden="true">
+  <rect width="320" height="205" fill="oklch(0.07 0 0)"/>
+  <rect x="18" y="16" width="120" height="7" rx="3.5" fill="oklch(1 0 0 / .18)"/><rect x="18" y="30" width="72" height="7" rx="3.5" fill="oklch(1 0 0 / .10)"/>
+  <text x="302" y="30" text-anchor="end" font-family="DM Mono, monospace" font-size="12" fill="oklch(from var(--accent) l c h)">0.92</text>
+  <g fill="oklch(from var(--accent) l c h / .9)"><rect x="34" y="150" width="20" height="36" rx="3"/><rect x="66" y="128" width="20" height="58" rx="3"/><rect x="98" y="108" width="20" height="78" rx="3"/><rect x="130" y="118" width="20" height="68" rx="3"/><rect x="162" y="88" width="20" height="98" rx="3"/><rect x="194" y="70" width="20" height="116" rx="3"/><rect x="226" y="82" width="20" height="104" rx="3"/><rect x="258" y="56" width="20" height="130" rx="3"/></g>
+  <line x1="18" y1="186" x2="302" y2="186" stroke="oklch(1 0 0 / .2)"/>
+</svg></div>
+        <div class="rx rx-skin"><b>LOCAL-01</b></div>
+        <svg class="sh-wire" viewBox="0 0 1000 640" preserveAspectRatio="none" aria-hidden="true"><path class="w" d="M283,597 L444,630 L401,630" pathLength="1"/><path class="t" d="M401,630 l-9,-5 v10 z"/><path class="w" d="M604,279 L782,339 L860,258" pathLength="1"/><path class="t" d="M860,258 l-9,-5 v10 z"/><path class="w" d="M195,575 L139,500 L22,466 L161,520" pathLength="1"/><path class="t" d="M161,520 l-9,-5 v10 z"/><path class="w" d="M444,495 L508,478 L603,478" pathLength="1"/><path class="t" d="M603,478 l-9,-5 v10 z"/><path class="w" d="M486,348 L615,422 L714,422 L603,507" pathLength="1"/><path class="t" d="M603,507 l-9,-5 v10 z"/><path class="w" d="M752,207 L930,279 L836,352 L948,344 L990,300" pathLength="1"/><path class="t" d="M990,300 l-9,-5 v10 z"/><path class="w" d="M859,108 L814,108 L884,31 L748,106" pathLength="1"/><path class="t" d="M748,106 l-9,-5 v10 z"/><path class="w" d="M378,325 L329,325 L262,393 L172,393 L251,398" pathLength="1"/><path class="t" d="M251,398 l-9,-5 v10 z"/><path class="w" d="M928,387 L990,387 L990,387 L990,387" pathLength="1"/><path class="t" d="M990,387 l-9,-5 v10 z"/><text x="689" y="283">01</text><text x="487" y="304">1</text><text x="350" y="387">0100</text><text x="847" y="465">1</text><text x="362" y="60">0011</text><text x="670" y="176">0100</text><rect class="w" x="6" y="6" width="988" height="628" rx="22" pathLength="1"/></svg>
+      </div>
+      
+    </div>
+    
+    <div class="sc-over" id="scOver"><div class="sc-act a3"><h2>One box in your office. Everyone connects to it.</h2><p>Your people at the counter, at home and on the road all reach it through your VPN. The big cloud models only ever see what our guard lets out.</p></div></div>
+    <div class="sh-act" id="shAct"><h2></h2><p></p></div>
+    <div class="sh-cue" id="shCue" aria-hidden="true">Scroll to explore <i>↓</i></div>
+  </div>
+</section>
+<section class="scene-m" aria-label="Placement">
+  <div class="sm-media" aria-hidden="true"></div>
+  <div class="container"><svg class="plan-m" viewBox="60 60 1080 560" aria-hidden="true"><rect style="stroke-dashoffset:0" class="sc-line pl pl-bld" x="250.0" y="110.0" width="620.0" height="300.0" rx="6" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl pl-wall" points="640.0,110.0 640.0,410.0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line dim pl pl-wall pl-dash" x="670" y="185" width="170" height="150" rx="8" pathLength="1" stroke-dasharray="0.02 0.012"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="290.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="312" cy="188" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws pl-you" x="360.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="382" cy="188" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="430.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="452" cy="188" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="500.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="522" cy="188" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="290.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="312" cy="268" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="360.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="382" cy="268" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="430.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="452" cy="268" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="500.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="522" cy="268" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="290.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="312" cy="348" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="360.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="382" cy="348" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="430.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="452" cy="348" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="500.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="522" cy="348" r="6" pathLength="1"/><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="312.0,163.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="382.0,163.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="452.0,163.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="522.0,163.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="312.0,243.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="382.0,243.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="452.0,243.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="522.0,243.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="312.0,323.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="382.0,323.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="452.0,323.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="522.0,323.0 755.0,260.0" pathLength="1" /><circle class="pl-node" style="opacity:1" cx="755" cy="260" r="9"/><circle class="pl-pulse" cx="755" cy="260" r="9"/><text class="sc-label" style="opacity:1" x="755" y="290" text-anchor="middle">LOCAL MODEL</text><rect style="stroke-dashoffset:0" class="sc-line pl-gate" x="241.0" y="291.0" width="18.0" height="18.0" rx="2" pathLength="1" /><text class="sc-label" style="opacity:1" x="234" y="330" text-anchor="middle">VPN</text><rect style="stroke-dashoffset:0" class="sc-line pl-gate" x="861.0" y="291.0" width="18.0" height="18.0" rx="2" pathLength="1" /><text class="sc-label" style="opacity:1" x="886" y="330" text-anchor="middle">VPN</text><rect style="stroke-dashoffset:0" class="sc-line pl-gate" x="746.0" y="401.0" width="18.0" height="18.0" rx="2" pathLength="1" /><text class="sc-label" style="opacity:1" x="789" y="415" text-anchor="middle">GUARD</text><polyline style="stroke-dashoffset:0" class="sc-line dim pl-glink" points="250.0,300.0 290.0,300.0 640.0,260.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-glink" points="870.0,300.0 830.0,300.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-glink" points="755.0,260.0 755.0,410.0" pathLength="1" /><path style="stroke-dashoffset:0" class="sc-line pl-rlink" d="M110 170 Q180 110 250 300" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="88.0" y="148.0" width="44.0" height="44.0" rx="6" pathLength="1" /><polygon style="stroke-dashoffset:0" class="sc-line pl-rn" points="97.0,181.0 97.0,167.0 110.0,156.0 123.0,167.0 123.0,181.0" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="106.0" y="171.0" width="8.0" height="10.0" rx="0" pathLength="1" /><text class="sc-label" style="opacity:1" x="110" y="214" text-anchor="middle">WORKING FROM HOME</text><path style="stroke-dashoffset:0" class="sc-line pl-rlink" d="M95 400 Q172 240 250 300" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="73.0" y="378.0" width="44.0" height="44.0" rx="6" pathLength="1" /><polygon style="stroke-dashoffset:0" class="sc-line pl-rn" points="81.0,402.0 109.0,392.0 97.0,401.0 99.0,412.0 94.0,402.0" pathLength="1"/><text class="sc-label" style="opacity:1" x="95" y="444" text-anchor="middle">TRAVELING</text><path style="stroke-dashoffset:0" class="sc-line pl-rlink" d="M1090 170 Q980 110 870 300" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="1068.0" y="148.0" width="44.0" height="44.0" rx="6" pathLength="1" /><path style="stroke-dashoffset:0" class="sc-line pl-rn" d="M1090 184 C1080 172 1079 167 1079 165 A11 11 0 0 1 1101 165 C1101 167 1100 172 1090 184 Z" pathLength="1"/><circle style="stroke-dashoffset:0" class="sc-line pl-rn" cx="1090" cy="165" r="4" pathLength="1"/><text class="sc-label" style="opacity:1" x="1090" y="214" text-anchor="middle">ON SITE</text><path style="stroke-dashoffset:0" class="sc-line pl-rlink" d="M1105 400 Q988 240 870 300" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="1083.0" y="378.0" width="44.0" height="44.0" rx="6" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="1093.0" y="388.0" width="24.0" height="26.0" rx="1" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line pl-rn" points="1093.0,388.0 1105.0,382.0 1117.0,388.0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="1097.0" y="393.0" width="6.0" height="6.0" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="1107.0" y="393.0" width="6.0" height="6.0" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="1097.0" y="402.0" width="6.0" height="6.0" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="1107.0" y="402.0" width="6.0" height="6.0" rx="0" pathLength="1" /><text class="sc-label" style="opacity:1" x="1105" y="444" text-anchor="middle">SATELLITE OFFICE</text><rect style="stroke-dashoffset:0" class="sc-line dim pl pl-band pl-dash" x="250" y="470" width="620" height="130" rx="8" pathLength="1" stroke-dasharray="0.01 0.008"/><text class="sc-label" style="opacity:1" x="560" y="458" text-anchor="middle">THE BIG CLOUD MODELS · ONLY THROUGH OUR GUARD</text><polyline style="stroke-dashoffset:0" class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 310.0,505.0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(0 310 525)"/><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(60 310 525)"/><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(120 310 525)"/><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(180 310 525)"/><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(240 310 525)"/><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(300 310 525)"/><text class="sc-label" style="opacity:1" x="310" y="559" text-anchor="middle">OPENAI</text><polyline style="stroke-dashoffset:0" class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 410.0,505.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line pl-fm" points="397.0,537.0 406.0,513.0 414.0,513.0 423.0,537.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line pl-fm" points="403.0,528.0 417.0,528.0" pathLength="1" /><text class="sc-label" style="opacity:1" x="410" y="559" text-anchor="middle">ANTHROPIC</text><polyline style="stroke-dashoffset:0" class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 510.0,505.0" pathLength="1" /><path style="stroke-dashoffset:0" class="sc-line pl-fm" d="M510 509 Q510 525 526 525 Q510 525 510 541 Q510 525 494 525 Q510 525 510 509 Z" pathLength="1"/><text class="sc-label" style="opacity:1" x="510" y="559" text-anchor="middle">GEMINI</text><polyline style="stroke-dashoffset:0" class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 610.0,505.0" pathLength="1" /><path style="stroke-dashoffset:0" class="sc-line pl-fm" d="M596 533 C596 511 608 511 610 525 C612 539 624 539 624 517" pathLength="1"/><path style="stroke-dashoffset:0" class="sc-line pl-fm" d="M596 533 C596 539 604 539 607 531" pathLength="1"/><path style="stroke-dashoffset:0" class="sc-line pl-fm" d="M624 517 C624 511 616 511 613 519" pathLength="1"/><text class="sc-label" style="opacity:1" x="610" y="559" text-anchor="middle">META LLAMA</text><polyline style="stroke-dashoffset:0" class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 710.0,505.0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="695.0" y="510.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="719.0" y="510.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="695.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="701.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="713.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="719.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="695.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="701.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="707.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="713.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="719.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="695.0" y="528.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="707.0" y="528.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="719.0" y="528.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="695.0" y="534.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="719.0" y="534.0" width="5.4" height="5.4" rx="0" pathLength="1" /><text class="sc-label" style="opacity:1" x="710" y="559" text-anchor="middle">MISTRAL</text><polyline style="stroke-dashoffset:0" class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 810.0,505.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line pl-fm" points="797.0,511.0 823.0,539.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line pl-fm" points="823.0,511.0 812.0,523.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line pl-fm" points="797.0,539.0 808.0,527.0" pathLength="1" /><text class="sc-label" style="opacity:1" x="810" y="559" text-anchor="middle">XAI</text><text class="sc-label" style="opacity:1" x="250" y="96" text-anchor="start">YOUR OFFICE · 12 SEATS</text><text class="sc-label" style="opacity:1" x="870" y="96" text-anchor="end">ONE LOCAL MODEL</text></svg><h2>One box in your office. Everyone connects to it.</h2><p>Your people at the counter, at home and on the road all reach it through your VPN. The big cloud models only ever see what our guard lets out.</p></div>
+</section>
+
+<!-- anatomy -->
+<section class="anatomy" id="anatomy">
+  <div class="container anatomy-grid">
+    <div class="anatomy-copy">
+      <p class="kicker">WHAT'S IN THE BOX</p>
+      <h2 class="sec-title">What you're<br><span class="amber">actually getting.</span></h2>
+      <p class="sec-sub">Rent the same chatbot as everyone else and you get everyone else's answers. The layers underneath are what make this one yours.</p>
+      <ol class="layer-list" id="layerList">
+        <li><span class="ll-name">The chat</span><p class="ll-note">What your team sees: a chat window and a shared inbox for questions.</p></li>
+        <li><span class="ll-name">The model</span><p class="ll-note">An open model, tested against the big names on your own work.</p></li>
+        <li><span class="ll-name">Testing</span><p class="ll-note">Proof it works before a customer finds out it doesn't.</p></li>
+        <li><span class="ll-name">Human review</span><p class="ll-note">People grading answers overnight, catching what machines miss.</p></li>
+        <li><span class="ll-name">Your examples</span><p class="ll-note">Your documents, photos and records, organised so the model can learn from them.</p></li>
+        <li><span class="ll-name">Your records</span><p class="ll-note">Everything your business already has. The part money can't shortcut.</p></li>
+      </ol>
+    </div>
+    <div class="anatomy-stage" aria-hidden="true">
+      <div class="stack-shadow" id="stackShadow"></div>
+      <div class="stack" id="stack">
+        <div class="plate plate-screen" data-i="0">
+          <svg viewBox="0 0 320 320">
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(0.22 0 0)" stroke="oklch(1 0 0 / 0.22)" stroke-width="1.5"/>
+            <rect x="52" y="52" width="216" height="150" rx="8" fill="oklch(0.10 0 0)"/>
+            <g fill="oklch(from var(--accent) l c h / 0.85)">
+              <rect x="72" y="152" width="18" height="34" rx="2"/><rect x="102" y="132" width="18" height="54" rx="2"/><rect x="132" y="112" width="18" height="74" rx="2"/><rect x="162" y="122" width="18" height="64" rx="2"/><rect x="192" y="92" width="18" height="94" rx="2"/><rect x="222" y="72" width="18" height="114" rx="2"/>
+            </g>
+            <rect x="52" y="222" width="140" height="10" rx="5" fill="oklch(1 0 0 / 0.14)"/>
+            <rect x="52" y="244" width="96" height="10" rx="5" fill="oklch(1 0 0 / 0.09)"/>
+          </svg>
+          <span class="plate-tag">CHAT</span>
+        </div>
+        <div class="plate plate-model" data-i="1">
+          <svg viewBox="0 0 320 320">
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(0.18 0 0)" stroke="oklch(1 0 0 / 0.18)" stroke-width="1.5"/>
+            <g fill="oklch(1 0 0 / 0.10)">
+              <rect x="64" y="64" width="26" height="26" rx="4"/><rect x="102" y="64" width="26" height="26" rx="4"/><rect x="140" y="64" width="26" height="26" rx="4"/><rect x="178" y="64" width="26" height="26" rx="4"/><rect x="216" y="64" width="26" height="26" rx="4"/>
+              <rect x="64" y="102" width="26" height="26" rx="4"/><rect x="102" y="102" width="26" height="26" rx="4"/><rect x="178" y="102" width="26" height="26" rx="4"/><rect x="216" y="102" width="26" height="26" rx="4"/>
+              <rect x="64" y="140" width="26" height="26" rx="4"/><rect x="216" y="140" width="26" height="26" rx="4"/>
+              <rect x="64" y="178" width="26" height="26" rx="4"/><rect x="102" y="178" width="26" height="26" rx="4"/><rect x="178" y="178" width="26" height="26" rx="4"/><rect x="216" y="178" width="26" height="26" rx="4"/>
+              <rect x="64" y="216" width="26" height="26" rx="4"/><rect x="102" y="216" width="26" height="26" rx="4"/><rect x="140" y="216" width="26" height="26" rx="4"/><rect x="178" y="216" width="26" height="26" rx="4"/><rect x="216" y="216" width="26" height="26" rx="4"/>
+            </g>
+            <rect x="121" y="121" width="78" height="78" rx="10" fill="oklch(0.10 0 0)" stroke="oklch(from var(--accent) l c h / 0.7)" stroke-width="1.5"/>
+            <text x="160" y="166" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(from var(--accent) l c h)">GPU</text>
+          </svg>
+          <span class="plate-tag">MODEL</span>
+        </div>
+        <div class="plate plate-data plate-eval" data-i="2">
+          <svg viewBox="0 0 320 320">
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(0.18 0 0)"/>
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(from var(--accent) calc(l - .16) c h / 0.14)" stroke="oklch(from var(--accent) l c h / 0.55)" stroke-width="1.5"/>
+            <g fill="none" stroke="oklch(from var(--accent) l c h)" stroke-width="2">
+              <circle cx="160" cy="160" r="62"/>
+              <path d="M160 98 A 62 62 0 0 1 222 160" stroke="oklch(from var(--accent) calc(l + .08) c h)" stroke-width="4"/>
+            </g>
+            <text x="160" y="168" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="16" fill="oklch(from var(--accent) calc(l + .08) c h)">0.92</text>
+            <g stroke="oklch(from var(--accent) l c h / 0.5)" stroke-width="1.5"><path d="M60 60h28M60 72h18M232 248h28M242 260h18"/></g>
+          </svg>
+          <span class="plate-tag amber">TESTING</span>
+        </div>
+        <div class="plate plate-data plate-feedback" data-i="3">
+          <svg viewBox="0 0 320 320">
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(0.18 0 0)"/>
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(from var(--accent) calc(l - .16) c h / 0.12)" stroke="oklch(from var(--accent) l c h / 0.45)" stroke-width="1.5"/>
+            <g fill="oklch(from var(--accent) l c h / 0.8)">
+              <rect x="70" y="140" width="10" height="40" rx="3"/><rect x="90" y="120" width="10" height="80" rx="3"/><rect x="110" y="150" width="10" height="20" rx="3"/><rect x="130" y="100" width="10" height="120" rx="3"/><rect x="150" y="130" width="10" height="60" rx="3"/><rect x="170" y="110" width="10" height="100" rx="3"/><rect x="190" y="145" width="10" height="30" rx="3"/><rect x="210" y="125" width="10" height="70" rx="3"/><rect x="230" y="150" width="10" height="24" rx="3"/>
+            </g>
+            <text x="52" y="66" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(from var(--accent) calc(l + .08) c h / 0.8)">grade: B &gt; A</text>
+          </svg>
+          <span class="plate-tag amber">REVIEW</span>
+        </div>
+        <div class="plate plate-data plate-labels" data-i="4">
+          <svg viewBox="0 0 320 320">
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(0.18 0 0)"/>
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(from var(--accent) calc(l - .16) c h / 0.10)" stroke="oklch(from var(--accent) l c h / 0.45)" stroke-width="1.5"/>
+            <g fill="none" stroke="oklch(from var(--accent) l c h)" stroke-width="1.5">
+              <rect x="70" y="80" width="86" height="66" rx="4"/>
+              <rect x="180" y="120" width="70" height="90" rx="4" stroke-dasharray="5 4"/>
+              <rect x="96" y="188" width="64" height="52" rx="4"/>
+            </g>
+            <g font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(from var(--accent) calc(l + .08) c h)">
+              <text x="70" y="72">invoice</text><text x="180" y="112">fracture</text><text x="96" y="180">defect</text>
+            </g>
+          </svg>
+          <span class="plate-tag amber">EXAMPLES</span>
+        </div>
+        <div class="plate plate-data plate-raw" data-i="5">
+          <svg viewBox="0 0 320 320">
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(0.18 0 0)"/>
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(from var(--accent) calc(l - .48) calc(c - .1) h / 0.5)" stroke="oklch(from var(--accent) calc(l - .16) c h / 0.7)" stroke-width="1.5"/>
+            <g fill="oklch(from var(--accent) l c h / 0.55)">
+              <circle cx="70" cy="70" r="3"/><circle cx="120" cy="95" r="2"/><circle cx="190" cy="66" r="3.5"/><circle cx="240" cy="100" r="2.5"/><circle cx="95" cy="150" r="2.5"/><circle cx="160" cy="140" r="3"/><circle cx="215" cy="160" r="2"/><circle cx="260" cy="190" r="3"/><circle cx="80" cy="220" r="3"/><circle cx="140" cy="205" r="2"/><circle cx="185" cy="235" r="3.5"/><circle cx="235" cy="250" r="2.5"/><circle cx="110" cy="262" r="2"/><circle cx="160" cy="270" r="3"/><circle cx="55" cy="120" r="2"/><circle cx="255" cy="140" r="2.5"/>
+            </g>
+          </svg>
+          <span class="plate-tag amber">RECORDS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- models: the scorecard -->
+<section class="models" id="models">
+  <div class="container">
+    <div class="models-head">
+      <p class="kicker">WE TESTED THEM ALL</p>
+      <h2 class="sec-title" data-reveal>Every model, tested on <span class="amber">real work.</span></h2>
+      <p class="sec-sub" data-reveal>Before your files touch anything, we run the whole field against your actual work: open models that can live in your office, and the big cloud ones behind our guard. Pick one of each and compare.</p>
+    </div>
+    <div class="models-grid">
+      <div class="radar-wrap" data-reveal>
+        <svg class="radar" viewBox="0 0 520 500" role="img" aria-label="Scorecard: six criteria compared across candidate models against what your business needs">
+          <polygon class="grid" points="260.0,208.0 296.4,229.0 296.4,271.0 260.0,292.0 223.6,271.0 223.6,229.0"/><polygon class="grid" points="260.0,166.0 332.7,208.0 332.7,292.0 260.0,334.0 187.3,292.0 187.3,208.0"/><polygon class="grid" points="260.0,124.0 369.1,187.0 369.1,313.0 260.0,376.0 150.9,313.0 150.9,187.0"/><polygon class="grid" points="260.0,82.0 405.5,166.0 405.5,334.0 260.0,418.0 114.5,334.0 114.5,166.0"/><line class="axis" x1="260" y1="250" x2="260.0" y2="82.0"/><text class="lbl" x="260.0" y="54.0" text-anchor="middle">TASK ACCURACY</text><line class="axis" x1="260" y1="250" x2="405.5" y2="166.0"/><text class="lbl" x="433.2" y="154.0" text-anchor="start">SPEED</text><line class="axis" x1="260" y1="250" x2="405.5" y2="334.0"/><text class="lbl" x="433.2" y="354.0" text-anchor="start">COST</text><line class="axis" x1="260" y1="250" x2="260.0" y2="418.0"/><text class="lbl" x="260.0" y="454.0" text-anchor="middle">PRIVACY</text><line class="axis" x1="260" y1="250" x2="114.5" y2="334.0"/><text class="lbl" x="86.8" y="354.0" text-anchor="end">REASONING</text><line class="axis" x1="260" y1="250" x2="114.5" y2="166.0"/><text class="lbl" x="86.8" y="154.0" text-anchor="end">LONG DOCS</text>
+          <polygon class="need" points="260.0,119.0 356.0,194.6 347.3,300.4 260.0,404.6 158.2,308.8 164.0,194.6"/>
+          <polygon class="poly" id="radarPoly" points="260.0,108.9 367.7,187.8 385.1,322.2 260.0,418.0 146.5,315.5 152.3,187.8"/>
+          <g id="radarDots"><circle class="dot" r="4"/><circle class="dot" r="4"/><circle class="dot" r="4"/><circle class="dot" r="4"/><circle class="dot" r="4"/><circle class="dot" r="4"/></g><polygon class="poly2" id="radarPoly2" points=""/><g id="radarDots2"><circle class="dot2" r="4"/><circle class="dot2" r="4"/><circle class="dot2" r="4"/><circle class="dot2" r="4"/><circle class="dot2" r="4"/><circle class="dot2" r="4"/></g>
+          <text class="legend" x="260" y="476" text-anchor="middle">— — —  WHAT YOU NEED     <tspan class="lg-l">▬</tspan>  LOCAL PICK     <tspan class="lg-f">▬</tspan>  CLOUD PICK</text>
+        </svg>
+        <div class="chips" id="modelChips"><div class="chip-row"><span class="chip-lbl">LOCAL MODELS</span><button class="chip" type="button" data-model="qwen" aria-pressed="true">Qwen 3.8<span class="fit">★ OUR PICK</span></button><button class="chip" type="button" data-model="kimi" aria-pressed="false">Kimi3</button><button class="chip" type="button" data-model="gemma" aria-pressed="false">Gemma 4</button></div><div class="chip-row"><span class="chip-lbl">CLOUD MODELS</span><button class="chip" type="button" data-model="fable" aria-pressed="true"><i class="mk" aria-hidden="true"><svg viewBox="0 0 32 32"><g stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"><path d="M16 4v24M4 16h24M7.5 7.5l17 17M24.5 7.5l-17 17M16 4l-3 4M16 4l3 4M16 28l-3-4M16 28l3-4"/></g></svg></i>Fable 5.1</button><button class="chip" type="button" data-model="astra" aria-pressed="false"><i class="mk" aria-hidden="true"><svg viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect x="12.8" y="3" width="6.4" height="15" rx="3.2" transform="rotate(0 16 16)"/><rect x="12.8" y="3" width="6.4" height="15" rx="3.2" transform="rotate(60 16 16)"/><rect x="12.8" y="3" width="6.4" height="15" rx="3.2" transform="rotate(120 16 16)"/><rect x="12.8" y="3" width="6.4" height="15" rx="3.2" transform="rotate(180 16 16)"/><rect x="12.8" y="3" width="6.4" height="15" rx="3.2" transform="rotate(240 16 16)"/><rect x="12.8" y="3" width="6.4" height="15" rx="3.2" transform="rotate(300 16 16)"/></g></svg></i>Astra</button><button class="chip" type="button" data-model="grok" aria-pressed="false"><i class="mk" aria-hidden="true"><svg viewBox="0 0 32 32"><g stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"><path d="M5 5l22 22M27 5l-9.5 9.5M5 27l9.5-9.5"/></g></svg></i>Grok 4.6</button></div><p class="chip-more">…and hundreds more</p></div>
+      </div>
+      <div class="paths" id="paths" aria-live="polite">
+        <article class="path" data-for="qwen" data-kind="local">
+          <h3>Local · Qwen 3.8 <small>RUNS IN YOUR OFFICE</small></h3>
+          <p>An open model on the box under the desk. Your documents never leave the building, there is no metered bill, and it is fast because there is no round trip to anyone's cloud. Our pick for most offices: the best balance of accuracy, speed and cost we have measured.</p>
+          <ul class="pipe" aria-label="Request path"><li><b>ASK</b><span>your question</span></li><li class="guard"><b>QWEN 3.8</b><span>on your machine</span></li><li><b>ANSWER</b><span>back on screen</span></li></ul>
+          <div class="lat"><span>LATENCY</span><div class="bar"><i style="--w:11%"></i></div><b>≈ 40 ms</b></div>
+        </article>
+        <article class="path" data-for="kimi" data-kind="local" hidden>
+          <h3>Local · Kimi3 <small>RUNS IN YOUR OFFICE</small></h3>
+          <p>The long-document specialist. Contracts, records, whole case files in one pass, on hardware you own. A little slower per answer, a lot better when the question spans two hundred pages.</p>
+          <ul class="pipe" aria-label="Request path"><li><b>ASK</b><span>your question</span></li><li class="guard"><b>KIMI3</b><span>on your machine</span></li><li><b>ANSWER</b><span>back on screen</span></li></ul>
+          <div class="lat"><span>LATENCY</span><div class="bar"><i style="--w:15%"></i></div><b>≈ 55 ms</b></div>
+        </article>
+        <article class="path" data-for="gemma" data-kind="local" hidden>
+          <h3>Local · Gemma 4 <small>ONE SMALL BOX</small></h3>
+          <p>Small and quick. The cheapest answers on the scorecard, right for routing, extraction, first drafts and anything you run ten thousand times a day.</p>
+          <ul class="pipe" aria-label="Request path"><li><b>ASK</b><span>your question</span></li><li class="guard"><b>GEMMA 4</b><span>on your machine</span></li><li><b>ANSWER</b><span>back on screen</span></li></ul>
+          <div class="lat"><span>LATENCY</span><div class="bar"><i style="--w:7%"></i></div><b>≈ 25 ms</b></div>
+        </article>
+        <article class="path" data-for="fable" data-kind="frontier">
+          <h3>Fable 5.1, behind our guard <small>WHEN YOU NEED THE BIG ONES</small></h3>
+          <p>For the hardest reasoning. We put a guard between you and it: every request is screened for prompt injection, and a small local model hashes names, account numbers and anything personal before it leaves, then restores them on the way back.</p>
+          <ul class="pipe" aria-label="Request path"><li><b>ASK</b><span>your request</span></li><li class="guard"><b>SCREEN</b><span>injection check</span></li><li class="guard"><b>HASH</b><span>PII masked locally</span></li><li><b>FABLE 5.1</b><span>model answers</span></li><li class="guard"><b>RESTORE</b><span>PII put back locally</span></li><li><b>ANSWER</b><span>back on screen</span></li></ul>
+          <div class="lat"><span>LATENCY</span><div class="bar"><i style="--w:58%"></i></div><b>≈ 380 ms</b></div>
+        </article>
+        <article class="path" data-for="astra" data-kind="frontier" hidden>
+          <h3>Astra, behind our guard <small>WHEN YOU NEED THE BIG ONES</small></h3>
+          <p>Strong across the board and quick for a frontier model. Same guard: screened, hashed locally, restored locally. The provider only ever sees an anonymised request.</p>
+          <ul class="pipe" aria-label="Request path"><li><b>ASK</b><span>your request</span></li><li class="guard"><b>SCREEN</b><span>injection check</span></li><li class="guard"><b>HASH</b><span>PII masked locally</span></li><li><b>ASTRA</b><span>model answers</span></li><li class="guard"><b>RESTORE</b><span>PII put back locally</span></li><li><b>ANSWER</b><span>back on screen</span></li></ul>
+          <div class="lat"><span>LATENCY</span><div class="bar"><i style="--w:55%"></i></div><b>≈ 360 ms</b></div>
+        </article>
+        <article class="path" data-for="grok" data-kind="frontier" hidden>
+          <h3>Grok 4.6, behind our guard <small>WHEN YOU NEED THE BIG ONES</small></h3>
+          <p>Fast and current. Same guard on every call: injection screen, personal details hashed before the request leaves the building and put back before it reaches your screen.</p>
+          <ul class="pipe" aria-label="Request path"><li><b>ASK</b><span>your request</span></li><li class="guard"><b>SCREEN</b><span>injection check</span></li><li class="guard"><b>HASH</b><span>PII masked locally</span></li><li><b>GROK 4.6</b><span>model answers</span></li><li class="guard"><b>RESTORE</b><span>PII put back locally</span></li><li><b>ANSWER</b><span>back on screen</span></li></ul>
+          <div class="lat"><span>LATENCY</span><div class="bar"><i style="--w:52%"></i></div><b>≈ 340 ms</b></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- cases -->
+<!-- pilot -->
+<section class="pilot" id="pilot">
+  <div class="container">
+    <p class="kicker">THE 30-DAY PILOT</p>
+    <h2 class="sec-title" data-reveal>Pick the box that <span class="amber">fits the room.</span></h2>
+    <p class="sec-sub" data-reveal>Every box comes with the chat app, the model scorecard, the guard for cloud models and the overnight grading. One flat price a month after the pilot. No per-seat, no per-message.</p>
+    <div class="tiers">
+      <article class="tier" data-reveal>
+        <header><b>Keep One</b><small>5–15 PEOPLE</small></header>
+        <p class="price">$390<span>/month</span></p>
+        <p>One open model, your files indexed, a box under one desk. Right for a practice, a shop, a small firm.</p>
+        <ul><li>One model, one office</li><li>Chat app and a shared question inbox</li><li>Guarded access to the big cloud models</li><li>Overnight grading and the morning report</li></ul>
+        <a href="contact.html?tier=one" class="btn btn-fill">Start the pilot <span class="arr" aria-hidden="true">→</span></a>
+      </article>
+      <article class="tier featured" data-reveal>
+        <header><b>Keep Team</b><small>15–60 PEOPLE · MOST POPULAR</small></header>
+        <p class="price">$890<span>/month</span></p>
+        <p>Two models, one fast and one careful, with VPN for the people who work from home or the road.</p>
+        <ul><li>Two models, picked from your scorecard</li><li>Remote staff through your VPN</li><li>A second box as a spare</li><li>One fine-tuned adapter a year</li></ul>
+        <a href="contact.html?tier=team" class="btn btn-fill">Start the pilot <span class="arr" aria-hidden="true">→</span></a>
+      </article>
+      <article class="tier" data-reveal>
+        <header><b>Keep Office</b><small>60–200 PEOPLE</small></header>
+        <p class="price">$1,900<span>/month</span></p>
+        <p>A rack-mounted box, an adapter per team, and a named engineer who knows your building.</p>
+        <ul><li>Rack box, redundant power</li><li>An adapter per team</li><li>A named engineer</li><li>Quarterly on-site visit</li></ul>
+        <a href="contact.html?tier=office" class="btn btn-fill">Start the pilot <span class="arr" aria-hidden="true">→</span></a>
+      </article>
+    </div>
+    <p class="pilot-note"><b>How the pilot works:</b> we bring the box, set it up in an afternoon, and you use it for thirty days with your real files. Keep it, or we come and get it. Nothing to sign until you decide.</p>
+  </div>
+</section>
+
+<!-- cinema -->
+<section class="cinema" id="cinema" data-theme="dark" aria-label="What a Tuesday looks like">
+  <div class="cine-slide">
+    <div class="cine-media">
+      <img src="https://images.pexels.com/photos/29393030/pexels-photo-29393030.jpeg?auto=compress&cs=tinysrgb&w=2000" alt="A machine shop turning a part on a lathe" loading="lazy">
+    </div>
+    <h2 class="cine-cap">A machine shop in Toledo asks about a <span class="amber">1987 part drawing.</span><small>01 — THE SHOP FLOOR</small></h2>
+  </div>
+  <div class="cine-slide">
+    <div class="cine-media">
+      <img src="https://images.pexels.com/photos/8413334/pexels-photo-8413334.jpeg?auto=compress&cs=tinysrgb&w=2000" alt="A dentist working with a patient in a bright clinic" loading="lazy">
+    </div>
+    <h2 class="cine-cap">A dental practice in Tempe drafts <span class="amber">insurance letters</span> before lunch.<small>02 — THE FRONT DESK</small></h2>
+  </div>
+  <div class="cine-slide">
+    <div class="cine-media">
+      <img src="https://images.pexels.com/photos/7654131/pexels-photo-7654131.jpeg?auto=compress&cs=tinysrgb&w=2000" alt="Two accountants working through paperwork at a laptop" loading="lazy">
+    </div>
+    <h2 class="cine-cap">An accounting firm in Raleigh gets through <span class="amber">March.</span><small>03 — THE BUSY SEASON</small></h2>
+  </div>
+</section>
+
+<!-- night fold -->
+<section class="night-fold" id="overnight" data-theme="dark" aria-label="The overnight shift">
+  <div class="container">
+    <div class="nf-grid">
+      <div>
+        <p class="nf-kicker">THE NIGHT SHIFT</p>
+        <h2>It keeps working while <span class="amber">you sleep.</span></h2>
+        <p class="nf-sub">Watched by people who don't. Every answer is graded overnight; every miss becomes tomorrow's lesson.</p>
+        <ul class="nf-steps" id="nfSteps">
+          <li>
+            <time>6:04 PM</time>
+            <span class="nf-text">You lock up. The box keeps working.</span>
+          </li>
+          <li>
+            <time>2:17 AM</time>
+            <span class="nf-text">Our graders read the day's answers, one by one.</span>
+          </li>
+          <li>
+            <time>8:00 AM</time>
+            <span class="nf-text">A short report is in your inbox: what slipped, what's fixed, what's next.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="nf-canvas" id="nfCanvas">
+        <img class="nf-fallback" id="nfFallback" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" alt="Earth at night from space, city lights tracing the continents" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- stats -->
+<section class="stats" id="numbers">
+  <div class="container stats-grid">
+    <div class="stat"><b><span class="count" data-to="1240" data-dec="0">0</span></b><span>SMALL BUSINESSES WITH A BOX</span></div>
+    <div class="stat"><b><span class="count" data-to="0" data-dec="0">0</span></b><span>FILES THAT LEFT A BUILDING</span></div>
+    <div class="stat"><b><span class="count" data-to="40" data-dec="0">0</span><i>ms</i></b><span>TYPICAL ANSWER</span></div>
+    <div class="stat"><b><span class="count" data-to="1" data-dec="0">0</span><i>day</i></b><span>FROM DOORSTEP TO FIRST ANSWER</span></div>
+  </div>
+</section>
+
+<!-- quote -->
+<section class="quote container">
+  <figure>
+    <blockquote data-reveal><span class="mark">“</span>I asked it where the 2019 invoices for the Hendersons went and it just knew. And nothing about the Hendersons ever left the shop.<span class="mark">”</span></blockquote>
+    <figcaption><b>Marisol Vega</b> — Owner, Vega &amp; Daughters Plumbing</figcaption>
+  </figure>
+</section>
+
+<!-- cta -->
+<section class="cta" id="demo">
+  <div class="container">
+    <h2 data-reveal>Let's put a box <span class="amber">under your desk.</span></h2>
+    <p data-reveal>Thirty days, nothing to sign. We bring the box, set it up in an afternoon, and you keep it if you like it.</p>
+    <a href="contact.html" class="btn btn-honey" data-reveal>Talk to Sam <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<!-- footer -->
+<footer id="company">
+  <div class="container foot-grid">
+    <div>
+      <a href="index.html" class="brand"><svg class="k-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 30V11h4V6h4v5h6V6h4v5h4v19z" fill="currentColor"/><path d="M13 30v-9h6v9" fill="var(--bg)"/></svg><span class="brand-name">Keep</span></a>
+      <p class="foot-blurb">Your own AI. In your building. On your side.</p>
+    </div>
+    <div class="foot-col">
+      <h4>HOW IT WORKS</h4>
+      <ul>
+        <li><a href="index.html#anatomy">What's in the box</a></li>
+        <li><a href="models.html">Models we tested</a></li>
+        <li><a href="solutions.html">Custom AI</a></li>
+        <li><a href="index.html#pilot">The 30-day pilot</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#careers">Jobs</a></li>
+        <li><a href="about.html#press">Press</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>SAY HELLO</h4>
+      <ul>
+        <li><a href="contact.html">Talk to Sam</a></li>
+        <li><a href="mailto:sam@keep.example">sam@keep.example</a></li>
+        <li><a href="about.html#press">Security pack</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-word" aria-hidden="true">KEEP</div>
+  <div class="container foot-legal">
+    <span>© 2026 KEEP — A FICTIONAL CONCEPT. NOT AFFILIATED WITH ANYONE.</span>
+    <span>YOUR BUILDING · YOUR FILES · YOUR AI</span>
+  </div>
+</footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var hasGSAP = typeof window.gsap !== "undefined" && typeof window.ScrollTrigger !== "undefined";
+  var motionOK = !reduce && hasGSAP;
+  if (motionOK) document.documentElement.classList.add("motion-ok");
+
+  /* nav + progress */
+  var nav = document.getElementById("nav"),
+      progress = document.getElementById("scrollProgress");
+  function onScroll(){
+    nav.classList.toggle("scrolled", window.scrollY > 24);
+    if (!window.__shPinned) { var shEl = document.querySelector(".sh"); if (shEl) nav.classList.toggle("nav-dark", window.scrollY > shEl.offsetHeight - 85); }
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (progress && max > 0) progress.style.width = (window.scrollY / max * 100) + "%";
+  }
+  window.addEventListener("scroll", onScroll, { passive:true });
+  onScroll();
+
+  /* mobile menu */
+  var toggle = document.getElementById("menuToggle"),
+      overlay = document.getElementById("menuOverlay"),
+      closeBtn = document.getElementById("menuClose");
+  function setMenu(open){
+    overlay.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+  toggle.addEventListener("click", function(){ setMenu(true); });
+  closeBtn.addEventListener("click", function(){ setMenu(false); });
+  overlay.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+
+  /* smooth scroll */
+  var lenis = null;
+  if (!reduce && typeof window.Lenis !== "undefined") {
+    lenis = new Lenis({ duration: 0.85, smoothWheel: true });
+    if (hasGSAP) {
+      lenis.on("scroll", ScrollTrigger.update);
+      gsap.ticker.add(function(t){ lenis.raf(t * 1000); });
+      gsap.ticker.lagSmoothing(0);
+    } else {
+      (function raf(t){ lenis.raf(t); requestAnimationFrame(raf); })(0);
+    }
+    document.documentElement.classList.add("lenis");
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener("click", function(e){
+        var id = a.getAttribute("href");
+        if (id.length < 2) return;
+        var el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        lenis.scrollTo(el, { offset: -60 });
+      });
+    });
+  }
+
+  /* reveals */
+  if (motionOK && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add("revealed"); io.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -12% 0px", threshold: 0.01 });
+    document.querySelectorAll("[data-reveal]").forEach(function(el){ io.observe(el); });
+  }
+
+  if (hasGSAP) {
+    gsap.registerPlugin(ScrollTrigger);
+    var mm = gsap.matchMedia();
+
+
+    /* hero footage: all clips stacked, ← → switch, choice remembered */
+    (function(){
+      var vids = Array.prototype.slice.call(document.querySelectorAll("#shFrame video.sh-video")), lbl = document.getElementById("shVidLbl"), nav = document.getElementById("shVnav");
+      if (vids.length < 2 || !nav) return;
+      var i = Math.max(0, vids.findIndex(function(v){ return v.classList.contains("on"); }));
+      try { var k = localStorage.getItem("keep-hero-vid"); var j = vids.findIndex(function(v){ return v.dataset.vid === k; }); if (j >= 0) i = j; } catch (e) {}
+      function show(n){
+        i = (n + vids.length) % vids.length;
+        vids.forEach(function(v, x){ var on = x === i; v.classList.toggle("on", on); if (on) { v.preload = "auto"; var p = v.play(); p && p.catch && p.catch(function(){}); } else { v.pause(); } });
+        lbl.textContent = (i + 1) + " / " + vids.length + " · " + vids[i].dataset.vid.toUpperCase();
+        try { localStorage.setItem("keep-hero-vid", vids[i].dataset.vid); } catch (e) {}
+      }
+      show(i);
+      var flashT; function flash(){ nav.classList.add("show"); clearTimeout(flashT); flashT = setTimeout(function(){ nav.classList.remove("show"); }, 1600); }
+      nav.querySelectorAll("button").forEach(function(b){ b.addEventListener("click", function(){ show(i + Number(b.dataset.dir)); flash(); }); });
+      document.addEventListener("keydown", function(e){
+        if (/INPUT|TEXTAREA|SELECT/.test(document.activeElement && document.activeElement.tagName)) return;
+        if (e.key === "ArrowRight") { show(i + 1); flash(); e.preventDefault(); } else if (e.key === "ArrowLeft") { show(i - 1); flash(); e.preventDefault(); }
+      });
+    })();
+    /* hero: the frame — created first (document order) */
+    var shProgressNav = 0.08;
+    mm.add("(min-width: 961px) and (prefers-reduced-motion: no-preference)", function(){
+      var stage = document.getElementById("shStage"), rig = document.getElementById("shRig");
+      var ghost = document.getElementById("shGhost");
+      window.__shPinned = true;
+      function fitTo(el, dockId, mode){
+        var dock = document.getElementById(dockId);
+        var rw = el.offsetWidth, rh = el.offsetHeight;
+        var rcx = el.offsetLeft + rw/2, rcy = el.offsetTop + rh/2;
+        // walk the dock up to the stage for its layout position
+        var dcx = 0, dcy = 0, n = dock;
+        while (n && n !== stage){
+          dcx += n.offsetLeft; dcy += n.offsetTop;
+          if (n !== dock && n.classList.contains("sc-board")) { dcx -= n.offsetWidth / 2; dcy -= n.offsetHeight / 2; } /* board is translate(-50%,-50%) */
+          n = n.offsetParent;
+        }
+        var dw = dock.offsetWidth, dh = dock.offsetHeight;
+        if (dock.classList.contains("centered")) { /* translate(-50%,-50%) docks: offsetLeft is already the center */ }
+        else { dcx += dw/2; dcy += dh/2; }
+        var s = mode === "tall" ? dh / rw : dw / rw;
+        var band = mode === "band" ? Math.max(0.12, Math.min(1, dh / (rh * s))) : 1;
+        return { dx: dcx - rcx, dy: dcy - rcy, s: s, band: band, clip: "inset(" + ((1 - band) / 2 * 100).toFixed(2) + "% 0% " + ((1 - band) / 2 * 100).toFixed(2) + "% 0% round 8px)" };
+      }
+      var q = function(sel){ return stage.querySelectorAll(sel); };
+      var tl = gsap.timeline({
+        defaults: { ease: "none" },
+        scrollTrigger: {
+          trigger: ".sh", start: "top top", end: "+=7600",
+          pin: true, scrub: 0.5, anticipatePin: 1, invalidateOnRefresh: true,
+          onUpdate: function(self){ nav.classList.toggle("nav-dark", self.progress > shProgressNav); }
+        }
+      });
+      /* the turn */
+      tl.to(".sh-h1", { autoAlpha: 0, y: -40, duration: 0.10, ease: "power2.in" }, 0);
+      tl.to("#shCue", { autoAlpha: 0, duration: 0.05 }, 0);
+      tl.to("#shBg", { autoAlpha: 0, duration: 0.14 }, 0.03);
+      tl.to(rig, { scale: 0.42, rotationY: -24, rotationX: 8, y: function(){ return -0.10 * window.innerHeight; }, duration: 0.30, ease: "power2.inOut" }, 0.04);
+      tl.to(".sh-scrim2", { opacity: 0.55, duration: 0.2 }, 0.08);
+      tl.fromTo(".sh-wire", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 0.12);
+      tl.fromTo(".sh-wire .w", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.16, stagger: 0.006 }, 0.13);
+      tl.fromTo(".sh-wire .t, .sh-wire text", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.06, stagger: 0.004 }, 0.22);
+      tl.fromTo(".sh-plane", { z: 0, x: 0, y: 0, autoAlpha: 0 }, { z: function(i){ return -(i + 1) * 90; }, x: function(i){ return (i + 1) * 60; }, y: function(i){ return -(i + 1) * 8; }, autoAlpha: 0.95, duration: 0.14, stagger: 0.02, ease: "power2.out" }, 0.20);
+      tl.fromTo("#shAct", { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.09, ease: "power2.out" }, 0.30);
+      /* scene */
+      (function(tl, rig, ghost, fitTo, q){
+
+        /* straight to the desk: no act-1 line, no plane stack — the frame goes from the wire straight onto the monitor */
+        tl.set("#elS", { autoAlpha: 1 }, 0.28);
+        tl.fromTo("#elS .el-wall", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.10, stagger: 0.01 }, 0.30);
+        tl.fromTo("#elS .el-floor, #elS .el-desk", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.10, stagger: 0.01 }, 0.34);
+        tl.fromTo("#elS .el-mon", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.08, stagger: 0.01 }, 0.40);
+        tl.to(rig, { rotationY: 0, rotationX: 0, x: function(){ return fitTo(rig, "dockB").dx; }, y: function(){ return fitTo(rig, "dockB").dy; }, scale: function(){ return fitTo(rig, "dockB").s; }, duration: 0.16, ease: "power2.inOut" }, 0.42);
+        tl.to([".sh-wire", "#shAct"], { autoAlpha: 0, duration: 0.06 }, 0.44);
+        tl.to(".sh-scrim2", { opacity: 0.85, duration: 0.05 }, 0.56);
+        tl.fromTo(".rx-ui", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 0.60);
+        tl.fromTo("#elS .el-panel", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.08, stagger: 0.02 }, 0.62);
+        tl.to({}, { duration: 0.04 });
+        /* act 2: the cabinet panel slides open; the box is behind it */
+        tl.to("#elS .el-panel", { x: 150, autoAlpha: 0, duration: 0.10, ease: "power2.inOut" }, 0.74);
+
+        tl.fromTo("#elS .el-tw", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.08, stagger: 0.01 }, 0.8);
+        tl.fromTo("#elS .el-tw-t", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.03 }, 0.88);
+        tl.to("#elS .el-led", { autoAlpha: 1, duration: 0.02 }, 0.89);
+        tl.fromTo("#elS .el-cable", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.07, stagger: 0.02 }, 0.9);
+        tl.fromTo("#obBoard .sc-step-head", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.03 }, 0.92);
+        tl.fromTo("#elS .ld1", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.05 }, 0.9400000000000001);
+        tl.fromTo("#st1", { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.05 }, 0.9600000000000001);
+        tl.fromTo("#elS .ld2", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.05 }, 1.02);
+        tl.fromTo("#st2", { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.05 }, 1.04);
+        tl.fromTo("#elS .ld3", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.05 }, 1.1);
+        tl.fromTo("#st3", { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.05 }, 1.12);
+
+        /* act 3: hinge — the drawing falls flat about its floor line, the plan stands up in its place */
+        tl.to(rig, { autoAlpha: 0, duration: 0.06 }, 1.22);
+        tl.to("#elS", { rotationX: -90, autoAlpha: 0, transformOrigin: "50% 67.14%", duration: 0.16, ease: "power2.in" }, 1.22);
+        tl.fromTo("#plS", { rotationX: 90, autoAlpha: 0, transformOrigin: "50% 67.14%" }, { rotationX: 0, autoAlpha: 1, duration: 0.16, ease: "power2.out" }, 1.32);
+
+        tl.to(["#obBoard .sc-step", "#obBoard .sc-step-head"], { autoAlpha: 0, duration: 0.04 }, 1.2);
+        tl.fromTo("#plS .pl-bld", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.08 }, 1.42);
+        tl.fromTo("#plS .pl-wall", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.06, stagger: 0.01 }, 1.47);
+        tl.fromTo("#plS .pl-ws", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.05, stagger: 0.004 }, 1.5);
+        tl.to("#plS .pl-node", { autoAlpha: 1, duration: 0.03 }, 1.56);
+        tl.fromTo("#plS .pl-link", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.06, stagger: 0.008 }, 1.5699999999999998);
+        tl.fromTo("#plS .pl-gate, #plS .pl-glink", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.05, stagger: 0.01 }, 1.64);
+        tl.fromTo("#plS .pl-rn", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.05, stagger: 0.004 }, 1.67);
+        tl.fromTo("#plS .pl-rlink", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.07, stagger: 0.02 }, 1.7);
+        tl.set("#plS .pl-rlink", { strokeDasharray: "0.03 0.02" }, 1.7799999999999998);
+        tl.set("#plS .pl-dash:not(.pl-band)", { strokeDasharray: "0.02 0.012" }, 1.54);
+        tl.set("#plS .pl-band", { strokeDasharray: "0.01 0.008" }, 1.8299999999999998);
+        tl.fromTo("#plS .pl-band", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.06 }, 1.76);
+        tl.fromTo("#plS .pl-fm", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.06, stagger: 0.003 }, 1.79);
+        tl.fromTo("#plS .pl-flink", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.06, stagger: 0.015 }, 1.8399999999999999);
+        tl.set("#plS .pl-flink", { strokeDasharray: "0.03 0.02" }, 1.92);
+        tl.fromTo("#plS .pl-t", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.03, stagger: 0.006 }, 1.8199999999999998);
+        tl.set("#plS .pl-pulse", { opacity: 1, attr: { class: "pl-pulse on" } }, 1.9);
+        tl.fromTo(".sc-act.a3", { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.07, ease: "power2.out" }, 1.92);
+        tl.to({}, { duration: 0.06 });
+
+      })(tl, rig, ghost, fitTo, q);
+      return function(){ window.__shPinned = false; tl.scrollTrigger && tl.scrollTrigger.kill(); tl.kill(); gsap.set([rig, ghost, ".sh-plane", ".sh-wire", "#shBg", ".sh-h1", "#shCue", ".sh-scrim2"], { clearProps: "all" }); };
+    });
+
+    /* anatomy pin — created second (document order) */
+    mm.add("(min-width: 961px) and (prefers-reduced-motion: no-preference)", function(){
+      var plates = gsap.utils.toArray(".plate");
+      var exploded = [250, 190, 140, 95, 50, 0];
+      var items = gsap.utils.toArray("#layerList li");
+      var thresholds = [0.10, 0.24, 0.38, 0.52, 0.66, 0.78];
+      function setProgress(p){
+        items.forEach(function(li, i){ li.classList.toggle("active", p > thresholds[i]); });
+        plates.forEach(function(pl, i){ pl.classList.toggle("lit", i >= 2 && p > thresholds[i]); });
+      }
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".anatomy", start: "top top", end: "+=2600",
+          pin: true, scrub: 0.35, anticipatePin: 1,
+          onUpdate: function(self){ setProgress(self.progress); }
+        }
+      });
+      plates.forEach(function(pl, i){
+        tl.fromTo(pl, { z: i * 16 }, { z: exploded[i], ease: "power2.inOut", duration: 0.72 }, i * 0.05);
+      });
+      tl.fromTo("#stack", { rotationX: 56, rotationZ: -45 }, { rotationX: 60, rotationZ: -37, ease: "none", duration: 1 }, 0);
+      tl.fromTo("#stackShadow", { opacity: 0.5, scale: 1 }, { opacity: 0.2, scale: 1.3, ease: "none", duration: 1 }, 0);
+      return function(){ tl.scrollTrigger && tl.scrollTrigger.kill(); tl.kill(); };
+    });
+
+
+
+    /* cinema: pinned full-bleed photo crossfades — created third (document order) */
+    mm.add("(min-width: 961px) and (prefers-reduced-motion: no-preference)", function(){
+      var section = document.querySelector(".cinema");
+      var slides = gsap.utils.toArray(".cine-slide");
+      var medias = gsap.utils.toArray(".cine-media");
+      var caps = gsap.utils.toArray(".cine-cap");
+      section.classList.add("pinned");
+      gsap.set(slides.slice(1), { autoAlpha: 0 });
+      gsap.set(caps, { autoAlpha: 0, y: 44 });
+      var tl = gsap.timeline({
+        defaults: { ease: "none" },
+        scrollTrigger: {
+          trigger: section, start: "top top", end: "+=3000",
+          pin: true, scrub: 0.4, anticipatePin: 1
+        }
+      });
+      tl.fromTo(medias[0], { scale: 1.14 }, { scale: 1, duration: 1 }, 0);
+      tl.to(caps[0], { autoAlpha: 1, y: 0, duration: 0.2, ease: "power2.out" }, 0.08);
+      tl.to(caps[0], { autoAlpha: 0, y: -30, duration: 0.18, ease: "power2.in" }, 0.72);
+      tl.to(slides[1], { autoAlpha: 1, duration: 0.24 }, 0.82);
+      tl.fromTo(medias[1], { scale: 1.14 }, { scale: 1, duration: 1 }, 1);
+      tl.to(caps[1], { autoAlpha: 1, y: 0, duration: 0.2, ease: "power2.out" }, 1.1);
+      tl.to(caps[1], { autoAlpha: 0, y: -30, duration: 0.18, ease: "power2.in" }, 1.72);
+      tl.to(slides[2], { autoAlpha: 1, duration: 0.24 }, 1.82);
+      tl.fromTo(medias[2], { scale: 1.14 }, { scale: 1, duration: 1 }, 2);
+      tl.to(caps[2], { autoAlpha: 1, y: 0, duration: 0.2, ease: "power2.out" }, 2.12);
+      return function(){
+        tl.scrollTrigger && tl.scrollTrigger.kill(); tl.kill();
+        section.classList.remove("pinned");
+        gsap.set(slides.concat(medias, caps), { clearProps: "all" });
+      };
+    });
+
+    /* night fold: 3D earth day → night — created fourth (document order) */
+    var nfProgress = 0;
+    var nfSetSun = null;
+    mm.add("(min-width: 961px) and (prefers-reduced-motion: no-preference)", function(){
+      var steps = gsap.utils.toArray("#nfSteps li");
+      function setSteps(p){
+        var idx = p < 0.30 ? 0 : p < 0.68 ? 1 : 2;
+        steps.forEach(function(li, i){ li.classList.toggle("active", i === idx); });
+      }
+      setSteps(0);
+      var st = ScrollTrigger.create({
+        trigger: ".night-fold", start: "top top", end: "+=2600",
+        pin: true, scrub: 0.35, anticipatePin: 1,
+        onUpdate: function(self){
+          nfProgress = self.progress;
+          setSteps(nfProgress);
+          if (nfSetSun) nfSetSun(nfProgress);
+        }
+      });
+      return function(){ st.kill(); };
+    });
+
+
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function(){ ScrollTrigger.refresh(); });
+    }
+  }
+
+  /* count-ups */
+  var counters = document.querySelectorAll(".count");
+  function runCount(el){
+    var to = parseFloat(el.dataset.to), dec = parseInt(el.dataset.dec || "0", 10);
+    if (reduce) { el.textContent = to.toFixed(dec); return; }
+    var start = null;
+    function step(ts){
+      if (!start) start = ts;
+      var p = Math.min(1, (ts - start) / 1500);
+      var e = 1 - Math.pow(1 - p, 4);
+      el.textContent = (to * e).toFixed(dec);
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ("IntersectionObserver" in window) {
+    var cio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { runCount(en.target); cio.unobserve(en.target); }
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(function(c){ cio.observe(c); });
+  } else {
+    counters.forEach(function(c){ c.textContent = c.dataset.to; });
+  }
+
+
+  /* models: pick one local + one frontier; both on the radar, both cards on the right */
+  (function(){
+    var poly = { local: document.getElementById("radarPoly"), frontier: document.getElementById("radarPoly2") };
+    var dots = { local: document.getElementById("radarDots"), frontier: document.getElementById("radarDots2") };
+    if (!poly.local || !poly.frontier) return;
+    var DATA = {"qwen":[0.84,0.82,0.9,1.0,0.76,0.72],"kimi":[0.8,0.7,0.86,1.0,0.82,0.88],"gemma":[0.72,0.92,0.96,1.0,0.6,0.58],"fable":[0.97,0.58,0.44,0.86,0.98,0.94],"astra":[0.95,0.66,0.48,0.86,0.94,0.9],"grok":[0.9,0.72,0.52,0.86,0.9,0.8]};
+    var KIND = {"qwen": "local", "kimi": "local", "gemma": "local", "fable": "frontier", "astra": "frontier", "grok": "frontier"};
+    var cur = { local: DATA.qwen.slice(), frontier: DATA.fable.slice() };
+    var cx = 260, cy = 250, r = 168;
+    function pt(i, v){ var a = -Math.PI/2 + i*Math.PI/3; return [cx + r*v*Math.cos(a), cy + r*v*Math.sin(a)]; }
+    function draw(kind){
+      var pts = cur[kind].map(function(v,i){ return pt(i,v); });
+      poly[kind].setAttribute("points", pts.map(function(p){ return p[0].toFixed(1)+","+p[1].toFixed(1); }).join(" "));
+      var cs = dots[kind].children;
+      for (var i = 0; i < cs.length; i++){ cs[i].setAttribute("cx", pts[i][0]); cs[i].setAttribute("cy", pts[i][1]); }
+    }
+    draw("local"); draw("frontier");
+    var busy = {};
+    function showPath(key){
+      var kind = KIND[key], next = document.querySelector('#paths .path[data-for="' + key + '"]'), curEl = document.querySelector('#paths .path[data-kind="' + kind + '"]:not([hidden])');
+      if (!next || next === curEl || busy[kind]) return;
+      if (!motionOK) { if (curEl) curEl.hidden = true; next.hidden = false; return; }
+      busy[kind] = true;
+      gsap.to(curEl, { autoAlpha: 0, y: -8, duration: 0.18, ease: "power2.in", onComplete: function(){
+        curEl.hidden = true; gsap.set(curEl, { clearProps: "all" }); next.hidden = false;
+        gsap.fromTo(next, { autoAlpha: 0, y: 12 }, { autoAlpha: 1, y: 0, duration: 0.32, ease: "power3.out", onComplete: function(){ busy[kind] = false; gsap.set(next, { clearProps: "all" }); } });
+        gsap.fromTo(next.querySelectorAll(".pipe li"), { autoAlpha: 0, x: -6 }, { autoAlpha: 1, x: 0, duration: 0.3, stagger: 0.05, ease: "power2.out", clearProps: "all" });
+      } });
+    }
+    document.querySelectorAll("#modelChips .chip").forEach(function(ch){
+      ch.addEventListener("click", function(){
+        var key = ch.dataset.model, kind = KIND[key];
+        ch.closest(".chip-row").querySelectorAll(".chip").forEach(function(c){ c.setAttribute("aria-pressed", c === ch ? "true" : "false"); });
+        showPath(key);
+        var target = DATA[key];
+        if (motionOK) { gsap.to(cur[kind], { endArray: target, duration: 0.7, ease: "power3.out", onUpdate: function(){ draw(kind); } }); }
+        else { cur[kind] = target.slice(); draw(kind); }
+      });
+    });
+    if (motionOK) {
+      gsap.from([poly.local, poly.frontier], { scale: 0.2, transformOrigin: "260px 250px", opacity: 0, duration: 1.1, ease: "power3.out", stagger: 0.15,
+        scrollTrigger: { trigger: ".models", start: "top 65%", once: true } });
+    }
+  })();
+
+
+  /* 3D earth: shared by the night fold and the horizon hero */
+  function mountEarth(wrapId, fbId, opts){
+    var wrap = document.getElementById(wrapId);
+    if (!wrap || typeof THREE === "undefined") return null;
+    var renderer;
+    try { renderer = new THREE.WebGLRenderer({ antialias:true, alpha:true }); }
+    catch(e){ return; }
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    wrap.appendChild(renderer.domElement);
+    var fb = document.getElementById(fbId);
+    if (fb) fb.style.display = "none";
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(38, 1, 0.1, 10);
+    camera.position.z = 3.1;
+
+    var TEX = "https://cdn.jsdelivr.net/gh/mrdoob/three.js@r149/examples/textures/planets/";
+    var loader = new THREE.TextureLoader();
+    loader.crossOrigin = "anonymous";
+    var dayT = loader.load(TEX + "earth_atmos_2048.jpg");
+    var nightT = loader.load(TEX + "earth_lights_2048.png");
+
+    var uniforms = {
+      dayMap:   { value: dayT },
+      nightMap: { value: nightT },
+      sunDir:   { value: new THREE.Vector3(0, 0.12, 1) }
+    };
+    var mat = new THREE.ShaderMaterial({
+      uniforms: uniforms,
+      vertexShader: [
+        "varying vec2 vUv;",
+        "varying vec3 vNormal;",
+        "void main(){",
+        "  vUv = uv;",
+        "  vNormal = normalize(normalMatrix * normal);",
+        "  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);",
+        "}"
+      ].join("\n"),
+      fragmentShader: [
+        "uniform sampler2D dayMap;",
+        "uniform sampler2D nightMap;",
+        "uniform vec3 sunDir;",
+        "varying vec2 vUv;",
+        "varying vec3 vNormal;",
+        "void main(){",
+        "  vec3 day = texture2D(dayMap, vUv).rgb;",
+        "  vec3 night = texture2D(nightMap, vUv).rgb;",
+        "  vec3 s = normalize(sunDir);",
+        "  float cosA = dot(normalize(vNormal), s);",
+        "  float dayness = smoothstep(-0.18, 0.28, cosA);",
+        "  vec3 dayLit = day * (0.18 + 1.05 * max(cosA, 0.0));",
+        "  vec3 nightLit = night * vec3(1.15, 0.95, 0.72) * 1.9 + day * 0.045;",
+        "  vec3 col = mix(nightLit, dayLit, dayness);",
+        "  float rim = pow(1.0 - abs(vNormal.z), 3.0);",
+        "  col += vec3(0.35, 0.55, 0.95) * rim * 0.35 * dayness;",
+        "  gl_FragColor = vec4(col, 1.0);",
+        "}"
+      ].join("\n")
+    });
+    var earth = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 64), mat);
+    earth.rotation.y = -1.1;
+    scene.add(earth);
+
+    function applySun(p){
+      var a = p * Math.PI * 0.94;
+      uniforms.sunDir.value.set(Math.sin(a), 0.12, Math.cos(a));
+    }
+    if (opts.onReady) opts.onReady(applySun);
+
+    function resize(){
+      var w = wrap.clientWidth, h = wrap.clientHeight;
+      if (!w || !h) return;
+      renderer.setSize(w, h);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    }
+    window.addEventListener("resize", resize); resize();
+
+    if (reduce) {
+      /* still frame: dusk terminator with city lights showing */
+      applySun(opts.stillSun);
+      resize();
+      renderer.render(scene, camera);
+      return applySun;
+    }
+    var clock = new THREE.Clock();
+    var mobileStatic = window.matchMedia("(max-width: 960px)").matches;
+    (function tick(){
+      var dt = clock.getDelta();
+      earth.rotation.y += dt * opts.spin;
+      applySun(opts.progress && !mobileStatic ? opts.progress() : opts.stillSun);
+      renderer.render(scene, camera);
+      requestAnimationFrame(tick);
+    })();
+    return applySun;
+  }
+  mountEarth("nfCanvas", "nfFallback", { stillSun: 0.62, spin: 0.045, progress: function(){ return nfProgress; }, onReady: function(f){ nfSetSun = f; } });
+  mountEarth("heroGlobe", "heroGlobeFallback", { stillSun: 0.56, spin: 0.07 });
+})();
+</script>
+<!-- Stock footage: Pexels (free licence). Fonts: Manrope + DM Mono via Google Fonts; Aeonik (licensed) is first in the stack if installed. -->
+<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask Keep</button>
+<div class="cw" id="cw" role="dialog" aria-label="Chat with Keep">
+  <div class="cw-head"><div><b><i></i>Keep</b><small>SCRIPTED · SAM PICKS UP ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
+  <div class="cw-log" id="cwLog"></div>
+  <div class="cw-quick"><button type="button">Local or API?</button><button type="button">Pricing</button><button type="button">Security</button><button type="button">Start a pilot</button></div>
+  <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>
+</div>
+<script src="assets/models.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

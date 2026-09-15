@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Crucible</title>
+<meta name="description" content="Crucible puts one AI model in your building and guards the frontier ones. Local first, API when you need it.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 26 26%27%3E%3Cpath d=%27M4 5h18l-6.2 9.5v5.3l-3.6 2.7v-8L4 5Z%27 fill=%27none%27 stroke=%27%2374a6ff%27 stroke-width=%272%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+
+<script>
+(function(){
+  var P = {
+    scale:  { name: "Scale green",     ref: "scale.com black/white + one green",
+              accent: "oklch(78% 0.15 148)", "accent-ink": "oklch(52% 0.15 150)" },
+    mono:   { name: "Mono",            ref: "Vercel pure monochrome",
+              accent: "oklch(1 0 0)", "accent-ink": "oklch(0 0 0)" },
+    linear: { name: "Indigo black",    ref: "Linear blue-black + electric blue",
+              accent: "oklch(0.74 0.15 258)", "accent-ink": "oklch(0.50 0.19 262)",
+              bg: "oklch(0.15 0.012 262)", "bg-2": "oklch(0.20 0.012 262)", panel: "oklch(0.23 0.012 262)", "panel-2": "oklch(0.27 0.012 262)",
+              ink: "oklch(0.97 0.004 262)", muted: "oklch(0.68 0.01 262)", "muted-2": "oklch(0.84 0.006 262)", "page-light": "oklch(0.985 0.003 262)" },
+    ember:  { name: "Ember",           ref: "molten red-orange (not amber)",
+              accent: "oklch(0.70 0.20 32)", "accent-ink": "oklch(0.55 0.21 30)" },
+    ice:    { name: "Ice",             ref: "Runway / ElevenLabs cyan",
+              accent: "oklch(0.85 0.11 205)", "accent-ink": "oklch(0.55 0.12 220)" },
+    violet: { name: "Violet",          ref: "Stripe violet on black",
+              accent: "oklch(0.76 0.15 305)", "accent-ink": "oklch(0.50 0.22 295)" },
+    acid:   { name: "Acid",            ref: "Liquid Death chartreuse",
+              accent: "oklch(0.92 0.21 122)", "accent-ink": "oklch(0.60 0.20 125)" }
+  };
+  var DEFAULTS = { accent: "oklch(78% 0.15 148)", "accent-ink": "oklch(52% 0.15 150)", bg: "oklch(0 0 0)", "bg-2": "oklch(0.10 0 0)", panel: "oklch(0.14 0 0)", "panel-2": "oklch(0.19 0 0)",
+                   ink: "oklch(1 0 0)", muted: "oklch(0.66 0 0)", "muted-2": "oklch(0.83 0 0)", "page-light": "oklch(1 0 0)", "page-light-ink": "oklch(0 0 0)" };
+  var root = document.documentElement, q = new URLSearchParams(location.search), key = q.get("palette");
+  if (key === "off") return;
+  try { key = key || localStorage.getItem("crucible-palette"); } catch (e) {}
+  if (!P[key]) key = "linear";
+  function apply(k){
+    var pal = P[k]; Object.keys(DEFAULTS).forEach(function(t){ root.style.setProperty("--" + t, pal[t] || DEFAULTS[t]); });
+    root.dataset.palette = k; try { localStorage.setItem("crucible-palette", k); } catch (e) {}
+    var b = document.querySelectorAll(".pal button[data-k]"); for (var i = 0; i < b.length; i++) b[i].setAttribute("aria-pressed", String(b[i].dataset.k === k));
+    var lbl = document.querySelector(".pal span"); if (lbl) lbl.textContent = pal.name.toUpperCase();
+  }
+  apply(key);
+  document.addEventListener("DOMContentLoaded", function(){
+    var ui = document.createElement("div"); ui.className = "pal"; ui.setAttribute("role", "group"); ui.setAttribute("aria-label", "Palette");
+    Object.keys(P).forEach(function(k){ var b = document.createElement("button"); b.type = "button"; b.dataset.k = k; b.title = P[k].name + " — " + P[k].ref; b.setAttribute("aria-label", P[k].name);
+      b.style.setProperty("--sw", P[k].accent); if (P[k].bg) b.style.boxShadow = "inset 0 0 0 1px oklch(1 0 0 / .25), 0 0 0 3px " + P[k].bg; b.addEventListener("click", function(){ apply(k); }); ui.appendChild(b); });
+    var lbl = document.createElement("span"); ui.appendChild(lbl);
+    var x = document.createElement("button"); x.type = "button"; x.className = "pal-x"; x.textContent = "✕"; x.setAttribute("aria-label", "Hide palette picker"); x.addEventListener("click", function(){ ui.remove(); }); ui.appendChild(x);
+    document.body.appendChild(ui); apply(root.dataset.palette);
+  });
+})();
+</script>
+</head>
+<body class="sub">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand" aria-label="Crucible home">
+      <svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <path d="M4 5h18l-6.2 9.5v5.3l-3.6 2.7v-8L4 5Z" fill="none" stroke="oklch(0 0 0)" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M9.5 8.5h7" stroke="oklch(0 0 0)" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">crucible</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#anatomy">Inside</a><a href="models.html">Models</a><a href="solutions.html">Custom Solutions</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html" aria-current="page">Contact</a></nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-ghost nav-cta">Log in</a>
+      <a href="contact.html" class="btn btn-fill nav-cta">Book a demo</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"><i id="scrollProgress"></i></div>
+</header>
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose">CLOSE ✕</button>
+  <a href="index.html#anatomy">Inside</a><a href="models.html">Models</a><a href="solutions.html">Custom Solutions</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+  <a href="contact.html">Book a demo</a>
+</div>
+<main id="main">
+<section class="page-head"><div class="container">
+  <p class="kicker">CONTACT</p>
+  <h1>Tell us what you'd <span class="amber">feed it.</span></h1>
+  <p class="sec-sub">A few lines about your team and the work. We reply within one business day with a scorecard plan and a quote.</p>
+</div></section>
+<section class="page-body"><div class="container contact-grid">
+  <div>
+    <form class="form" id="inq" novalidate>
+      <div class="field"><label for="f-name">NAME</label><input id="f-name" name="name" type="text" autocomplete="name" required><span class="err">Please add your name.</span></div>
+      <div class="field"><label for="f-email">WORK EMAIL</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err">That email does not look right.</span></div>
+      <div class="field"><label for="f-co">COMPANY</label><input id="f-co" name="company" type="text" autocomplete="organization"></div>
+      <div class="field"><label for="f-size">TEAM SIZE</label><select id="f-size" name="size"><option>1–10</option><option selected>11–50</option><option>51–200</option><option>201–1000</option><option>1000+</option></select></div>
+      <fieldset class="field full"><legend>WHAT YOU NEED</legend><div class="opts">
+        <label class="opt"><input type="radio" name="need" value="local" checked><span>A local box in the building</span></label>
+        <label class="opt"><input type="radio" name="need" value="guarded"><span>Guarded access to frontier models</span></label>
+        <label class="opt"><input type="radio" name="need" value="both"><span>Both</span></label>
+        <label class="opt"><input type="radio" name="need" value="tune"><span>Fine-tuning for one task</span></label>
+        <label class="opt"><input type="radio" name="need" value="unsure"><span>Not sure yet</span></label>
+      </div></fieldset>
+      <fieldset class="field full"><legend>MODELS YOU WANT ON THE SCORECARD</legend><div class="opts" id="modelOpts"></div></fieldset>
+      <div class="field full"><label for="f-msg">THE WORK</label><textarea id="f-msg" name="message" placeholder="What would the model be doing? Documents, volumes, who asks, what a good answer looks like." required></textarea><span class="err">A sentence or two helps us prepare.</span></div>
+      <div class="form-foot"><button class="btn btn-fill" type="submit">Send inquiry <span class="arr">→</span></button><p>No mailing list. One reply, from a person.</p></div>
+    </form>
+    <div class="form-ok" id="inqOk"><h2>Thanks — it's in.</h2><p id="inqOkP">We'll reply within one business day.</p></div>
+  </div>
+  <aside class="side">
+    <div><h3>Prefer email?</h3><p><a href="mailto:foundry@crucible.example" style="color:var(--ink);">foundry@crucible.example</a></p></div>
+    <div><h3>What happens next</h3><p>A 30-minute call, then we run the scorecard on a sample of your real tasks. You see the numbers before you decide anything.</p></div>
+    <div><h3>Security questionnaire?</h3><p>Send it along. Our guard, the local box and the overnight grading are all documented for your security team.</p></div>
+  </aside>
+</div></section>
+</main>
+<footer id="company">
+  <div class="container foot-grid">
+    <div>
+      <span class="brand-name">CRUCIBLE</span>
+      <p class="foot-blurb">The data foundry for frontier AI. Refined, forged, assayed — in that order, every time.</p>
+    </div>
+    <div class="foot-col">
+      <h4>PLATFORM</h4>
+      <ul>
+        <li><a href="index.html#anatomy">Inside the machine</a></li>
+        <li><a href="index.html#top">Where it lives</a></li>
+        <li><a href="models.html">Models</a></li><li><a href="solutions.html">Custom Solutions</a></li>
+        <li><a href="index.html#numbers">Numbers</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="about.html#careers">Careers</a></li>
+        <li><a href="#company">Research</a></li>
+        <li><a href="about.html#press">Press</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>CONTACT</h4>
+      <ul>
+        <li><a href="contact.html">Book a demo</a></li>
+        <li><a href="#demo">foundry@crucible.example</a></li>
+        <li><a href="about.html#press">Security</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-word" aria-hidden="true">CRUCIBLE</div>
+  <div class="container foot-legal">
+    <span>© 2026 CRUCIBLE INDUSTRIES — A FICTIONAL CONCEPT. NOT AFFILIATED WITH SCALE AI.</span>
+    <span>LOCAL OR CLOUD · YOUR CALL</span>
+  </div>
+</footer>
+<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask Crucible</button>
+<div class="cw" id="cw" role="dialog" aria-label="Chat with Crucible">
+  <div class="cw-head"><div><b><i></i>Crucible</b><small>SCRIPTED · A PERSON REPLIES ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
+  <div class="cw-log" id="cwLog"></div>
+  <div class="cw-quick"><button type="button">Local or API?</button><button type="button">Pricing</button><button type="button">Security</button><button type="button">Book a demo</button></div>
+  <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="assets/models.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var INQUIRY_ENDPOINT = ""; /* POST JSON here (Formspree, your CRM, a Worker). Empty = local confirmation + mailto fallback. */
+  var Q = new URLSearchParams(location.search), M = window.CRUCIBLE_MODELS, pre = Q.get("model");
+  var needPre = document.querySelector('input[name="need"][value="' + (Q.get("need") || "") + '"]'); if (needPre) needPre.checked = true;
+  document.getElementById("modelOpts").innerHTML = M.slice(0, 8).map(function(m){ return '<label class="opt"><input type="checkbox" name="models" value="' + m.id + '"' + (m.id === pre ? " checked" : "") + '><span>' + m.name + '</span></label>'; }).join("") + '<label class="opt"><input type="checkbox" name="models" value="advise"><span>You choose</span></label>';
+  var f = document.getElementById("inq");
+  f.addEventListener("submit", function(e){
+    e.preventDefault(); var ok = true;
+    ["f-name", "f-email", "f-msg"].forEach(function(id){ var el = document.getElementById(id), fld = el.closest(".field"); var v = el.value.trim(); var good = v && (id !== "f-email" || /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)); fld.classList.toggle("invalid", !good); if (!good) ok = false; });
+    if (!ok) { f.querySelector(".invalid input, .invalid textarea").focus(); return; }
+    var data = {}; new FormData(f).forEach(function(v, k){ if (data[k]) data[k] = [].concat(data[k], v); else data[k] = v; });
+    function done(){ f.hidden = true; document.getElementById("inqOk").classList.add("on"); document.getElementById("inqOk").scrollIntoView({ behavior: "smooth", block: "center" }); }
+    if (INQUIRY_ENDPOINT) { fetch(INQUIRY_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) }).then(done).catch(function(){ done(); }); }
+    else { var body = encodeURIComponent(Object.keys(data).map(function(k){ return k + ": " + data[k]; }).join("\n")); document.getElementById("inqOkP").innerHTML = "We'll reply within one business day. Nothing was sent from this demo build; <a href='mailto:foundry@crucible.example?subject=Crucible%20inquiry&body=" + body + "' style='color:var(--ink); text-decoration:underline;'>send it by email</a> instead."; done(); }
+  });
+})();
+</script>
+</body>
+</html>

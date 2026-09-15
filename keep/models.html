@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Models — Keep</title>
+<meta name="description" content="Keep puts a private AI box in your business. Your files stay in the building; the big cloud models only see what our guard lets out.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/keep.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cpath d=%27M5 30V11h4V6h4v5h6V6h4v5h4v19z%27 fill=%27%23246a8e%27/%3E%3Cpath d=%27M13 30v-9h6v9%27 fill=%27%23fff%27/%3E%3C/svg%3E">
+
+</head>
+<body class="sub p-models">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><svg class="k-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 30V11h4V6h4v5h6V6h4v5h4v19z" fill="currentColor"/><path d="M13 30v-9h6v9" fill="var(--bg)"/></svg><span class="brand-name">Keep</span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#anatomy">How it works</a><a href="models.html" aria-current="page">Models</a><a href="solutions.html">Custom AI</a><a href="index.html#pilot">Pilot</a><a href="about.html">About</a><a href="faq.html">FAQ</a></nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-coral nav-cta">Talk to Sam <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"><i id="scrollProgress"></i></div>
+</header>
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose">CLOSE ✕</button>
+  <a href="index.html#anatomy">How it works</a><a href="models.html">Models</a><a href="solutions.html">Custom AI</a><a href="index.html#pilot">Pilot</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
+  <a href="contact.html">Talk to Sam</a>
+</div>
+<main id="main">
+<section class="page-head"><div class="container">
+  <p class="kicker">MODELS</p>
+  <h1>Every model we've tested, <span class="amber">on real work.</span></h1>
+  <p class="sec-sub">Open models that can live in your office, and the big cloud ones behind our guard. Scores come from work like yours, not from benchmarks. Pick a local one and a cloud one on the home page to compare.</p>
+</div></section>
+<section class="page-body"><div class="container">
+  <div class="filters" role="group" aria-label="Filter models">
+    <span class="chip-lbl">SHOW</span>
+    <button class="chip" type="button" data-kind="all" aria-pressed="true">All</button>
+    <button class="chip" type="button" data-kind="local" aria-pressed="false">Local</button>
+    <button class="chip" type="button" data-kind="frontier" aria-pressed="false">Cloud</button>
+    <input class="search" id="q" type="search" placeholder="Search models or vendors" aria-label="Search models">
+  </div>
+  <div class="tbl-wrap"><table class="tbl" id="modelsTable">
+    <thead><tr><th>Model</th><th class="hide-m">Vendor</th><th class="hide-s">Runs</th><th>Score</th><th class="hide-m">Latency</th><th class="hide-m">Context</th><th class="hide-m">Cost</th><th></th></tr></thead>
+    <tbody></tbody>
+  </table></div>
+</div></section>
+</main>
+<footer id="company">
+  <div class="container foot-grid">
+    <div>
+      <a href="index.html" class="brand"><svg class="k-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 30V11h4V6h4v5h6V6h4v5h4v19z" fill="currentColor"/><path d="M13 30v-9h6v9" fill="var(--bg)"/></svg><span class="brand-name">Keep</span></a>
+      <p class="foot-blurb">Your own AI. In your building. On your side.</p>
+    </div>
+    <div class="foot-col">
+      <h4>HOW IT WORKS</h4>
+      <ul>
+        <li><a href="index.html#anatomy">What's in the box</a></li>
+        <li><a href="models.html">Models we tested</a></li>
+        <li><a href="solutions.html">Custom AI</a></li>
+        <li><a href="index.html#pilot">The 30-day pilot</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#careers">Jobs</a></li>
+        <li><a href="about.html#press">Press</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>SAY HELLO</h4>
+      <ul>
+        <li><a href="contact.html">Talk to Sam</a></li>
+        <li><a href="mailto:sam@keep.example">sam@keep.example</a></li>
+        <li><a href="about.html#press">Security pack</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-word" aria-hidden="true">KEEP</div>
+  <div class="container foot-legal">
+    <span>© 2026 KEEP — A FICTIONAL CONCEPT. NOT AFFILIATED WITH ANYONE.</span>
+    <span>YOUR BUILDING · YOUR FILES · YOUR AI</span>
+  </div>
+</footer>
+<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask Keep</button>
+<div class="cw" id="cw" role="dialog" aria-label="Chat with Keep">
+  <div class="cw-head"><div><b><i></i>Keep</b><small>SCRIPTED · SAM PICKS UP ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
+  <div class="cw-log" id="cwLog"></div>
+  <div class="cw-quick"><button type="button">Local or API?</button><button type="button">Pricing</button><button type="button">Security</button><button type="button">Start a pilot</button></div>
+  <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="assets/models.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var M = window.CRUCIBLE_MODELS, tb = document.querySelector("#modelsTable tbody"), q = document.getElementById("q"), kind = "all";
+  var MARKS = {"claude": "<i class=\"mk\" aria-hidden=\"true\"><svg viewBox=\"0 0 32 32\"><g stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" fill=\"none\"><path d=\"M16 4v24M4 16h24M7.5 7.5l17 17M24.5 7.5l-17 17M16 4l-3 4M16 4l3 4M16 28l-3-4M16 28l3-4\"/></g></svg></i>", "openai": "<i class=\"mk\" aria-hidden=\"true\"><svg viewBox=\"0 0 32 32\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\"><rect x=\"12.8\" y=\"3\" width=\"6.4\" height=\"15\" rx=\"3.2\" transform=\"rotate(0 16 16)\"/><rect x=\"12.8\" y=\"3\" width=\"6.4\" height=\"15\" rx=\"3.2\" transform=\"rotate(60 16 16)\"/><rect x=\"12.8\" y=\"3\" width=\"6.4\" height=\"15\" rx=\"3.2\" transform=\"rotate(120 16 16)\"/><rect x=\"12.8\" y=\"3\" width=\"6.4\" height=\"15\" rx=\"3.2\" transform=\"rotate(180 16 16)\"/><rect x=\"12.8\" y=\"3\" width=\"6.4\" height=\"15\" rx=\"3.2\" transform=\"rotate(240 16 16)\"/><rect x=\"12.8\" y=\"3\" width=\"6.4\" height=\"15\" rx=\"3.2\" transform=\"rotate(300 16 16)\"/></g></svg></i>", "x": "<i class=\"mk\" aria-hidden=\"true\"><svg viewBox=\"0 0 32 32\"><g stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" fill=\"none\"><path d=\"M5 5l22 22M27 5l-9.5 9.5M5 27l9.5-9.5\"/></g></svg></i>", "": ""};
+  function row(m){
+    return '<tr><td><a class="name" href="model.html?id=' + m.id + '">' + (MARKS[m.mark] || "") + m.name + (m.tag ? ' <span class="tag">' + m.tag + '</span>' : "") + '</a></td>' +
+      '<td class="vendor hide-m">' + m.vendor + '</td><td class="hide-s"><span class="tag kind">' + (m.kind === "local" ? "YOUR BUILDING" : "BEHIND OUR GUARD") + '</span></td>' +
+      '<td class="score"><span class="bar"><i style="--w:' + m.score + '%"></i></span>' + m.score + '</td><td class="hide-m">' + m.latency + '</td><td class="hide-m">' + m.ctx + '</td><td class="hide-m vendor">' + m.cost + '</td>' +
+      '<td><a class="more" href="model.html?id=' + m.id + '">Report →</a></td></tr>';
+  }
+  function draw(){
+    var s = (q.value || "").toLowerCase();
+    var rows = M.filter(function(m){ return (kind === "all" || m.kind === kind) && (!s || (m.name + " " + m.vendor + " " + m.tag).toLowerCase().indexOf(s) >= 0); }).sort(function(a, b){ return b.score - a.score; });
+    tb.innerHTML = rows.map(row).join("") || '<tr><td colspan="8" class="vendor">No models match.</td></tr>';
+  }
+  document.querySelectorAll(".filters .chip").forEach(function(b){ b.addEventListener("click", function(){ kind = b.dataset.kind; document.querySelectorAll(".filters .chip").forEach(function(c){ c.setAttribute("aria-pressed", String(c === b)); }); draw(); }); });
+  q.addEventListener("input", draw); draw();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — Crucible</title>
+<meta name="description" content="Crucible puts one AI model in your building and guards the frontier ones. Local first, API when you need it.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 26 26%27%3E%3Cpath d=%27M4 5h18l-6.2 9.5v5.3l-3.6 2.7v-8L4 5Z%27 fill=%27none%27 stroke=%27%2374a6ff%27 stroke-width=%272%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+
+<script>
+(function(){
+  var P = {
+    scale:  { name: "Scale green",     ref: "scale.com black/white + one green",
+              accent: "oklch(78% 0.15 148)", "accent-ink": "oklch(52% 0.15 150)" },
+    mono:   { name: "Mono",            ref: "Vercel pure monochrome",
+              accent: "oklch(1 0 0)", "accent-ink": "oklch(0 0 0)" },
+    linear: { name: "Indigo black",    ref: "Linear blue-black + electric blue",
+              accent: "oklch(0.74 0.15 258)", "accent-ink": "oklch(0.50 0.19 262)",
+              bg: "oklch(0.15 0.012 262)", "bg-2": "oklch(0.20 0.012 262)", panel: "oklch(0.23 0.012 262)", "panel-2": "oklch(0.27 0.012 262)",
+              ink: "oklch(0.97 0.004 262)", muted: "oklch(0.68 0.01 262)", "muted-2": "oklch(0.84 0.006 262)", "page-light": "oklch(0.985 0.003 262)" },
+    ember:  { name: "Ember",           ref: "molten red-orange (not amber)",
+              accent: "oklch(0.70 0.20 32)", "accent-ink": "oklch(0.55 0.21 30)" },
+    ice:    { name: "Ice",             ref: "Runway / ElevenLabs cyan",
+              accent: "oklch(0.85 0.11 205)", "accent-ink": "oklch(0.55 0.12 220)" },
+    violet: { name: "Violet",          ref: "Stripe violet on black",
+              accent: "oklch(0.76 0.15 305)", "accent-ink": "oklch(0.50 0.22 295)" },
+    acid:   { name: "Acid",            ref: "Liquid Death chartreuse",
+              accent: "oklch(0.92 0.21 122)", "accent-ink": "oklch(0.60 0.20 125)" }
+  };
+  var DEFAULTS = { accent: "oklch(78% 0.15 148)", "accent-ink": "oklch(52% 0.15 150)", bg: "oklch(0 0 0)", "bg-2": "oklch(0.10 0 0)", panel: "oklch(0.14 0 0)", "panel-2": "oklch(0.19 0 0)",
+                   ink: "oklch(1 0 0)", muted: "oklch(0.66 0 0)", "muted-2": "oklch(0.83 0 0)", "page-light": "oklch(1 0 0)", "page-light-ink": "oklch(0 0 0)" };
+  var root = document.documentElement, q = new URLSearchParams(location.search), key = q.get("palette");
+  if (key === "off") return;
+  try { key = key || localStorage.getItem("crucible-palette"); } catch (e) {}
+  if (!P[key]) key = "linear";
+  function apply(k){
+    var pal = P[k]; Object.keys(DEFAULTS).forEach(function(t){ root.style.setProperty("--" + t, pal[t] || DEFAULTS[t]); });
+    root.dataset.palette = k; try { localStorage.setItem("crucible-palette", k); } catch (e) {}
+    var b = document.querySelectorAll(".pal button[data-k]"); for (var i = 0; i < b.length; i++) b[i].setAttribute("aria-pressed", String(b[i].dataset.k === k));
+    var lbl = document.querySelector(".pal span"); if (lbl) lbl.textContent = pal.name.toUpperCase();
+  }
+  apply(key);
+  document.addEventListener("DOMContentLoaded", function(){
+    var ui = document.createElement("div"); ui.className = "pal"; ui.setAttribute("role", "group"); ui.setAttribute("aria-label", "Palette");
+    Object.keys(P).forEach(function(k){ var b = document.createElement("button"); b.type = "button"; b.dataset.k = k; b.title = P[k].name + " — " + P[k].ref; b.setAttribute("aria-label", P[k].name);
+      b.style.setProperty("--sw", P[k].accent); if (P[k].bg) b.style.boxShadow = "inset 0 0 0 1px oklch(1 0 0 / .25), 0 0 0 3px " + P[k].bg; b.addEventListener("click", function(){ apply(k); }); ui.appendChild(b); });
+    var lbl = document.createElement("span"); ui.appendChild(lbl);
+    var x = document.createElement("button"); x.type = "button"; x.className = "pal-x"; x.textContent = "✕"; x.setAttribute("aria-label", "Hide palette picker"); x.addEventListener("click", function(){ ui.remove(); }); ui.appendChild(x);
+    document.body.appendChild(ui); apply(root.dataset.palette);
+  });
+})();
+</script>
+</head>
+<body class="sub">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand" aria-label="Crucible home">
+      <svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <path d="M4 5h18l-6.2 9.5v5.3l-3.6 2.7v-8L4 5Z" fill="none" stroke="oklch(0 0 0)" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M9.5 8.5h7" stroke="oklch(0 0 0)" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">crucible</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#anatomy">Inside</a><a href="models.html">Models</a><a href="solutions.html">Custom Solutions</a><a href="about.html">About</a><a href="faq.html" aria-current="page">FAQ</a><a href="contact.html">Contact</a></nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-ghost nav-cta">Log in</a>
+      <a href="contact.html" class="btn btn-fill nav-cta">Book a demo</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"><i id="scrollProgress"></i></div>
+</header>
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose">CLOSE ✕</button>
+  <a href="index.html#anatomy">Inside</a><a href="models.html">Models</a><a href="solutions.html">Custom Solutions</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+  <a href="contact.html">Book a demo</a>
+</div>
+<main id="main">
+<section class="page-head"><div class="container">
+  <p class="kicker">FAQ</p>
+  <h1>Questions we get <span class="amber">on the first call.</span></h1>
+  <p class="sec-sub">If yours is not here, the chat in the corner knows the same answers and the <a href="contact.html" style="color:var(--ink); text-decoration:underline;">contact page</a> reaches a person.</p>
+</div></section>
+<section class="page-body"><div class="container"><div class="faq-group"><h2>Local or API</h2><details class="faq"><summary>What does "local" actually mean?</summary><div class="a"><p>An open model (Qwen 3.8 is our current pick) running on a workstation we install in your office, wired to your network and nothing else. Your documents are indexed on that box. Questions and answers never leave the building, and there is no per-token bill.</p></div></details><details class="faq"><summary>When would we use a frontier model instead?</summary><div class="a"><p>When the task needs the very top of the reasoning scale: long legal analysis, hard research, unusual code. We route those requests through our guard to Fable 5.1, Astra, Grok 4.6 or whichever model won on your tasks. Chat and everyday work stay local.</p></div></details><details class="faq"><summary>Can we mix both?</summary><div class="a"><p>That is the normal setup. The local model answers by default; the guarded path is a per-task switch, not a different product.</p></div></details><details class="faq"><summary>Who picks the model?</summary><div class="a"><p>We do, from evidence. Before your data touches anything we run the whole field against your real tasks and show you the scorecard. You can change the pick any time; the box does not care which model is loaded.</p></div></details></div><div class="faq-group"><h2>Security</h2><details class="faq"><summary>What is "our guard"?</summary><div class="a"><p>Two steps on every API call. First a screen for prompt injection, so a document your staff paste cannot instruct the model to leak something. Then a small local model hashes names, account numbers, addresses and anything that looks personal before the request leaves the building. The frontier model sees tokens like <code>PERSON_7</code>; the answer comes back and the same local model puts the real details back on your screen.</p></div></details><details class="faq"><summary>What does the provider see?</summary><div class="a"><p>An anonymised request and nothing about who asked. We keep no copy of the plaintext on the API side; the mapping between hash and detail never leaves your box.</p></div></details><details class="faq"><summary>Can we audit it?</summary><div class="a"><p>Yes. Every guarded request writes a local log line: what was hashed, what was screened, which model answered, how long it took. Your security team can read it; we cannot.</p></div></details><details class="faq"><summary>Where does the local box sit?</summary><div class="a"><p>Under a desk, in a closet, in your rack. It needs power and one network cable. Remote staff reach it through your existing VPN.</p></div></details></div><div class="faq-group"><h2>Fine-tuning</h2><details class="faq"><summary>What does fine-tuning actually change?</summary><div class="a"><p>A small adapter, about 0.4% of the weights, learns your patterns: your vocabulary, your formats, your rules, the answers your people would sign. The base model stays untouched, so we keep one adapter per team and can roll any of them back in a click. The full picture is on the <a href='solutions.html'>Custom Solutions</a> page.</p></div></details><details class="faq"><summary>How long does a fine-tune take?</summary><div class="a"><p>Four weeks for one task: a week to gather the examples, a week to refine and grade them, a week to train and prove the result against the base model and the best frontier model, and a week to ship and watch it. The training itself is a few hours on the box.</p></div></details><details class="faq"><summary>Does our data leave the building to train?</summary><div class="a"><p>No. The examples are pulled onto the box, deduplicated and hashed there, and the adapter trains on the same hardware. Nothing is uploaded anywhere at any step.</p></div></details><details class="faq"><summary>Will it know things that change every day?</summary><div class="a"><p>That is the index's job, not the adapter's. Fine-tuning teaches habits; the index on the box supplies today's facts. The tuned model reads it like every other model does.</p></div></details></div><div class="faq-group"><h2>Pricing and process</h2><details class="faq"><summary>How is it priced?</summary><div class="a"><p>A local build is a one-time hardware cost plus a flat monthly support fee, with no usage metering. Guarded API access is billed at the provider's published token price plus our guard, itemised. We quote after a short call.</p></div></details><details class="faq"><summary>How long from first call to working box?</summary><div class="a"><p>About two weeks. Most of that is indexing your documents and running the model scorecard on your tasks. The install itself is a morning: we carry the box in, plug it in, and leave when your first answer comes back.</p></div></details><details class="faq"><summary>What happens overnight?</summary><div class="a"><p>Every answer is graded overnight by people who read them; every miss becomes the next day's training example. You get a scored report in your inbox each morning.</p></div></details><details class="faq"><summary>Can we leave?</summary><div class="a"><p>The box is yours, the model is open, the index is in a standard format. If you stop paying support, everything keeps working; you just stop getting the overnight grading and updates.</p></div></details></div>
+</div></section>
+</main>
+<footer id="company">
+  <div class="container foot-grid">
+    <div>
+      <span class="brand-name">CRUCIBLE</span>
+      <p class="foot-blurb">The data foundry for frontier AI. Refined, forged, assayed — in that order, every time.</p>
+    </div>
+    <div class="foot-col">
+      <h4>PLATFORM</h4>
+      <ul>
+        <li><a href="index.html#anatomy">Inside the machine</a></li>
+        <li><a href="index.html#top">Where it lives</a></li>
+        <li><a href="models.html">Models</a></li><li><a href="solutions.html">Custom Solutions</a></li>
+        <li><a href="index.html#numbers">Numbers</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="about.html#careers">Careers</a></li>
+        <li><a href="#company">Research</a></li>
+        <li><a href="about.html#press">Press</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>CONTACT</h4>
+      <ul>
+        <li><a href="contact.html">Book a demo</a></li>
+        <li><a href="#demo">foundry@crucible.example</a></li>
+        <li><a href="about.html#press">Security</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-word" aria-hidden="true">CRUCIBLE</div>
+  <div class="container foot-legal">
+    <span>© 2026 CRUCIBLE INDUSTRIES — A FICTIONAL CONCEPT. NOT AFFILIATED WITH SCALE AI.</span>
+    <span>LOCAL OR CLOUD · YOUR CALL</span>
+  </div>
+</footer>
+<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask Crucible</button>
+<div class="cw" id="cw" role="dialog" aria-label="Chat with Crucible">
+  <div class="cw-head"><div><b><i></i>Crucible</b><small>SCRIPTED · A PERSON REPLIES ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
+  <div class="cw-log" id="cwLog"></div>
+  <div class="cw-quick"><button type="button">Local or API?</button><button type="button">Pricing</button><button type="button">Security</button><button type="button">Book a demo</button></div>
+  <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="assets/models.js"></script>
+<script src="assets/site.js"></script>
+
+</body>
+</html>

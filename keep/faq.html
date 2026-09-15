@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — Keep</title>
+<meta name="description" content="Keep puts a private AI box in your business. Your files stay in the building; the big cloud models only see what our guard lets out.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/keep.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cpath d=%27M5 30V11h4V6h4v5h6V6h4v5h4v19z%27 fill=%27%23246a8e%27/%3E%3Cpath d=%27M13 30v-9h6v9%27 fill=%27%23fff%27/%3E%3C/svg%3E">
+
+</head>
+<body class="sub p-faq">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><svg class="k-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 30V11h4V6h4v5h6V6h4v5h4v19z" fill="currentColor"/><path d="M13 30v-9h6v9" fill="var(--bg)"/></svg><span class="brand-name">Keep</span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#anatomy">How it works</a><a href="models.html">Models</a><a href="solutions.html">Custom AI</a><a href="index.html#pilot">Pilot</a><a href="about.html">About</a><a href="faq.html" aria-current="page">FAQ</a></nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-coral nav-cta">Talk to Sam <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"><i id="scrollProgress"></i></div>
+</header>
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose">CLOSE ✕</button>
+  <a href="index.html#anatomy">How it works</a><a href="models.html">Models</a><a href="solutions.html">Custom AI</a><a href="index.html#pilot">Pilot</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
+  <a href="contact.html">Talk to Sam</a>
+</div>
+<main id="main">
+<section class="page-head"><div class="container">
+  <p class="kicker">FAQ</p>
+  <h1>Things people <span class="amber">ask Sam.</span></h1>
+  <p class="sec-sub">If yours is not here, the chat in the corner knows the same answers and the <a href="contact.html" style="color:var(--ink); text-decoration:underline;">contact page</a> reaches Sam.</p>
+</div></section>
+<section class="page-body"><div class="container"><div class="faq-group"><h2>Local or API</h2><details class="faq"><summary>What does "local" actually mean?</summary><div class="a"><p>An open model (Qwen 3.8 is our current pick) running on a small box we set up in your office, wired to your network and nothing else. Your documents are indexed on that box. Questions and answers never leave the building, and there is no per-token bill.</p></div></details><details class="faq"><summary>When would we use a frontier model instead?</summary><div class="a"><p>When the task needs the very top of the reasoning scale: long legal analysis, hard research, unusual code. We route those requests through our guard to Fable 5.1, Astra, Grok 4.6 or whichever model won on your tasks. Chat and everyday work stay local.</p></div></details><details class="faq"><summary>Can we mix both?</summary><div class="a"><p>That is the normal setup. The local model answers by default; the guarded path is a per-task switch, not a different product.</p></div></details><details class="faq"><summary>Who picks the model?</summary><div class="a"><p>We do, from evidence. Before your data touches anything we run the whole field against your real tasks and show you the scorecard. You can change the pick any time; the box does not care which model is loaded.</p></div></details></div><div class="faq-group"><h2>Security</h2><details class="faq"><summary>What is "our guard"?</summary><div class="a"><p>Two steps on every API call. First a screen for prompt injection, so a document your staff paste cannot instruct the model to leak something. Then a small local model hashes names, account numbers, addresses and anything that looks personal before the request leaves the building. The frontier model sees tokens like <code>PERSON_7</code>; the answer comes back and the same local model puts the real details back on your screen.</p></div></details><details class="faq"><summary>What does the provider see?</summary><div class="a"><p>An anonymised request and nothing about who asked. We keep no copy of the plaintext on the API side; the mapping between hash and detail never leaves your box.</p></div></details><details class="faq"><summary>Can we audit it?</summary><div class="a"><p>Yes. Every guarded request writes a local log line: what was hashed, what was screened, which model answered, how long it took. Your security team can read it; we cannot.</p></div></details><details class="faq"><summary>Where does the local box sit?</summary><div class="a"><p>Under a desk, in a closet, in your rack. It needs power and one network cable. Remote staff reach it through your existing VPN.</p></div></details></div><div class="faq-group"><h2>Fine-tuning</h2><details class="faq"><summary>What does fine-tuning actually change?</summary><div class="a"><p>A small adapter, about 0.4% of the weights, learns your patterns: your vocabulary, your formats, your rules, the answers your people would sign. The base model stays untouched, so we keep one adapter per team and can roll any of them back in a click. The full picture is on the <a href='solutions.html'>Custom Solutions</a> page.</p></div></details><details class="faq"><summary>How long does a fine-tune take?</summary><div class="a"><p>Four weeks for one task: a week to gather the examples, a week to refine and grade them, a week to train and prove the result against the base model and the best frontier model, and a week to ship and watch it. The training itself is a few hours on the box.</p></div></details><details class="faq"><summary>Does our data leave the building to train?</summary><div class="a"><p>No. The examples are pulled onto the box, deduplicated and hashed there, and the adapter trains on the same hardware. Nothing is uploaded anywhere at any step.</p></div></details><details class="faq"><summary>Will it know things that change every day?</summary><div class="a"><p>That is the index's job, not the adapter's. Fine-tuning teaches habits; the index on the box supplies today's facts. The tuned model reads it like every other model does.</p></div></details></div><div class="faq-group"><h2>Pricing and process</h2><details class="faq"><summary>How is it priced?</summary><div class="a"><p>A local build is a one-time hardware cost plus a flat monthly support fee, with no usage metering. Guarded API access is billed at the provider's published token price plus our guard, itemised. We quote after a short call.</p></div></details><details class="faq"><summary>How long from first call to working box?</summary><div class="a"><p>About two weeks. Most of that is indexing your documents and running the model scorecard on your tasks. The install itself is a morning: we carry the box in, plug it in, and leave when your first answer comes back.</p></div></details><details class="faq"><summary>What happens overnight?</summary><div class="a"><p>Every answer is graded overnight by people who read them; every miss becomes the next day's training example. You get a scored report in your inbox each morning.</p></div></details><details class="faq"><summary>Can we leave?</summary><div class="a"><p>The box is yours, the model is open, the index is in a standard format. If you stop paying support, everything keeps working; you just stop getting the overnight grading and updates.</p></div></details></div>
+</div></section>
+</main>
+<footer id="company">
+  <div class="container foot-grid">
+    <div>
+      <a href="index.html" class="brand"><svg class="k-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 30V11h4V6h4v5h6V6h4v5h4v19z" fill="currentColor"/><path d="M13 30v-9h6v9" fill="var(--bg)"/></svg><span class="brand-name">Keep</span></a>
+      <p class="foot-blurb">Your own AI. In your building. On your side.</p>
+    </div>
+    <div class="foot-col">
+      <h4>HOW IT WORKS</h4>
+      <ul>
+        <li><a href="index.html#anatomy">What's in the box</a></li>
+        <li><a href="models.html">Models we tested</a></li>
+        <li><a href="solutions.html">Custom AI</a></li>
+        <li><a href="index.html#pilot">The 30-day pilot</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#careers">Jobs</a></li>
+        <li><a href="about.html#press">Press</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>SAY HELLO</h4>
+      <ul>
+        <li><a href="contact.html">Talk to Sam</a></li>
+        <li><a href="mailto:sam@keep.example">sam@keep.example</a></li>
+        <li><a href="about.html#press">Security pack</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-word" aria-hidden="true">KEEP</div>
+  <div class="container foot-legal">
+    <span>© 2026 KEEP — A FICTIONAL CONCEPT. NOT AFFILIATED WITH ANYONE.</span>
+    <span>YOUR BUILDING · YOUR FILES · YOUR AI</span>
+  </div>
+</footer>
+<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask Keep</button>
+<div class="cw" id="cw" role="dialog" aria-label="Chat with Keep">
+  <div class="cw-head"><div><b><i></i>Keep</b><small>SCRIPTED · SAM PICKS UP ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
+  <div class="cw-log" id="cwLog"></div>
+  <div class="cw-quick"><button type="button">Local or API?</button><button type="button">Pricing</button><button type="button">Security</button><button type="button">Start a pilot</button></div>
+  <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="assets/models.js"></script>
+<script src="assets/site.js"></script>
+
+</body>
+</html>
