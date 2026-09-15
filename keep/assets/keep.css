@@ -1398,7 +1398,7 @@ h1, h2, h3, .sec-title, .sh-h1, .cta h2, .page-head h1, .cine-cap, .night-fold h
 /* nav: a floating pill */
 .nav, .nav.scrolled, .nav.nav-dark, .nav.nav-dark.scrolled, .nav.scrolled:not(.nav-dark), body.sub .nav{ position:fixed; top:var(--s-4); left:0; right:0; background:transparent; border:0; backdrop-filter:none; color:var(--ink); padding:0 clamp(20px, 3vw, 44px); }   /* a comfortable gap either side of the pill */
 .nav .container{ max-width:none; }   /* the pill itself is the container: it runs edge to edge inside the header's inset */
-.nav-inner, .nav.nav-dark .nav-inner{ height:70px; background:oklch(from var(--bg) l c h / .88); backdrop-filter:blur(14px); border:1px solid var(--line); border-radius:var(--pill); padding:0 var(--s-3) 0 var(--s-7); box-shadow:0 14px 34px -22px oklch(0.23 0.045 245 / .45); gap:0; }
+.nav-inner, .nav.nav-dark .nav-inner{ height:76px; background:oklch(from var(--bg) l c h / .88); backdrop-filter:blur(14px); border:1px solid var(--line); border-radius:var(--pill); padding:0 var(--s-4) 0 var(--s-10); box-shadow:0 14px 34px -22px oklch(0.23 0.045 245 / .45); gap:0; }
 .nav .brand, .nav.nav-dark .brand{ color:var(--brand); margin-right:var(--s-10); }
 .k-mark{ width:28px; height:28px; display:block; }
 .brand-name{ font-family:var(--display); font-weight:400; font-size:1.45rem; letter-spacing:0; color:var(--ink); }
@@ -1406,7 +1406,7 @@ h1, h2, h3, .sec-title, .sh-h1, .cta h2, .page-head h1, .cine-cap, .night-fold h
 .nav-links a, .nav.nav-dark .nav-links a{ color:var(--muted-2); font-size:1.05rem; font-weight:500; }
 .nav-links a:hover, .nav.nav-dark .nav-links a:hover, .nav-links a[aria-current="page"]{ color:var(--brand); }
 .nav .btn-fill, .nav.nav-dark .btn-fill{ background:var(--coral); color:oklch(1 0 0); }
-.nav .btn-coral, .nav.nav-dark .btn-coral{ background:var(--coral); color:oklch(1 0 0); height:48px; padding:0 var(--s-6); font-size:1.05rem; }
+.nav .btn-coral, .nav.nav-dark .btn-coral{ background:var(--coral); color:oklch(1 0 0); height:44px; padding:0 var(--s-6); font-size:1.05rem; }
 .nav .btn-coral:hover{ background:var(--coral-deep); }
 .menu-toggle i, .nav.nav-dark .menu-toggle i{ background:var(--ink); }
 .scroll-progress{ display:none; }
@@ -1579,7 +1579,8 @@ body.p-model .page-head{ --head-bg: var(--bg-2); }
   .forge-stage{ top:calc(var(--nav-h) - 6px); }
   .tiers{ grid-template-columns:1fr; }
   .tier.featured{ transform:none; }
-  .nav-inner{ height:64px; padding:0 var(--s-3) 0 var(--s-5); }
+  .nav-inner{ height:66px; padding:0 var(--s-3) 0 var(--s-6); }
+  .nav .btn-coral{ height:42px; padding:0 var(--s-5); font-size:.95rem; }
   .nav, .nav.scrolled, .nav.nav-dark, body.sub .nav{ padding:0 14px; }
   .menu-overlay{ padding-top:calc(var(--nav-h) + var(--s-8)); }
 }
