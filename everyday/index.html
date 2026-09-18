@@ -111,7 +111,12 @@
          background:var(--ivory-2); border:1px solid var(--line); border-radius:var(--r);
          padding:15px 18px; text-align:left; box-shadow:0 12px 30px oklch(0.4 0.03 60 / .09); }
   .card .meta{ display:flex; gap:8px; align-items:center; font:600 10.5px/1 var(--sans);
-               letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); margin-bottom:8px; }
+               letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); margin-bottom:8px;
+               white-space:nowrap; overflow:hidden; }
+  .card .meta em{ font:400 11.5px/1 var(--sans); font-style:normal; letter-spacing:0; text-transform:none;
+                  opacity:.78; overflow:hidden; text-overflow:ellipsis; }
+  .card:not(.fresh) p{ display:none; }
+  .card:not(.fresh) .meta{ margin-bottom:0; }
   .card .meta b{ width:7px; height:7px; border-radius:50%; background:var(--sage); }
   .card p{ margin:0; font-size:.95rem; line-height:1.5; color:var(--ink-2); }
   .card.fresh{ background:var(--ivory); border-color:var(--ink); box-shadow:0 22px 48px oklch(0.4 0.03 60 / .16); }
@@ -329,9 +334,9 @@
     <p class="avail" data-rise>Mac, Windows, Chrome and iOS. Free for 2,000 words a week.</p>
 
     <div class="deck" id="deck" aria-hidden="true">
-      <div class="card" data-i="3"><div class="meta"><b></b>Sent · 4 Mar</div><p>Happy to push it a week — I'd rather send you something finished than something on time.</p></div>
-      <div class="card" data-i="2"><div class="meta"><b></b>Sent · 19 Jun</div><p>Short answer: yes. Long answer: yes, but not until the Faulkner job is off my desk.</p></div>
-      <div class="card" data-i="1"><div class="meta"><b></b>Sent · 2 Sep</div><p>That number's right but it's doing a lot of work. Can I walk you through it on Thursday?</p></div>
+      <div class="card" data-i="3"><div class="meta"><b></b>Sent · 4 Mar<em>“I'd rather send you something finished”</em></div><p>Happy to push it a week — I'd rather send you something finished than something on time.</p></div>
+      <div class="card" data-i="2"><div class="meta"><b></b>Sent · 19 Jun<em>“Short answer: yes.”</em></div><p>Short answer: yes. Long answer: yes, but not until the Faulkner job is off my desk.</p></div>
+      <div class="card" data-i="1"><div class="meta"><b></b>Sent · 2 Sep<em>“That number's doing a lot of work.”</em></div><p>That number's right but it's doing a lot of work. Can I walk you through it on Thursday?</p></div>
       <div class="card fresh" data-i="0">
         <div class="meta"><b></b>Drafted just now · in your voice</div>
         <p>That estimate holds, but it assumes the September scope. If the extra two rooms are back in, give me till Thursday and I'll send you a real number instead of a hopeful one.</p>
@@ -594,7 +599,7 @@
 
   /* ------------------------------------------------------------ hero deck fans open once */
   var cards = gsap.utils.toArray("#deck .card");
-  var FAN = [{y: 112, r: 0, w: 61}, {y: 74, r: -1.6, w: 57.5}, {y: 38, r: 1.4, w: 54}, {y: 4, r: -1.0, w: 50.5}];
+  var FAN = [{y: 108, r: 0, w: 61}, {y: 72, r: -1.6, w: 57.5}, {y: 38, r: 1.4, w: 54}, {y: 4, r: -1.0, w: 50.5}];
   function place(){
     cards.forEach(function(c){
       var f = FAN[+c.dataset.i];
