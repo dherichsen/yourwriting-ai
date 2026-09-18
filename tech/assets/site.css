@@ -1363,5 +1363,6 @@ body.sub .stats{ border-top:0; }
 .brand-name .tld{ color:var(--accent); }
 footer{ overflow:hidden; }                 /* the giant footer word is longer than the old one */
 .foot-word{ font-size:clamp(3rem, 11.5vw, 9.5rem); letter-spacing:.02em; }
-.nav .brand-name{ letter-spacing:-0.01em; }
+.nav .brand-name{ letter-spacing:-0.015em; font-size:1.14rem; }
+.brand svg{ display:none; }   /* no emblem anywhere the source markup still carries one */
 footer .brand-name .tld{ color:var(--accent); }
