@@ -1,0 +1,380 @@
+window.WRITING_MODELS = [
+{
+"id": "qwen",
+"name": "Qwen 3.8",
+"vendor": "Alibaba · open weights",
+"kind": "local",
+"mark": "",
+"tag": "OUR PICK",
+"score": 88,
+"latency": "≈ 40 ms",
+"cost": "Hardware you own",
+"ctx": "256k",
+"radar": [
+0.84,
+0.82,
+0.9,
+1.0,
+0.76,
+0.72
+],
+"blurb": "An open model on the box under the desk. Your documents never leave the building, there is no metered bill, and it is fast because there is no round trip to anyone's cloud. Our pick for most offices: the best balance of accuracy, speed and cost we have measured."
+},
+{
+"id": "kimi",
+"name": "Kimi3",
+"vendor": "Moonshot · open weights",
+"kind": "local",
+"mark": "",
+"tag": "LONG DOCS",
+"score": 85,
+"latency": "≈ 55 ms",
+"cost": "Hardware you own",
+"ctx": "1M",
+"radar": [
+0.8,
+0.7,
+0.86,
+1.0,
+0.82,
+0.88
+],
+"blurb": "The long-document specialist. Contracts, records, whole case files in one pass, on hardware you own. A little slower per answer, a lot better when the question spans two hundred pages."
+},
+{
+"id": "gemma",
+"name": "Gemma 4",
+"vendor": "Google · open weights",
+"kind": "local",
+"mark": "",
+"tag": "FAST & CHEAP",
+"score": 76,
+"latency": "≈ 25 ms",
+"cost": "Hardware you own",
+"ctx": "128k",
+"radar": [
+0.72,
+0.92,
+0.96,
+1.0,
+0.6,
+0.58
+],
+"blurb": "Small and quick. The cheapest answers on the scorecard, right for routing, extraction, first drafts and anything you run ten thousand times a day."
+},
+{
+"id": "fable",
+"name": "Fable 5.1",
+"vendor": "Anthropic · API",
+"kind": "frontier",
+"mark": "claude",
+"tag": "HARDEST REASONING",
+"score": 91,
+"latency": "≈ 380 ms",
+"cost": "$3 / $15 per 1M tokens",
+"ctx": "1M",
+"radar": [
+0.97,
+0.58,
+0.44,
+0.86,
+0.98,
+0.94
+],
+"blurb": "For the hardest reasoning. We put a guard between you and it: every request is screened for prompt injection, and a small local model hashes names, account numbers and anything personal before it leaves, then restores them on the way back."
+},
+{
+"id": "astra",
+"name": "Astra",
+"vendor": "OpenAI · API",
+"kind": "frontier",
+"mark": "openai",
+"tag": "ALL-ROUNDER",
+"score": 89,
+"latency": "≈ 360 ms",
+"cost": "$2.50 / $10 per 1M tokens",
+"ctx": "400k",
+"radar": [
+0.95,
+0.66,
+0.48,
+0.86,
+0.94,
+0.9
+],
+"blurb": "Strong across the board and quick for a frontier model. Same guard: screened, hashed locally, restored locally. The provider only ever sees an anonymised request."
+},
+{
+"id": "grok",
+"name": "Grok 4.6",
+"vendor": "xAI · API",
+"kind": "frontier",
+"mark": "x",
+"tag": "CURRENT EVENTS",
+"score": 86,
+"latency": "≈ 340 ms",
+"cost": "$3 / $15 per 1M tokens",
+"ctx": "256k",
+"radar": [
+0.9,
+0.72,
+0.52,
+0.86,
+0.9,
+0.8
+],
+"blurb": "Fast and current. Same guard on every call: injection screen, personal details hashed before the request leaves the building and put back before it reaches your screen."
+},
+{
+"id": "llama4",
+"name": "Llama 4 Maverick",
+"vendor": "Meta · open weights",
+"kind": "local",
+"mark": "",
+"tag": "",
+"score": 82,
+"latency": "≈ 48 ms",
+"cost": "Hardware you own",
+"ctx": "1M",
+"radar": [
+0.8,
+0.74,
+0.86,
+1.0,
+0.78,
+0.8
+],
+"blurb": "A solid general open model. Slightly behind Qwen 3.8 on our task set, ahead on multilingual work."
+},
+{
+"id": "mistral",
+"name": "Mistral Large 3",
+"vendor": "Mistral · open weights",
+"kind": "local",
+"mark": "",
+"tag": "",
+"score": 80,
+"latency": "≈ 52 ms",
+"cost": "Hardware you own",
+"ctx": "256k",
+"radar": [
+0.78,
+0.72,
+0.84,
+1.0,
+0.76,
+0.7
+],
+"blurb": "Strong in French and German, careful with structured output. A good second local model for European teams."
+},
+{
+"id": "deepseek",
+"name": "DeepSeek V4",
+"vendor": "DeepSeek · open weights",
+"kind": "local",
+"mark": "",
+"tag": "CODE",
+"score": 84,
+"latency": "≈ 60 ms",
+"cost": "Hardware you own",
+"ctx": "128k",
+"radar": [
+0.86,
+0.66,
+0.88,
+1.0,
+0.84,
+0.66
+],
+"blurb": "The best open model we have measured on code and math. Wants the bigger box."
+},
+{
+"id": "phi",
+"name": "Phi-5 Mini",
+"vendor": "Microsoft · open weights",
+"kind": "local",
+"mark": "",
+"tag": "",
+"score": 70,
+"latency": "≈ 18 ms",
+"cost": "Hardware you own",
+"ctx": "128k",
+"radar": [
+0.66,
+0.96,
+0.98,
+1.0,
+0.54,
+0.5
+],
+"blurb": "Tiny and fast. Routing, classification and anything that has to answer before the user finishes typing."
+},
+{
+"id": "nemotron",
+"name": "Nemotron 4",
+"vendor": "NVIDIA · open weights",
+"kind": "local",
+"mark": "",
+"tag": "",
+"score": 79,
+"latency": "≈ 44 ms",
+"cost": "Hardware you own",
+"ctx": "128k",
+"radar": [
+0.78,
+0.78,
+0.84,
+1.0,
+0.72,
+0.68
+],
+"blurb": "Tuned for the hardware it ships on. Good tool use, unremarkable prose."
+},
+{
+"id": "command",
+"name": "Command R+",
+"vendor": "Cohere · open weights",
+"kind": "local",
+"mark": "",
+"tag": "RETRIEVAL",
+"score": 78,
+"latency": "≈ 46 ms",
+"cost": "Hardware you own",
+"ctx": "128k",
+"radar": [
+0.78,
+0.76,
+0.84,
+1.0,
+0.68,
+0.82
+],
+"blurb": "Built for retrieval over your own documents. Cites what it used."
+},
+{
+"id": "gemini",
+"name": "Gemini 3 Pro",
+"vendor": "Google · API",
+"kind": "frontier",
+"mark": "",
+"tag": "LONG DOCS",
+"score": 88,
+"latency": "≈ 400 ms",
+"cost": "$2 / $12 per 1M tokens",
+"ctx": "2M",
+"radar": [
+0.94,
+0.6,
+0.5,
+0.86,
+0.92,
+0.98
+],
+"blurb": "The biggest context window on the card. Behind our guard like every API."
+},
+{
+"id": "o5",
+"name": "Astra Reasoner",
+"vendor": "OpenAI · API",
+"kind": "frontier",
+"mark": "openai",
+"tag": "",
+"score": 90,
+"latency": "≈ 2.1 s",
+"cost": "$10 / $40 per 1M tokens",
+"ctx": "400k",
+"radar": [
+0.98,
+0.3,
+0.3,
+0.86,
+0.99,
+0.9
+],
+"blurb": "Thinks for a long time. Right for the hard, rare question; wrong for chat."
+},
+{
+"id": "haiku",
+"name": "Fable Haiku",
+"vendor": "Anthropic · API",
+"kind": "frontier",
+"mark": "claude",
+"tag": "",
+"score": 83,
+"latency": "≈ 190 ms",
+"cost": "$0.80 / $4 per 1M tokens",
+"ctx": "256k",
+"radar": [
+0.88,
+0.84,
+0.72,
+0.86,
+0.82,
+0.8
+],
+"blurb": "The fast Anthropic model. Most of Fable's judgement at a fifth of the price."
+},
+{
+"id": "mistralapi",
+"name": "Mistral Medium 3",
+"vendor": "Mistral · API",
+"kind": "frontier",
+"mark": "",
+"tag": "",
+"score": 81,
+"latency": "≈ 300 ms",
+"cost": "$0.40 / $2 per 1M tokens",
+"ctx": "128k",
+"radar": [
+0.84,
+0.76,
+0.8,
+0.86,
+0.8,
+0.74
+],
+"blurb": "Cheap, quick and European-hosted. A good guarded default for teams with EU data rules."
+},
+{
+"id": "cohereapi",
+"name": "Command A",
+"vendor": "Cohere · API",
+"kind": "frontier",
+"mark": "",
+"tag": "",
+"score": 80,
+"latency": "≈ 320 ms",
+"cost": "$2.50 / $10 per 1M tokens",
+"ctx": "256k",
+"radar": [
+0.84,
+0.72,
+0.66,
+0.86,
+0.78,
+0.86
+],
+"blurb": "Retrieval-first, enterprise-shaped. Behind our guard."
+},
+{
+"id": "deepseekapi",
+"name": "DeepSeek V4 (hosted)",
+"vendor": "DeepSeek · API",
+"kind": "frontier",
+"mark": "",
+"tag": "",
+"score": 84,
+"latency": "≈ 420 ms",
+"cost": "$0.30 / $1.20 per 1M tokens",
+"ctx": "128k",
+"radar": [
+0.86,
+0.6,
+0.9,
+0.7,
+0.84,
+0.66
+],
+"blurb": "Very cheap hosted access. We score its privacy lower: the guard hashes everything, and we still recommend the local build."
+}
+];

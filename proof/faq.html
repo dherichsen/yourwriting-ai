@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — yourwriting.ai</title>
+<meta name="description" content="yourwriting.ai fine-tunes a model on the writing your business already sends, then checks every claim it makes against your own files before anyone reads it.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/proof.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 26 26%27%3E%3Cpath d=%27M13 2.5 19.5 12 13 21.5 6.5 12Z%27 fill=%27none%27 stroke=%27%2334c98a%27 stroke-width=%272%27 stroke-linejoin=%27round%27/%3E%3Cpath d=%27M13 13v8.5%27 fill=%27none%27 stroke=%27%2334c98a%27 stroke-width=%272%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
+
+</head>
+<body class="sub p-faq">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand" aria-label="yourwriting.ai home"><svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 2.5 19.5 12 13 21.5 6.5 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 13v8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M11.4 9.6a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0" stroke="currentColor" stroke-width="1.6"/></svg><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="models.html">Models</a><a href="about.html">About</a><a href="faq.html" aria-current="page">FAQ</a></nav>
+    <div class="nav-actions"><a href="contact.html" class="btn btn-ok nav-cta">Book a walkthrough <span class="arr" aria-hidden="true">→</span></a></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</header>
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose">CLOSE ✕</button>
+  <a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="models.html">Models</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
+  <a href="contact.html">Book a walkthrough</a>
+</div>
+<main id="main">
+<section class="page-head"><div class="container">
+  <p class="kicker">FAQ</p>
+  <h1>Questions we get <span class="ok">on the first call.</span></h1>
+  <p class="sec-sub">If yours is not here, the chat in the corner knows the same answers and the <a href="contact.html" style="color:var(--ink);text-decoration:underline">contact page</a> reaches a person.</p>
+</div></section>
+<section class="page-body"><div class="container"><div class="faq-group"><h2>The gate</h2><details class="faq"><summary>What exactly is a “hallucination gate”?</summary><div class="a"><p>A check that runs between the model and the person. The draft is split into claims, every claim is looked up in the files you named as sources, and the draft only goes forward when each one is supported — repaired from the file, or turned into a question when nothing settles it. A receipt listing each claim and its source line travels with the draft. Full detail on the <a href='gate.html'>gate page</a>.</p></div></details><details class="faq"><summary>Doesn't the model already cite its sources?</summary><div class="a"><p>Models are good at producing citations and bad at guaranteeing them; a fluent citation to a document that does not say that thing is the most common failure we see. The gate does not ask the model to be honest, it checks the claim against the file itself and marks the answer.</p></div></details><details class="faq"><summary>What happens when a claim can't be checked?</summary><div class="a"><p>It is never quietly dropped. Either the file contains the right value and the gate substitutes it (marked, so the writer sees what changed), or the sentence becomes an explicit commitment to confirm. Your reviewer sees both cases in the receipt.</p></div></details><details class="faq"><summary>Can we see what it caught?</summary><div class="a"><p>Every checked claim writes a line to a local log: the claim, the source it matched, the verdict, the repair. Your security and quality people can read it; we cannot.</p></div></details></div><div class="faq-group"><h2>Fine-tuning</h2><details class="faq"><summary>Why tune instead of just prompting?</summary><div class="a"><p>Prompts are a costume over a rented model: they drift, they cost tokens on every call, and they do not survive a long queue. A thin adapter — about 0.4% of the weights — learns your formats and vocabulary once and holds on the ten thousandth draft.</p></div></details><details class="faq"><summary>How many examples do you need?</summary><div class="a"><p>Six hundred to two thousand pieces of writing you would sign, for one kind of letter. More matters less than consistency: two thousand drafts by six different people with six different habits teach the model to be inconsistent.</p></div></details><details class="faq"><summary>How long does a tune take?</summary><div class="a"><p>Four weeks for one kind of writing: a week to gather, a week to grade, a week to tune and prove, a week to ship and watch. The training itself is a few hours on the box.</p></div></details><details class="faq"><summary>Does our writing leave the building to train?</summary><div class="a"><p>No. Examples are pulled onto the box, deduplicated and hashed there, and the adapter trains on the same hardware. The gate's sources never leave either.</p></div></details></div><div class="faq-group"><h2>Local or API</h2><details class="faq"><summary>What runs on the box?</summary><div class="a"><p>An open model (Qwen 3.8 is our current pick), your adapter, the index over your source files, and the gate. Your documents are indexed on that box; questions and answers never leave the building, and there is no per-token bill.</p></div></details><details class="faq"><summary>When would we use a frontier model?</summary><div class="a"><p>When a task genuinely needs the top of the reasoning scale. Those requests go out through our guard — screened for prompt injection, personal details hashed locally before the request leaves — and come back through the same gate as everything else.</p></div></details><details class="faq"><summary>Who picks the model?</summary><div class="a"><p>Evidence does. Before your writing touches anything, we run the field against your real letters and show you the scorecard; it is on the <a href='models.html'>models page</a>.</p></div></details></div><div class="faq-group"><h2>Pricing and process</h2><details class="faq"><summary>How is it priced?</summary><div class="a"><p>A pilot is a fixed fee for one kind of writing over four weeks, hardware included. After that it is a flat monthly support fee per box, with no usage metering. Guarded API access is billed at the provider's token price plus our guard, itemised.</p></div></details><details class="faq"><summary>What do we have to provide?</summary><div class="a"><p>One owner who can say what a good letter looks like, two or three people to grade for about three hours in week two, and access to the systems where your writing and your source files live.</p></div></details><details class="faq"><summary>What happens overnight?</summary><div class="a"><p>People read the day's drafts and mark the misses. Those become the next adapter's training examples and, where the miss was a claim, a new gate rule. A short report is in your inbox each morning.</p></div></details><details class="faq"><summary>Can we leave?</summary><div class="a"><p>The box is yours, the model is open, and the adapter, index, source list and logs are in standard formats. Stop paying support and everything keeps working; you stop getting the overnight grading and the updates.</p></div></details></div>
+</div></section>
+</main>
+<footer id="company">
+  <div class="container foot-grid">
+    <div>
+      <a href="index.html" class="brand"><svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 2.5 19.5 12 13 21.5 6.5 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 13v8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M11.4 9.6a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0" stroke="currentColor" stroke-width="1.6"/></svg><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
+      <p class="foot-blurb">Tuned on your words. Checked against your files. Nothing goes out that can't be traced.</p>
+    </div>
+    <div class="foot-col"><h4>THE PRODUCT</h4><ul>
+      <li><a href="index.html#how">How it learns your voice</a></li>
+      <li><a href="gate.html">The hallucination gate</a></li>
+      <li><a href="models.html">Models we tested</a></li>
+      <li><a href="index.html#price">Pricing</a></li>
+    </ul></div>
+    <div class="foot-col"><h4>COMPANY</h4><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="about.html#careers">Jobs</a></li>
+      <li><a href="about.html#press">Press</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul></div>
+    <div class="foot-col"><h4>CONTACT</h4><ul>
+      <li><a href="contact.html">Book a walkthrough</a></li>
+      <li><a href="mailto:hello@yourwriting.ai">hello@yourwriting.ai</a></li>
+      <li><a href="about.html#press">Security pack</a></li>
+    </ul></div>
+  </div>
+  <div class="foot-word" aria-hidden="true">YOURWRITING</div>
+  <div class="container foot-legal">
+    <span>© 2026 YOURWRITING.AI — A FICTIONAL CONCEPT. NOT AFFILIATED WITH ANYONE.</span>
+    <span>EVERY CLAIM · TRACED TO A LINE</span>
+  </div>
+</footer>
+<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask yourwriting</button>
+<div class="cw" id="cw" role="dialog" aria-label="Chat with yourwriting.ai">
+  <div class="cw-head"><div><b><i></i>yourwriting.ai</b><small>SCRIPTED · A PERSON REPLIES ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
+  <div class="cw-log" id="cwLog"></div>
+  <div class="cw-quick"><button type="button">Local or API?</button><button type="button">Pricing</button><button type="button">Security</button><button type="button">The gate</button></div>
+  <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="assets/models.js"></script>
+<script src="assets/site.js"></script>
+
+</body>
+</html>

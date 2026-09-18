@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Communication you can count on — yourwriting.ai</title>
+<meta name="description" content="yourwriting.ai fine-tunes a model on the writing your business already sends, then checks every claim it makes against your own files before anyone reads it.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/proof.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 26 26%27%3E%3Cpath d=%27M13 2.5 19.5 12 13 21.5 6.5 12Z%27 fill=%27none%27 stroke=%27%2334c98a%27 stroke-width=%272%27 stroke-linejoin=%27round%27/%3E%3Cpath d=%27M13 13v8.5%27 fill=%27none%27 stroke=%27%2334c98a%27 stroke-width=%272%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
+
+</head>
+<body class="sub p-home">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand" aria-label="yourwriting.ai home"><svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 2.5 19.5 12 13 21.5 6.5 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 13v8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M11.4 9.6a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0" stroke="currentColor" stroke-width="1.6"/></svg><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#how" aria-current="page">How it works</a><a href="gate.html">The gate</a><a href="models.html">Models</a><a href="about.html">About</a><a href="faq.html">FAQ</a></nav>
+    <div class="nav-actions"><a href="contact.html" class="btn btn-ok nav-cta">Book a walkthrough <span class="arr" aria-hidden="true">→</span></a></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</header>
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose">CLOSE ✕</button>
+  <a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="models.html">Models</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
+  <a href="contact.html">Book a walkthrough</a>
+</div>
+<main id="main">
+<section class="ph" id="top">
+  <div class="container ph-grid">
+    <div>
+      <p class="kicker">FINE-TUNED ON YOUR WRITING · CHECKED AGAINST YOUR FILES</p>
+      <h1>Communication you can <span class="ok">count on.</span></h1>
+      <p class="lede">We tune an open model on the writing your business already sends, then put a gate in front of it. Every claim it makes is matched to a line in your own files before anyone reads it — and when there is no line to match, it says so instead of inventing one.</p>
+      <div class="cta-row"><a href="contact.html" class="btn btn-ok">Book a walkthrough <span class="arr" aria-hidden="true">→</span></a><a href="#gate" class="btn btn-ghost">See the gate</a></div>
+      <ul class="ph-facts">
+        <li><b>≈ 40 ms</b><span>TYPICAL REPLY</span></li>
+        <li><b>0</b><span>FILES THAT LEAVE</span></li>
+        <li><b>Every claim</b><span>TRACED TO A LINE</span></li>
+      </ul>
+    </div>
+    <div class="paper ph-demo" id="phDemo" aria-live="polite">
+      <div class="ph-head"><span id="phTo">To: —</span><span id="phKind">DRAFTED &amp; CHECKED</span></div>
+      <div class="body" id="phBody"></div>
+      <div class="foot"><span id="phFoot">GATE · WAITING</span><span>yourwriting.ai</span></div>
+    </div>
+  </div>
+</section><section class="gate" id="gate">
+  <div class="container gate-head">
+    <p class="kicker">THE HALLUCINATION GATE</p>
+    <h2>Nothing goes out that <span class="ok">can't be traced.</span></h2>
+    <p class="sub">A tuned model sounds like you — which is exactly why a wrong number in it is dangerous. So the draft never goes straight to a person. It goes through the gate: split into claims, looked up in your own files, and repaired or held when the line isn't there.</p>
+  </div>
+  <div class="gate-pin" id="gatePin">
+    <div class="container gate-grid" id="gateGrid">
+      <svg class="wires" id="gateWires" aria-hidden="true"></svg>
+      <article class="paper doc" id="gateDoc">
+        <header><span>To: Marcus Feld · Reed Logistics</span><span>RE: MARCH INVOICE</span></header>
+        <div class="body">
+          <p>Hi Marcus — thanks for chasing this one up.</p>
+          <p>The March invoice came to <span class="claim" data-c="1">$41,880</span>, which covers the two extra pallets you approved on <span class="claim" data-c="2">the 14th</span>.</p>
+          <p>Your rate is locked until <span class="claim bad" data-c="3">the end of Q3</span><span class="fix" data-c="3">30 June</span>, so nothing changes on the April run.</p>
+          <p>— Priya</p>
+        </div>
+        <div class="foot" id="gateReceipt" style="opacity:0"><span><b id="gateCount">3 CLAIMS · 3 SOURCED · 0 UNVERIFIED</b></span><span>GATE v1.4 · 240 MS</span></div>
+      </article>
+      <div class="rail" id="gateRail">
+        <article class="ev" data-c="1">
+          <p class="file">invoices / 2026-03-reed.pdf · p2</p>
+          <p class="src-line">“TOTAL DUE — $41,880.00”</p>
+          <p class="verdict">✓ SUPPORTED</p>
+          <span class="seal">✓</span>
+        </article>
+        <article class="ev" data-c="2">
+          <p class="file">mail / feld-approval · 14 Mar</p>
+          <p class="src-line">“yes to the two extra pallets, put them on the March run”</p>
+          <p class="verdict">✓ SUPPORTED</p>
+          <span class="seal">✓</span>
+        </article>
+        <article class="ev" data-c="3">
+          <p class="file">contracts / reed-2025.pdf · §4</p>
+          <p class="src-line" id="evQuote">No line supports “the end of Q3”.</p>
+          <p class="verdict">✗ NOT IN YOUR FILES</p>
+          <span class="seal">!</span>
+        </article>
+      </div>
+      <p class="gate-cap" id="gateCap"><b>01 · SPLIT</b><span>Every sentence is broken into the claims it actually makes.</span></p>
+    </div>
+  </div>
+  <div class="container gate-more">
+    <p>The gate runs on the same box as the model, in about 240 ms. It writes a line in your log for every claim it checked, so your people can audit what it let through — and what it caught.</p>
+    <a href="gate.html" class="btn btn-ghost">How the gate decides <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+</section><section class="sec" id="how"><div class="container">
+  <p class="kicker">HOW IT LEARNS YOUR VOICE</p>
+  <h2 class="sec-title">Five steps, four weeks, <span class="ok">one job at a time.</span></h2>
+  <p class="sec-sub">Fine-tuning is the whole product here, not an add-on. The box does the work; your people do the judging.</p>
+  <div class="forge-grid">
+    <div class="forge-stage"><svg class="forge-svg" viewBox="40 90 720 480" aria-hidden="true"><g id="fg1"><rect class="sc-line dim src" x="70.0" y="110.0" width="64.0" height="48.0" rx="4" pathLength="1" /><polyline class="sc-line dim src" points="80.0,124.0 108.6,124.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,133.0 119.6,133.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,142.0 108.6,142.0" pathLength="1" /><text class="sc-label src-t" x="70" y="100" text-anchor="start" >TICKETS</text><path class="sc-line dim lnk" d="M134 134 C 230 134, 230 300, 322 300" pathLength="1" /><rect class="sc-line dim src" x="70.0" y="230.0" width="64.0" height="48.0" rx="4" pathLength="1" /><polyline class="sc-line dim src" points="80.0,244.0 108.6,244.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,253.0 119.6,253.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,262.0 108.6,262.0" pathLength="1" /><text class="sc-label src-t" x="70" y="220" text-anchor="start" >CONTRACTS</text><path class="sc-line dim lnk" d="M134 254 C 230 254, 230 300, 322 300" pathLength="1" /><rect class="sc-line dim src" x="70.0" y="350.0" width="64.0" height="48.0" rx="4" pathLength="1" /><polyline class="sc-line dim src" points="80.0,364.0 108.6,364.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,373.0 119.6,373.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,382.0 108.6,382.0" pathLength="1" /><text class="sc-label src-t" x="70" y="340" text-anchor="start" >EMAIL</text><path class="sc-line dim lnk" d="M134 374 C 230 374, 230 300, 322 300" pathLength="1" /><rect class="sc-line dim src" x="70.0" y="470.0" width="64.0" height="48.0" rx="4" pathLength="1" /><polyline class="sc-line dim src" points="80.0,484.0 108.6,484.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,493.0 119.6,493.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,502.0 108.6,502.0" pathLength="1" /><text class="sc-label src-t" x="70" y="460" text-anchor="start" >CALL NOTES</text><path class="sc-line dim lnk" d="M134 494 C 230 494, 230 300, 322 300" pathLength="1" /><rect class="sc-line stk dim" x="364.0" y="258.0" width="200.0" height="150.0" rx="4" pathLength="1" /><rect class="sc-line stk dim" x="358.0" y="250.0" width="200.0" height="150.0" rx="4" pathLength="1" /><rect class="sc-line stk dim" x="352.0" y="242.0" width="200.0" height="150.0" rx="4" pathLength="1" /><rect class="sc-line stk dim" x="346.0" y="234.0" width="200.0" height="150.0" rx="4" pathLength="1" /><rect class="sc-line stk" x="340.0" y="226.0" width="200.0" height="150.0" rx="4" pathLength="1" /><polyline class="sc-line stk" points="362.0,258.0 463.4,258.0" pathLength="1" /><polyline class="sc-line stk" points="362.0,267.0 502.4,267.0" pathLength="1" /><polyline class="sc-line stk" points="362.0,276.0 463.4,276.0" pathLength="1" /><polyline class="sc-line stk" points="362.0,285.0 502.4,285.0" pathLength="1" /><polyline class="sc-line stk" points="362.0,294.0 463.4,294.0" pathLength="1" /><text class="sc-label note" x="600" y="262" text-anchor="start" >PULLED FROM</text><text class="sc-label note" x="600" y="284" text-anchor="start" >YOUR SYSTEMS,</text><text class="sc-label note" x="600" y="306" text-anchor="start" >INTO THE BOX</text><polyline class="sc-line dim note-l" points="548.0,300.0 586.0,300.0" pathLength="1" /><text class="fg-big" x="440" y="460" text-anchor="middle" id="fgCount1">0</text><text class="sc-label note" x="440" y="486" text-anchor="middle" >EXAMPLES · NOTHING UPLOADED</text></g><g id="fg2"><polyline class="sc-line fg-gate" points="400.0,150.0 400.0,450.0" pathLength="1" /><text class="sc-label gate-t" x="400" y="134" text-anchor="middle" >GUARD</text><text class="sc-label gate-t" x="388" y="474" text-anchor="end" >DEDUPE · HASH · GRADE</text><g class="fg-doc" id="fd0" transform="translate(60 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><g class="fg-doc" id="fd1" transform="translate(96 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><polyline class="sc-line fd-x" points="6.0,6.0 38.0,50.0" pathLength="1" /><polyline class="sc-line fd-x" points="38.0,6.0 6.0,50.0" pathLength="1" /></g><g class="fg-doc" id="fd2" transform="translate(132 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><g class="fg-doc" id="fd3" transform="translate(168 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><g class="fg-doc" id="fd4" transform="translate(204 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><polyline class="sc-line fd-x" points="6.0,6.0 38.0,50.0" pathLength="1" /><polyline class="sc-line fd-x" points="38.0,6.0 6.0,50.0" pathLength="1" /></g><g class="fg-doc" id="fd5" transform="translate(240 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><g class="fg-doc" id="fd6" transform="translate(276 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><polyline class="sc-line fd-x" points="6.0,6.0 38.0,50.0" pathLength="1" /><polyline class="sc-line fd-x" points="38.0,6.0 6.0,50.0" pathLength="1" /></g><g class="fg-doc" id="fd7" transform="translate(312 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><text class="sc-label r-t" x="574" y="250" text-anchor="middle" >HASHED · GRADED</text><text class="sc-label r-t" x="600" y="474" text-anchor="middle" >DUPLICATES · DROPPED</text><text class="fg-big" x="60" y="520" text-anchor="start" id="fgCount2">0</text><text class="sc-label r-t" x="60" y="544" text-anchor="start" >KEPT OF 14,212</text></g><g id="fg3"><rect class="sc-line fg-base" x="260.0" y="200.0" width="320.0" height="220.0" rx="8" pathLength="1" /><rect class="fg-cell" x="284" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="222" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="386" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="239" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="352" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="239" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="488" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="256" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="301" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="256" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="522" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="273" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="420" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="273" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="454" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="290" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="539" y="290" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="284" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="307" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="403" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="324" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="318" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="324" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="505" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="341" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="369" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="341" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="437" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="341" width="14" height="14" rx="2"/><text class="sc-label t-t" x="420" y="400" text-anchor="middle" >QWEN 3.8 · BASE MODEL · UNTOUCHED</text><rect class="sc-line fg-adapter" x="260.0" y="166.0" width="320.0" height="24.0" rx="6" pathLength="1" id="fgAdapter"/><text class="sc-label t-t" x="420" y="152" text-anchor="middle" >ADAPTER · 0.4% OF THE WEIGHTS · YOURS</text><polyline class="sc-line dim ax" points="60.0,260.0 60.0,420.0 230.0,420.0" pathLength="1" /><path class="sc-line fg-loss" d="M60 270 C 92 402, 150 412, 230 406" pathLength="1" /><text class="sc-label t-t" x="60" y="248" text-anchor="start" >LOSS</text><text class="sc-label t-t" x="117" y="440" text-anchor="middle" >1</text><text class="sc-label t-t" x="173" y="440" text-anchor="middle" >2</text><text class="sc-label t-t" x="230" y="440" text-anchor="middle" >3</text><text class="sc-label t-t" x="145" y="462" text-anchor="middle" >EPOCHS</text><text class="fg-mid" x="660" y="250" text-anchor="middle" >3,860</text><text class="sc-label t-t" x="660" y="272" text-anchor="middle" >EXAMPLES IN</text><polyline class="sc-line dim feed" points="700.0,300.0 600.0,300.0" pathLength="1" /><polyline class="sc-line dim feed" points="610.0,295.0 600.0,300.0 610.0,305.0" pathLength="1" /><polyline class="sc-line dim feed" points="700.0,320.0 600.0,320.0" pathLength="1" /><polyline class="sc-line dim feed" points="610.0,315.0 600.0,320.0 610.0,325.0" pathLength="1" /><polyline class="sc-line dim feed" points="700.0,340.0 600.0,340.0" pathLength="1" /><polyline class="sc-line dim feed" points="610.0,335.0 600.0,340.0 610.0,345.0" pathLength="1" /><text class="fg-mid" x="420" y="470" text-anchor="middle" id="fgEpoch">EPOCH 0 / 3</text><text class="sc-label t-t" x="420" y="496" text-anchor="middle" >4 H 12 MIN · ON THE BOX · NOTHING UPLOADED</text></g><g id="fg4"><text class="sc-label p-t" x="60" y="195" text-anchor="start" >BASE MODEL</text><rect class="fg-bar base" x="260" y="176" width="281" height="28" rx="4"/><text class="fg-num" x="555" y="196" text-anchor="start" id="fgN-base" data-to="61">0</text><text class="sc-label p-t" x="60" y="285" text-anchor="start" >TUNED FOR YOU</text><rect class="fg-bar tuned" x="260" y="266" width="409" height="28" rx="4"/><text class="fg-num" x="683" y="286" text-anchor="start" id="fgN-tuned" data-to="89">0</text><text class="sc-label p-t" x="60" y="375" text-anchor="start" >FRONTIER · GUARDED</text><rect class="fg-bar front" x="260" y="356" width="386" height="28" rx="4"/><text class="fg-num" x="660" y="376" text-anchor="start" id="fgN-front" data-to="84">0</text><polyline class="sc-line fg-delta" points="541.0,216.0 541.0,236.0 669.0,236.0 669.0,256.0" pathLength="1" /><text class="sc-label p-t delta-t" x="605" y="250" text-anchor="middle" >+28 ON YOUR TASKS</text><text class="sc-label p-t" x="60" y="480" text-anchor="start" >412 HELD-OUT TASKS · GRADED BLIND BY THE SAME THREE PEOPLE</text></g><g id="fg5"><polyline class="sc-line dim s-room" points="60.0,470.0 740.0,470.0" pathLength="1" /><polyline class="sc-line s-room" points="200.0,264.0 520.0,264.0" pathLength="1" /><polyline class="sc-line dim s-room" points="210.0,264.0 210.0,470.0" pathLength="1" /><polyline class="sc-line dim s-room" points="510.0,264.0 510.0,470.0" pathLength="1" /><rect class="sc-line s-tw" x="360.0" y="296.0" width="110.0" height="174.0" rx="6" pathLength="1" /><rect class="sc-line dim s-tw" x="380.0" y="330.0" width="70.0" height="12.0" rx="2" pathLength="1" /><circle class="fg-led" cx="415" cy="448" r="5"/><text class="sc-label s-t" x="415" y="420" text-anchor="middle" >LOCAL-01</text><text class="sc-label s-t s-ver" x="415" y="384" text-anchor="middle" >v1.0 → v1.1</text><g id="fgChip" transform="translate(0 0)"><rect class="fg-chip" x="380" y="120" width="70" height="12" rx="2"/><text class="sc-label s-chip" x="415" y="108" text-anchor="middle">ADAPTER v1.1</text></g><path class="sc-line dim fg-loop" d="M480 380 H700 a40 40 0 0 0 40 -40 V200 a40 40 0 0 0 -40 -40 H520" pathLength="1" /><polyline class="sc-line dim fg-loop" points="532.0,150.0 520.0,160.0 532.0,170.0" pathLength="1" /><text class="sc-label s-t" x="606" y="262" text-anchor="middle" >OVERNIGHT GRADING</text><text class="sc-label s-t" x="606" y="284" text-anchor="middle" >MISSES → NEXT WEEK'S EXAMPLES</text><text class="sc-label s-t" x="60" y="520" text-anchor="start" >LIVE IN 40 S · ROLLBACK IN ONE CLICK · THE OLD VERSION STAYS ON DISK</text></g></svg><div class="forge-hud"><span id="fgStep">01 / 05</span><span id="fgName">GATHER</span></div></div>
+    <ol class="forge-steps" id="forgeSteps"><li class="forge-step" data-i="0"><b>01 · GATHER</b><h3>The writing you already send.</h3><p>Sent mail, proposals, quotes, reports, the replies your best people write on a good day. We pull them from the systems they already live in onto the box in your building. Nothing is uploaded anywhere.</p></li><li class="forge-step" data-i="1"><b>02 · REFINE</b><h3>Deduplicated, redacted, graded by your people.</h3><p>Near-duplicates drop out. Names, account numbers and anything personal are hashed before a single example is used. Then two or three of your people grade a sample, so the model learns from letters you would sign.</p></li><li class="forge-step" data-i="2"><b>03 · TUNE</b><h3>A thin adapter learns your voice. The base model stays intact.</h3><p>About 0.4% of the weights learn your formats, your vocabulary and your habits over a few hours on the box. One adapter per team, and any of them rolls back in a click.</p></li><li class="forge-step" data-i="3"><b>04 · PROVE</b><h3>Graded blind, against the model you'd otherwise rent.</h3><p>Held-out letters nobody trained on become the exam. Base model, your tuned model and the best guarded frontier model are scored side by side by the same people, blind. You see the number before anything ships.</p></li><li class="forge-step" data-i="4"><b>05 · SHIP</b><h3>Live on the box, with the gate in front of it.</h3><p>From that moment every draft goes through the gate before a person sees it, and the overnight grading keeps feeding the next version: every miss your people mark becomes next week's training example.</p></li></ol>
+  </div>
+</div></section><section class="sec" id="writes"><div class="container">
+  <p class="kicker">WHAT IT WRITES</p>
+  <h2 class="sec-title">The communication your business <span class="ok">can't get wrong.</span></h2>
+  <p class="sec-sub">One tuned adapter per kind of writing, each with its own gate rules and its own eval set.</p>
+  <div class="writes"><article data-reveal><h3>Client replies</h3><p>The everyday back-and-forth: chasing, confirming, apologising, quoting a number from a file. The gate checks the number; the tune makes it sound like the person whose name is on it.</p><small>TUNED ON · 2 YEARS OF SENT MAIL</small></article><article data-reveal><h3>Proposals and quotes</h3><p>Your structure, your terms, your pricing table, pulled from the live sheet rather than remembered. Drafts land at the standard your best writer sets, not the average of the internet.</p><small>TUNED ON · 600 SIGNED PROPOSALS</small></article><article data-reveal><h3>Reports and summaries</h3><p>Monthly reports, case notes, handover documents. Long, dull, and exactly where invented detail does the most damage — so every figure carries a source line.</p><small>TUNED ON · 4 YEARS OF REPORTS</small></article><article data-reveal><h3>Policy and compliance answers</h3><p>“What does our policy actually say about this?” The model answers in your words and the gate refuses to answer at all when the policy does not cover it.</p><small>TUNED ON · THE POLICY LIBRARY</small></article><article data-reveal><h3>Follow-ups at scale</h3><p>Ten thousand short messages a week that all have to be right. A small tuned model does these for a fraction of a cent, behind the same gate as everything else.</p><small>TUNED ON · THE TICKET HISTORY</small></article><article data-reveal><h3>The awkward ones</h3><p>Late deliveries, declined claims, price rises. Tone is the whole job, and tone is the thing a generic model gets wrong in a way your customers notice.</p><small>TUNED ON · WHAT YOU ACTUALLY SENT</small></article></div>
+</div></section><section class="numbers" aria-label="Numbers">
+  <div class="container stats-grid">
+    <div class="stat"><b><span class="count" data-to="94" data-dec="0">0</span><i>%</i></b><span>DRAFTS SENT WITH NO EDIT</span></div>
+    <div class="stat"><b><span class="count" data-to="0" data-dec="0">0</span></b><span>UNSOURCED CLAIMS THAT GOT OUT</span></div>
+    <div class="stat"><b><span class="count" data-to="240" data-dec="0">0</span><i>ms</i></b><span>THE GATE, PER DRAFT</span></div>
+    <div class="stat"><b><span class="count" data-to="28" data-dec="0">0</span><i>pts</i></b><span>TUNED OVER BASE, BLIND-GRADED</span></div>
+  </div>
+</section><section class="sec" id="limits"><div class="container">
+  <p class="kicker">WHERE WE'LL TELL YOU NO</p>
+  <h2 class="sec-title">What the gate <span class="ok">will not do for you.</span></h2>
+  <ul class="limits">
+    <li data-reveal><strong>It can't check what you don't have.</strong><p>The gate proves a claim against your files. If the answer lives in somebody's head, or in a system we were not given, the claim comes back unverified and the draft says so. That is the gate working, and it is the most common reason a first week is noisy.</p></li>
+    <li data-reveal><strong>It won't make a weak model clever.</strong><p>Tuning teaches habits, not intelligence. A tuned open model beats a frontier one on your letters because it has seen your letters. Ask it something genuinely hard and unfamiliar and it is the base model again — that is what the guarded frontier path is for.</p></li>
+    <li data-reveal><strong>It isn't a compliance sign-off.</strong><p>Every claim traced and logged is evidence, not approval. The regulated letters still get a human name against them, and the gate's log exists to make that review quick rather than to replace it.</p></li>
+  </ul>
+</div></section><section class="sec" id="price"><div class="container">
+  <p class="kicker">ENGAGEMENTS</p>
+  <h2 class="sec-title">Start with <span class="ok">one kind of letter.</span></h2>
+  <p class="sec-sub">Narrow on purpose: one job, one eval set, one number you can trust at the end of it.</p>
+  <div class="plans">
+    <article class="plan lead" data-reveal>
+      <h3>Pilot<small>ONE KIND OF WRITING · FOUR WEEKS · FIXED FEE</small></h3>
+      <p>We gather and grade your examples, tune the adapter, wire the gate to the files that matter, and score it blind against the base model and a frontier model.</p>
+      <ul><li>The adapter, on your box, in a standard format</li><li>The gate, with your source list and rules</li><li>The eval set and the blind scorecard</li><li>The log your security team can read</li></ul>
+      <a href="contact.html?need=tune" class="btn btn-ok">Scope a pilot <span class="arr" aria-hidden="true">→</span></a>
+    </article>
+    <article class="plan" data-reveal>
+      <h3>Program<small>A KIND A MONTH · ROLLING</small></h3>
+      <p>For teams with a queue of writing to hand over. The overnight grading from each tune feeds the next one, and the engineer who installed your box runs it.</p>
+      <ul><li>A new adapter and gate profile each month</li><li>Overnight grading across every adapter</li><li>Quarterly re-scoring against the current field</li><li>A named engineer who knows your building</li></ul>
+      <a href="contact.html" class="btn btn-ghost">Talk it through</a>
+    </article>
+  </div>
+</div></section><section class="cta"><div class="container">
+  <h2 data-reveal>Bring one letter <span class="ok">you can't get wrong.</span></h2>
+  <p data-reveal>We'll tune on the ones you've already sent, wire the gate to the files behind them, and show you the graded difference in four weeks.</p>
+  <a href="contact.html" class="btn btn-honey" data-reveal>Book a walkthrough <span class="arr" aria-hidden="true">→</span></a>
+</div></section>
+</main>
+<footer id="company">
+  <div class="container foot-grid">
+    <div>
+      <a href="index.html" class="brand"><svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 2.5 19.5 12 13 21.5 6.5 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 13v8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M11.4 9.6a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0" stroke="currentColor" stroke-width="1.6"/></svg><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
+      <p class="foot-blurb">Tuned on your words. Checked against your files. Nothing goes out that can't be traced.</p>
+    </div>
+    <div class="foot-col"><h4>THE PRODUCT</h4><ul>
+      <li><a href="index.html#how">How it learns your voice</a></li>
+      <li><a href="gate.html">The hallucination gate</a></li>
+      <li><a href="models.html">Models we tested</a></li>
+      <li><a href="index.html#price">Pricing</a></li>
+    </ul></div>
+    <div class="foot-col"><h4>COMPANY</h4><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="about.html#careers">Jobs</a></li>
+      <li><a href="about.html#press">Press</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul></div>
+    <div class="foot-col"><h4>CONTACT</h4><ul>
+      <li><a href="contact.html">Book a walkthrough</a></li>
+      <li><a href="mailto:hello@yourwriting.ai">hello@yourwriting.ai</a></li>
+      <li><a href="about.html#press">Security pack</a></li>
+    </ul></div>
+  </div>
+  <div class="foot-word" aria-hidden="true">YOURWRITING</div>
+  <div class="container foot-legal">
+    <span>© 2026 YOURWRITING.AI — A FICTIONAL CONCEPT. NOT AFFILIATED WITH ANYONE.</span>
+    <span>EVERY CLAIM · TRACED TO A LINE</span>
+  </div>
+</footer>
+<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask yourwriting</button>
+<div class="cw" id="cw" role="dialog" aria-label="Chat with yourwriting.ai">
+  <div class="cw-head"><div><b><i></i>yourwriting.ai</b><small>SCRIPTED · A PERSON REPLIES ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
+  <div class="cw-log" id="cwLog"></div>
+  <div class="cw-quick"><button type="button">Local or API?</button><button type="button">Pricing</button><button type="button">Security</button><button type="button">The gate</button></div>
+  <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="assets/models.js"></script>
+<script src="assets/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  gsap.registerPlugin(ScrollTrigger);
+  var RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------------- hero: a draft that checks itself ---------------- */
+  var LETTERS = [
+    { to: "To: Marcus Feld · Reed Logistics", lines: [
+      { t: "Hi Marcus — the March invoice came to $41,880, which covers the two extra pallets you approved on the 14th.", src: "invoices / 2026-03-reed.pdf" },
+      { t: "Your rate is locked until the end of Q3", bad: "no line supports “end of Q3”", fix: "Your rate is locked until 30 June, so nothing changes on the April run.", src: "contracts / reed-2025.pdf §4" },
+      { t: "I've attached the pallet note so you have it on file.", src: "drive / pallet-note-0314.pdf" } ] },
+    { to: "To: Dana Whitfield · Whitfield Dental", lines: [
+      { t: "Thanks for the x-rays — the claim went to Delta on Tuesday under code D2740.", src: "practice / claims-log.csv" },
+      { t: "They usually settle these in about ten days", bad: "no line supports “ten days”", fix: "Delta's last four settlements with us took 18, 21, 19 and 22 days, so plan for three weeks.", src: "practice / settlements-2026.xlsx" },
+      { t: "If anything comes back short, we appeal it at no cost to you.", src: "policy / appeals.md" } ] },
+    { to: "To: Ana Duarte · Duarte & Co", lines: [
+      { t: "Draft two of the proposal is attached; the scope is unchanged from our call.", src: "proposals / duarte-v2.docx" },
+      { t: "The discount we discussed brings it to $18,400", bad: "no line supports “$18,400”", fix: "The 12% partner discount brings it to $19,096 — I'd rather send the real figure than the one from memory.", src: "pricing / 2026-rates.xlsx" },
+      { t: "Happy to walk through it on Thursday if that's easier.", src: "calendar / thu-1400" } ] }
+  ];
+  var body = document.getElementById("phBody"), toEl = document.getElementById("phTo"), footEl = document.getElementById("phFoot"), demo = document.getElementById("phDemo");
+  var cur = 0, raf = 0, timer = 0, paused = false, visible = true;
+  demo.addEventListener("mouseenter", function(){ paused = true; });
+  demo.addEventListener("mouseleave", function(){ paused = false; });
+  new IntersectionObserver(function(e){ visible = e[0].isIntersecting; }, { threshold: .2 }).observe(demo);
+
+  function row(){ var p = document.createElement("p"); p.className = "dl"; p.innerHTML = '<span class="t"></span><br><span class="chip"><i>✓</i><span class="s"></span></span>'; body.appendChild(p); return p; }
+  function chip(p, ok, text){ var c = p.querySelector(".chip"); c.classList.toggle("bad", !ok); c.querySelector("i").textContent = ok ? "✓" : "!"; c.querySelector(".s").textContent = text; c.classList.add("on"); }
+  function play(i){
+    clearTimeout(timer); cancelAnimationFrame(raf); cur = i;
+    var L = LETTERS[i]; toEl.textContent = L.to; body.innerHTML = ""; footEl.textContent = "GATE · CHECKING";
+    if (RM) {
+      L.lines.forEach(function(l){ var p = row(); p.querySelector(".t").textContent = l.fix || l.t; chip(p, true, l.src); });
+      footEl.textContent = "GATE · 3 CLAIMS · 3 SOURCED"; timer = setTimeout(next, 9000); return;
+    }
+    var n = 0;
+    (function line(){
+      if (n >= L.lines.length) { footEl.textContent = "GATE · 3 CLAIMS · 3 SOURCED · 0 UNVERIFIED"; timer = setTimeout(next, 6500); return; }
+      var l = L.lines[n++], p = row(), t = p.querySelector(".t"), start = performance.now();
+      p.classList.add("typing");
+      (function frame(now){
+        var k = Math.min(l.t.length, Math.floor((now - start) / 17));
+        if (t.textContent.length !== k) t.textContent = l.t.slice(0, k);
+        if (k < l.t.length) { raf = requestAnimationFrame(frame); return; }
+        p.classList.remove("typing");
+        if (!l.bad) { setTimeout(function(){ chip(p, true, l.src); line(); }, 420); return; }
+        setTimeout(function(){
+          chip(p, false, l.bad); footEl.textContent = "GATE · CLAIM 2 · NOT IN YOUR FILES";
+          setTimeout(function(){
+            t.textContent = ""; p.classList.add("typing"); var s2 = performance.now();
+            (function fix(now2){
+              var j = Math.min(l.fix.length, Math.floor((now2 - s2) / 14));
+              if (t.textContent.length !== j) t.textContent = l.fix.slice(0, j);
+              if (j < l.fix.length) { raf = requestAnimationFrame(fix); return; }
+              p.classList.remove("typing"); p.classList.add("fixed");
+              chip(p, true, l.src); footEl.textContent = "GATE · CLAIM 2 · REPAIRED FROM FILE";
+              setTimeout(line, 520);
+            })(performance.now());
+          }, 1100);
+        }, 420);
+      })(performance.now());
+    })();
+  }
+  function next(){ if (paused || !visible || document.hidden) { timer = setTimeout(next, 1200); return; } play((cur + 1) % LETTERS.length); }
+  play(0);
+
+  /* ---------------- the gate: claims lift out, come back stamped ---------------- */
+  var grid = document.getElementById("gateGrid"), wires = document.getElementById("gateWires"), cap = document.getElementById("gateCap");
+  var claims = Array.prototype.slice.call(document.querySelectorAll("#gateDoc .claim"));
+  var evs = Array.prototype.slice.call(document.querySelectorAll("#gateRail .ev"));
+  wires.innerHTML = claims.map(function(cl){ return '<path data-c="' + cl.dataset.c + '" pathLength="1"/>'; }).join("");
+  var wirePaths = Array.prototype.slice.call(wires.querySelectorAll("path"));
+  function drawWires(){          /* only ever moves the paths: the timeline holds these exact nodes */
+    var g = grid.getBoundingClientRect(); wires.setAttribute("viewBox", "0 0 " + g.width + " " + g.height);
+    claims.forEach(function(cl, i){
+      var c = cl.getBoundingClientRect(), e = evs[+cl.dataset.c - 1].getBoundingClientRect();
+      var x1 = c.right - g.left + 6, y1 = c.top - g.top + c.height / 2, x2 = e.left - g.left - 6, y2 = e.top - g.top + 26, m = (x1 + x2) / 2;
+      wirePaths[i].setAttribute("d", "M" + x1 + " " + y1 + " C" + m + " " + y1 + " " + m + " " + y2 + " " + x2 + " " + y2);
+    });
+  }
+  function caption(n, t){ cap.innerHTML = "<b>" + n + "</b><span>" + t + "</span>"; }
+  var tl = gsap.timeline({ paused: true, defaults: { ease: "none" } });
+  /* 01 split */
+  tl.to(claims, { "--mark": 1, duration: .10, stagger: .05 }, 0.02);
+  tl.add(function(){ caption("01 · SPLIT", "Every sentence is broken into the claims it actually makes."); }, 0);
+  /* 02 retrieve */
+  tl.add(function(){ caption("02 · RETRIEVE", "Each claim is looked up in the files you gave the gate."); }, 0.30);
+  tl.to("#gateWires path", { strokeDashoffset: 0, duration: .22, stagger: .07 }, 0.32);
+  tl.fromTo(evs, { opacity: 0, x: 18 }, { opacity: 1, x: 0, duration: .16, stagger: .07, immediateRender: false }, 0.36);
+  /* 03 check */
+  tl.add(function(){ caption("03 · CHECK", "Supported, or not in your files. There is no third answer."); }, 0.68);
+  tl.to([evs[0], evs[1]], { duration: .01, onComplete: function(){ evs[0].classList.add("is-ok"); evs[1].classList.add("is-ok"); } }, 0.70);
+  tl.to("#gateRail .ev:nth-child(-n+2) .verdict", { opacity: 1, duration: .08, stagger: .06 }, 0.72);
+  tl.to("#gateRail .ev:nth-child(-n+2) .seal", { opacity: 1, scale: 1, duration: .1, stagger: .06, ease: "back.out(2)" }, 0.74);
+  tl.to([claims[0], claims[1]], { duration: .01, onComplete: function(){ claims[0].classList.add("checked"); claims[1].classList.add("checked"); } }, 0.76);
+  tl.to("#gateWires path[data-c='1'], #gateWires path[data-c='2']", { stroke: "var(--ok)", duration: .1 }, 0.76);
+  tl.to(evs[2], { duration: .01, onComplete: function(){ evs[2].classList.add("is-bad"); evs[2].querySelector(".verdict").classList.add("bad"); evs[2].querySelector(".seal").classList.add("bad"); } }, 0.88);
+  tl.to(evs[2].querySelector(".verdict"), { opacity: 1, duration: .08 }, 0.90);
+  tl.to(evs[2].querySelector(".seal"), { opacity: 1, scale: 1, duration: .1, ease: "back.out(2)" }, 0.90);
+  tl.to(claims[2], { duration: .01, onComplete: function(){ claims[2].classList.add("flagged"); } }, 0.92);
+  tl.to("#gateWires path[data-c='3']", { stroke: "var(--flag)", duration: .1 }, 0.92);
+  /* 04 repair */
+  tl.add(function(){ caption("04 · REPAIR", "It can't invent the number, so it takes the real one — or asks."); }, 1.08);
+  tl.to(claims[2], { "--strike": 1, duration: .12 }, 1.10);
+  tl.to(claims[2], { opacity: .45, duration: .1 }, 1.18);
+  tl.set(".fix", { display: "inline" }, 1.22);
+  tl.fromTo(".fix", { opacity: 0, y: -6 }, { opacity: 1, y: 0, duration: .14, immediateRender: false }, 1.22);
+  tl.add(function(){
+    var e = evs[2]; e.classList.remove("is-bad"); e.classList.add("is-ok");
+    e.querySelector(".verdict").classList.remove("bad"); e.querySelector(".verdict").textContent = "✓ REPAIRED FROM FILE";
+    e.querySelector(".seal").classList.remove("bad"); e.querySelector(".seal").textContent = "✓";
+    document.getElementById("evQuote").textContent = "“the agreed rate holds until 30 June 2026”";
+  }, 1.30);
+  tl.to("#gateWires path[data-c='3']", { stroke: "var(--ok)", duration: .1 }, 1.32);
+  /* 05 sign */
+  tl.add(function(){ caption("05 · SIGN", "The receipt goes with it: every claim, and the line it came from."); }, 1.52);
+  tl.fromTo("#gateReceipt", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .12, immediateRender: false }, 1.54);
+  tl.to({}, { duration: .3 }, 1.70);
+  /* reverse-safe: rebuild the mutable bits when scrubbing back past the repair */
+  function resetFrom(p){
+    if (p < 1.30 / 2.0) {
+      var e = evs[2]; e.classList.remove("is-ok"); if (p > 0.88 / 2.0) e.classList.add("is-bad");
+      e.querySelector(".verdict").textContent = "✗ NOT IN YOUR FILES"; e.querySelector(".verdict").classList.add("bad");
+      e.querySelector(".seal").textContent = "!"; e.querySelector(".seal").classList.add("bad");
+      document.getElementById("evQuote").textContent = "No line supports “the end of Q3”.";
+    }
+    if (p < 0.76 / 2.0) { claims[0].classList.remove("checked"); claims[1].classList.remove("checked"); evs[0].classList.remove("is-ok"); evs[1].classList.remove("is-ok"); }
+    if (p < 0.92 / 2.0) claims[2].classList.remove("flagged");
+  }
+  var mobile = matchMedia("(max-width: 960px)").matches;
+  drawWires();
+  ScrollTrigger.create({
+    trigger: "#gatePin", start: mobile ? "top 70%" : "top top", end: mobile ? "bottom 40%" : "+=3200",
+    pin: !mobile && !RM, scrub: RM ? true : 0.6, animation: tl, invalidateOnRefresh: true,
+    onRefresh: drawWires, onUpdate: function(st){ resetFrom(st.progress); }
+  });
+  window.addEventListener("resize", function(){ clearTimeout(window.__gw); window.__gw = setTimeout(function(){ drawWires(); ScrollTrigger.refresh(); }, 200); });
+
+  /* ---------------- the forge ---------------- */
+  var steps = Array.prototype.slice.call(document.querySelectorAll(".forge-step")), names = ["GATHER", "REFINE", "TUNE", "PROVE", "SHIP"];
+  var hud = document.getElementById("fgStep"), hudName = document.getElementById("fgName");
+  steps.forEach(function(s, i){
+    ScrollTrigger.create({ trigger: s, start: "top 62%", end: "bottom 62%", onToggle: function(st){
+      s.classList.toggle("on", st.isActive);
+      if (st.isActive) { hud.textContent = "0" + (i + 1) + " / 05"; hudName.textContent = names[i]; } } });
+  });
+  var S = .7, T = function(t){ return Math.floor(t + 1e-9) + ((t + 1e-9) % 1) * S; }, D = function(d){ return d * S; };
+  var ft = gsap.timeline({ paused: true, defaults: { ease: "none" } });
+  var _to = ft.to.bind(ft), _fromTo = ft.fromTo.bind(ft);
+  ft.to = function(tg, v, t){ if (v.duration) v.duration = D(v.duration); if (typeof v.stagger === "number") v.stagger = D(v.stagger); return _to(tg, v, t === undefined ? t : T(t)); };
+  ft.fromTo = function(tg, a, v, t){ if (v.duration) v.duration = D(v.duration); if (typeof v.stagger === "number") v.stagger = D(v.stagger); else if (v.stagger && v.stagger.each) v.stagger.each = D(v.stagger.each); return _fromTo(tg, a, v, t === undefined ? t : T(t)); };
+  function draw(sel, t, d, stag){ ft.fromTo(sel, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, stagger: stag || 0, ease: "none" }, t); }
+  function show(sel, t, d, stag){ ft.to(sel, { opacity: 1, duration: d || .08, stagger: stag || 0, ease: "none" }, t); }
+  function count(el, to, t, d, fmt){ var o = { v: 0 }; ft.to(o, { v: to, duration: d, ease: "none", onUpdate: function(){ el.textContent = fmt ? fmt(o.v) : Math.round(o.v).toLocaleString("en-US"); } }, t); }
+  function stageIn(id, t){ ft.set(id, { autoAlpha: 1 }, t); }
+  function stageOut(id, t){ _to(id, { autoAlpha: 0, duration: .05, ease: "none" }, t); }
+  stageIn("#fg1", 0);
+  draw("#fg1 .src", .02, .16, .05); show("#fg1 .src-t", .08, .08, .05);
+  draw("#fg1 .lnk", .22, .22, .05); draw("#fg1 .stk", .40, .16, .04);
+  show("#fg1 #fgCount1", .48, .05); count(document.getElementById("fgCount1"), 14212, .48, .34);
+  draw("#fg1 .note-l", .62, .08); show("#fg1 .note", .66, .08, .04);
+  stageOut("#fg1", .93);
+  stageIn("#fg2", 1.0);
+  draw("#fg2 .fg-gate", 1.02, .14); show("#fg2 .gate-t", 1.10, .08, .04); draw("#fg2 .fd-r", 1.06, .14, .015);
+  var keptX = { 0: 450, 2: 512, 3: 574, 5: 636, 7: 698 }, dropX = { 1: 440, 4: 500, 6: 560 };
+  for (var i = 0; i < 8; i++) {
+    var d = "#fd" + i, t = 1.24 + i * .045;
+    if (keptX[i] !== undefined) {
+      ft.to(d, { x: keptX[i], duration: .26 }, t);
+      show(d + " .fd-redact", t + .22, .05, .03);
+      ft.fromTo(d + " .fd-stamp", { opacity: 0, scale: .4 }, { opacity: 1, scale: 1, duration: .08 }, t + .30);
+    } else {
+      ft.to(d, { x: dropX[i], y: 392, duration: .26 }, t);
+      ft.to(d, { opacity: .3, duration: .1 }, t + .18);
+      draw(d + " .fd-x", t + .22, .08);
+    }
+  }
+  show("#fg2 .r-t", 1.68, .08, .04); show("#fg2 #fgCount2", 1.66, .05); count(document.getElementById("fgCount2"), 3860, 1.66, .26);
+  stageOut("#fg2", 1.93);
+  stageIn("#fg3", 2.0);
+  draw("#fg3 .fg-base", 2.02, .16); ft.fromTo("#fg3 .fg-cell", { opacity: 0 }, { opacity: 1, duration: .02, stagger: { each: .002 } }, 2.08);
+  draw("#fg3 .fg-adapter", 2.18, .12); show("#fg3 .t-t", 2.22, .06, .02); draw("#fg3 .ax", 2.22, .1); draw("#fg3 .feed", 2.24, .1, .03); show("#fg3 .fg-mid", 2.28, .06);
+  count(document.getElementById("fgEpoch"), 3, 2.34, .42, function(v){ return "EPOCH " + Math.min(3, Math.floor(v + 1e-6)) + " / 3"; });
+  draw("#fg3 .fg-loss", 2.34, .42);
+  ft.to("#fg3 .fg-cell.hot", { fill: "var(--ok)", duration: .04, stagger: .028 }, 2.36);
+  ft.to("#fgAdapter", { attr: { fill: "oklch(from var(--ok) l c h / .22)" }, stroke: "var(--ok)", duration: .12 }, 2.66);
+  stageOut("#fg3", 2.93);
+  stageIn("#fg4", 3.0);
+  show("#fg4 .p-t:not(.delta-t)", 3.02, .06, .03);
+  ft.fromTo("#fg4 .fg-bar", { scaleX: 0 }, { scaleX: 1, duration: .28, stagger: .14, ease: "power2.out" }, 3.06);
+  [["fgN-base", 61, 3.06], ["fgN-tuned", 89, 3.20], ["fgN-front", 84, 3.34]].forEach(function(r){ var el = document.getElementById(r[0]); show("#" + r[0], r[2], .04); count(el, r[1], r[2], .28); });
+  draw("#fg4 .fg-delta", 3.62, .1); show("#fg4 .delta-t", 3.70, .06);
+  stageOut("#fg4", 3.93);
+  stageIn("#fg5", 4.0);
+  draw("#fg5 .s-room", 4.02, .14, .02); draw("#fg5 .s-tw", 4.10, .14, .04); show("#fg5 .s-t:not(.s-ver)", 4.18, .06, .03); show("#fg5 .s-chip", 4.22, .05);
+  ft.to("#fgChip", { y: 210, duration: .26, ease: "power2.in" }, 4.28);
+  ft.to("#fg5 .s-chip", { opacity: 0, duration: .04 }, 4.50);
+  show("#fg5 .fg-led", 4.54, .04); show("#fg5 .s-ver", 4.56, .06); draw("#fg5 .fg-loop", 4.60, .26, .02);
+  if (ft.duration() < 5) _to({}, { duration: 5 - ft.duration() }, ft.duration());
+  ScrollTrigger.create({ trigger: "#forgeSteps", start: "top 62%", end: "bottom 62%", scrub: RM ? true : 0.6, animation: ft });
+
+  /* ---------------- counters ---------------- */
+  document.querySelectorAll(".count").forEach(function(el){
+    var to = parseFloat(el.dataset.to), dec = parseInt(el.dataset.dec || "0", 10), o = { v: 0 };
+    ScrollTrigger.create({ trigger: el, start: "top 88%", once: true, onEnter: function(){
+      if (RM) { el.textContent = to.toFixed(dec); return; }
+      gsap.to(o, { v: to, duration: 1.5, ease: "power3.out", onUpdate: function(){ el.textContent = o.v.toFixed(dec); } }); } });
+  });
+})();
+</script>
+</body>
+</html>

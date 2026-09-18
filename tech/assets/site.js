@@ -1,5 +1,5 @@
 
-/* Crucible site: nav, reveals, chat widget (scripted — wire CHAT_ENDPOINT to a real assistant) */
+/* yourwriting.ai site: nav, reveals, chat widget (scripted — wire CHAT_ENDPOINT to a real assistant) */
 (function(){
   var nav = document.getElementById("nav"), sub = document.body.classList.contains("sub");
   if (sub && nav) { nav.classList.add("nav-dark", "scrolled"); }
@@ -16,7 +16,7 @@
   var CHAT_ENDPOINT = ""; /* POST {messages:[...]} → {reply:"..."}; empty = scripted answers below */
   var FAQ = [
     { k: /fine.?tun|custom|train|adapter|lora|teach|solution/i, a: "Fine-tuning teaches the local model your documents, vocabulary and rules. A thin adapter trains on the box in a few hours; the base model stays untouched. Four weeks per task, scored before and after. Details on the <a href='solutions.html'>Custom Solutions</a> page." },
-    { k: /who are you|about|team|founded|company|where.*based|hiring|career|job/i, a: "Crucible is forty-one people in Denver, Austin and Berlin who put AI models in the building instead of the cloud. Founded in 2024; 412 boxes in the field. The story and open roles are on the <a href='about.html'>About</a> page." },
+    { k: /who are you|about|team|founded|company|where.*based|hiring|career|job/i, a: "yourwriting.ai is forty-one people in Denver, Austin and Berlin who put AI models in the building instead of the cloud. Founded in 2024; 412 boxes in the field. The story and open roles are on the <a href='about.html'>About</a> page." },
     { k: /local|on.?prem|building|office|box|workstation/i, a: "Local means an open model (Qwen 3.8 is our pick) running on a workstation we install in your office. Your documents never leave the building and there is no per-token bill. Most teams start here." },
     { k: /api|frontier|claude|fable|astra|openai|grok|gemini|cloud/i, a: "Frontier models (Fable 5.1, Astra, Grok 4.6 and others) run behind our guard: every request is screened for prompt injection and a small local model hashes names and account numbers before anything leaves, then restores them on the way back. Typical round trip is about 380 ms." },
     { k: /price|pricing|cost|how much|\$|budget/i, a: "A local build is a one-time hardware cost plus a flat monthly support fee, with no metered usage. Guarded API access is billed at the provider's token price plus our guard. We quote after a short call: <a href='contact.html'>book a demo</a>." },
@@ -38,7 +38,7 @@
   }
   function ask(q){ add(q, "me"); if (CHAT_ENDPOINT) { fetch(CHAT_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ messages: [{ role: "user", content: q }] }) }).then(function(r){ return r.json(); }).then(function(j){ add(j.reply || "…", "bot"); }).catch(function(){ reply(q); }); } else reply(q); }
   var opened = false;
-  function open(o){ panel.classList.toggle("open", o); btn.setAttribute("aria-expanded", String(o)); if (o && !opened) { opened = true; add("Hi. Ask about local models, our guard for frontier APIs, pricing or setup. I'm scripted; a person picks up on the contact page.", "bot"); } if (o) input.focus(); }
+  function open(o){ panel.classList.toggle("open", o); btn.setAttribute("aria-expanded", String(o)); if (o && !opened) { opened = true; add("Hi. Ask about the model on your box, the guard for frontier APIs, fine-tuning, pricing or setup. I'm scripted; a person picks up on the contact page.", "bot"); } if (o) input.focus(); }
   btn.addEventListener("click", function(){ open(!panel.classList.contains("open")); });
   document.getElementById("cwClose").addEventListener("click", function(){ open(false); });
   document.querySelectorAll(".cw-quick button").forEach(function(b){ b.addEventListener("click", function(){ ask(b.textContent); }); });

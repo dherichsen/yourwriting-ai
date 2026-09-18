@@ -1,10 +1,11 @@
-# Crucible and Keep
+# yourwriting.ai
 
-Two concept sites for the same fictional business — a private AI box installed in your building, every model tested on your own work, guarded access to the big cloud models, and people grading the answers overnight.
+Concept sites for a fictional product: an open model fine-tuned on the writing your business already sends, running on a box in your own building, with a hallucination gate in front of it.
 
-- **Crucible** (`crucible/`) — the enterprise look: Scale.com proportions, indigo-black, thin display type. A data foundry.
-- **Keep** (`keep/`) — the small-business sibling: light, blue + orange + yellow, Young Serif, a founder named Sam and a 30-day pilot.
+- **`tech/` — yourwriting.ai, the techy cut.** Scale-style proportions, indigo black, a three-act pinned scroll story (screen → desk → office floor plan), a paired model scorecard, and a fine-tuning deep dive.
+- **`proof/` — yourwriting.ai, the fine-tuning cut.** Built entirely around fine-tuning and the **hallucination gate**: the draft is split into claims, each claim is looked up in your own files, repaired or held, and a receipt travels with it. Charcoal and paper, green for checked, red-orange for flagged.
+- **`keep/` — Keep.** The same idea aimed at small businesses: light, blue/orange/yellow, a founder named Sam, a thirty-day pilot and three hardware tiers.
 
-Both are static HTML (GSAP + ScrollTrigger + Lenis, Three.js for the earth) and open straight from disk or any static host. Pages: home, models list, model detail (with an inlined Standpoint report), custom AI / fine-tuning, about, FAQ, contact, and a scripted chat widget. Form and chat endpoints are empty constants (`INQUIRY_ENDPOINT`, `CHAT_ENDPOINT`).
+Each site has a home page, a models list, a model detail page (with an inlined sample evaluation report), a fine-tuning page, about, FAQ, contact, and a scripted chat widget. Plain static HTML (GSAP + ScrollTrigger + Lenis, Three.js for the night-shift globe) — open from disk or any static host. Form and chat endpoints are empty constants (`INQUIRY_ENDPOINT`, `CHAT_ENDPOINT`).
 
-Everything here is fictional concept work: the companies, people, prices, scores and quotes are made up. Not affiliated with Scale AI, onpremises.ai or anyone else.
+Everything here is fictional: the companies, people, prices, scores and quotes are invented. Not affiliated with Scale AI, onpremises.ai or anyone else.

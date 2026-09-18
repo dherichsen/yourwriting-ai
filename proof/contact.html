@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a walkthrough — yourwriting.ai</title>
+<meta name="description" content="yourwriting.ai fine-tunes a model on the writing your business already sends, then checks every claim it makes against your own files before anyone reads it.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/proof.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 26 26%27%3E%3Cpath d=%27M13 2.5 19.5 12 13 21.5 6.5 12Z%27 fill=%27none%27 stroke=%27%2334c98a%27 stroke-width=%272%27 stroke-linejoin=%27round%27/%3E%3Cpath d=%27M13 13v8.5%27 fill=%27none%27 stroke=%27%2334c98a%27 stroke-width=%272%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
+
+</head>
+<body class="sub p-contact">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand" aria-label="yourwriting.ai home"><svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 2.5 19.5 12 13 21.5 6.5 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 13v8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M11.4 9.6a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0" stroke="currentColor" stroke-width="1.6"/></svg><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="models.html">Models</a><a href="about.html">About</a><a href="faq.html">FAQ</a></nav>
+    <div class="nav-actions"><a href="contact.html" class="btn btn-ok nav-cta">Book a walkthrough <span class="arr" aria-hidden="true">→</span></a></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</header>
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose">CLOSE ✕</button>
+  <a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="models.html">Models</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
+  <a href="contact.html">Book a walkthrough</a>
+</div>
+<main id="main">
+<section class="page-head"><div class="container">
+  <p class="kicker">BOOK A WALKTHROUGH</p>
+  <h1>Tell us what you <span class="ok">have to write.</span></h1>
+  <p class="sec-sub">A few lines about your team and the writing you can't get wrong. We reply within one business day with a pilot plan, a scorecard and a quote.</p>
+</div></section>
+<section class="page-body"><div class="container contact-grid">
+  <div>
+    <form class="form" id="inq" novalidate>
+      <div class="field"><label for="f-name">NAME</label><input id="f-name" name="name" type="text" autocomplete="name" required><span class="err">Please add your name.</span></div>
+      <div class="field"><label for="f-email">WORK EMAIL</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err">That email does not look right.</span></div>
+      <div class="field"><label for="f-co">COMPANY</label><input id="f-co" name="company" type="text" autocomplete="organization"></div>
+      <div class="field"><label for="f-size">TEAM SIZE</label><select id="f-size" name="size"><option>1–10</option><option selected>11–50</option><option>51–200</option><option>201–1000</option><option>1000+</option></select></div>
+      <fieldset class="field full"><legend>WHAT YOU NEED</legend><div class="opts">
+        <label class="opt"><input type="radio" name="need" value="local" checked><span>A tuned model on our own box</span></label>
+        <label class="opt"><input type="radio" name="need" value="guarded"><span>The gate over what we already have</span></label>
+        <label class="opt"><input type="radio" name="need" value="both"><span>Both</span></label>
+        <label class="opt"><input type="radio" name="need" value="tune"><span>Fine-tuning for one kind of letter</span></label>
+        <label class="opt"><input type="radio" name="need" value="unsure"><span>Not sure yet</span></label>
+      </div></fieldset>
+      <fieldset class="field full"><legend>MODELS YOU WANT ON THE SCORECARD</legend><div class="opts" id="modelOpts"></div></fieldset>
+      <div class="field full"><label for="f-msg">THE WORK</label><textarea id="f-msg" name="message" placeholder="What has to be written, how often, who signs it, and which files hold the facts it has to get right." required></textarea><span class="err">A sentence or two helps us prepare.</span></div>
+      <div class="form-foot"><button class="btn btn-ok" type="submit">Send inquiry <span class="arr">→</span></button><p>No mailing list. One reply, from a person.</p></div>
+    </form>
+    <div class="form-ok" id="inqOk"><h2>Thanks — it's in.</h2><p id="inqOkP">We'll reply within one business day.</p></div>
+  </div>
+  <aside class="side">
+    <div><h3>Prefer email?</h3><p><a href="mailto:hello@yourwriting.ai" style="color:var(--ink);">hello@yourwriting.ai</a></p></div>
+    <div><h3>What happens next</h3><p>A 30-minute call, then we run the scorecard on a sample of your real letters and wire the gate to a folder of your files. You see both numbers before you decide anything.</p></div>
+    <div><h3>Security questionnaire?</h3><p>Send it along. The box, the guard, the gate's log format and the overnight grading are all documented for your security team.</p></div>
+  </aside>
+</div></section>
+</main>
+<footer id="company">
+  <div class="container foot-grid">
+    <div>
+      <a href="index.html" class="brand"><svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 2.5 19.5 12 13 21.5 6.5 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 13v8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M11.4 9.6a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0" stroke="currentColor" stroke-width="1.6"/></svg><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
+      <p class="foot-blurb">Tuned on your words. Checked against your files. Nothing goes out that can't be traced.</p>
+    </div>
+    <div class="foot-col"><h4>THE PRODUCT</h4><ul>
+      <li><a href="index.html#how">How it learns your voice</a></li>
+      <li><a href="gate.html">The hallucination gate</a></li>
+      <li><a href="models.html">Models we tested</a></li>
+      <li><a href="index.html#price">Pricing</a></li>
+    </ul></div>
+    <div class="foot-col"><h4>COMPANY</h4><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="about.html#careers">Jobs</a></li>
+      <li><a href="about.html#press">Press</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul></div>
+    <div class="foot-col"><h4>CONTACT</h4><ul>
+      <li><a href="contact.html">Book a walkthrough</a></li>
+      <li><a href="mailto:hello@yourwriting.ai">hello@yourwriting.ai</a></li>
+      <li><a href="about.html#press">Security pack</a></li>
+    </ul></div>
+  </div>
+  <div class="foot-word" aria-hidden="true">YOURWRITING</div>
+  <div class="container foot-legal">
+    <span>© 2026 YOURWRITING.AI — A FICTIONAL CONCEPT. NOT AFFILIATED WITH ANYONE.</span>
+    <span>EVERY CLAIM · TRACED TO A LINE</span>
+  </div>
+</footer>
+<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask yourwriting</button>
+<div class="cw" id="cw" role="dialog" aria-label="Chat with yourwriting.ai">
+  <div class="cw-head"><div><b><i></i>yourwriting.ai</b><small>SCRIPTED · A PERSON REPLIES ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
+  <div class="cw-log" id="cwLog"></div>
+  <div class="cw-quick"><button type="button">Local or API?</button><button type="button">Pricing</button><button type="button">Security</button><button type="button">The gate</button></div>
+  <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="assets/models.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var INQUIRY_ENDPOINT = ""; /* POST JSON here (Formspree, your CRM, a Worker). Empty = local confirmation + mailto fallback. */
+  var Q = new URLSearchParams(location.search), M = window.CRUCIBLE_MODELS, pre = Q.get("model");
+  var needPre = document.querySelector('input[name="need"][value="' + (Q.get("need") || "") + '"]'); if (needPre) needPre.checked = true;
+  document.getElementById("modelOpts").innerHTML = M.slice(0, 8).map(function(m){ return '<label class="opt"><input type="checkbox" name="models" value="' + m.id + '"' + (m.id === pre ? " checked" : "") + '><span>' + m.name + '</span></label>'; }).join("") + '<label class="opt"><input type="checkbox" name="models" value="advise"><span>You choose</span></label>';
+  var f = document.getElementById("inq");
+  f.addEventListener("submit", function(e){
+    e.preventDefault(); var ok = true;
+    ["f-name", "f-email", "f-msg"].forEach(function(id){ var el = document.getElementById(id), fld = el.closest(".field"); var v = el.value.trim(); var good = v && (id !== "f-email" || /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)); fld.classList.toggle("invalid", !good); if (!good) ok = false; });
+    if (!ok) { f.querySelector(".invalid input, .invalid textarea").focus(); return; }
+    var data = {}; new FormData(f).forEach(function(v, k){ if (data[k]) data[k] = [].concat(data[k], v); else data[k] = v; });
+    function done(){ f.hidden = true; document.getElementById("inqOk").classList.add("on"); document.getElementById("inqOk").scrollIntoView({ behavior: "smooth", block: "center" }); }
+    if (INQUIRY_ENDPOINT) { fetch(INQUIRY_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) }).then(done).catch(function(){ done(); }); }
+    else { var body = encodeURIComponent(Object.keys(data).map(function(k){ return k + ": " + data[k]; }).join("\n")); document.getElementById("inqOkP").innerHTML = "We'll reply within one business day. Nothing was sent from this demo build; <a href='mailto:hello@yourwriting.ai?subject=yourwriting.ai%20pilot&body=" + body + "' style='color:var(--ink); text-decoration:underline;'>send it by email</a> instead."; done(); }
+  });
+})();
+</script>
+</body>
+</html>

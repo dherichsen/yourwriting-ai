@@ -3,67 +3,85 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Crucible and Keep</title>
-<meta name="description" content="Two concept sites for the same fictional business: a private AI box in your building. Crucible is the enterprise look; Keep is the small-business sibling.">
+<title>yourwriting.ai — concept sites</title>
+<meta name="description" content="Three concept sites for the same fictional product: a writing model tuned on your own words, running in your own building.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 26 26%27%3E%3Cpath d=%27M13 2.5 19.5 12 13 21.5 6.5 12Z%27 fill=%27none%27 stroke=%27%2334c98a%27 stroke-width=%272%27 stroke-linejoin=%27round%27/%3E%3Cpath d=%27M13 13v8.5%27 fill=%27none%27 stroke=%27%2334c98a%27 stroke-width=%272%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
 <style>
-  :root{ --bg:#0b0d14; --ink:#f2f3f7; --muted:rgba(242,243,247,.62); --line:rgba(255,255,255,.12); --accent:#74a6ff; --keep:#f6c945; --coral:#f0705a; }
+  :root{ --bg:#0f1012; --ink:#f3f3f4; --muted:rgba(243,243,244,.62); --line:rgba(255,255,255,.12);
+         --tech:#74a6ff; --proof:#34c98a; --keep:#f6c945; }
   *{ box-sizing:border-box; }
   html, body{ margin:0; background:var(--bg); color:var(--ink); }
-  body{ font:16px/1.5 "Figtree", system-ui, sans-serif; padding:clamp(24px, 5vw, 64px) clamp(20px, 4vw, 48px); }
-  main{ max-width:1180px; margin:0 auto; }
-  header{ margin-bottom:clamp(28px, 4vw, 48px); }
-  h1{ font-size:clamp(1.6rem, 3vw, 2.4rem); font-weight:500; letter-spacing:-.01em; margin:0 0 8px; }
-  header p{ margin:0; color:var(--muted); max-width:62ch; }
-  .sites{ display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:clamp(16px, 2.5vw, 28px); }
-  .site{ display:block; color:inherit; text-decoration:none; border:1px solid var(--line); border-radius:20px; overflow:hidden; background:rgba(255,255,255,.03); transition:border-color .25s, transform .25s; }
+  body{ font:16px/1.55 "Inter Tight", system-ui, sans-serif; letter-spacing:-0.005em; padding:clamp(28px, 5vw, 64px) clamp(20px, 4vw, 48px); }
+  main{ max-width:1240px; margin:0 auto; }
+  header{ margin-bottom:clamp(28px, 4vw, 48px); max-width:62ch; }
+  .mark{ display:flex; align-items:center; gap:.55rem; margin-bottom:18px; }
+  .mark svg{ width:24px; height:24px; color:var(--proof); }
+  .mark b{ font-size:1.1rem; font-weight:600; }
+  .mark b i{ font-style:normal; color:var(--proof); }
+  h1{ font-size:clamp(1.55rem, 2.6vw, 2.3rem); font-weight:500; letter-spacing:-0.025em; margin:0 0 10px; }
+  header p{ margin:0; color:var(--muted); }
+  .sites{ display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:clamp(16px, 2vw, 24px); }
+  .site{ display:flex; flex-direction:column; color:inherit; text-decoration:none; border:1px solid var(--line); border-radius:18px;
+         overflow:hidden; background:rgba(255,255,255,.03); transition:border-color .25s, transform .25s; }
   .site:hover{ border-color:rgba(255,255,255,.45); transform:translateY(-3px); }
   .site img{ display:block; width:100%; aspect-ratio:1440/1000; object-fit:cover; object-position:top; border-bottom:1px solid var(--line); }
-  .site .body{ padding:22px 24px 24px; }
-  .site .tag{ font:500 11px/1 "IBM Plex Mono", monospace; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
-  .site h2{ font-size:1.5rem; font-weight:500; margin:8px 0 6px; letter-spacing:-.01em; }
+  .site .body{ padding:20px 22px 24px; display:flex; flex-direction:column; flex:1; }
+  .tag{ font:400 11px/1 "JetBrains Mono", monospace; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+  .site h2{ font-size:1.32rem; font-weight:500; letter-spacing:-0.02em; margin:9px 0 6px; }
+  .site.tech h2 b{ color:var(--tech); } .site.proof h2 b{ color:var(--proof); } .site.keep h2 b{ color:var(--keep); }
   .site h2 b{ font-weight:500; }
-  .site.crucible h2 b{ color:var(--accent); }
-  .site.keep h2 b{ color:var(--keep); }
-  .site p{ margin:0 0 16px; color:var(--muted); }
-  .site .links{ display:flex; flex-wrap:wrap; gap:8px 14px; font-size:14px; }
-  .site .links span{ color:var(--ink); border-bottom:1px solid rgba(255,255,255,.25); padding-bottom:1px; }
-  .site .links span.cta{ color:var(--bg); background:var(--ink); border:0; border-radius:999px; padding:6px 14px; }
-  .site.keep .links span.cta{ background:var(--coral); color:#fff; }
-  footer{ margin-top:clamp(28px, 4vw, 48px); font-size:13px; color:var(--muted); display:flex; flex-wrap:wrap; gap:8px 20px; }
+  .site p{ margin:0 0 18px; color:var(--muted); font-size:.95rem; }
+  .go{ margin-top:auto; display:inline-flex; align-items:center; gap:.5em; align-self:flex-start; padding:9px 16px; border-radius:999px;
+       background:var(--ink); color:#0f1012; font-size:.9rem; font-weight:500; }
+  .site.proof .go{ background:var(--proof); } .site.keep .go{ background:var(--keep); }
+  footer{ margin-top:clamp(28px, 4vw, 44px); display:flex; flex-wrap:wrap; gap:10px 22px; font-size:13px; color:var(--muted); }
   footer a{ color:var(--ink); }
 </style>
 </head>
 <body>
 <main>
   <header>
-    <h1>Crucible and Keep</h1>
-    <p>Two concept sites for the same fictional business, a private AI box installed in your building. Same features on both: the scroll story, the model scorecard, model reports, custom AI, about, FAQ, contact and a chat widget.</p>
+    <div class="mark">
+      <svg viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 2.5 19.5 12 13 21.5 6.5 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 13v8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M11.4 9.6a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0" stroke="currentColor" stroke-width="1.6"/></svg>
+      <b>yourwriting<i>.ai</i></b>
+    </div>
+    <h1>Three concept sites, one product.</h1>
+    <p>A writing model tuned on the words your business already sends, running on a box in your own building. Same feature set on each: the scroll story, a model scorecard, model reports, fine-tuning, about, FAQ, contact and a chat widget.</p>
   </header>
   <div class="sites">
-    <a class="site crucible" href="crucible/index.html">
-      <img src="assets/crucible.jpg" alt="Crucible home page: a dark inset video frame under a flat white nav, the headline An AI Stack That Was Built Around Your Business" loading="lazy">
+    <a class="site tech" href="tech/index.html">
+      <img src="assets/tech.jpg" alt="yourwriting.ai, the techy cut: a dark inset video frame under a flat white nav with the headline An AI Stack That Was Built Around Your Writing" loading="lazy">
       <div class="body">
-        <span class="tag">The original · enterprise</span>
-        <h2><b>Crucible</b> — the data foundry</h2>
-        <p>Scale.com proportions, indigo-black, thin display type. Built for procurement and security teams at larger companies.</p>
-        <div class="links"><span class="cta">Open Crucible →</span><span>models</span><span>custom solutions</span><span>about</span></div>
+        <span class="tag">The techy cut · enterprise</span>
+        <h2><b>yourwriting.ai</b> — the stack</h2>
+        <p>Scale-style proportions, indigo black, a three-act scroll story from the screen to the office floor plan. Built for the buyer who wants to see the machinery.</p>
+        <span class="go">Open the stack →</span>
+      </div>
+    </a>
+    <a class="site proof" href="proof/index.html">
+      <img src="assets/proof.jpg" alt="yourwriting.ai, the fine-tuning cut: a dark page with the headline Communication you can count on and a paper draft being checked claim by claim" loading="lazy">
+      <div class="body">
+        <span class="tag">The fine-tuning cut · with the gate</span>
+        <h2><b>yourwriting.ai</b> — communication you can count on</h2>
+        <p>Everything aimed at one promise: tuned on your writing, and a hallucination gate that traces every claim to a line in your own files before anyone reads it.</p>
+        <span class="go">Open the gate →</span>
       </div>
     </a>
     <a class="site keep" href="keep/index.html">
-      <img src="assets/keep.jpg" alt="Keep home page: a floating white pill nav with an orange Talk to Sam button over footage of papers in a binder, the headline Your own AI. Under your desk." loading="lazy">
+      <img src="assets/keep.jpg" alt="Keep: a light page with a floating white pill nav, an orange Talk to Sam button, and the headline Your own AI. Under your desk." loading="lazy">
       <div class="body">
         <span class="tag">The sibling · small business</span>
         <h2><b>Keep</b> — a box under your desk</h2>
-        <p>Light, blue and orange and yellow, Young Serif. A founder named Sam, a 30-day pilot and three boxes to pick from.</p>
-        <div class="links"><span class="cta">Open Keep →</span><span>models</span><span>custom AI</span><span>pilot</span></div>
+        <p>The same idea for a five-to-sixty person business: light, blue and orange and yellow, a founder named Sam, a thirty-day pilot and three boxes to pick from.</p>
+        <span class="go">Open Keep →</span>
       </div>
     </a>
   </div>
   <footer>
-    <span>Fictional concept work; every company, person, price and score is made up.</span>
-    <a href="https://github.com/dherichsen/crucible-and-keep">Source on GitHub</a>
+    <span>Fictional concept work; every company, person, price, score and quote is made up.</span>
+    <a href="https://github.com/dherichsen/yourwriting-ai">Source on GitHub</a>
   </footer>
 </main>
 </body>

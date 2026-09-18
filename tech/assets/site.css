@@ -1358,3 +1358,10 @@ body.sub .stats{ border-top:0; }
   .tl-dot{ display:none; }
   .people{ grid-template-columns:1fr 1fr; }
 }
+
+/* ================= yourwriting.ai ================= */
+.brand-name .tld{ color:var(--accent); }
+footer{ overflow:hidden; }                 /* the giant footer word is longer than the old one */
+.foot-word{ font-size:clamp(3rem, 11.5vw, 9.5rem); letter-spacing:.02em; }
+.nav .brand-name{ letter-spacing:-0.01em; }
+footer .brand-name .tld{ color:var(--accent); }

@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About — Crucible</title>
-<meta name="description" content="Crucible puts one AI model in your building and guards the frontier ones. Local first, API when you need it.">
+<title>About — yourwriting.ai</title>
+<meta name="description" content="yourwriting.ai puts a writing model in your building and guards the frontier ones. Local first, API when you need it.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 26 26%27%3E%3Cpath d=%27M4 5h18l-6.2 9.5v5.3l-3.6 2.7v-8L4 5Z%27 fill=%27none%27 stroke=%27%2374a6ff%27 stroke-width=%272%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 26 26%27%3E%3Cpath d=%27M13 2.5 19.5 12 13 21.5 6.5 12Z%27 fill=%27none%27 stroke=%27%2374a6ff%27 stroke-width=%272%27 stroke-linejoin=%27round%27/%3E%3Cpath d=%27M13 13v8.5%27 fill=%27none%27 stroke=%27%2374a6ff%27 stroke-width=%272%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
 
 <script>
 (function(){
@@ -34,11 +34,11 @@
                    ink: "oklch(1 0 0)", muted: "oklch(0.66 0 0)", "muted-2": "oklch(0.83 0 0)", "page-light": "oklch(1 0 0)", "page-light-ink": "oklch(0 0 0)" };
   var root = document.documentElement, q = new URLSearchParams(location.search), key = q.get("palette");
   if (key === "off") return;
-  try { key = key || localStorage.getItem("crucible-palette"); } catch (e) {}
+  try { key = key || localStorage.getItem("yw-palette"); } catch (e) {}
   if (!P[key]) key = "linear";
   function apply(k){
     var pal = P[k]; Object.keys(DEFAULTS).forEach(function(t){ root.style.setProperty("--" + t, pal[t] || DEFAULTS[t]); });
-    root.dataset.palette = k; try { localStorage.setItem("crucible-palette", k); } catch (e) {}
+    root.dataset.palette = k; try { localStorage.setItem("yw-palette", k); } catch (e) {}
     var b = document.querySelectorAll(".pal button[data-k]"); for (var i = 0; i < b.length; i++) b[i].setAttribute("aria-pressed", String(b[i].dataset.k === k));
     var lbl = document.querySelector(".pal span"); if (lbl) lbl.textContent = pal.name.toUpperCase();
   }
@@ -58,13 +58,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="index.html" class="brand" aria-label="Crucible home">
-      <svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true">
-        <path d="M4 5h18l-6.2 9.5v5.3l-3.6 2.7v-8L4 5Z" fill="none" stroke="oklch(0 0 0)" stroke-width="1.6" stroke-linejoin="round"/>
-        <path d="M9.5 8.5h7" stroke="oklch(0 0 0)" stroke-width="1.6" stroke-linecap="round"/>
-      </svg>
-      <span class="brand-name">crucible</span>
-    </a>
+    <a href="index.html" class="brand" aria-label="yourwriting.ai home"><svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 2.5 19.5 12 13 21.5 6.5 12Z" stroke="oklch(0 0 0)" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 13v8.5" stroke="oklch(0 0 0)" stroke-width="1.6" stroke-linecap="round"/><path d="M11.4 9.6a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0" stroke="oklch(0 0 0)" stroke-width="1.6"/></svg><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
     <nav class="nav-links" aria-label="Primary"><a href="index.html#anatomy">Inside</a><a href="models.html">Models</a><a href="solutions.html">Custom Solutions</a><a href="about.html" aria-current="page">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
     <div class="nav-actions">
       <a href="contact.html" class="btn btn-ghost nav-cta">Log in</a>
@@ -83,13 +77,13 @@
 <section class="page-head"><div class="container">
   <p class="kicker">ABOUT</p>
   <h1>We put the model <span class="amber">in the building.</span></h1>
-  <p class="sec-sub">Crucible is forty-one people who think a company's AI should live where its data does. We install it, test it, tune it and grade it. The box is yours.</p>
+  <p class="sec-sub">yourwriting.ai is forty-one people who think a company's writing model should live where its files do. We install it, tune it on your words, check what it writes and grade it. The box is yours.</p>
 </div></section>
 
 <section class="sec"><div class="container why">
   <h2 data-reveal>The best model in the world is the wrong one if your contracts have to leave to use it.</h2>
   <div class="prose">
-    <p data-reveal>Crucible started in 2024 with three people who had spent a year on the wrong side of the same problem. One ran IT for a hospital group and had turned down every AI vendor because none of them could explain where the records went. One built models and was tired of watching good open ones sit unused because nobody would carry them into an office. One was the sysadmin who kept getting the security questionnaire.</p>
+    <p data-reveal>yourwriting.ai started in 2024 with three people who had spent a year on the wrong side of the same problem. One ran IT for a hospital group and had turned down every AI vendor because none of them could explain where the records went. One built models and was tired of watching good open ones sit unused because nobody would carry them into an office. One was the sysadmin who kept getting the security questionnaire.</p>
     <p data-reveal>So we did the unfashionable thing. We bought a workstation, put an open model on it, drove it to a clinic in Denver and plugged it in. The doctors asked it about their own notes, on their own network, and the answers came back in forty milliseconds. Nobody had to sign anything.</p>
     <p data-reveal>Everything since has been that afternoon, done properly: a guard so the frontier models can be used without the records leaving, a scorecard so the pick is evidence rather than taste, a grading floor so every answer gets read by a person, and a field team that installs a box in a morning. Four hundred and twelve buildings later, the job is the same.</p>
   </div>
@@ -128,14 +122,14 @@
   <div id="careers">
     <h2 class="sec-title">Open <span class="amber">roles.</span></h2>
     <p class="sec-sub">We hire people who like carrying things into buildings and reading carefully. No sales team, by design.</p>
-    <ul class="jobs"><li><a href="mailto:people@crucible.example?subject=Field%20engineer%20%E2%80%94%20AUSTIN">Field engineer</a><span>AUSTIN · FULL TIME</span></li><li><a href="mailto:people@crucible.example?subject=Field%20engineer%20%E2%80%94%20BERLIN">Field engineer</a><span>BERLIN · FULL TIME</span></li><li><a href="mailto:people@crucible.example?subject=Grader%20%E2%80%94%20REMOTE">Grader</a><span>REMOTE · CONTRACT · EVENINGS</span></li><li><a href="mailto:people@crucible.example?subject=Model%20engineer%20%E2%80%94%20DENVER">Model engineer</a><span>DENVER · FULL TIME</span></li></ul>
+    <ul class="jobs"><li><a href="mailto:jobs@yourwriting.ai?subject=Field%20engineer%20%E2%80%94%20AUSTIN">Field engineer</a><span>AUSTIN · FULL TIME</span></li><li><a href="mailto:jobs@yourwriting.ai?subject=Field%20engineer%20%E2%80%94%20BERLIN">Field engineer</a><span>BERLIN · FULL TIME</span></li><li><a href="mailto:jobs@yourwriting.ai?subject=Grader%20%E2%80%94%20REMOTE">Grader</a><span>REMOTE · CONTRACT · EVENINGS</span></li><li><a href="mailto:jobs@yourwriting.ai?subject=Model%20engineer%20%E2%80%94%20DENVER">Model engineer</a><span>DENVER · FULL TIME</span></li></ul>
   </div>
   <div id="press">
     <h2 class="sec-title">Press and <span class="amber">security.</span></h2>
     <p class="sec-sub">The press kit has the logo, photos of the box and founder bios. The security pack has the guard, the grading floor and the audit log, written for your security team.</p>
     <ul class="jobs">
-      <li><a href="mailto:press@crucible.example">press@crucible.example</a><span>PRESS KIT · INTERVIEWS</span></li>
-      <li><a href="mailto:security@crucible.example">security@crucible.example</a><span>QUESTIONNAIRES · DISCLOSURE</span></li>
+      <li><a href="mailto:press@yourwriting.ai">press@yourwriting.ai</a><span>PRESS KIT · INTERVIEWS</span></li>
+      <li><a href="mailto:security@yourwriting.ai">security@yourwriting.ai</a><span>QUESTIONNAIRES · DISCLOSURE</span></li>
       <li><a href="contact.html">Book a demo</a><span>SEE A BOX</span></li>
     </ul>
   </div>
@@ -150,8 +144,8 @@
 <footer id="company">
   <div class="container foot-grid">
     <div>
-      <span class="brand-name">CRUCIBLE</span>
-      <p class="foot-blurb">The data foundry for frontier AI. Refined, forged, assayed — in that order, every time.</p>
+      <span class="brand-name">YOURWRITING<span class="tld">.AI</span></span>
+      <p class="foot-blurb">The writing model that is actually yours. Tuned on your own words, checked against your own files.</p>
     </div>
     <div class="foot-col">
       <h4>PLATFORM</h4>
@@ -175,20 +169,20 @@
       <h4>CONTACT</h4>
       <ul>
         <li><a href="contact.html">Book a demo</a></li>
-        <li><a href="#demo">foundry@crucible.example</a></li>
+        <li><a href="#demo">hello@yourwriting.ai</a></li>
         <li><a href="about.html#press">Security</a></li>
       </ul>
     </div>
   </div>
-  <div class="foot-word" aria-hidden="true">CRUCIBLE</div>
+  <div class="foot-word" aria-hidden="true">YOURWRITING</div>
   <div class="container foot-legal">
-    <span>© 2026 CRUCIBLE INDUSTRIES — A FICTIONAL CONCEPT. NOT AFFILIATED WITH SCALE AI.</span>
+    <span>© 2026 YOURWRITING.AI — A FICTIONAL CONCEPT. NOT AFFILIATED WITH ANYONE.</span>
     <span>LOCAL OR CLOUD · YOUR CALL</span>
   </div>
 </footer>
-<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask Crucible</button>
-<div class="cw" id="cw" role="dialog" aria-label="Chat with Crucible">
-  <div class="cw-head"><div><b><i></i>Crucible</b><small>SCRIPTED · A PERSON REPLIES ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
+<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask yourwriting</button>
+<div class="cw" id="cw" role="dialog" aria-label="Chat with yourwriting.ai">
+  <div class="cw-head"><div><b><i></i>yourwriting.ai</b><small>SCRIPTED · A PERSON REPLIES ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
   <div class="cw-log" id="cwLog"></div>
   <div class="cw-quick"><button type="button">Local or API?</button><button type="button">Pricing</button><button type="button">Security</button><button type="button">Book a demo</button></div>
   <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>

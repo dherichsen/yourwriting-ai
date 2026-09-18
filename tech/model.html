@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Model — Crucible</title>
-<meta name="description" content="Crucible puts one AI model in your building and guards the frontier ones. Local first, API when you need it.">
+<title>Model — yourwriting.ai</title>
+<meta name="description" content="yourwriting.ai puts a writing model in your building and guards the frontier ones. Local first, API when you need it.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 26 26%27%3E%3Cpath d=%27M4 5h18l-6.2 9.5v5.3l-3.6 2.7v-8L4 5Z%27 fill=%27none%27 stroke=%27%2374a6ff%27 stroke-width=%272%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 26 26%27%3E%3Cpath d=%27M13 2.5 19.5 12 13 21.5 6.5 12Z%27 fill=%27none%27 stroke=%27%2374a6ff%27 stroke-width=%272%27 stroke-linejoin=%27round%27/%3E%3Cpath d=%27M13 13v8.5%27 fill=%27none%27 stroke=%27%2374a6ff%27 stroke-width=%272%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
 <style>.sp{margin:0;background:var(--page);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
 .sp header{padding:28px 32px 12px;max-width:1280px;margin:0 auto}
 .sp h1{font-size:26px;margin:0 0 4px;letter-spacing:-.01em}
@@ -57,7 +57,7 @@
 .sp .note{font-size:13px;color:var(--ink2)}
 .sp .note code{background:var(--page);padding:1px 5px;border-radius:4px}
 .sp ol.notes li{margin-bottom:4px}
-/* Crucible skin for the report */
+/* yourwriting.ai skin for the report */
 :root{ --surface:#151a26; --page:transparent; --ink2:#b9bfcc; --grid:#2a2f3c; --axis:#3b4152; --border:rgba(255,255,255,.10);
   --s1:#5b8def; --s2:#e0692f; --s3:#22b07f; --s4:#d9a100; --s5:#e07fa6; --s6:#4caf50; --s7:#9b8ff0; --s8:#ef6b6b;
   --good:#22b07f; --warn:#d9a100; --serious:#ec835a; --critical:#ef6b6b; --goodtext:#4fd18f;
@@ -107,11 +107,11 @@
                    ink: "oklch(1 0 0)", muted: "oklch(0.66 0 0)", "muted-2": "oklch(0.83 0 0)", "page-light": "oklch(1 0 0)", "page-light-ink": "oklch(0 0 0)" };
   var root = document.documentElement, q = new URLSearchParams(location.search), key = q.get("palette");
   if (key === "off") return;
-  try { key = key || localStorage.getItem("crucible-palette"); } catch (e) {}
+  try { key = key || localStorage.getItem("yw-palette"); } catch (e) {}
   if (!P[key]) key = "linear";
   function apply(k){
     var pal = P[k]; Object.keys(DEFAULTS).forEach(function(t){ root.style.setProperty("--" + t, pal[t] || DEFAULTS[t]); });
-    root.dataset.palette = k; try { localStorage.setItem("crucible-palette", k); } catch (e) {}
+    root.dataset.palette = k; try { localStorage.setItem("yw-palette", k); } catch (e) {}
     var b = document.querySelectorAll(".pal button[data-k]"); for (var i = 0; i < b.length; i++) b[i].setAttribute("aria-pressed", String(b[i].dataset.k === k));
     var lbl = document.querySelector(".pal span"); if (lbl) lbl.textContent = pal.name.toUpperCase();
   }
@@ -131,13 +131,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="index.html" class="brand" aria-label="Crucible home">
-      <svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true">
-        <path d="M4 5h18l-6.2 9.5v5.3l-3.6 2.7v-8L4 5Z" fill="none" stroke="oklch(0 0 0)" stroke-width="1.6" stroke-linejoin="round"/>
-        <path d="M9.5 8.5h7" stroke="oklch(0 0 0)" stroke-width="1.6" stroke-linecap="round"/>
-      </svg>
-      <span class="brand-name">crucible</span>
-    </a>
+    <a href="index.html" class="brand" aria-label="yourwriting.ai home"><svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 2.5 19.5 12 13 21.5 6.5 12Z" stroke="oklch(0 0 0)" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 13v8.5" stroke="oklch(0 0 0)" stroke-width="1.6" stroke-linecap="round"/><path d="M11.4 9.6a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0" stroke="oklch(0 0 0)" stroke-width="1.6"/></svg><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
     <nav class="nav-links" aria-label="Primary"><a href="index.html#anatomy">Inside</a><a href="models.html" aria-current="page">Models</a><a href="solutions.html">Custom Solutions</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
     <div class="nav-actions">
       <a href="contact.html" class="btn btn-ghost nav-cta">Log in</a>
@@ -242,8 +236,8 @@
 <footer id="company">
   <div class="container foot-grid">
     <div>
-      <span class="brand-name">CRUCIBLE</span>
-      <p class="foot-blurb">The data foundry for frontier AI. Refined, forged, assayed — in that order, every time.</p>
+      <span class="brand-name">YOURWRITING<span class="tld">.AI</span></span>
+      <p class="foot-blurb">The writing model that is actually yours. Tuned on your own words, checked against your own files.</p>
     </div>
     <div class="foot-col">
       <h4>PLATFORM</h4>
@@ -267,20 +261,20 @@
       <h4>CONTACT</h4>
       <ul>
         <li><a href="contact.html">Book a demo</a></li>
-        <li><a href="#demo">foundry@crucible.example</a></li>
+        <li><a href="#demo">hello@yourwriting.ai</a></li>
         <li><a href="about.html#press">Security</a></li>
       </ul>
     </div>
   </div>
-  <div class="foot-word" aria-hidden="true">CRUCIBLE</div>
+  <div class="foot-word" aria-hidden="true">YOURWRITING</div>
   <div class="container foot-legal">
-    <span>© 2026 CRUCIBLE INDUSTRIES — A FICTIONAL CONCEPT. NOT AFFILIATED WITH SCALE AI.</span>
+    <span>© 2026 YOURWRITING.AI — A FICTIONAL CONCEPT. NOT AFFILIATED WITH ANYONE.</span>
     <span>LOCAL OR CLOUD · YOUR CALL</span>
   </div>
 </footer>
-<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask Crucible</button>
-<div class="cw" id="cw" role="dialog" aria-label="Chat with Crucible">
-  <div class="cw-head"><div><b><i></i>Crucible</b><small>SCRIPTED · A PERSON REPLIES ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
+<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask yourwriting</button>
+<div class="cw" id="cw" role="dialog" aria-label="Chat with yourwriting.ai">
+  <div class="cw-head"><div><b><i></i>yourwriting.ai</b><small>SCRIPTED · A PERSON REPLIES ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
   <div class="cw-log" id="cwLog"></div>
   <div class="cw-quick"><button type="button">Local or API?</button><button type="button">Pricing</button><button type="button">Security</button><button type="button">Book a demo</button></div>
   <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>
@@ -446,10 +440,10 @@ document.getElementById('method').innerHTML = [
 
 </script><script>
 (function(){
-  var M = window.CRUCIBLE_MODELS, id = new URLSearchParams(location.search).get("id") || "qwen";
+  var M = window.WRITING_MODELS, id = new URLSearchParams(location.search).get("id") || "qwen";
   var m = M.find(function(x){ return x.id === id; }) || M[0];
   var MARKS = {"claude": "<i class=\"mk\" aria-hidden=\"true\"><svg viewBox=\"0 0 32 32\"><g stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" fill=\"none\"><path d=\"M16 4v24M4 16h24M7.5 7.5l17 17M24.5 7.5l-17 17M16 4l-3 4M16 4l3 4M16 28l-3-4M16 28l3-4\"/></g></svg></i>", "openai": "<i class=\"mk\" aria-hidden=\"true\"><svg viewBox=\"0 0 32 32\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\"><rect x=\"12.8\" y=\"3\" width=\"6.4\" height=\"15\" rx=\"3.2\" transform=\"rotate(0 16 16)\"/><rect x=\"12.8\" y=\"3\" width=\"6.4\" height=\"15\" rx=\"3.2\" transform=\"rotate(60 16 16)\"/><rect x=\"12.8\" y=\"3\" width=\"6.4\" height=\"15\" rx=\"3.2\" transform=\"rotate(120 16 16)\"/><rect x=\"12.8\" y=\"3\" width=\"6.4\" height=\"15\" rx=\"3.2\" transform=\"rotate(180 16 16)\"/><rect x=\"12.8\" y=\"3\" width=\"6.4\" height=\"15\" rx=\"3.2\" transform=\"rotate(240 16 16)\"/><rect x=\"12.8\" y=\"3\" width=\"6.4\" height=\"15\" rx=\"3.2\" transform=\"rotate(300 16 16)\"/></g></svg></i>", "x": "<i class=\"mk\" aria-hidden=\"true\"><svg viewBox=\"0 0 32 32\"><g stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" fill=\"none\"><path d=\"M5 5l22 22M27 5l-9.5 9.5M5 27l9.5-9.5\"/></g></svg></i>", "": ""};
-  document.title = m.name + " — Crucible";
+  document.title = m.name + " — yourwriting.ai";
   document.getElementById("mKick").textContent = (m.kind === "local" ? "LOCAL MODEL" : "FRONTIER MODEL · BEHIND OUR GUARD") + (m.tag ? " · " + m.tag : "");
   document.getElementById("mName").innerHTML = (MARKS[m.mark] || "") + '<span>' + m.name + '</span>';
   document.getElementById("mBlurb").textContent = m.blurb;
