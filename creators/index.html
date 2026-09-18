@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yourwriting.ai — your story, your voice, your writing</title>
+<meta name="description" content="A model trained on everything you have already written, so the next thing sounds like you wrote it. A fictional concept site for creators.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ctext x=%2716%27 y=%2724%27 text-anchor=%27middle%27 font-family=%27Georgia,serif%27 font-size=%2726%27 fill=%27%238a2c22%27%3Ey%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:      oklch(0.984 0.006 30);
+    --paper-2:    oklch(0.960 0.011 30);
+    --ink:        oklch(0.205 0.020 30);
+    --ink-2:      oklch(0.452 0.018 30);
+    --rule:       oklch(0.882 0.013 30);
+    --accent:     oklch(0.452 0.155 27);
+    --accent-lit: oklch(0.640 0.170 32);
+    --night:      oklch(0.196 0.022 28);
+    --night-ink:  oklch(0.955 0.010 40);
+    --night-ink2: oklch(0.700 0.016 40);
+    --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+    --measure: 34rem;
+    --gutter: clamp(22px, 5vw, 64px);
+    --z-nav: 40;
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font:400 clamp(1.06rem, 0.55vw + 0.94rem, 1.22rem)/1.62 var(--serif);
+    font-variation-settings:"opsz" 16;
+    font-synthesis-weight:none; text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{ background:var(--accent); color:var(--paper); }
+  .shell{ max-width:1160px; margin:0 auto; padding-inline:var(--gutter); }
+  .col{ max-width:var(--measure); }
+  p{ margin:0 0 1.05em; text-wrap:pretty; }
+  a{ color:inherit; }
+  h1,h2,h3{ font-weight:400; text-wrap:balance; margin:0; letter-spacing:-0.018em; }
+  em{ font-style:italic; }
+  hr.rule{ border:0; border-top:1px solid var(--rule); margin:0; }
+
+  /* small italic labels — the only "eyebrow" device, used four times total */
+  .note{ font:italic 400 0.86rem/1.5 var(--serif); font-variation-settings:"opsz" 9;
+         color:var(--ink-2); letter-spacing:.005em; }
+
+  /* ---------------------------------------------------------------- nav */
+  .nav{ position:fixed; inset:0 0 auto 0; z-index:var(--z-nav); display:flex; justify-content:space-between;
+        align-items:baseline; padding:clamp(20px,2.6vw,30px) var(--gutter);
+        mix-blend-mode:normal; transition:color .45s ease; color:var(--ink); pointer-events:none; }
+  .nav > *{ pointer-events:auto; }
+  .nav.on-night{ color:var(--night-ink); }
+  .nav .wm{ font-size:1.06rem; letter-spacing:-0.02em; text-decoration:none; font-variation-settings:"opsz" 14; }
+  .nav .wm i{ font-style:italic; color:var(--accent); transition:color .45s ease; }
+  .nav.on-night .wm i{ color:var(--accent-lit); }
+  .nav .go{ font-size:.96rem; text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:2px; }
+
+  /* ---------------------------------------------------------------- hero */
+  .hero{ min-height:100svh; display:flex; flex-direction:column; justify-content:center;
+         padding-block:clamp(120px,15vh,190px) clamp(40px,7vh,72px); }
+  .hero h1{ font-size:clamp(2.9rem, 8.4vw, 6rem); line-height:0.99; font-variation-settings:"opsz" 72;
+            font-weight:300; letter-spacing:-0.032em; margin:0 0 clamp(26px,3.4vw,40px); max-width:16ch; }
+  .hero h1 .l{ display:block; }
+  .hero h1 .vo{ position:relative; font-style:italic; font-weight:350; }
+  .hero h1 .vo svg{ position:absolute; left:0; right:-1%; bottom:-0.03em; width:101%; height:.34em; overflow:visible; }
+  .hero h1 .vo path{ fill:none; stroke:var(--accent); stroke-width:6; stroke-linecap:round;
+                     stroke-dasharray:1; stroke-dashoffset:1; }
+  .hero .sub{ max-width:31rem; color:var(--ink-2); font-size:1.12em; margin-bottom:clamp(26px,3vw,36px); }
+  .acts{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px; }
+  .btn{ display:inline-block; text-decoration:none; background:var(--accent); color:var(--paper);
+        padding:.62em 1.35em .68em; border-radius:2px; font-size:1rem; letter-spacing:-0.005em;
+        transition:background .3s cubic-bezier(.2,.7,.3,1), transform .3s cubic-bezier(.2,.7,.3,1); }
+  .btn:hover{ background:var(--ink); transform:translateY(-1px); }
+  .lnk{ text-decoration:none; border-bottom:1px solid var(--rule); padding-bottom:2px; color:var(--ink-2);
+        transition:border-color .3s, color .3s; }
+  .lnk:hover{ color:var(--ink); border-color:var(--ink); }
+  .hero .foot{ margin-top:auto; padding-top:clamp(32px,6vh,64px); }
+
+  /* ---------------------------------------------------------------- essay */
+  .essay{ padding-block:clamp(64px,9vw,120px) clamp(56px,8vw,104px); }
+  .essay .col{ max-width:36rem; }
+  .lede::first-letter{ float:left; font-size:4.2em; line-height:.78; padding:.06em .1em 0 0;
+                       font-weight:300; color:var(--accent); font-variation-settings:"opsz" 72; }
+  .pull{ margin:clamp(34px,4.4vw,52px) 0 clamp(30px,4vw,44px); padding-left:clamp(18px,2.4vw,30px);
+         border-left:1px solid var(--accent); font-size:clamp(1.28rem,2.4vw,1.7rem); line-height:1.3;
+         font-variation-settings:"opsz" 40; font-weight:300; letter-spacing:-0.02em; max-width:24ch; }
+
+  /* ---------------------------------------------------------------- peak */
+  .peak{ background:var(--night); color:var(--night-ink); }
+  .peak .stage{ min-height:100svh; display:flex; align-items:center; }
+  .peak .stage-in{ width:100%; padding-block:clamp(96px,12vh,140px) clamp(56px,8vh,90px); }
+  .peak .head{ display:flex; justify-content:space-between; align-items:baseline; gap:20px;
+               border-bottom:1px solid oklch(1 0 0 / .16); padding-bottom:12px; margin-bottom:clamp(30px,5vh,58px); }
+  .peak .head h2{ font-size:clamp(1.1rem,1.7vw,1.32rem); font-weight:400; font-variation-settings:"opsz" 18; }
+  .peak .head .n{ font:italic 400 .88rem/1 var(--serif); color:var(--night-ink2); font-variation-settings:"opsz" 9; }
+  .takes{ position:relative; min-height:clamp(300px,40vh,420px); }
+  .take{ position:absolute; inset:0; display:flex; align-items:center; opacity:0; }
+  .take p{ margin:0; font-size:clamp(1.55rem, 3.9vw, 2.95rem); line-height:1.16; font-weight:300;
+           letter-spacing:-0.028em; font-variation-settings:"opsz" 60; max-width:19ch; }
+  .take .w{ display:inline-block; white-space:pre; }
+  .meterwrap{ margin-top:clamp(28px,4.5vh,52px); }
+  .meter{ position:relative; height:1px; background:oklch(1 0 0 / .2); }
+  .meter i{ position:absolute; inset:0 auto 0 0; width:0%; background:var(--accent-lit); display:block; }
+  .meter b{ position:absolute; top:-3px; left:0; width:7px; height:7px; border-radius:50%;
+            background:var(--accent-lit); transform:translateX(-50%); }
+  .mlabels{ display:flex; justify-content:space-between; margin-top:11px; }
+  .mlabels span{ font:italic 400 .84rem/1 var(--serif); color:var(--night-ink2); font-variation-settings:"opsz" 9;
+                 letter-spacing:.06em; text-transform:lowercase; }
+  .caption{ margin-top:clamp(18px,2.6vh,26px); min-height:1.6em; }
+  .caption em{ color:var(--night-ink); font-size:.95rem; }
+
+  /* ---------------------------------------------------------------- specimen */
+  .spec{ padding-block:clamp(72px,10vw,130px); }
+  .spec h2, .how h2, .writes h2, .wont h2, .forwho h2, .price h2{
+    font-size:clamp(1.9rem,3.7vw,2.85rem); font-weight:300; letter-spacing:-0.028em;
+    font-variation-settings:"opsz" 48; line-height:1.08; margin-bottom:.5em; max-width:17ch; }
+  .spec .intro{ max-width:33rem; color:var(--ink-2); margin-bottom:clamp(40px,5.5vw,66px); }
+  .habits{ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));
+           gap:0 clamp(28px,4vw,64px); border-top:1px solid var(--rule); }
+  .habit{ border-bottom:1px solid var(--rule); padding:clamp(16px,2vw,22px) 0; display:flex; gap:16px; align-items:baseline; }
+  .habit .k{ font:italic 400 .82rem/1.5 var(--serif); color:var(--accent); font-variation-settings:"opsz" 9;
+             flex:0 0 5.4rem; }
+  .habit p{ margin:0; font-size:1.02em; }
+  .rhythm{ margin-top:clamp(44px,6vw,76px); }
+  .rhythm .bars{ display:flex; flex-direction:column; gap:7px; max-width:40rem; margin-top:18px; }
+  .rhythm .bars i{ display:block; height:2px; background:var(--ink); transform:scaleX(0); transform-origin:left center; }
+  .rhythm .bars i.long{ background:var(--accent); }
+  .tally{ display:flex; flex-wrap:wrap; gap:clamp(26px,5vw,72px); margin-top:clamp(44px,6vw,72px);
+          padding-top:clamp(24px,3vw,34px); border-top:1px solid var(--rule); }
+  .tally div b{ display:block; font-size:clamp(2.1rem,4.4vw,3.1rem); font-weight:200; letter-spacing:-0.03em;
+                font-variation-settings:"opsz" 60; line-height:1; margin-bottom:6px; }
+
+  /* ---------------------------------------------------------------- how */
+  .how{ background:var(--paper-2); padding:clamp(72px,10vw,130px) 0; }
+  .how ol{ list-style:none; counter-reset:s; margin:clamp(34px,4.5vw,54px) 0 0; padding:0; max-width:44rem; }
+  .how li{ counter-increment:s; position:relative; padding:clamp(22px,3vw,32px) 0 clamp(22px,3vw,32px) clamp(56px,7vw,92px);
+           border-top:1px solid var(--rule); }
+  .how li:last-child{ border-bottom:1px solid var(--rule); }
+  .how li::before{ content:counter(s); position:absolute; left:0; top:clamp(18px,2.6vw,27px);
+                   font-size:clamp(1.5rem,2.6vw,2rem); font-weight:200; color:var(--accent);
+                   font-variation-settings:"opsz" 40; line-height:1; }
+  .how li h3{ font-size:1.22em; margin-bottom:.3em; letter-spacing:-0.02em; }
+  .how li p{ margin:0; color:var(--ink-2); max-width:34rem; }
+
+  /* ---------------------------------------------------------------- writes */
+  .writes{ padding-block:clamp(72px,10vw,120px); }
+  .writes .list{ margin-top:clamp(28px,3.6vw,44px); max-width:42rem; }
+  .writes .list p{ font-size:clamp(1.22rem,2.5vw,1.72rem); line-height:1.34; font-weight:300;
+                   letter-spacing:-0.022em; font-variation-settings:"opsz" 40; margin:0 0 .42em;
+                   color:var(--ink-2); transition:color .5s ease; }
+  .writes .list p .hl{ color:var(--ink); }
+
+  /* ---------------------------------------------------------------- wont + who */
+  .wont{ padding-block:clamp(64px,9vw,110px); border-top:1px solid var(--rule); }
+  .wont .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));
+               gap:clamp(26px,3.4vw,52px); margin-top:clamp(28px,3.6vw,44px); }
+  .wont .grid > div h3{ font-size:1.06em; margin-bottom:.35em; }
+  .wont .grid > div p{ color:var(--ink-2); font-size:.99em; margin:0; }
+  .forwho{ padding-block:clamp(56px,8vw,100px) clamp(64px,9vw,110px); }
+  .forwho .col{ max-width:38rem; }
+  .forwho ul{ margin:clamp(24px,3vw,36px) 0 0; padding:0; list-style:none; }
+  .forwho li{ padding:13px 0; border-bottom:1px solid var(--rule); color:var(--ink-2); }
+  .forwho li:first-child{ border-top:1px solid var(--rule); }
+
+  /* ---------------------------------------------------------------- price */
+  .price{ background:var(--paper-2); padding:clamp(72px,10vw,130px) 0; }
+  .plans{ margin-top:clamp(32px,4.2vw,52px); border-top:1px solid var(--rule); max-width:52rem; }
+  .plan{ display:grid; grid-template-columns:8.5rem 1fr auto; gap:clamp(16px,3vw,40px); align-items:baseline;
+         padding:clamp(20px,2.7vw,30px) 0; border-bottom:1px solid var(--rule); }
+  .plan .nm{ font-size:1.2em; letter-spacing:-0.018em; }
+  .plan .ds{ color:var(--ink-2); font-size:.99em; }
+  .plan .pr{ font-size:1.25em; white-space:nowrap; font-variation-settings:"opsz" 24; }
+  .plan .pr small{ font:italic 400 .7em/1 var(--serif); color:var(--ink-2); }
+  @media (max-width:700px){
+    .plan{ grid-template-columns:1fr auto; row-gap:10px; }
+    .plan .nm{ grid-area:1/1; } .plan .pr{ grid-area:1/2; }   /* price stays on the name's line */
+    .plan .ds{ grid-area:2/1/3/3; }
+  }
+
+  /* ---------------------------------------------------------------- close */
+  .close{ padding-block:clamp(84px,12vw,150px) clamp(40px,5vw,60px); }
+  .close h2{ font-size:clamp(2.2rem,5.4vw,4rem); font-weight:300; letter-spacing:-0.032em;
+             font-variation-settings:"opsz" 72; line-height:1.03; max-width:14ch; margin-bottom:.45em; }
+  .close .sub{ color:var(--ink-2); max-width:30rem; margin-bottom:clamp(26px,3.4vw,38px); }
+  form.sign{ display:flex; flex-wrap:wrap; gap:12px; max-width:30rem; }
+  form.sign input{ flex:1 1 15rem; font:400 1rem/1 var(--serif); color:var(--ink); background:transparent;
+                   border:0; border-bottom:1px solid var(--ink); padding:.7em .1em; border-radius:0; }
+  form.sign input::placeholder{ color:var(--ink-2); font-style:italic; }
+  form.sign input:focus{ outline:none; border-bottom-color:var(--accent); }
+  .colophon{ margin-top:clamp(64px,9vw,120px); padding-top:22px; border-top:1px solid var(--rule);
+             display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px 34px; }
+  .colophon p{ margin:0; max-width:46ch; }
+
+  /* ---------------------------------------------------------------- reveal */
+  [data-rise]{ opacity:0; transform:translateY(14px); }
+  .no-motion [data-rise]{ opacity:1; transform:none; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    [data-rise]{ opacity:1 !important; transform:none !important; }
+    .hero h1 .vo path{ stroke-dashoffset:0; }
+    .rhythm .bars i{ transform:scaleX(1); }
+    .take{ position:static; opacity:1; margin-bottom:1.1em; }
+    .takes{ min-height:0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="wm" href="#top">yourwriting<i>.ai</i></a>
+  <a class="go" href="#start">Start</a>
+</header>
+
+<main id="top">
+
+  <!-- ============================================================ hero -->
+  <section class="hero shell">
+    <h1>
+      <span class="l">Your story.</span>
+      <span class="l">Your <span class="vo">voice<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8.4C46 3.2 104 2.4 150 4.6c44 2.1 96 3.4 148 1.2" pathLength="1"/></svg></span>.</span>
+      <span class="l">Your writing.</span>
+    </h1>
+    <p class="sub">A model trained on everything you have already written, so the next draft starts in your handwriting instead of someone else's. It doesn't write for you. It writes the way you do.</p>
+    <div class="acts">
+      <a class="btn" href="#start">Feed it your archive</a>
+      <a class="lnk" href="#learns">See what it reads in you</a>
+    </div>
+    <div class="foot"><p class="note">For newsletter writers, authors, ghostwriters, and anyone whose name goes on the work.</p></div>
+  </section>
+
+  <!-- ============================================================ essay -->
+  <section class="essay shell">
+    <div class="col">
+      <p class="lede" data-rise>Everyone has the same machine now. Ask it for a paragraph about grief, or pricing, or a bad Tuesday in March, and it hands back the same competent, weightless prose it hands everybody else — the sentence that could have come from anyone, which is a longer way of saying it came from nobody.</p>
+      <p data-rise>Readers have started to notice. Two in five now say heavy AI use would make them trust a favourite name less, double what they said a year ago, and the giveaway they report most often is writing that arrives too smooth to have been lived through.</p>
+      <div class="pull" data-rise>The problem was never that it writes badly. It's that it writes like everyone.</div>
+      <p data-rise>Your archive is the one thing it doesn't have. Ten years of newsletters, the drafts you abandoned, the replies you actually sent — a record of a specific person making specific choices, several hundred thousand times. That record is a fingerprint, and it is enough to teach a model the difference between prose and <em>your</em> prose.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ peak -->
+  <section class="peak" id="peak">
+    <div class="stage" id="peakStage">
+     <div class="shell stage-in">
+      <div class="head">
+        <h2>One sentence, eight ways.</h2>
+        <span class="n" id="peakN">01 / 08</span>
+      </div>
+
+      <div class="takes" id="takes">
+        <div class="take"><p>In today's fast-paced world, consistency is key to building an audience that truly trusts you.</p></div>
+        <div class="take"><p>Publishing on a regular schedule is one of the most reliable ways to build trust with readers.</p></div>
+        <div class="take"><p>Newsletter writers who skip weeks tend to lose the readers they worked hardest to earn.</p></div>
+        <div class="take"><p>Skip a week and you can feel it. Skip three and the open rate tells you what it cost.</p></div>
+        <div class="take"><p>Skip a week and you feel it in the numbers. Skip three and the numbers stop being a metaphor.</p></div>
+        <div class="take"><p>So I skipped three weeks in March, and the open rate did what open rates do.</p></div>
+        <div class="take"><p>I skipped three weeks in March. The open rate did what open rates do, and there was no one to be annoyed at.</p></div>
+        <div class="take"><p>I skipped three weeks in March and four hundred people quietly stopped opening. Nobody wrote to ask where I'd gone, which was the part that stung.</p></div>
+      </div>
+
+      <div class="meterwrap">
+        <div class="meter"><i id="mFill"></i><b id="mDot"></b></div>
+        <div class="mlabels"><span>anyone</span><span>you</span></div>
+        <div class="caption"><em id="peakCap">the machine's first answer, to anybody who asks</em></div>
+      </div>
+     </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ specimen -->
+  <section class="spec shell" id="learns">
+    <h2 data-rise>It isn't reading what you know.<br>It's reading how you turn.</h2>
+    <p class="intro" data-rise>Topics are the easy part, and the part you can look up. What makes a sentence yours is smaller and much harder to fake: where you breathe, what you refuse to say, the word you reach for eleven times a year. Here is the sort of thing it comes back with after a first pass through an archive.</p>
+
+    <div class="habits">
+      <div class="habit" data-rise><span class="k">rhythm</span><p>Sentences from six to forty-one words. You like the long one immediately after three short ones.</p></div>
+      <div class="habit" data-rise><span class="k">openings</span><p>One paragraph in five begins with <em>And</em>, <em>But</em> or <em>So</em>. You almost never open with a question you intend to answer.</p></div>
+      <div class="habit" data-rise><span class="k">diction</span><p><em>Actually</em>, eleven times a year. <em>Moreover</em>, never. You say <em>bought</em> where most people would say <em>invested in</em>.</p></div>
+      <div class="habit" data-rise><span class="k">marks</span><p>No semicolons in four years. Em dashes everywhere, usually carrying the second thought rather than an aside.</p></div>
+      <div class="habit" data-rise><span class="k">endings</span><p>You finish a section on its shortest sentence, and you never explain the joke you just made.</p></div>
+      <div class="habit" data-rise><span class="k">refusals</span><p>You don't use <em>journey</em>, <em>unlock</em>, <em>leverage</em>, or any sentence that begins <em>In a world where</em>.</p></div>
+    </div>
+
+    <div class="rhythm" data-rise>
+      <p class="note">Sentence lengths across one issue — the long ones in red are where you tend to land the point.</p>
+      <div class="bars" id="bars" aria-hidden="true"></div>
+    </div>
+
+    <div class="tally">
+      <div data-rise><b>341</b><span class="note">pieces read</span></div>
+      <div data-rise><b>218k</b><span class="note">words of you</span></div>
+      <div data-rise><b>41</b><span class="note">habits named</span></div>
+      <div data-rise><b>0</b><span class="note">of it shown to anyone</span></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ how -->
+  <section class="how">
+    <div class="shell">
+      <h2 data-rise>How it learns you.</h2>
+      <ol>
+        <li data-rise>
+          <h3>Hand over the archive.</h3>
+          <p>Newsletters, drafts, the book you stopped writing in 2023, the long replies you send at midnight. Messy is fine; messy is the point. It reads all of it and keeps none of it anywhere another person can reach.</p>
+        </li>
+        <li data-rise>
+          <h3>It learns the habits, not the facts.</h3>
+          <p>Voice and knowledge are tuned apart on purpose. The model learns how you move through a sentence; anything it needs to <em>know</em> stays in your files, where it can be quoted and checked rather than remembered and guessed at.</p>
+        </li>
+        <li data-rise>
+          <h3>You write with it, and it keeps learning from the cuts.</h3>
+          <p>It drafts, you cut. What you cut is the most useful thing you own — a running record of what you would never have said — and it goes straight back into the next tuning. The longer you use it, the less there is to cut.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================================================ writes -->
+  <section class="writes shell">
+    <h2 data-rise>What you'll actually use it for.</h2>
+    <div class="list" id="writeList">
+      <p>The issue that's due tomorrow.</p>
+      <p>The chapter you've been circling for a month.</p>
+      <p>The reply you've been avoiding since Tuesday.</p>
+      <p>The cold open, once you know the ending.</p>
+      <p>The pitch, in your voice instead of the pitch voice.</p>
+      <p>The caption, which should take four minutes and takes forty.</p>
+      <p>The note to the people who paid, when the thing slipped.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ wont -->
+  <section class="wont shell">
+    <h2 data-rise>What it won't do.</h2>
+    <div class="grid">
+      <div data-rise>
+        <h3>Invent your life.</h3>
+        <p>If a claim isn't in something you gave it, it says so instead of filling the gap with something plausible. A blank is cheaper than a correction.</p>
+      </div>
+      <div data-rise>
+        <h3>Publish anything.</h3>
+        <p>There is no button that sends. Nothing leaves without you reading it first, which is the only version of this that stays honest.</p>
+      </div>
+      <div data-rise>
+        <h3>Be your ghostwriter.</h3>
+        <p>It's not here to have your ideas. It's here so the blank page is already in your handwriting, and you can get to the part that was always yours to do.</p>
+      </div>
+      <div data-rise>
+        <h3>Sound like you on day one.</h3>
+        <p>The first week is uncanny and slightly wrong, the way a good impression is. It gets close around thirty pieces and stops being noticeable around a hundred.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ who -->
+  <section class="forwho shell">
+    <div class="col">
+      <h2 data-rise>Who this is for.</h2>
+      <ul>
+        <li data-rise>Newsletter writers with an archive worth reading twice.</li>
+        <li data-rise>Authors between books, and authors inside one.</li>
+        <li data-rise>Ghostwriters keeping five voices straight without letting them bleed.</li>
+        <li data-rise>Founders who still write their own posts and would like to keep doing it.</li>
+        <li data-rise>Anyone who has been told their writing sounds like them, and would rather that stayed true.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================ price -->
+  <section class="price" id="start">
+    <div class="shell">
+      <h2 data-rise>What it costs.</h2>
+      <p class="intro note" data-rise style="max-width:30rem">Monthly, cancel whenever. Your archive leaves with you, along with the model tuned on it.</p>
+      <div class="plans">
+        <div class="plan" data-rise>
+          <span class="nm">Reading</span>
+          <span class="ds">It reads your archive and shows you the voiceprint — the habits, the refusals, the rhythm. No model, no drafting. Most people start here and are quietly unsettled by it.</span>
+          <span class="pr">Free</span>
+        </div>
+        <div class="plan" data-rise>
+          <span class="nm">Writing</span>
+          <span class="ds">Your model, tuned on your archive and re-tuned every month as you publish. Unlimited drafting, and every claim traced back to a file you gave it.</span>
+          <span class="pr">$29 <small>/ month</small></span>
+        </div>
+        <div class="plan" data-rise>
+          <span class="nm">Studio</span>
+          <span class="ds">Five voices kept separately, for ghostwriters and small teams who write as somebody else for a living. Each one gets its own archive and its own refusals.</span>
+          <span class="pr">$89 <small>/ month</small></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ close -->
+  <section class="close shell">
+    <h2 data-rise>Bring twenty thousand words you already wrote.</h2>
+    <p class="sub" data-rise>That's usually about a year of a newsletter, or three chapters, or one very long correspondence. Enough for the first pass to be recognisable.</p>
+    <form class="sign" data-rise onsubmit="return false;">
+      <input type="email" placeholder="you@yourdomain" aria-label="Your email">
+      <button class="btn" type="submit">Send me the voiceprint</button>
+    </form>
+
+    <div class="colophon">
+      <p class="note">Set entirely in Newsreader, one family, optical sizes 9 through 72.</p>
+      <p class="note">A fictional concept site. No product exists; every number, habit, quote and price on this page is invented.</p>
+    </div>
+  </section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  var RM = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!window.gsap) { document.body.classList.add("no-motion"); return; }
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ---------------------------------------------------------- sentence-length bars (specimen) */
+  var LENGTHS = [14, 9, 6, 31, 11, 7, 8, 27, 12, 6, 19, 41, 9, 7, 13, 24, 8, 5];
+  var bars = document.getElementById("bars");
+  LENGTHS.forEach(function(n){
+    var i = document.createElement("i");
+    i.style.width = Math.round((n / 41) * 100) + "%";
+    if (n >= 24) i.className = "long";
+    bars.appendChild(i);
+  });
+
+  /* ---------------------------------------------------------- hero: the underline writes itself */
+  var stroke = document.querySelector(".hero .vo path");
+  if (RM) { gsap.set(stroke, {strokeDashoffset: 0}); }
+  else {
+    gsap.timeline({delay: .35})
+      .from(".hero h1 .l", {opacity: 0, y: 22, duration: .9, stagger: .09, ease: "expo.out"})
+      .to(stroke, {strokeDashoffset: 0, duration: .85, ease: "power2.inOut"}, "-=.45")
+      .from(".hero .sub, .hero .acts, .hero .foot", {opacity: 0, y: 14, duration: .7, stagger: .08, ease: "expo.out"}, "-=.6");
+  }
+
+  /* ---------------------------------------------------------- general rises */
+  gsap.utils.toArray("[data-rise]").forEach(function(el){
+    if (RM) { gsap.set(el, {opacity: 1, y: 0}); return; }
+    gsap.to(el, {
+      opacity: 1, y: 0, duration: .85, ease: "expo.out",
+      scrollTrigger: {trigger: el, start: "top 88%", once: true}
+    });
+  });
+
+  /* the rhythm bars draw out once, left to right */
+  ScrollTrigger.create({
+    trigger: ".rhythm", start: "top 78%", once: true,
+    onEnter: function(){
+      if (RM) { gsap.set(".rhythm .bars i", {scaleX: 1}); return; }
+      gsap.to(".rhythm .bars i", {scaleX: 1, duration: .7, stagger: .035, ease: "expo.out"});
+    }
+  });
+
+  /* the "what you'll use it for" list lights one line at a time as it passes the middle */
+  gsap.utils.toArray("#writeList p").forEach(function(p){
+    var inner = p.innerHTML;
+    p.innerHTML = '<span class="hl-wrap">' + inner + "</span>";
+    ScrollTrigger.create({
+      trigger: p, start: "top 72%", end: "bottom 42%",
+      onToggle: function(st){ p.querySelector(".hl-wrap").classList.toggle("hl", st.isActive); }
+    });
+  });
+
+  /* ---------------------------------------------------------- THE PEAK: one sentence, eight ways */
+  var takes = gsap.utils.toArray("#takes .take");
+  var CAPS = [
+    "the machine's first answer, to anybody who asks",
+    "now it knows your subject — and nothing else about you",
+    "now it knows who reads you",
+    "now it has your rhythm: short, short, short, long",
+    "now it has the words you actually reach for",
+    "now it knows you start paragraphs on <em>So</em>",
+    "now it knows what you'd never say out loud",
+    "yours — the detail nobody else would have kept"
+  ];
+  var capEl = document.getElementById("peakCap"),
+      numEl = document.getElementById("peakN"),
+      fill  = document.getElementById("mFill"),
+      dot   = document.getElementById("mDot");
+
+  /* split each take into words once, so the incoming sentence writes itself in rather than fading as a block */
+  takes.forEach(function(t){
+    var p = t.querySelector("p");
+    p.innerHTML = p.textContent.split(/(\s+)/).map(function(chunk){
+      return /^\s+$/.test(chunk) ? chunk : '<span class="w">' + chunk + "</span>";
+    }).join("");
+  });
+
+  function setState(i){
+    i = Math.max(0, Math.min(takes.length - 1, i));
+    capEl.innerHTML = CAPS[i];
+    numEl.textContent = "0" + (i + 1) + " / 0" + takes.length;
+    var pct = (i / (takes.length - 1)) * 100;
+    fill.style.width = pct + "%";
+    dot.style.left = pct + "%";
+  }
+
+  if (RM) {
+    gsap.set(takes, {opacity: 1});
+    gsap.set("#takes .w", {opacity: 1, y: 0});
+    setState(takes.length - 1);
+  } else {
+    /* take 0 is already written when the pin begins; every later take writes itself in
+       during the run-up to its own unit, so at whole units the sentence is complete and holding */
+    gsap.set(takes[0], {opacity: 1});
+    gsap.set(takes[0].querySelectorAll(".w"), {opacity: 1, y: 0});
+    for (var k = 1; k < takes.length; k++) gsap.set(takes[k].querySelectorAll(".w"), {opacity: 0, y: 10});
+
+    var tl = gsap.timeline({paused: true});
+    for (var i = 1; i < takes.length; i++) {
+      tl.to(takes[i - 1].querySelectorAll(".w"), {opacity: 0, y: -8, duration: .18, ease: "power2.in"}, i - .78);
+      tl.set(takes[i - 1], {opacity: 0}, i - .58);
+      tl.set(takes[i], {opacity: 1}, i - .56);
+      tl.fromTo(takes[i].querySelectorAll(".w"), {opacity: 0, y: 10},
+        {opacity: 1, y: 0, duration: .22, ease: "power2.out",
+         /* amount, not each: the stagger spans the same slice whether the take is 12 words or 27 */
+         stagger: {amount: .26}, immediateRender: false}, i - .52);
+    }
+    tl.to({}, {duration: .5}, takes.length - 1);   /* the last one gets a beat before the pin releases */
+
+    var LAST = takes.length - 1, DUR = tl.duration();
+    ScrollTrigger.create({
+      trigger: "#peak",
+      start: "top top",
+      end: "+=" + (window.innerWidth < 760 ? 2900 : 4100),
+      pin: "#peakStage",
+      pinSpacing: true,
+      scrub: 0.55,
+      animation: tl,
+      invalidateOnRefresh: true,
+      onUpdate: function(st){ setState(Math.min(LAST, Math.round(st.progress * DUR))); }
+    });
+    setState(0);
+  }
+
+  /* the nav inverts while the dark section is behind it */
+  ScrollTrigger.create({
+    trigger: "#peak", start: "top 48px", end: "bottom 48px",
+    onToggle: function(st){ document.getElementById("nav").classList.toggle("on-night", st.isActive); }
+  });
+})();
+</script>
+<style>
+  /* lit state for the "what you'll use it for" list — declared after the script's class is known */
+  #writeList .hl-wrap{ color:var(--ink-2); transition:color .55s ease; }
+  #writeList .hl-wrap.hl{ color:var(--ink); }
+</style>
+</body>
+</html>
