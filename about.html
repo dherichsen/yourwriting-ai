@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — yourwriting.ai</title>
+<meta name="description" content="Who builds yourwriting.ai, how the hallucination gate came about, and the evaluation behind it.">
+<link rel="canonical" href="https://yourwriting.ai/about.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="yourwriting.ai">
+<meta property="og:title" content="About — yourwriting.ai">
+<meta property="og:description" content="Who builds yourwriting.ai, how the hallucination gate came about, and the evaluation behind it.">
+<meta property="og:url" content="https://yourwriting.ai/about.html">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/proof.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ctext x=%2716%27 y=%2724%27 text-anchor=%27middle%27 font-family=%27Helvetica,Arial,sans-serif%27 font-size=%2726%27 font-weight=%27600%27 fill=%27%2334c98a%27%3Ey%3C/text%3E%3C/svg%3E">
+
+</head>
+<body class="sub p-about">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand" aria-label="yourwriting.ai home"><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="about.html" aria-current="page">About</a><a href="faq.html">FAQ</a></nav>
+    <div class="nav-actions"><a href="contact.html" class="btn btn-ok nav-cta">Book a walkthrough <span class="arr" aria-hidden="true">→</span></a></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</header>
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose">CLOSE ✕</button>
+  <a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
+  <a href="contact.html">Book a walkthrough</a>
+</div>
+<main id="main">
+<section class="page-head"><div class="container">
+  <p class="kicker">ABOUT</p>
+  <h1>We started with the voice. <span class="ok">Then came the gate.</span></h1>
+  <p class="sec-sub">yourwriting.ai is a small team that tunes a writing model on what your firm has already sent — and built the thing that stops it making anything up.</p>
+</div></section>
+<section class="sec"><div class="container why" style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--s-16);align-items:start">
+  <h2 data-reveal style="font-size:var(--step-3);font-weight:500;line-height:1.14;max-width:20ch;text-wrap:balance">A model that sounds exactly like your firm is the most dangerous place for a made-up number.</h2>
+  <div>
+    <p data-reveal style="color:var(--ink)">We started inside a studio that writes for firms in regulated work: clinics, treatment centres, law practices. The job was to make machine drafts read like the people who sign them, and we measured it the hard way — nineteen rounds of tuning and prompting through 2026, graded blind against human-written pages, with every idea that failed written down next to the ones that worked.</p>
+    <p data-reveal style="color:var(--muted-2);margin-top:var(--s-4)">The voice turned out to be the easier half. A draft that sounds exactly like the partner is the one nobody re-reads — and that is where a wrong figure, a date from a superseded contract or a case that does not exist walks straight out the door in the firm's own cadence.</p>
+    <p data-reveal style="color:var(--muted-2);margin-top:var(--s-4)">So we built the gate: split the draft into claims, look each one up in the firm's own files, repair it or hold it, and sign a receipt that says what was checked. It has a written evaluation — planted errors, poisoned sources, a second model as blind judge — and the numbers on the home page come from it, not from a slide.</p>
+  </div>
+</div></section>
+<section class="sec"><div class="container">
+  <h2 class="sec-title">What we <span class="ok">hold to.</span></h2>
+  <div class="writes" style="grid-template-columns:1fr 1fr;gap:0 var(--s-16)"><article data-reveal><h3>Tuned beats prompted.</h3><p>A page of instructions in front of a rented model is a costume. A few thousand of your own letters change what the model is, and it holds up on the ten thousandth draft as well as the first.</p></article><article data-reveal><h3>A claim without a line is a guess.</h3><p>Fluent text is not evidence. If the gate cannot put a file and a line against a claim, it does not go out — however confident, well-written and plausible it sounds.</p></article><article data-reveal><h3>People grade the writing.</h3><p>Humans read the drafts and mark the misses. That is where the next adapter and the next gate rule come from, and it is the part nobody can automate away yet.</p></article><article data-reveal><h3>You can leave.</h3><p>Open weights, your examples, your adapter, your source list, your logs — all in standard formats on hardware you own. Support is the only thing you rent.</p></article></div>
+</div></section>
+<section class="sec"><div class="container">
+  <h2 class="sec-title">How we <span class="ok">got here.</span></h2>
+  <div class="tl" id="tl" style="margin-top:var(--s-12)">
+    <div class="tl-line" aria-hidden="true"><i></i></div>
+    <ol class="tl-list"><li><i class="tl-dot" aria-hidden="true"></i><time>2026</time><strong>The measurement</strong><p>Nineteen rounds of making machine drafts read like the firm, graded blind against human-written pages. Six ideas kept, eight thrown out, all of it on the record.</p></li><li><i class="tl-dot" aria-hidden="true"></i><time>SEP 2026</time><strong>The call</strong><p>The fine-tuning is a feature. The proof that the writing was checked is the product. yourwriting.ai gets its brief.</p></li><li><i class="tl-dot" aria-hidden="true"></i><time>OCT 2026</time><strong>The gate</strong><p>Version 0.3: claims, sources, verdicts, receipts. A hundred and sixty evaluation runs with planted and poisoned errors, judged blind.</p></li><li><i class="tl-dot" aria-hidden="true"></i><time>NOW</time><strong>First pilots</strong><p>One kind of letter, four weeks, a fixed fee. Firms that bill for words and carry liability for them go first.</p></li></ol>
+  </div>
+</div></section>
+<section class="sec" id="team"><div class="container">
+  <h2 class="sec-title">The <span class="ok">people.</span></h2>
+  <p class="sec-sub">Small on purpose. Nobody in sales.</p>
+  <div class="people"><div class="person" data-reveal><b>David Erichsen</b><span>FOUNDER</span></div><div class="person" data-reveal><b>The gate</b><span>BUILT AND EVALUATED IN-HOUSE · REPORT IN EVERY SECURITY PACK</span></div></div>
+</div></section>
+<section class="sec"><div class="container two" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--s-16)">
+  <div id="press">
+    <h2 class="sec-title">Press and <span class="ok">security.</span></h2>
+    <p class="sec-sub">The security pack documents the gate, the receipt and log format, and the evaluation for your security team. One address reaches a person for both.</p>
+    <ul class="jobs">
+      <li><a href="mailto:hello@yourwriting.ai?subject=Press">hello@yourwriting.ai</a><span>PRESS · INTERVIEWS</span></li>
+      <li><a href="mailto:hello@yourwriting.ai?subject=Security%20pack">hello@yourwriting.ai</a><span>SECURITY PACK · QUESTIONNAIRES · DISCLOSURE</span></li>
+      <li><a href="contact.html">Book a walkthrough</a><span>SEE THE GATE ON YOUR OWN LETTERS</span></li>
+    </ul>
+  </div>
+  <div>
+    <h2 class="sec-title">Who it's <span class="ok">for.</span></h2>
+    <p class="sec-sub">A firm that bills for words and carries liability for them — ten to a hundred and fifty people. Regulated-vertical marketing, boutique and midsize law, accounting and advisory. If a wrong number in a letter costs you a client or a renewal, this was built for you.</p>
+  </div>
+</div></section><section class="cta"><div class="container">
+  <h2 data-reveal>Bring one letter <span class="ok">you can't get wrong.</span></h2>
+  <p data-reveal>We'll tune on the ones you've already sent, wire the gate to the files behind them, and show you the graded difference in four weeks.</p>
+  <a href="contact.html" class="btn btn-honey" data-reveal>Book a walkthrough <span class="arr" aria-hidden="true">→</span></a>
+</div></section>
+</main>
+<footer id="company">
+  <div class="container foot-grid">
+    <div>
+      <a href="index.html" class="brand"><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
+      <p class="foot-blurb">Tuned on your words. Checked against your files. Nothing goes out that can't be traced.</p>
+    </div>
+    <div class="foot-col"><h4>THE PRODUCT</h4><ul>
+      <li><a href="index.html#how">How it learns your voice</a></li>
+      <li><a href="gate.html">The hallucination gate</a></li>
+      <li><a href="index.html#price">Pricing</a></li>
+    </ul></div>
+    <div class="foot-col"><h4>COMPANY</h4><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="about.html#press">Press</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul></div>
+    <div class="foot-col"><h4>CONTACT</h4><ul>
+      <li><a href="contact.html">Book a walkthrough</a></li>
+      <li><a href="mailto:hello@yourwriting.ai">hello@yourwriting.ai</a></li>
+      <li><a href="about.html#press">Security pack</a></li>
+    </ul></div>
+  </div>
+  <div class="foot-word" aria-hidden="true">YOURWRITING</div>
+  <div class="container foot-legal">
+    <span>© 2026 YOURWRITING.AI</span>
+    <span>EVERY CLAIM · TRACED TO A LINE</span>
+  </div>
+</footer>
+<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask yourwriting</button>
+<div class="cw" id="cw" role="dialog" aria-label="Chat with yourwriting.ai">
+  <div class="cw-head"><div><b><i></i>yourwriting.ai</b><small>SCRIPTED · A PERSON REPLIES ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
+  <div class="cw-log" id="cwLog"></div>
+  <div class="cw-quick"><button type="button">Local or API?</button><button type="button">Pricing</button><button type="button">Security</button><button type="button">The gate</button></div>
+  <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="assets/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  gsap.registerPlugin(ScrollTrigger);
+  var RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var tl = gsap.timeline({ defaults: { ease: "none" } });
+  tl.to(".tl-line i", { scaleX: 1, duration: 1 }, 0);
+  tl.to(".tl-dot", { opacity: 1, scale: 1, duration: .08, stagger: .184, ease: "power2.out" }, .02);
+  ScrollTrigger.create({ trigger: "#tl", start: "top 80%", end: "bottom 55%", scrub: RM ? true : 0.5, animation: tl });
+  document.querySelectorAll(".count").forEach(function(el){
+    var to = parseFloat(el.dataset.to), dec = parseInt(el.dataset.dec || "0", 10), o = { v: 0 };
+    ScrollTrigger.create({ trigger: el, start: "top 88%", once: true, onEnter: function(){
+      if (RM) { el.textContent = to.toFixed(dec); return; }
+      gsap.to(o, { v: to, duration: 1.5, ease: "power3.out", onUpdate: function(){ el.textContent = o.v.toFixed(dec); } }); } });
+  });
+})();
+</script>
+</body>
+</html>

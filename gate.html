@@ -4,7 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The hallucination gate — yourwriting.ai</title>
-<meta name="description" content="yourwriting.ai fine-tunes a model on the writing your business already sends, then checks every claim it makes against your own files before anyone reads it.">
+<meta name="description" content="How the gate decides: split, retrieve, check, repair, sign. Every claim traced to a line in your own files, or held.">
+<link rel="canonical" href="https://yourwriting.ai/gate.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="yourwriting.ai">
+<meta property="og:title" content="The hallucination gate — yourwriting.ai">
+<meta property="og:description" content="How the gate decides: split, retrieve, check, repair, sign. Every claim traced to a line in your own files, or held.">
+<meta property="og:url" content="https://yourwriting.ai/gate.html">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/proof.css">
@@ -16,21 +23,21 @@
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="index.html" class="brand" aria-label="yourwriting.ai home"><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
-    <nav class="nav-links" aria-label="Primary"><a href="index.html#how">How it works</a><a href="gate.html" aria-current="page">The gate</a><a href="models.html">Models</a><a href="about.html">About</a><a href="faq.html">FAQ</a></nav>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#how">How it works</a><a href="gate.html" aria-current="page">The gate</a><a href="about.html">About</a><a href="faq.html">FAQ</a></nav>
     <div class="nav-actions"><a href="contact.html" class="btn btn-ok nav-cta">Book a walkthrough <span class="arr" aria-hidden="true">→</span></a></div>
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
   </div>
 </header>
 <div class="menu-overlay" id="menuOverlay">
   <button class="menu-close" id="menuClose">CLOSE ✕</button>
-  <a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="models.html">Models</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
+  <a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
   <a href="contact.html">Book a walkthrough</a>
 </div>
 <main id="main">
 <section class="page-head"><div class="container">
   <p class="kicker">THE HALLUCINATION GATE</p>
   <h1>How the gate <span class="ok">decides.</span></h1>
-  <p class="sec-sub">A tuned model writes in your voice, which is exactly what makes a wrong figure inside it dangerous. The gate is the part that refuses to let one through — five checks on every draft, about 240 ms, on the same box as the model.</p>
+  <p class="sec-sub">A tuned model writes in your voice, which is exactly what makes a wrong figure inside it dangerous. The gate is the part that refuses to let one through — five checks on every draft, before a person sees it.</p>
 </div></section>
 <style>
   .gflow{margin-top:var(--s-10)}
@@ -90,7 +97,7 @@
   <h2 class="sec-title">What a receipt <span class="ok">looks like.</span></h2>
   <p class="sec-sub">It is attached to the draft in your queue and written to the log. Nothing here leaves your building.</p>
   <div class="paper" style="max-width:52rem;margin-top:var(--s-8)">
-    <div class="ph-head"><span>RECEIPT · DRAFT 8841</span><span>GATE v1.4 · 240 MS</span></div>
+    <div class="ph-head"><span>RECEIPT · DRAFT 8841</span><span>GATE v0.3 · SIGNED</span></div>
     <div class="body" style="font-family:var(--mono);font-size:.82rem;line-height:1.9">
       <div>CLAIM 1 &nbsp;“$41,880” &nbsp;→ &nbsp;invoices/2026-03-reed.pdf p2 &nbsp;· &nbsp;SUPPORTED</div>
       <div>CLAIM 2 &nbsp;“the 14th” &nbsp;→ &nbsp;mail/feld-approval 14 Mar &nbsp;· &nbsp;SUPPORTED</div>
@@ -98,13 +105,13 @@
       <div>CLAIM 4 &nbsp;“no change on the April run” &nbsp;→ &nbsp;INFERRED FROM CLAIM 3 &nbsp;· &nbsp;SUPPORTED</div>
       <div style="color:var(--ok-deep)">4 CLAIMS &nbsp;· &nbsp;3 SOURCED &nbsp;· &nbsp;1 REPAIRED &nbsp;· &nbsp;0 UNVERIFIED</div>
     </div>
-    <div class="foot"><span>REVIEWER: P. NATARAJAN</span><span>SENT 09:41</span></div>
+    <div class="foot"><span>REVIEWER: SIGNED OFF</span><span>SENT 09:41</span></div>
   </div>
 </div></section>
 <section class="sec"><div class="container">
   <h2 class="sec-title">What it <span class="ok">costs you.</span></h2>
   <div class="writes" style="margin-top:var(--s-8)">
-    <article><h3>240 ms</h3><p>Added to every draft. Nobody has ever noticed it in a queue; the model itself takes longer.</p><small>ON THE SAME BOX</small></article>
+    <article><h3>Seconds, not minutes</h3><p>Added to every draft before anyone reads it — less than the re-read it replaces, and it runs while the writer moves on.</p><small>ON EVERY DRAFT</small></article>
     <article><h3>A source list</h3><p>Someone in your team has to say which folders count as truth. That hour is the real cost of the gate, and it is the hour that makes it work.</p><small>ONE AFTERNOON, ONCE</small></article>
     <article><h3>A noisy first week</h3><p>The gate flags things your people have been saying from memory for years. Some of those turn out to be wrong. That is the point, and it settles down by week two.</p><small>EXPECT IT</small></article>
   </div>
@@ -124,12 +131,10 @@
     <div class="foot-col"><h4>THE PRODUCT</h4><ul>
       <li><a href="index.html#how">How it learns your voice</a></li>
       <li><a href="gate.html">The hallucination gate</a></li>
-      <li><a href="models.html">Models we tested</a></li>
       <li><a href="index.html#price">Pricing</a></li>
     </ul></div>
     <div class="foot-col"><h4>COMPANY</h4><ul>
       <li><a href="about.html">About</a></li>
-      <li><a href="about.html#careers">Jobs</a></li>
       <li><a href="about.html#press">Press</a></li>
       <li><a href="faq.html">FAQ</a></li>
     </ul></div>
@@ -141,7 +146,7 @@
   </div>
   <div class="foot-word" aria-hidden="true">YOURWRITING</div>
   <div class="container foot-legal">
-    <span>© 2026 YOURWRITING.AI — A FICTIONAL CONCEPT. NOT AFFILIATED WITH ANYONE.</span>
+    <span>© 2026 YOURWRITING.AI</span>
     <span>EVERY CLAIM · TRACED TO A LINE</span>
   </div>
 </footer>
@@ -153,7 +158,6 @@
   <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="assets/models.js"></script>
 <script src="assets/site.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script>

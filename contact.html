@@ -4,7 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Book a walkthrough — yourwriting.ai</title>
-<meta name="description" content="yourwriting.ai fine-tunes a model on the writing your business already sends, then checks every claim it makes against your own files before anyone reads it.">
+<meta name="description" content="Tell us about the writing you can't get wrong. One reply, from a person, within a business day.">
+<link rel="canonical" href="https://yourwriting.ai/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="yourwriting.ai">
+<meta property="og:title" content="Book a walkthrough — yourwriting.ai">
+<meta property="og:description" content="Tell us about the writing you can't get wrong. One reply, from a person, within a business day.">
+<meta property="og:url" content="https://yourwriting.ai/contact.html">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/proof.css">
@@ -16,14 +23,14 @@
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="index.html" class="brand" aria-label="yourwriting.ai home"><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
-    <nav class="nav-links" aria-label="Primary"><a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="models.html">Models</a><a href="about.html">About</a><a href="faq.html">FAQ</a></nav>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="about.html">About</a><a href="faq.html">FAQ</a></nav>
     <div class="nav-actions"><a href="contact.html" class="btn btn-ok nav-cta">Book a walkthrough <span class="arr" aria-hidden="true">→</span></a></div>
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
   </div>
 </header>
 <div class="menu-overlay" id="menuOverlay">
   <button class="menu-close" id="menuClose">CLOSE ✕</button>
-  <a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="models.html">Models</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
+  <a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
   <a href="contact.html">Book a walkthrough</a>
 </div>
 <main id="main">
@@ -46,7 +53,6 @@
         <label class="opt"><input type="radio" name="need" value="tune"><span>Fine-tuning for one kind of letter</span></label>
         <label class="opt"><input type="radio" name="need" value="unsure"><span>Not sure yet</span></label>
       </div></fieldset>
-      <fieldset class="field full"><legend>MODELS YOU WANT ON THE SCORECARD</legend><div class="opts" id="modelOpts"></div></fieldset>
       <div class="field full"><label for="f-msg">THE WORK</label><textarea id="f-msg" name="message" placeholder="What has to be written, how often, who signs it, and which files hold the facts it has to get right." required></textarea><span class="err">A sentence or two helps us prepare.</span></div>
       <div class="form-foot"><button class="btn btn-ok" type="submit">Send inquiry <span class="arr">→</span></button><p>No mailing list. One reply, from a person.</p></div>
     </form>
@@ -68,12 +74,10 @@
     <div class="foot-col"><h4>THE PRODUCT</h4><ul>
       <li><a href="index.html#how">How it learns your voice</a></li>
       <li><a href="gate.html">The hallucination gate</a></li>
-      <li><a href="models.html">Models we tested</a></li>
       <li><a href="index.html#price">Pricing</a></li>
     </ul></div>
     <div class="foot-col"><h4>COMPANY</h4><ul>
       <li><a href="about.html">About</a></li>
-      <li><a href="about.html#careers">Jobs</a></li>
       <li><a href="about.html#press">Press</a></li>
       <li><a href="faq.html">FAQ</a></li>
     </ul></div>
@@ -85,7 +89,7 @@
   </div>
   <div class="foot-word" aria-hidden="true">YOURWRITING</div>
   <div class="container foot-legal">
-    <span>© 2026 YOURWRITING.AI — A FICTIONAL CONCEPT. NOT AFFILIATED WITH ANYONE.</span>
+    <span>© 2026 YOURWRITING.AI</span>
     <span>EVERY CLAIM · TRACED TO A LINE</span>
   </div>
 </footer>
@@ -97,23 +101,30 @@
   <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="assets/models.js"></script>
 <script src="assets/site.js"></script>
 <script>
 (function(){
-  var INQUIRY_ENDPOINT = ""; /* POST JSON here (Formspree, your CRM, a Worker). Empty = local confirmation + mailto fallback. */
-  var Q = new URLSearchParams(location.search), M = window.CRUCIBLE_MODELS, pre = Q.get("model");
+  var INQUIRY_ENDPOINT = "https://formsubmit.co/ajax/hello@yourwriting.ai"; /* FormSubmit: first submission sends an activation link to hello@yourwriting.ai */
+  var Q = new URLSearchParams(location.search);
   var needPre = document.querySelector('input[name="need"][value="' + (Q.get("need") || "") + '"]'); if (needPre) needPre.checked = true;
-  document.getElementById("modelOpts").innerHTML = M.slice(0, 8).map(function(m){ return '<label class="opt"><input type="checkbox" name="models" value="' + m.id + '"' + (m.id === pre ? " checked" : "") + '><span>' + m.name + '</span></label>'; }).join("") + '<label class="opt"><input type="checkbox" name="models" value="advise"><span>You choose</span></label>';
   var f = document.getElementById("inq");
   f.addEventListener("submit", function(e){
     e.preventDefault(); var ok = true;
     ["f-name", "f-email", "f-msg"].forEach(function(id){ var el = document.getElementById(id), fld = el.closest(".field"); var v = el.value.trim(); var good = v && (id !== "f-email" || /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)); fld.classList.toggle("invalid", !good); if (!good) ok = false; });
     if (!ok) { f.querySelector(".invalid input, .invalid textarea").focus(); return; }
     var data = {}; new FormData(f).forEach(function(v, k){ if (data[k]) data[k] = [].concat(data[k], v); else data[k] = v; });
-    function done(){ f.hidden = true; document.getElementById("inqOk").classList.add("on"); document.getElementById("inqOk").scrollIntoView({ behavior: "smooth", block: "center" }); }
-    if (INQUIRY_ENDPOINT) { fetch(INQUIRY_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) }).then(done).catch(function(){ done(); }); }
-    else { var body = encodeURIComponent(Object.keys(data).map(function(k){ return k + ": " + data[k]; }).join("\n")); document.getElementById("inqOkP").innerHTML = "We'll reply within one business day. Nothing was sent from this demo build; <a href='mailto:hello@yourwriting.ai?subject=yourwriting.ai%20pilot&body=" + body + "' style='color:var(--ink); text-decoration:underline;'>send it by email</a> instead."; done(); }
+    data._subject = "yourwriting.ai walkthrough — " + (data.company || data.name); data._template = "table"; data._captcha = "false";
+    var btn = f.querySelector('button[type="submit"]'); if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+    var body = encodeURIComponent(Object.keys(data).filter(function(k){ return k[0] !== "_"; }).map(function(k){ return k + ": " + data[k]; }).join("\n"));
+    var mailto = "mailto:hello@yourwriting.ai?subject=yourwriting.ai%20walkthrough&body=" + body;
+    function done(sent){
+      if (!sent) { document.getElementById("inqOkP").innerHTML = "That didn't go through from here. <a href='" + mailto + "' style='color:var(--ink); text-decoration:underline;'>Send it by email</a> instead — same details, one click."; }
+      f.hidden = true; var okEl = document.getElementById("inqOk"); okEl.classList.add("on"); okEl.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+    fetch(INQUIRY_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(data) })
+      .then(function(r){ return r.ok ? r.json() : Promise.reject(r); })
+      .then(function(j){ done(String(j && j.success) === "true"); })
+      .catch(function(){ done(false); });
   });
 })();
 </script>

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /concepts/
+Sitemap: https://yourwriting.ai/sitemap.xml
