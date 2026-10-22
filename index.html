@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Communication you can count on — yourwriting.ai</title>
 <meta name="description" content="yourwriting.ai tunes a model on the writing your firm already sends, then checks every claim against your own files before anyone reads it.">
 <link rel="canonical" href="https://yourwriting.ai/">
@@ -12,51 +12,185 @@
 <meta property="og:description" content="yourwriting.ai tunes a model on the writing your firm already sends, then checks every claim against your own files before anyone reads it.">
 <meta property="og:url" content="https://yourwriting.ai/">
 <meta name="twitter:card" content="summary">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/proof.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ctext x=%2716%27 y=%2724%27 text-anchor=%27middle%27 font-family=%27Helvetica,Arial,sans-serif%27 font-size=%2726%27 font-weight=%27600%27 fill=%27%2334c98a%27%3Ey%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.dataset.theme = "atlas";</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=DM+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ctext x=%2716%27 y=%2724%27 text-anchor=%27middle%27 font-family=%27Helvetica,Arial,sans-serif%27 font-size=%2726%27 font-weight=%27600%27 fill=%27%2374a6ff%27%3Ey%3C/text%3E%3C/svg%3E">
+
+
 
 </head>
-<body class="sub p-home">
+<body>
 <a class="skip-link" href="#main">Skip to content</a>
+
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="index.html" class="brand" aria-label="yourwriting.ai home"><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
-    <nav class="nav-links" aria-label="Primary"><a href="index.html#how" aria-current="page">How it works</a><a href="gate.html">The gate</a><a href="about.html">About</a><a href="faq.html">FAQ</a></nav>
-    <div class="nav-actions"><a href="contact.html" class="btn btn-ok nav-cta">Book a walkthrough <span class="arr" aria-hidden="true">→</span></a></div>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#how" aria-current="page">How it works</a><a href="gate.html" >The gate</a><a href="about.html" >About</a><a href="faq.html" >FAQ</a></nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-fill nav-cta">Book a walkthrough</a>
+    </div>
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
   </div>
+  <div class="scroll-progress" aria-hidden="true"><i id="scrollProgress"></i></div>
 </header>
 <div class="menu-overlay" id="menuOverlay">
   <button class="menu-close" id="menuClose">CLOSE ✕</button>
   <a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
   <a href="contact.html">Book a walkthrough</a>
 </div>
+
 <main id="main">
-<section class="ph" id="top">
-  <div class="container ph-grid">
-    <div>
-      <p class="kicker">FINE-TUNED ON YOUR WRITING · CHECKED AGAINST YOUR FILES</p>
-      <h1>Communication you can <span class="ok">count on.</span></h1>
-      <p class="lede">We tune an open model on the writing your business already sends, then put a gate in front of it. Every claim it makes is matched to a line in your own files before anyone reads it — and when there is no line to match, it says so instead of inventing one.</p>
-      <div class="cta-row"><a href="contact.html" class="btn btn-ok">Book a walkthrough <span class="arr" aria-hidden="true">→</span></a><a href="#gate" class="btn btn-ghost">See the gate</a></div>
-      <ul class="ph-facts">
-        <li><b>A receipt</b><span>WITH EVERY DRAFT</span></li>
-        <li><b>0</b><span>FILES THAT LEAVE</span></li>
-        <li><b>Every claim</b><span>TRACED TO A LINE</span></li>
-      </ul>
+<!-- hero -->
+<section class="sh" id="top" aria-label="yourwriting.ai">
+  <div class="sh-bg" id="shBg"></div>
+  <div class="sh-stage" id="shStage">
+    <div class="sc-under" id="scUnder"><div class="sc-board" id="obBoard" style="width:min(96vw, 96vh * 1.714); aspect-ratio:1200/700;">
+      <svg class="ob-svg" id="elS" viewBox="0 0 1200 700" aria-hidden="true" style="opacity:0"><polyline class="sc-line el el-floor" points="80.0,470.0 1120.0,470.0" pathLength="1" /><polygon class="sc-line el el-desk" points="300.0,300.0 900.0,300.0 900.0,316.0 300.0,316.0" pathLength="1"/><polyline class="sc-line el el-desk" points="320.0,316.0 320.0,470.0" pathLength="1" /><polyline class="sc-line el el-desk" points="880.0,316.0 880.0,470.0" pathLength="1" /><rect class="sc-line el el-mon" x="470.0" y="150.0" width="260.0" height="150.0" rx="10" pathLength="1" /><polyline class="sc-line el el-mon" points="600.0,300.0 600.0,282.0" pathLength="1" /><polyline class="sc-line el el-mon" points="540.0,282.0 660.0,282.0" pathLength="1" /><polyline class="sc-line dim el el-wall" points="1040.0,90.0 1040.0,470.0" pathLength="1" /><rect class="sc-line dim el el-wall" x="1070.0" y="130.0" width="90.0" height="170.0" rx="2" pathLength="1" /><polyline class="sc-line dim el el-wall" points="1115.0,130.0 1115.0,300.0" pathLength="1" /><polyline class="sc-line dim el el-wall" points="160.0,90.0 160.0,470.0" pathLength="1" /><rect class="sc-line el-tw" x="760.0" y="336.0" width="90.0" height="134.0" rx="6" pathLength="1" /><polyline class="sc-line dim el-tw" points="776.0,352.0 834.0,352.0" pathLength="1" /><polyline class="sc-line dim el-tw" points="776.0,362.0 834.0,362.0" pathLength="1" /><polyline class="sc-line dim el-tw" points="776.0,372.0 834.0,372.0" pathLength="1" /><circle class="el-led" cx="805" cy="452" r="4"/><text class="sc-label el-tw-t" x="805" y="425" text-anchor="middle">LOCAL-01</text><polyline class="sc-line el-cable" points="850.0,420.0 1000.0,420.0 1000.0,300.0" pathLength="1" /><rect class="sc-line el-cable" x="992.0" y="282.0" width="16.0" height="18.0" rx="2" pathLength="1" /><rect class="sc-line el-panel" x="740.0" y="336.0" width="130.0" height="134.0" rx="4" pathLength="1" id="elPanel"/><polyline class="sc-line el-panel" points="800.0,400.0 810.0,400.0" pathLength="1" /><polyline class="sc-line el-ld ld1" points="300.0,525.0 300.0,225.0 470.0,225.0" pathLength="1" /><polyline class="sc-line el-ld ld2" points="600.0,525.0 600.0,500.0 805.0,500.0 805.0,470.0" pathLength="1" /><polyline class="sc-line el-ld ld3" points="900.0,525.0 925.0,525.0 925.0,420.0" pathLength="1" /></svg>
+      <svg class="ob-svg" id="plS" viewBox="0 0 1200 700" aria-hidden="true" style="opacity:0"><rect class="sc-line pl pl-bld" x="250.0" y="110.0" width="620.0" height="300.0" rx="6" pathLength="1" /><polyline class="sc-line dim pl pl-wall" points="640.0,110.0 640.0,410.0" pathLength="1" /><rect class="sc-line dim pl pl-wall pl-dash" x="670" y="185" width="170" height="150" rx="8" pathLength="1" stroke-dasharray="0.02 0.012"/><rect class="sc-line pl-ws" x="290.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="312" cy="188" r="6" pathLength="1"/><rect class="sc-line pl-ws pl-you" x="360.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="382" cy="188" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="430.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="452" cy="188" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="500.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="522" cy="188" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="290.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="312" cy="268" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="360.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="382" cy="268" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="430.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="452" cy="268" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="500.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="522" cy="268" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="290.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="312" cy="348" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="360.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="382" cy="348" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="430.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="452" cy="348" r="6" pathLength="1"/><rect class="sc-line pl-ws" x="500.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle class="sc-line pl-ws" cx="522" cy="348" r="6" pathLength="1"/><polyline class="sc-line dim pl-link" points="312.0,163.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="382.0,163.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="452.0,163.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="522.0,163.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="312.0,243.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="382.0,243.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="452.0,243.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="522.0,243.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="312.0,323.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="382.0,323.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="452.0,323.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-link" points="522.0,323.0 755.0,260.0" pathLength="1" /><circle class="pl-node" cx="755" cy="260" r="9"/><circle class="pl-pulse" cx="755" cy="260" r="9"/><text class="sc-label pl-t" x="755" y="290" text-anchor="middle">LOCAL MODEL</text><rect class="sc-line pl-gate" x="241.0" y="291.0" width="18.0" height="18.0" rx="2" pathLength="1" /><text class="sc-label pl-t" x="234" y="330" text-anchor="middle">VPN</text><rect class="sc-line pl-gate" x="861.0" y="291.0" width="18.0" height="18.0" rx="2" pathLength="1" /><text class="sc-label pl-t" x="886" y="330" text-anchor="middle">VPN</text><rect class="sc-line pl-gate" x="746.0" y="401.0" width="18.0" height="18.0" rx="2" pathLength="1" /><text class="sc-label pl-t" x="789" y="415" text-anchor="middle">GUARD</text><polyline class="sc-line dim pl-glink" points="250.0,300.0 290.0,300.0 640.0,260.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-glink" points="870.0,300.0 830.0,300.0 755.0,260.0" pathLength="1" /><polyline class="sc-line dim pl-glink" points="755.0,260.0 755.0,410.0" pathLength="1" /><path class="sc-line pl-rlink" d="M110 170 Q180 110 250 300" pathLength="1"/><rect class="sc-line pl-rn" x="88.0" y="148.0" width="44.0" height="44.0" rx="6" pathLength="1" /><polygon class="sc-line pl-rn" points="97.0,181.0 97.0,167.0 110.0,156.0 123.0,167.0 123.0,181.0" pathLength="1"/><rect class="sc-line pl-rn" x="106.0" y="171.0" width="8.0" height="10.0" rx="0" pathLength="1" /><text class="sc-label pl-t" x="110" y="214" text-anchor="middle">WORKING FROM HOME</text><path class="sc-line pl-rlink" d="M95 400 Q172 240 250 300" pathLength="1"/><rect class="sc-line pl-rn" x="73.0" y="378.0" width="44.0" height="44.0" rx="6" pathLength="1" /><polygon class="sc-line pl-rn" points="81.0,402.0 109.0,392.0 97.0,401.0 99.0,412.0 94.0,402.0" pathLength="1"/><text class="sc-label pl-t" x="95" y="444" text-anchor="middle">TRAVELING</text><path class="sc-line pl-rlink" d="M1090 170 Q980 110 870 300" pathLength="1"/><rect class="sc-line pl-rn" x="1068.0" y="148.0" width="44.0" height="44.0" rx="6" pathLength="1" /><path class="sc-line pl-rn" d="M1090 184 C1080 172 1079 167 1079 165 A11 11 0 0 1 1101 165 C1101 167 1100 172 1090 184 Z" pathLength="1"/><circle class="sc-line pl-rn" cx="1090" cy="165" r="4" pathLength="1"/><text class="sc-label pl-t" x="1090" y="214" text-anchor="middle">ON SITE</text><path class="sc-line pl-rlink" d="M1105 400 Q988 240 870 300" pathLength="1"/><rect class="sc-line pl-rn" x="1083.0" y="378.0" width="44.0" height="44.0" rx="6" pathLength="1" /><rect class="sc-line pl-rn" x="1093.0" y="388.0" width="24.0" height="26.0" rx="1" pathLength="1" /><polyline class="sc-line pl-rn" points="1093.0,388.0 1105.0,382.0 1117.0,388.0" pathLength="1" /><rect class="sc-line pl-rn" x="1097.0" y="393.0" width="6.0" height="6.0" rx="0" pathLength="1" /><rect class="sc-line pl-rn" x="1107.0" y="393.0" width="6.0" height="6.0" rx="0" pathLength="1" /><rect class="sc-line pl-rn" x="1097.0" y="402.0" width="6.0" height="6.0" rx="0" pathLength="1" /><rect class="sc-line pl-rn" x="1107.0" y="402.0" width="6.0" height="6.0" rx="0" pathLength="1" /><text class="sc-label pl-t" x="1105" y="444" text-anchor="middle">SATELLITE OFFICE</text><rect class="sc-line dim pl pl-band pl-dash" x="250" y="470" width="620" height="130" rx="8" pathLength="1" stroke-dasharray="0.01 0.008"/><text class="sc-label pl-t" x="560" y="458" text-anchor="middle">FRONTIER MODELS · ONLY THROUGH OUR GUARD</text><polyline class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 310.0,505.0" pathLength="1" /><rect class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(0 310 525)"/><rect class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(60 310 525)"/><rect class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(120 310 525)"/><rect class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(180 310 525)"/><rect class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(240 310 525)"/><rect class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(300 310 525)"/><text class="sc-label pl-t" x="310" y="559" text-anchor="middle">OPENAI</text><polyline class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 410.0,505.0" pathLength="1" /><polyline class="sc-line pl-fm" points="397.0,537.0 406.0,513.0 414.0,513.0 423.0,537.0" pathLength="1" /><polyline class="sc-line pl-fm" points="403.0,528.0 417.0,528.0" pathLength="1" /><text class="sc-label pl-t" x="410" y="559" text-anchor="middle">ANTHROPIC</text><polyline class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 510.0,505.0" pathLength="1" /><path class="sc-line pl-fm" d="M510 509 Q510 525 526 525 Q510 525 510 541 Q510 525 494 525 Q510 525 510 509 Z" pathLength="1"/><text class="sc-label pl-t" x="510" y="559" text-anchor="middle">GEMINI</text><polyline class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 610.0,505.0" pathLength="1" /><path class="sc-line pl-fm" d="M596 533 C596 511 608 511 610 525 C612 539 624 539 624 517" pathLength="1"/><path class="sc-line pl-fm" d="M596 533 C596 539 604 539 607 531" pathLength="1"/><path class="sc-line pl-fm" d="M624 517 C624 511 616 511 613 519" pathLength="1"/><text class="sc-label pl-t" x="610" y="559" text-anchor="middle">META LLAMA</text><polyline class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 710.0,505.0" pathLength="1" /><rect class="sc-line pl-fm" x="695.0" y="510.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="719.0" y="510.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="695.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="701.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="713.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="719.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="695.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="701.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="707.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="713.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="719.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="695.0" y="528.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="707.0" y="528.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="719.0" y="528.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="695.0" y="534.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect class="sc-line pl-fm" x="719.0" y="534.0" width="5.4" height="5.4" rx="0" pathLength="1" /><text class="sc-label pl-t" x="710" y="559" text-anchor="middle">MISTRAL</text><polyline class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 810.0,505.0" pathLength="1" /><polyline class="sc-line pl-fm" points="797.0,511.0 823.0,539.0" pathLength="1" /><polyline class="sc-line pl-fm" points="823.0,511.0 812.0,523.0" pathLength="1" /><polyline class="sc-line pl-fm" points="797.0,539.0 808.0,527.0" pathLength="1" /><text class="sc-label pl-t" x="810" y="559" text-anchor="middle">XAI</text><text class="sc-label pl-t" x="250" y="96" text-anchor="start">YOUR FLOOR · 12 SEATS</text><text class="sc-label pl-t" x="870" y="96" text-anchor="end">ONE LOCAL MODEL</text></svg>
+      <div class="sc-dock centered" id="dockB" style="left:50.00%; top:32.14%; width:21.67%; transform:translate(-50%,-50%); aspect-ratio:1.733;"></div>
+      <div class="sc-dock centered" id="dockC" style="left:31.83%; top:23.29%; width:3.67%; transform:translate(-50%,-50%); aspect-ratio:1.69;"></div>
+      <div class="sc-step-head" style="left:14%; top:70%;">WHAT GOES WHERE</div><div class="sc-step" id="st1" style="left:14%; top:76%; width:22%;"><b>01</b><strong>The draft</strong><p>Written in your voice, on the screen your team already uses. Every claim in it is marked before a person reads it.</p></div><div class="sc-step" id="st2" style="left:41%; top:76%; width:22%;"><b>02</b><strong>The box</strong><p>Under the desk: the tuned model, the gate, and an index of your own files. One power cord, no subscription.</p></div><div class="sc-step" id="st3" style="left:66%; top:76%; width:22%;"><b>03</b><strong>The cable</strong><p>It talks to your office network and nothing else. No file leaves the building, no per-token bill.</p></div>
+    </div></div>
+    <div class="sh-rig" id="shRig">
+      
+      <div class="sh-frame" id="shFrame">
+        <video data-vid="cells" class="sh-video on" autoplay muted loop playsinline preload="auto" poster="https://images.pexels.com/videos/35634993/pexels-photo-35634993.jpeg?auto=compress&w=1600"><source src="https://videos.pexels.com/video-files/35634993/15102133_1920_1080_30fps.mp4" type="video/mp4"></video><video data-vid="smoke" class="sh-video" autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/7794287/abstract-art-colorful-colors-7794287.jpeg?auto=compress&w=1600"><source src="https://videos.pexels.com/video-files/7794287/7794287-hd_1920_1080_25fps.mp4" type="video/mp4"></video><video data-vid="circuit" class="sh-video" autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/6754824/pexels-photo-6754824.jpeg?auto=compress&w=1600"><source src="https://videos.pexels.com/video-files/6754824/6754824-hd_1920_1080_25fps.mp4" type="video/mp4"></video><video data-vid="surgical" class="sh-video" autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/30593273/medical-medical-equipment-robot-robotics-30593273.jpeg?auto=compress&w=1600"><source src="https://videos.pexels.com/video-files/30593273/13100530_1920_1080_30fps.mp4" type="video/mp4"></video><video data-vid="gold" class="sh-video" autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/6754820/pexels-photo-6754820.jpeg?auto=compress&w=1600"><source src="https://videos.pexels.com/video-files/6754820/6754820-hd_1920_1080_25fps.mp4" type="video/mp4"></video><video data-vid="office" class="sh-video" autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/5483080/pexels-photo-5483080.jpeg?auto=compress&w=1600"><source src="https://videos.pexels.com/video-files/5483080/5483080-hd_1366_720_25fps.mp4" type="video/mp4"></video><video data-vid="server" class="sh-video" autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/7140928/pexels-photo-7140928.jpeg?auto=compress&w=1600"><source src="https://videos.pexels.com/video-files/7140928/7140928-hd_1920_1080_24fps.mp4" type="video/mp4"></video><div class="sh-vnav" id="shVnav" role="group" aria-label="Hero footage"><button type="button" data-dir="-1" aria-label="Previous footage">←</button><span id="shVidLbl"></span><button type="button" data-dir="1" aria-label="Next footage">→</button></div>
+        <div class="sh-scrim"></div>
+        <div class="sh-scrim2"></div>
+        <h1 class="sh-h1"><span>Communication You Can <span class="amber">Count On</span></span></h1>
+        <div class="rx rx-ui"><svg viewBox="0 0 320 205" preserveAspectRatio="none" aria-hidden="true">
+  <rect width="320" height="205" fill="oklch(0.07 0 0)"/>
+  <rect x="18" y="16" width="120" height="7" rx="3.5" fill="oklch(1 0 0 / .18)"/><rect x="18" y="30" width="72" height="7" rx="3.5" fill="oklch(1 0 0 / .10)"/>
+  <text x="302" y="30" text-anchor="end" font-family="DM Mono, monospace" font-size="12" fill="oklch(from var(--accent) l c h)">0.92</text>
+  <g fill="oklch(from var(--accent) l c h / .9)"><rect x="34" y="150" width="20" height="36" rx="3"/><rect x="66" y="128" width="20" height="58" rx="3"/><rect x="98" y="108" width="20" height="78" rx="3"/><rect x="130" y="118" width="20" height="68" rx="3"/><rect x="162" y="88" width="20" height="98" rx="3"/><rect x="194" y="70" width="20" height="116" rx="3"/><rect x="226" y="82" width="20" height="104" rx="3"/><rect x="258" y="56" width="20" height="130" rx="3"/></g>
+  <line x1="18" y1="186" x2="302" y2="186" stroke="oklch(1 0 0 / .2)"/>
+</svg></div>
+        <div class="rx rx-skin"><b>LOCAL-01</b></div>
+        <svg class="sh-wire" viewBox="0 0 1000 640" preserveAspectRatio="none" aria-hidden="true"><path class="w" d="M283,597 L444,630 L401,630" pathLength="1"/><path class="t" d="M401,630 l-9,-5 v10 z"/><path class="w" d="M604,279 L782,339 L860,258" pathLength="1"/><path class="t" d="M860,258 l-9,-5 v10 z"/><path class="w" d="M195,575 L139,500 L22,466 L161,520" pathLength="1"/><path class="t" d="M161,520 l-9,-5 v10 z"/><path class="w" d="M444,495 L508,478 L603,478" pathLength="1"/><path class="t" d="M603,478 l-9,-5 v10 z"/><path class="w" d="M486,348 L615,422 L714,422 L603,507" pathLength="1"/><path class="t" d="M603,507 l-9,-5 v10 z"/><path class="w" d="M752,207 L930,279 L836,352 L948,344 L990,300" pathLength="1"/><path class="t" d="M990,300 l-9,-5 v10 z"/><path class="w" d="M859,108 L814,108 L884,31 L748,106" pathLength="1"/><path class="t" d="M748,106 l-9,-5 v10 z"/><path class="w" d="M378,325 L329,325 L262,393 L172,393 L251,398" pathLength="1"/><path class="t" d="M251,398 l-9,-5 v10 z"/><path class="w" d="M928,387 L990,387 L990,387 L990,387" pathLength="1"/><path class="t" d="M990,387 l-9,-5 v10 z"/><text x="689" y="283">01</text><text x="487" y="304">1</text><text x="350" y="387">0100</text><text x="847" y="465">1</text><text x="362" y="60">0011</text><text x="670" y="176">0100</text><rect class="w" x="6" y="6" width="988" height="628" rx="22" pathLength="1"/></svg>
+      </div>
+      
     </div>
-    <div class="paper ph-demo" id="phDemo" aria-live="polite">
-      <div class="ph-head"><span id="phTo">To: —</span><span id="phKind">DRAFTED &amp; CHECKED</span></div>
-      <div class="body" id="phBody"></div>
-      <div class="foot"><span id="phFoot">GATE · WAITING</span><span>yourwriting.ai</span></div>
+    
+    <div class="sc-over" id="scOver"><div class="sc-act a3"><h2>One model and one gate in the building. Everyone connects to it.</h2><p>Your people at home, on the road and on site come in through your VPN. Every draft passes the gate before a person sees it, and frontier models only ever see what the guard lets out.</p></div></div>
+    <div class="sh-act" id="shAct"><h2></h2><p></p></div>
+    <div class="sh-cue" id="shCue" aria-hidden="true">Scroll to explore <i>↓</i></div>
+  </div>
+</section>
+<section class="scene-m" aria-label="Placement">
+  <div class="sm-media" aria-hidden="true"></div>
+  <div class="container"><svg class="plan-m" viewBox="60 60 1080 560" aria-hidden="true"><rect style="stroke-dashoffset:0" class="sc-line pl pl-bld" x="250.0" y="110.0" width="620.0" height="300.0" rx="6" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl pl-wall" points="640.0,110.0 640.0,410.0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line dim pl pl-wall pl-dash" x="670" y="185" width="170" height="150" rx="8" pathLength="1" stroke-dasharray="0.02 0.012"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="290.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="312" cy="188" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws pl-you" x="360.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="382" cy="188" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="430.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="452" cy="188" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="500.0" y="150.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="522" cy="188" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="290.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="312" cy="268" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="360.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="382" cy="268" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="430.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="452" cy="268" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="500.0" y="230.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="522" cy="268" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="290.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="312" cy="348" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="360.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="382" cy="348" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="430.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="452" cy="348" r="6" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-ws" x="500.0" y="310.0" width="44.0" height="26.0" rx="2" pathLength="1" /><circle style="stroke-dashoffset:0" class="sc-line pl-ws" cx="522" cy="348" r="6" pathLength="1"/><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="312.0,163.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="382.0,163.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="452.0,163.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="522.0,163.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="312.0,243.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="382.0,243.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="452.0,243.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="522.0,243.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="312.0,323.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="382.0,323.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="452.0,323.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-link" points="522.0,323.0 755.0,260.0" pathLength="1" /><circle class="pl-node" style="opacity:1" cx="755" cy="260" r="9"/><circle class="pl-pulse" cx="755" cy="260" r="9"/><text class="sc-label" style="opacity:1" x="755" y="290" text-anchor="middle">LOCAL MODEL</text><rect style="stroke-dashoffset:0" class="sc-line pl-gate" x="241.0" y="291.0" width="18.0" height="18.0" rx="2" pathLength="1" /><text class="sc-label" style="opacity:1" x="234" y="330" text-anchor="middle">VPN</text><rect style="stroke-dashoffset:0" class="sc-line pl-gate" x="861.0" y="291.0" width="18.0" height="18.0" rx="2" pathLength="1" /><text class="sc-label" style="opacity:1" x="886" y="330" text-anchor="middle">VPN</text><rect style="stroke-dashoffset:0" class="sc-line pl-gate" x="746.0" y="401.0" width="18.0" height="18.0" rx="2" pathLength="1" /><text class="sc-label" style="opacity:1" x="789" y="415" text-anchor="middle">GUARD</text><polyline style="stroke-dashoffset:0" class="sc-line dim pl-glink" points="250.0,300.0 290.0,300.0 640.0,260.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-glink" points="870.0,300.0 830.0,300.0 755.0,260.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line dim pl-glink" points="755.0,260.0 755.0,410.0" pathLength="1" /><path style="stroke-dashoffset:0" class="sc-line pl-rlink" d="M110 170 Q180 110 250 300" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="88.0" y="148.0" width="44.0" height="44.0" rx="6" pathLength="1" /><polygon style="stroke-dashoffset:0" class="sc-line pl-rn" points="97.0,181.0 97.0,167.0 110.0,156.0 123.0,167.0 123.0,181.0" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="106.0" y="171.0" width="8.0" height="10.0" rx="0" pathLength="1" /><text class="sc-label" style="opacity:1" x="110" y="214" text-anchor="middle">WORKING FROM HOME</text><path style="stroke-dashoffset:0" class="sc-line pl-rlink" d="M95 400 Q172 240 250 300" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="73.0" y="378.0" width="44.0" height="44.0" rx="6" pathLength="1" /><polygon style="stroke-dashoffset:0" class="sc-line pl-rn" points="81.0,402.0 109.0,392.0 97.0,401.0 99.0,412.0 94.0,402.0" pathLength="1"/><text class="sc-label" style="opacity:1" x="95" y="444" text-anchor="middle">TRAVELING</text><path style="stroke-dashoffset:0" class="sc-line pl-rlink" d="M1090 170 Q980 110 870 300" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="1068.0" y="148.0" width="44.0" height="44.0" rx="6" pathLength="1" /><path style="stroke-dashoffset:0" class="sc-line pl-rn" d="M1090 184 C1080 172 1079 167 1079 165 A11 11 0 0 1 1101 165 C1101 167 1100 172 1090 184 Z" pathLength="1"/><circle style="stroke-dashoffset:0" class="sc-line pl-rn" cx="1090" cy="165" r="4" pathLength="1"/><text class="sc-label" style="opacity:1" x="1090" y="214" text-anchor="middle">ON SITE</text><path style="stroke-dashoffset:0" class="sc-line pl-rlink" d="M1105 400 Q988 240 870 300" pathLength="1"/><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="1083.0" y="378.0" width="44.0" height="44.0" rx="6" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="1093.0" y="388.0" width="24.0" height="26.0" rx="1" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line pl-rn" points="1093.0,388.0 1105.0,382.0 1117.0,388.0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="1097.0" y="393.0" width="6.0" height="6.0" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="1107.0" y="393.0" width="6.0" height="6.0" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="1097.0" y="402.0" width="6.0" height="6.0" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-rn" x="1107.0" y="402.0" width="6.0" height="6.0" rx="0" pathLength="1" /><text class="sc-label" style="opacity:1" x="1105" y="444" text-anchor="middle">SATELLITE OFFICE</text><rect style="stroke-dashoffset:0" class="sc-line dim pl pl-band pl-dash" x="250" y="470" width="620" height="130" rx="8" pathLength="1" stroke-dasharray="0.01 0.008"/><text class="sc-label" style="opacity:1" x="560" y="458" text-anchor="middle">FRONTIER MODELS · ONLY THROUGH OUR GUARD</text><polyline style="stroke-dashoffset:0" class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 310.0,505.0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(0 310 525)"/><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(60 310 525)"/><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(120 310 525)"/><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(180 310 525)"/><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(240 310 525)"/><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="306.5" y="509.0" width="7" height="18" rx="3.5" pathLength="1" transform="rotate(300 310 525)"/><text class="sc-label" style="opacity:1" x="310" y="559" text-anchor="middle">OPENAI</text><polyline style="stroke-dashoffset:0" class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 410.0,505.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line pl-fm" points="397.0,537.0 406.0,513.0 414.0,513.0 423.0,537.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line pl-fm" points="403.0,528.0 417.0,528.0" pathLength="1" /><text class="sc-label" style="opacity:1" x="410" y="559" text-anchor="middle">ANTHROPIC</text><polyline style="stroke-dashoffset:0" class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 510.0,505.0" pathLength="1" /><path style="stroke-dashoffset:0" class="sc-line pl-fm" d="M510 509 Q510 525 526 525 Q510 525 510 541 Q510 525 494 525 Q510 525 510 509 Z" pathLength="1"/><text class="sc-label" style="opacity:1" x="510" y="559" text-anchor="middle">GEMINI</text><polyline style="stroke-dashoffset:0" class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 610.0,505.0" pathLength="1" /><path style="stroke-dashoffset:0" class="sc-line pl-fm" d="M596 533 C596 511 608 511 610 525 C612 539 624 539 624 517" pathLength="1"/><path style="stroke-dashoffset:0" class="sc-line pl-fm" d="M596 533 C596 539 604 539 607 531" pathLength="1"/><path style="stroke-dashoffset:0" class="sc-line pl-fm" d="M624 517 C624 511 616 511 613 519" pathLength="1"/><text class="sc-label" style="opacity:1" x="610" y="559" text-anchor="middle">META LLAMA</text><polyline style="stroke-dashoffset:0" class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 710.0,505.0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="695.0" y="510.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="719.0" y="510.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="695.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="701.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="713.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="719.0" y="516.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="695.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="701.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="707.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="713.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="719.0" y="522.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="695.0" y="528.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="707.0" y="528.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="719.0" y="528.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="695.0" y="534.0" width="5.4" height="5.4" rx="0" pathLength="1" /><rect style="stroke-dashoffset:0" class="sc-line pl-fm" x="719.0" y="534.0" width="5.4" height="5.4" rx="0" pathLength="1" /><text class="sc-label" style="opacity:1" x="710" y="559" text-anchor="middle">MISTRAL</text><polyline style="stroke-dashoffset:0" class="sc-line dim pl-flink" stroke-dasharray="0.03 0.02" points="755.0,419.0 810.0,505.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line pl-fm" points="797.0,511.0 823.0,539.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line pl-fm" points="823.0,511.0 812.0,523.0" pathLength="1" /><polyline style="stroke-dashoffset:0" class="sc-line pl-fm" points="797.0,539.0 808.0,527.0" pathLength="1" /><text class="sc-label" style="opacity:1" x="810" y="559" text-anchor="middle">XAI</text><text class="sc-label" style="opacity:1" x="250" y="96" text-anchor="start">YOUR FLOOR · 12 SEATS</text><text class="sc-label" style="opacity:1" x="870" y="96" text-anchor="end">ONE LOCAL MODEL</text></svg><h2>One model and one gate in the building. Everyone connects to it.</h2><p>Your people at home, on the road and on site come in through your VPN. Every draft passes the gate before a person sees it, and frontier models only ever see what the guard lets out.</p></div>
+</section>
+
+<!-- anatomy -->
+<section class="anatomy" id="anatomy">
+  <div class="container anatomy-grid">
+    <div class="anatomy-copy">
+      <p class="kicker">INSIDE THE MACHINE</p>
+      <h2 class="sec-title">What you're<br><span class="amber">actually buying.</span></h2>
+      <p class="sec-sub">Rent the same model as your competitors and you'll ship the same answers. The layers underneath are where the difference is made — and the top one is a receipt.</p>
+      <ol class="layer-list" id="layerList">
+        <li><span class="ll-name">The receipt</span><p class="ll-note">What your reviewer touches: every claim, the file and line it came from, what was repaired, what's held.</p></li>
+        <li><span class="ll-name">The gate</span><p class="ll-note">Splits the draft into claims and checks each one against your files. Supported, repaired or held — no third answer.</p></li>
+        <li><span class="ll-name">Evaluation</span><p class="ll-note">Planted errors, poisoned sources, a blind judge. Proof it works before your clients find out it doesn't.</p></li>
+        <li><span class="ll-name">Human review</span><p class="ll-note">Your people grade the misses. Every one becomes a training example or a new gate rule.</p></li>
+        <li><span class="ll-name">The tune</span><p class="ll-note">A thin adapter learned from the letters you already send, so drafts land in your voice.</p></li>
+        <li><span class="ll-name">Your files</span><p class="ll-note">Invoices, contracts, policies, sent mail. The only truth the gate accepts — and the part money can't shortcut.</p></li>
+      </ol>
+    </div>
+    <div class="anatomy-stage" aria-hidden="true">
+      <div class="stack-shadow" id="stackShadow"></div>
+      <div class="stack" id="stack">
+        <div class="plate plate-screen" data-i="0">
+          <svg viewBox="0 0 320 320">
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(0.22 0 0)" stroke="oklch(1 0 0 / 0.22)" stroke-width="1.5"/>
+            <rect x="52" y="52" width="216" height="150" rx="8" fill="oklch(0.10 0 0)"/>
+            <g fill="oklch(from var(--accent) l c h / 0.85)">
+              <rect x="72" y="152" width="18" height="34" rx="2"/><rect x="102" y="132" width="18" height="54" rx="2"/><rect x="132" y="112" width="18" height="74" rx="2"/><rect x="162" y="122" width="18" height="64" rx="2"/><rect x="192" y="92" width="18" height="94" rx="2"/><rect x="222" y="72" width="18" height="114" rx="2"/>
+            </g>
+            <rect x="52" y="222" width="140" height="10" rx="5" fill="oklch(1 0 0 / 0.14)"/>
+            <rect x="52" y="244" width="96" height="10" rx="5" fill="oklch(1 0 0 / 0.09)"/>
+          </svg>
+          <span class="plate-tag">RECEIPT</span>
+        </div>
+        <div class="plate plate-model" data-i="1">
+          <svg viewBox="0 0 320 320">
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(0.18 0 0)" stroke="oklch(1 0 0 / 0.18)" stroke-width="1.5"/>
+            <g fill="oklch(1 0 0 / 0.10)">
+              <rect x="64" y="64" width="26" height="26" rx="4"/><rect x="102" y="64" width="26" height="26" rx="4"/><rect x="140" y="64" width="26" height="26" rx="4"/><rect x="178" y="64" width="26" height="26" rx="4"/><rect x="216" y="64" width="26" height="26" rx="4"/>
+              <rect x="64" y="102" width="26" height="26" rx="4"/><rect x="102" y="102" width="26" height="26" rx="4"/><rect x="178" y="102" width="26" height="26" rx="4"/><rect x="216" y="102" width="26" height="26" rx="4"/>
+              <rect x="64" y="140" width="26" height="26" rx="4"/><rect x="216" y="140" width="26" height="26" rx="4"/>
+              <rect x="64" y="178" width="26" height="26" rx="4"/><rect x="102" y="178" width="26" height="26" rx="4"/><rect x="178" y="178" width="26" height="26" rx="4"/><rect x="216" y="178" width="26" height="26" rx="4"/>
+              <rect x="64" y="216" width="26" height="26" rx="4"/><rect x="102" y="216" width="26" height="26" rx="4"/><rect x="140" y="216" width="26" height="26" rx="4"/><rect x="178" y="216" width="26" height="26" rx="4"/><rect x="216" y="216" width="26" height="26" rx="4"/>
+            </g>
+            <rect x="121" y="121" width="78" height="78" rx="10" fill="oklch(0.10 0 0)" stroke="oklch(from var(--accent) l c h / 0.7)" stroke-width="1.5"/>
+            <text x="160" y="166" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(from var(--accent) l c h)">GPU</text>
+          </svg>
+          <span class="plate-tag">GATE</span>
+        </div>
+        <div class="plate plate-data plate-eval" data-i="2">
+          <svg viewBox="0 0 320 320">
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(0.18 0 0)"/>
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(from var(--accent) calc(l - .16) c h / 0.14)" stroke="oklch(from var(--accent) l c h / 0.55)" stroke-width="1.5"/>
+            <g fill="none" stroke="oklch(from var(--accent) l c h)" stroke-width="2">
+              <circle cx="160" cy="160" r="62"/>
+              <path d="M160 98 A 62 62 0 0 1 222 160" stroke="oklch(from var(--accent) calc(l + .08) c h)" stroke-width="4"/>
+            </g>
+            <text x="160" y="168" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="16" fill="oklch(from var(--accent) calc(l + .08) c h)">0.92</text>
+            <g stroke="oklch(from var(--accent) l c h / 0.5)" stroke-width="1.5"><path d="M60 60h28M60 72h18M232 248h28M242 260h18"/></g>
+          </svg>
+          <span class="plate-tag amber">EVAL</span>
+        </div>
+        <div class="plate plate-data plate-feedback" data-i="3">
+          <svg viewBox="0 0 320 320">
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(0.18 0 0)"/>
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(from var(--accent) calc(l - .16) c h / 0.12)" stroke="oklch(from var(--accent) l c h / 0.45)" stroke-width="1.5"/>
+            <g fill="oklch(from var(--accent) l c h / 0.8)">
+              <rect x="70" y="140" width="10" height="40" rx="3"/><rect x="90" y="120" width="10" height="80" rx="3"/><rect x="110" y="150" width="10" height="20" rx="3"/><rect x="130" y="100" width="10" height="120" rx="3"/><rect x="150" y="130" width="10" height="60" rx="3"/><rect x="170" y="110" width="10" height="100" rx="3"/><rect x="190" y="145" width="10" height="30" rx="3"/><rect x="210" y="125" width="10" height="70" rx="3"/><rect x="230" y="150" width="10" height="24" rx="3"/>
+            </g>
+            <text x="52" y="66" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(from var(--accent) calc(l + .08) c h / 0.8)">grade: B &gt; A</text>
+          </svg>
+          <span class="plate-tag amber">REVIEW</span>
+        </div>
+        <div class="plate plate-data plate-labels" data-i="4">
+          <svg viewBox="0 0 320 320">
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(0.18 0 0)"/>
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(from var(--accent) calc(l - .16) c h / 0.10)" stroke="oklch(from var(--accent) l c h / 0.45)" stroke-width="1.5"/>
+            <g fill="none" stroke="oklch(from var(--accent) l c h)" stroke-width="1.5">
+              <rect x="70" y="80" width="86" height="66" rx="4"/>
+              <rect x="180" y="120" width="70" height="90" rx="4" stroke-dasharray="5 4"/>
+              <rect x="96" y="188" width="64" height="52" rx="4"/>
+            </g>
+            <g font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(from var(--accent) calc(l + .08) c h)">
+              <text x="70" y="72">invoice</text><text x="180" y="112">fracture</text><text x="96" y="180">defect</text>
+            </g>
+          </svg>
+          <span class="plate-tag amber">TUNE</span>
+        </div>
+        <div class="plate plate-data plate-raw" data-i="5">
+          <svg viewBox="0 0 320 320">
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(0.18 0 0)"/>
+            <rect x="28" y="28" width="264" height="264" rx="14" fill="oklch(from var(--accent) calc(l - .48) calc(c - .1) h / 0.5)" stroke="oklch(from var(--accent) calc(l - .16) c h / 0.7)" stroke-width="1.5"/>
+            <g fill="oklch(from var(--accent) l c h / 0.55)">
+              <circle cx="70" cy="70" r="3"/><circle cx="120" cy="95" r="2"/><circle cx="190" cy="66" r="3.5"/><circle cx="240" cy="100" r="2.5"/><circle cx="95" cy="150" r="2.5"/><circle cx="160" cy="140" r="3"/><circle cx="215" cy="160" r="2"/><circle cx="260" cy="190" r="3"/><circle cx="80" cy="220" r="3"/><circle cx="140" cy="205" r="2"/><circle cx="185" cy="235" r="3.5"/><circle cx="235" cy="250" r="2.5"/><circle cx="110" cy="262" r="2"/><circle cx="160" cy="270" r="3"/><circle cx="55" cy="120" r="2"/><circle cx="255" cy="140" r="2.5"/>
+            </g>
+          </svg>
+          <span class="plate-tag amber">YOUR FILES</span>
+        </div>
+      </div>
     </div>
   </div>
-</section><section class="gate" id="gate">
+</section>
+
+
+
+<!-- the gate -->
+<section class="gate" id="gate">
   <div class="container gate-head">
     <p class="kicker">THE HALLUCINATION GATE</p>
-    <h2>Nothing goes out that <span class="ok">can't be traced.</span></h2>
+    <h2>Nothing goes out that <span class="amber">can't be traced.</span></h2>
     <p class="sub">A tuned model sounds like you — which is exactly why a wrong number in it is dangerous. So the draft never goes straight to a person. It goes through the gate: split into claims, looked up in your own files, and repaired or held when the line isn't there.</p>
   </div>
   <div class="gate-pin" id="gatePin">
@@ -99,45 +233,113 @@
     <p>The gate runs on every draft before a person sees it. It writes a line in your log for every claim it checked, so your people can audit what it let through — and what it caught.</p>
     <a href="gate.html" class="btn btn-ghost">How the gate decides <span class="arr" aria-hidden="true">→</span></a>
   </div>
-</section><section class="sec" id="how"><div class="container">
+</section>
+
+
+<!-- cinema -->
+<section class="cinema" id="cinema" data-theme="dark" aria-label="What the work looks like">
+  <div class="cine-slide">
+    <div class="cine-media">
+      <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=2000&q=80" alt="A refinery at dusk — the raw material before anything is made of it" loading="lazy">
+    </div>
+    <h2 class="cine-cap">Every model starts as <span class="amber">somebody else's voice.</span><small>01 — OFF THE SHELF</small></h2>
+  </div>
+  <div class="cine-slide">
+    <div class="cine-media">
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=80" alt="Rows of server racks glowing in a dark data hall" loading="lazy">
+    </div>
+    <h2 class="cine-cap">Tuned on your words, <span class="amber">not on the internet's.</span><small>02 — THE TUNE</small></h2>
+  </div>
+  <div class="cine-slide">
+    <div class="cine-media">
+      <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=2000&q=80" alt="A robotic arm mid-motion in a test cell" loading="lazy">
+    </div>
+    <h2 class="cine-cap">Checked before it <span class="amber">sends.</span><small>03 — THE GATE</small></h2>
+  </div>
+</section>
+
+<!-- how it learns -->
+<section class="sec" id="how"><div class="container">
   <p class="kicker">HOW IT LEARNS YOUR VOICE</p>
-  <h2 class="sec-title">Five steps, four weeks, <span class="ok">one job at a time.</span></h2>
+  <h2 class="sec-title">Five steps, four weeks, <span class="amber">one job at a time.</span></h2>
   <p class="sec-sub">Fine-tuning is the whole product here, not an add-on. The box does the work; your people do the judging.</p>
   <div class="forge-grid">
-    <div class="forge-stage"><svg class="forge-svg" viewBox="40 90 720 480" aria-hidden="true"><g id="fg1"><rect class="sc-line dim src" x="70.0" y="110.0" width="64.0" height="48.0" rx="4" pathLength="1" /><polyline class="sc-line dim src" points="80.0,124.0 108.6,124.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,133.0 119.6,133.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,142.0 108.6,142.0" pathLength="1" /><text class="sc-label src-t" x="70" y="100" text-anchor="start" >TICKETS</text><path class="sc-line dim lnk" d="M134 134 C 230 134, 230 300, 322 300" pathLength="1" /><rect class="sc-line dim src" x="70.0" y="230.0" width="64.0" height="48.0" rx="4" pathLength="1" /><polyline class="sc-line dim src" points="80.0,244.0 108.6,244.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,253.0 119.6,253.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,262.0 108.6,262.0" pathLength="1" /><text class="sc-label src-t" x="70" y="220" text-anchor="start" >CONTRACTS</text><path class="sc-line dim lnk" d="M134 254 C 230 254, 230 300, 322 300" pathLength="1" /><rect class="sc-line dim src" x="70.0" y="350.0" width="64.0" height="48.0" rx="4" pathLength="1" /><polyline class="sc-line dim src" points="80.0,364.0 108.6,364.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,373.0 119.6,373.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,382.0 108.6,382.0" pathLength="1" /><text class="sc-label src-t" x="70" y="340" text-anchor="start" >EMAIL</text><path class="sc-line dim lnk" d="M134 374 C 230 374, 230 300, 322 300" pathLength="1" /><rect class="sc-line dim src" x="70.0" y="470.0" width="64.0" height="48.0" rx="4" pathLength="1" /><polyline class="sc-line dim src" points="80.0,484.0 108.6,484.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,493.0 119.6,493.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,502.0 108.6,502.0" pathLength="1" /><text class="sc-label src-t" x="70" y="460" text-anchor="start" >CALL NOTES</text><path class="sc-line dim lnk" d="M134 494 C 230 494, 230 300, 322 300" pathLength="1" /><rect class="sc-line stk dim" x="364.0" y="258.0" width="200.0" height="150.0" rx="4" pathLength="1" /><rect class="sc-line stk dim" x="358.0" y="250.0" width="200.0" height="150.0" rx="4" pathLength="1" /><rect class="sc-line stk dim" x="352.0" y="242.0" width="200.0" height="150.0" rx="4" pathLength="1" /><rect class="sc-line stk dim" x="346.0" y="234.0" width="200.0" height="150.0" rx="4" pathLength="1" /><rect class="sc-line stk" x="340.0" y="226.0" width="200.0" height="150.0" rx="4" pathLength="1" /><polyline class="sc-line stk" points="362.0,258.0 463.4,258.0" pathLength="1" /><polyline class="sc-line stk" points="362.0,267.0 502.4,267.0" pathLength="1" /><polyline class="sc-line stk" points="362.0,276.0 463.4,276.0" pathLength="1" /><polyline class="sc-line stk" points="362.0,285.0 502.4,285.0" pathLength="1" /><polyline class="sc-line stk" points="362.0,294.0 463.4,294.0" pathLength="1" /><text class="sc-label note" x="600" y="262" text-anchor="start" >PULLED FROM</text><text class="sc-label note" x="600" y="284" text-anchor="start" >YOUR SYSTEMS,</text><text class="sc-label note" x="600" y="306" text-anchor="start" >INTO THE BOX</text><polyline class="sc-line dim note-l" points="548.0,300.0 586.0,300.0" pathLength="1" /><text class="fg-big" x="440" y="460" text-anchor="middle" id="fgCount1">0</text><text class="sc-label note" x="440" y="486" text-anchor="middle" >EXAMPLES · NOTHING UPLOADED</text></g><g id="fg2"><polyline class="sc-line fg-gate" points="400.0,150.0 400.0,450.0" pathLength="1" /><text class="sc-label gate-t" x="400" y="134" text-anchor="middle" >GUARD</text><text class="sc-label gate-t" x="388" y="474" text-anchor="end" >DEDUPE · HASH · GRADE</text><g class="fg-doc" id="fd0" transform="translate(60 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><g class="fg-doc" id="fd1" transform="translate(96 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><polyline class="sc-line fd-x" points="6.0,6.0 38.0,50.0" pathLength="1" /><polyline class="sc-line fd-x" points="38.0,6.0 6.0,50.0" pathLength="1" /></g><g class="fg-doc" id="fd2" transform="translate(132 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><g class="fg-doc" id="fd3" transform="translate(168 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><g class="fg-doc" id="fd4" transform="translate(204 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><polyline class="sc-line fd-x" points="6.0,6.0 38.0,50.0" pathLength="1" /><polyline class="sc-line fd-x" points="38.0,6.0 6.0,50.0" pathLength="1" /></g><g class="fg-doc" id="fd5" transform="translate(240 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><g class="fg-doc" id="fd6" transform="translate(276 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><polyline class="sc-line fd-x" points="6.0,6.0 38.0,50.0" pathLength="1" /><polyline class="sc-line fd-x" points="38.0,6.0 6.0,50.0" pathLength="1" /></g><g class="fg-doc" id="fd7" transform="translate(312 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><text class="sc-label r-t" x="574" y="250" text-anchor="middle" >HASHED · GRADED</text><text class="sc-label r-t" x="600" y="474" text-anchor="middle" >DUPLICATES · DROPPED</text><text class="fg-big" x="60" y="520" text-anchor="start" id="fgCount2">0</text><text class="sc-label r-t" x="60" y="544" text-anchor="start" >KEPT OF 14,212</text></g><g id="fg3"><rect class="sc-line fg-base" x="260.0" y="200.0" width="320.0" height="220.0" rx="8" pathLength="1" /><rect class="fg-cell" x="284" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="222" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="386" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="239" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="352" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="239" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="488" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="256" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="301" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="256" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="522" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="273" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="420" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="273" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="454" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="290" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="539" y="290" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="284" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="307" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="403" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="324" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="318" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="324" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="505" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="341" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="369" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="341" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="437" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="341" width="14" height="14" rx="2"/><text class="sc-label t-t" x="420" y="400" text-anchor="middle" >QWEN 3.8 · BASE MODEL · UNTOUCHED</text><rect class="sc-line fg-adapter" x="260.0" y="166.0" width="320.0" height="24.0" rx="6" pathLength="1" id="fgAdapter"/><text class="sc-label t-t" x="420" y="152" text-anchor="middle" >ADAPTER · 0.4% OF THE WEIGHTS · YOURS</text><polyline class="sc-line dim ax" points="60.0,260.0 60.0,420.0 230.0,420.0" pathLength="1" /><path class="sc-line fg-loss" d="M60 270 C 92 402, 150 412, 230 406" pathLength="1" /><text class="sc-label t-t" x="60" y="248" text-anchor="start" >LOSS</text><text class="sc-label t-t" x="117" y="440" text-anchor="middle" >1</text><text class="sc-label t-t" x="173" y="440" text-anchor="middle" >2</text><text class="sc-label t-t" x="230" y="440" text-anchor="middle" >3</text><text class="sc-label t-t" x="145" y="462" text-anchor="middle" >EPOCHS</text><text class="fg-mid" x="660" y="250" text-anchor="middle" >3,860</text><text class="sc-label t-t" x="660" y="272" text-anchor="middle" >EXAMPLES IN</text><polyline class="sc-line dim feed" points="700.0,300.0 600.0,300.0" pathLength="1" /><polyline class="sc-line dim feed" points="610.0,295.0 600.0,300.0 610.0,305.0" pathLength="1" /><polyline class="sc-line dim feed" points="700.0,320.0 600.0,320.0" pathLength="1" /><polyline class="sc-line dim feed" points="610.0,315.0 600.0,320.0 610.0,325.0" pathLength="1" /><polyline class="sc-line dim feed" points="700.0,340.0 600.0,340.0" pathLength="1" /><polyline class="sc-line dim feed" points="610.0,335.0 600.0,340.0 610.0,345.0" pathLength="1" /><text class="fg-mid" x="420" y="470" text-anchor="middle" id="fgEpoch">EPOCH 0 / 3</text><text class="sc-label t-t" x="420" y="496" text-anchor="middle" >4 H 12 MIN · ON THE BOX · NOTHING UPLOADED</text></g><g id="fg4"><text class="sc-label p-t" x="60" y="195" text-anchor="start" >BASE MODEL</text><rect class="fg-bar base" x="260" y="176" width="281" height="28" rx="4"/><text class="fg-num" x="555" y="196" text-anchor="start" id="fgN-base" data-to="61">0</text><text class="sc-label p-t" x="60" y="285" text-anchor="start" >TUNED FOR YOU</text><rect class="fg-bar tuned" x="260" y="266" width="409" height="28" rx="4"/><text class="fg-num" x="683" y="286" text-anchor="start" id="fgN-tuned" data-to="89">0</text><text class="sc-label p-t" x="60" y="375" text-anchor="start" >FRONTIER · GUARDED</text><rect class="fg-bar front" x="260" y="356" width="386" height="28" rx="4"/><text class="fg-num" x="660" y="376" text-anchor="start" id="fgN-front" data-to="84">0</text><polyline class="sc-line fg-delta" points="541.0,216.0 541.0,236.0 669.0,236.0 669.0,256.0" pathLength="1" /><text class="sc-label p-t delta-t" x="605" y="250" text-anchor="middle" >+28 ON YOUR TASKS</text><text class="sc-label p-t" x="60" y="480" text-anchor="start" >EXAMPLE SCORECARD · HELD-OUT TASKS, GRADED BLIND</text></g><g id="fg5"><polyline class="sc-line dim s-room" points="60.0,470.0 740.0,470.0" pathLength="1" /><polyline class="sc-line s-room" points="200.0,264.0 520.0,264.0" pathLength="1" /><polyline class="sc-line dim s-room" points="210.0,264.0 210.0,470.0" pathLength="1" /><polyline class="sc-line dim s-room" points="510.0,264.0 510.0,470.0" pathLength="1" /><rect class="sc-line s-tw" x="360.0" y="296.0" width="110.0" height="174.0" rx="6" pathLength="1" /><rect class="sc-line dim s-tw" x="380.0" y="330.0" width="70.0" height="12.0" rx="2" pathLength="1" /><circle class="fg-led" cx="415" cy="448" r="5"/><text class="sc-label s-t" x="415" y="420" text-anchor="middle" >LOCAL-01</text><text class="sc-label s-t s-ver" x="415" y="384" text-anchor="middle" >v1.0 → v1.1</text><g id="fgChip" transform="translate(0 0)"><rect class="fg-chip" x="380" y="120" width="70" height="12" rx="2"/><text class="sc-label s-chip" x="415" y="108" text-anchor="middle">ADAPTER v1.1</text></g><path class="sc-line dim fg-loop" d="M480 380 H700 a40 40 0 0 0 40 -40 V200 a40 40 0 0 0 -40 -40 H520" pathLength="1" /><polyline class="sc-line dim fg-loop" points="532.0,150.0 520.0,160.0 532.0,170.0" pathLength="1" /><text class="sc-label s-t" x="606" y="262" text-anchor="middle" >OVERNIGHT GRADING</text><text class="sc-label s-t" x="606" y="284" text-anchor="middle" >MISSES → NEXT WEEK'S EXAMPLES</text><text class="sc-label s-t" x="60" y="520" text-anchor="start" >LIVE IN 40 S · ROLLBACK IN ONE CLICK · THE OLD VERSION STAYS ON DISK</text></g></svg><div class="forge-hud"><span id="fgStep">01 / 05</span><span id="fgName">GATHER</span></div></div>
+    <div class="forge-stage"><svg class="forge-svg" viewBox="40 90 720 480" aria-hidden="true"><g id="fg1"><rect class="sc-line dim src" x="70.0" y="110.0" width="64.0" height="48.0" rx="4" pathLength="1" /><polyline class="sc-line dim src" points="80.0,124.0 108.6,124.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,133.0 119.6,133.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,142.0 108.6,142.0" pathLength="1" /><text class="sc-label src-t" x="70" y="100" text-anchor="start" >TICKETS</text><path class="sc-line dim lnk" d="M134 134 C 230 134, 230 300, 322 300" pathLength="1" /><rect class="sc-line dim src" x="70.0" y="230.0" width="64.0" height="48.0" rx="4" pathLength="1" /><polyline class="sc-line dim src" points="80.0,244.0 108.6,244.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,253.0 119.6,253.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,262.0 108.6,262.0" pathLength="1" /><text class="sc-label src-t" x="70" y="220" text-anchor="start" >CONTRACTS</text><path class="sc-line dim lnk" d="M134 254 C 230 254, 230 300, 322 300" pathLength="1" /><rect class="sc-line dim src" x="70.0" y="350.0" width="64.0" height="48.0" rx="4" pathLength="1" /><polyline class="sc-line dim src" points="80.0,364.0 108.6,364.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,373.0 119.6,373.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,382.0 108.6,382.0" pathLength="1" /><text class="sc-label src-t" x="70" y="340" text-anchor="start" >EMAIL</text><path class="sc-line dim lnk" d="M134 374 C 230 374, 230 300, 322 300" pathLength="1" /><rect class="sc-line dim src" x="70.0" y="470.0" width="64.0" height="48.0" rx="4" pathLength="1" /><polyline class="sc-line dim src" points="80.0,484.0 108.6,484.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,493.0 119.6,493.0" pathLength="1" /><polyline class="sc-line dim src" points="80.0,502.0 108.6,502.0" pathLength="1" /><text class="sc-label src-t" x="70" y="460" text-anchor="start" >CALL NOTES</text><path class="sc-line dim lnk" d="M134 494 C 230 494, 230 300, 322 300" pathLength="1" /><rect class="sc-line stk dim" x="364.0" y="258.0" width="200.0" height="150.0" rx="4" pathLength="1" /><rect class="sc-line stk dim" x="358.0" y="250.0" width="200.0" height="150.0" rx="4" pathLength="1" /><rect class="sc-line stk dim" x="352.0" y="242.0" width="200.0" height="150.0" rx="4" pathLength="1" /><rect class="sc-line stk dim" x="346.0" y="234.0" width="200.0" height="150.0" rx="4" pathLength="1" /><rect class="sc-line stk" x="340.0" y="226.0" width="200.0" height="150.0" rx="4" pathLength="1" /><polyline class="sc-line stk" points="362.0,258.0 463.4,258.0" pathLength="1" /><polyline class="sc-line stk" points="362.0,267.0 502.4,267.0" pathLength="1" /><polyline class="sc-line stk" points="362.0,276.0 463.4,276.0" pathLength="1" /><polyline class="sc-line stk" points="362.0,285.0 502.4,285.0" pathLength="1" /><polyline class="sc-line stk" points="362.0,294.0 463.4,294.0" pathLength="1" /><text class="sc-label note" x="600" y="262" text-anchor="start" >PULLED FROM</text><text class="sc-label note" x="600" y="284" text-anchor="start" >YOUR SYSTEMS,</text><text class="sc-label note" x="600" y="306" text-anchor="start" >INTO THE BOX</text><polyline class="sc-line dim note-l" points="548.0,300.0 586.0,300.0" pathLength="1" /><text class="fg-big" x="440" y="460" text-anchor="middle" id="fgCount1">0</text><text class="sc-label note" x="440" y="486" text-anchor="middle" >EXAMPLES · NOTHING UPLOADED</text></g><g id="fg2"><polyline class="sc-line fg-gate" points="400.0,150.0 400.0,450.0" pathLength="1" /><text class="sc-label gate-t" x="400" y="134" text-anchor="middle" >GUARD</text><text class="sc-label gate-t" x="388" y="474" text-anchor="end" >DEDUPE · HASH · GRADE</text><g class="fg-doc" id="fd0" transform="translate(60 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><g class="fg-doc" id="fd1" transform="translate(96 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><polyline class="sc-line fd-x" points="6.0,6.0 38.0,50.0" pathLength="1" /><polyline class="sc-line fd-x" points="38.0,6.0 6.0,50.0" pathLength="1" /></g><g class="fg-doc" id="fd2" transform="translate(132 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><g class="fg-doc" id="fd3" transform="translate(168 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><g class="fg-doc" id="fd4" transform="translate(204 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><polyline class="sc-line fd-x" points="6.0,6.0 38.0,50.0" pathLength="1" /><polyline class="sc-line fd-x" points="38.0,6.0 6.0,50.0" pathLength="1" /></g><g class="fg-doc" id="fd5" transform="translate(240 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><g class="fg-doc" id="fd6" transform="translate(276 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><polyline class="sc-line fd-x" points="6.0,6.0 38.0,50.0" pathLength="1" /><polyline class="sc-line fd-x" points="38.0,6.0 6.0,50.0" pathLength="1" /></g><g class="fg-doc" id="fd7" transform="translate(312 272)"><rect class="sc-line fd-r" x="0.0" y="0.0" width="44.0" height="56.0" rx="3" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,14.0 26.2,14.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,23.0 33.2,23.0" pathLength="1" /><polyline class="sc-line dim fd-r" points="8.0,32.0 26.2,32.0" pathLength="1" /><rect class="fd-redact" x="8" y="20" width="18" height="5" rx="1"/><rect class="fd-redact" x="8" y="38" width="12" height="5" rx="1"/><g class="fd-stamp"><circle cx="44" cy="0" r="10"/><text x="44" y="4" text-anchor="middle">A</text></g></g><text class="sc-label r-t" x="574" y="250" text-anchor="middle" >HASHED · GRADED</text><text class="sc-label r-t" x="600" y="474" text-anchor="middle" >DUPLICATES · DROPPED</text><text class="fg-big" x="60" y="520" text-anchor="start" id="fgCount2">0</text><text class="sc-label r-t" x="60" y="544" text-anchor="start" >KEPT OF 14,212</text></g><g id="fg3"><rect class="sc-line fg-base" x="260.0" y="200.0" width="320.0" height="220.0" rx="8" pathLength="1" /><rect class="fg-cell" x="284" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="222" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="386" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="222" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="239" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="352" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="239" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="488" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="239" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="256" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="301" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="256" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="522" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="256" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="273" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="420" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="273" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="454" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="273" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="290" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="290" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="539" y="290" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="284" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="307" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="403" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="307" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="324" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="318" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="369" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="437" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="324" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="505" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="324" width="14" height="14" rx="2"/><rect class="fg-cell" x="284" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="301" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="318" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="335" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="352" y="341" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="369" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="386" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="403" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="420" y="341" width="14" height="14" rx="2"/><rect class="fg-cell hot" x="437" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="454" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="471" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="488" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="505" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="522" y="341" width="14" height="14" rx="2"/><rect class="fg-cell" x="539" y="341" width="14" height="14" rx="2"/><text class="sc-label t-t" x="420" y="400" text-anchor="middle" >QWEN 3.8 · BASE MODEL · UNTOUCHED</text><rect class="sc-line fg-adapter" x="260.0" y="166.0" width="320.0" height="24.0" rx="6" pathLength="1" id="fgAdapter"/><text class="sc-label t-t" x="420" y="152" text-anchor="middle" >ADAPTER · 0.4% OF THE WEIGHTS · YOURS</text><polyline class="sc-line dim ax" points="60.0,260.0 60.0,420.0 230.0,420.0" pathLength="1" /><path class="sc-line fg-loss" d="M60 270 C 92 402, 150 412, 230 406" pathLength="1" /><text class="sc-label t-t" x="60" y="248" text-anchor="start" >LOSS</text><text class="sc-label t-t" x="117" y="440" text-anchor="middle" >1</text><text class="sc-label t-t" x="173" y="440" text-anchor="middle" >2</text><text class="sc-label t-t" x="230" y="440" text-anchor="middle" >3</text><text class="sc-label t-t" x="145" y="462" text-anchor="middle" >EPOCHS</text><text class="fg-mid" x="660" y="250" text-anchor="middle" >3,860</text><text class="sc-label t-t" x="660" y="272" text-anchor="middle" >EXAMPLES IN</text><polyline class="sc-line dim feed" points="700.0,300.0 600.0,300.0" pathLength="1" /><polyline class="sc-line dim feed" points="610.0,295.0 600.0,300.0 610.0,305.0" pathLength="1" /><polyline class="sc-line dim feed" points="700.0,320.0 600.0,320.0" pathLength="1" /><polyline class="sc-line dim feed" points="610.0,315.0 600.0,320.0 610.0,325.0" pathLength="1" /><polyline class="sc-line dim feed" points="700.0,340.0 600.0,340.0" pathLength="1" /><polyline class="sc-line dim feed" points="610.0,335.0 600.0,340.0 610.0,345.0" pathLength="1" /><text class="fg-mid" x="420" y="470" text-anchor="middle" id="fgEpoch">EPOCH 0 / 3</text><text class="sc-label t-t" x="420" y="496" text-anchor="middle" >4 H 12 MIN · ON THE BOX · NOTHING UPLOADED</text></g><g id="fg4"><text class="sc-label p-t" x="60" y="195" text-anchor="start" >BASE MODEL</text><rect class="fg-bar base" x="260" y="176" width="281" height="28" rx="4"/><text class="fg-num" x="555" y="196" text-anchor="start" id="fgN-base" data-to="61">0</text><text class="sc-label p-t" x="60" y="285" text-anchor="start" >TUNED FOR YOU</text><rect class="fg-bar tuned" x="260" y="266" width="409" height="28" rx="4"/><text class="fg-num" x="683" y="286" text-anchor="start" id="fgN-tuned" data-to="89">0</text><text class="sc-label p-t" x="60" y="375" text-anchor="start" >FRONTIER · GUARDED</text><rect class="fg-bar front" x="260" y="356" width="386" height="28" rx="4"/><text class="fg-num" x="660" y="376" text-anchor="start" id="fgN-front" data-to="84">0</text><polyline class="sc-line fg-delta" points="541.0,216.0 541.0,236.0 669.0,236.0 669.0,256.0" pathLength="1" /><text class="sc-label p-t delta-t" x="605" y="250" text-anchor="middle" >+28 ON YOUR TASKS</text><text class="sc-label p-t" x="60" y="480" text-anchor="start" >EXAMPLE SCORECARD · HELD-OUT TASKS, GRADED BLIND</text></g><g id="fg5"><polyline class="sc-line dim s-room" points="60.0,470.0 740.0,470.0" pathLength="1" /><polyline class="sc-line s-room" points="200.0,264.0 520.0,264.0" pathLength="1" /><polyline class="sc-line dim s-room" points="210.0,264.0 210.0,470.0" pathLength="1" /><polyline class="sc-line dim s-room" points="510.0,264.0 510.0,470.0" pathLength="1" /><rect class="sc-line s-tw" x="360.0" y="296.0" width="110.0" height="174.0" rx="6" pathLength="1" /><rect class="sc-line dim s-tw" x="380.0" y="330.0" width="70.0" height="12.0" rx="2" pathLength="1" /><circle class="fg-led" cx="415" cy="448" r="5"/><text class="sc-label s-t" x="415" y="420" text-anchor="middle" >LOCAL-01</text><text class="sc-label s-t s-ver" x="415" y="384" text-anchor="middle" >v1.0 → v1.1</text><g id="fgChip" transform="translate(0 0)"><rect class="fg-chip" x="380" y="120" width="70" height="12" rx="2"/><text class="sc-label s-chip" x="415" y="108" text-anchor="middle">ADAPTER v1.1</text></g><path class="sc-line dim fg-loop" d="M480 380 H700 a40 40 0 0 0 40 -40 V200 a40 40 0 0 0 -40 -40 H520" pathLength="1" /><polyline class="sc-line dim fg-loop" points="532.0,150.0 520.0,160.0 532.0,170.0" pathLength="1" /><text class="sc-label s-t" x="606" y="262" text-anchor="middle" >OVERNIGHT GRADING</text><text class="sc-label s-t" x="606" y="284" text-anchor="middle" >MISSES → NEXT WEEK'S EXAMPLES</text><text class="sc-label s-t" x="60" y="520" text-anchor="start" >LIVE WITHIN THE HOUR · ROLLBACK IN ONE CLICK · THE OLD VERSION STAYS ON DISK</text></g></svg><div class="forge-hud"><span id="fgStep">01 / 05</span><span id="fgName">GATHER</span></div></div>
     <ol class="forge-steps" id="forgeSteps"><li class="forge-step" data-i="0"><b>01 · GATHER</b><h3>The writing you already send.</h3><p>Sent mail, proposals, quotes, reports, the replies your best people write on a good day. We pull them from the systems they already live in onto the box in your building. Nothing is uploaded anywhere.</p></li><li class="forge-step" data-i="1"><b>02 · REFINE</b><h3>Deduplicated, redacted, graded by your people.</h3><p>Near-duplicates drop out. Names, account numbers and anything personal are hashed before a single example is used. Then two or three of your people grade a sample, so the model learns from letters you would sign.</p></li><li class="forge-step" data-i="2"><b>03 · TUNE</b><h3>A thin adapter learns your voice. The base model stays intact.</h3><p>About 0.4% of the weights learn your formats, your vocabulary and your habits over a few hours on the box. One adapter per team, and any of them rolls back in a click.</p></li><li class="forge-step" data-i="3"><b>04 · PROVE</b><h3>Graded blind, against the model you'd otherwise rent.</h3><p>Held-out letters nobody trained on become the exam. Base model, your tuned model and the best guarded frontier model are scored side by side by the same people, blind. You see the number before anything ships.</p></li><li class="forge-step" data-i="4"><b>05 · SHIP</b><h3>Live on the box, with the gate in front of it.</h3><p>From that moment every draft goes through the gate before a person sees it, and the overnight grading keeps feeding the next version: every miss your people mark becomes next week's training example.</p></li></ol>
   </div>
-</div></section><section class="sec" id="writes"><div class="container">
+</div></section>
+
+<!-- what it writes -->
+<section class="sec" id="writes"><div class="container">
   <p class="kicker">WHAT IT WRITES</p>
-  <h2 class="sec-title">The communication your business <span class="ok">can't get wrong.</span></h2>
+  <h2 class="sec-title">The communication your business <span class="amber">can't get wrong.</span></h2>
   <p class="sec-sub">One tuned adapter per kind of writing, each with its own gate rules and its own eval set.</p>
   <div class="writes"><article data-reveal><h3>Client replies</h3><p>The everyday back-and-forth: chasing, confirming, apologising, quoting a number from a file. The gate checks the number; the tune makes it sound like the person whose name is on it.</p><small>TUNED ON · 2 YEARS OF SENT MAIL</small></article><article data-reveal><h3>Proposals and quotes</h3><p>Your structure, your terms, your pricing table, pulled from the live sheet rather than remembered. Drafts land at the standard your best writer sets, not the average of the internet.</p><small>TUNED ON · 600 SIGNED PROPOSALS</small></article><article data-reveal><h3>Reports and summaries</h3><p>Monthly reports, case notes, handover documents. Long, dull, and exactly where invented detail does the most damage — so every figure carries a source line.</p><small>TUNED ON · 4 YEARS OF REPORTS</small></article><article data-reveal><h3>Policy and compliance answers</h3><p>“What does our policy actually say about this?” The model answers in your words and the gate refuses to answer at all when the policy does not cover it.</p><small>TUNED ON · THE POLICY LIBRARY</small></article><article data-reveal><h3>Follow-ups at scale</h3><p>Ten thousand short messages a week that all have to be right. A small tuned model does these for a fraction of a cent, behind the same gate as everything else.</p><small>TUNED ON · THE TICKET HISTORY</small></article><article data-reveal><h3>The awkward ones</h3><p>Late deliveries, declined claims, price rises. Tone is the whole job, and tone is the thing a generic model gets wrong in a way your customers notice.</p><small>TUNED ON · WHAT YOU ACTUALLY SENT</small></article></div>
-</div></section><section class="numbers" aria-label="Numbers">
+</div></section>
+
+<!-- night fold -->
+<section class="night-fold" id="overnight" data-theme="dark" aria-label="The overnight shift">
+  <div class="container">
+    <div class="nf-grid">
+      <div>
+        <p class="nf-kicker">THE OVERNIGHT SHIFT</p>
+        <h2>Graded while <span class="amber">your office sleeps.</span></h2>
+        <p class="nf-sub">Every held claim and every edit your people made is read back overnight. Misses become the next adapter's training examples — and, where the miss was a claim, a new gate rule.</p>
+        <ul class="nf-steps" id="nfSteps">
+          <li>
+            <time>6:04 PM</time>
+            <span class="nf-text">Your team logs off. The day's drafts and their receipts are queued.</span>
+          </li>
+          <li>
+            <time>2:17 AM</time>
+            <span class="nf-text">Held claims and edited drafts are graded against what actually went out.</span>
+          </li>
+          <li>
+            <time>8:00 AM</time>
+            <span class="nf-text">A short report waits in your inbox — what was held, what was repaired, what changed.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="nf-canvas" id="nfCanvas">
+        <img class="nf-fallback" id="nfFallback" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" alt="Earth at night from space, city lights tracing the continents" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- stats -->
+<section class="stats" id="numbers">
   <div class="container stats-grid">
     <div class="stat"><b><span class="count" data-to="99.8" data-dec="1">0</span><i>%</i></b><span>PLANTED ERRORS CAUGHT · 528 OF 529</span></div>
     <div class="stat"><b><span class="count" data-to="0" data-dec="0">0</span></b><span>SILENT MISSES ON POISONED SOURCES</span></div>
     <div class="stat"><b><span class="count" data-to="1.3" data-dec="1">0</span><i>%</i></b><span>FALSE FLAGS AT THE LIVE THRESHOLD</span></div>
     <div class="stat"><b><span class="count" data-to="160" data-dec="0">0</span></b><span>EVALUATION RUNS, JUDGED BLIND</span></div>
   </div>
-  <p class="container" style="margin-top:var(--s-6);font-family:var(--mono);font-size:var(--t-micro);letter-spacing:var(--track-caps);color:var(--paper-muted);text-transform:uppercase">Gate v0.3 evaluation · October 2026 · planted and poisoned errors, a second model as blind judge. The full report is in every pilot's security pack.</p>
-</section><section class="sec" id="limits"><div class="container">
+  <p class="container stats-note">Gate v0.3 evaluation · October 2026 · planted and poisoned errors, a second model as blind judge. The full report is in every pilot's security pack.</p>
+</section>
+
+<!-- limits -->
+<section class="sec" id="limits"><div class="container">
   <p class="kicker">WHERE WE'LL TELL YOU NO</p>
-  <h2 class="sec-title">What the gate <span class="ok">will not do for you.</span></h2>
+  <h2 class="sec-title">What the gate <span class="amber">will not do for you.</span></h2>
   <ul class="limits">
     <li data-reveal><strong>It can't check what you don't have.</strong><p>The gate proves a claim against your files. If the answer lives in somebody's head, or in a system we were not given, the claim comes back unverified and the draft says so. That is the gate working, and it is the most common reason a first week is noisy.</p></li>
     <li data-reveal><strong>It won't make a weak model clever.</strong><p>Tuning teaches habits, not intelligence. A tuned open model beats a frontier one on your letters because it has seen your letters. Ask it something genuinely hard and unfamiliar and it is the base model again — that is what the guarded frontier path is for.</p></li>
     <li data-reveal><strong>It isn't a compliance sign-off.</strong><p>Every claim traced and logged is evidence, not approval. The regulated letters still get a human name against them, and the gate's log exists to make that review quick rather than to replace it.</p></li>
   </ul>
-</div></section><section class="sec" id="price"><div class="container">
+</div></section>
+
+<!-- engagements -->
+<section class="sec" id="price"><div class="container">
   <p class="kicker">ENGAGEMENTS</p>
-  <h2 class="sec-title">Start with <span class="ok">one kind of letter.</span></h2>
+  <h2 class="sec-title">Start with <span class="amber">one kind of letter.</span></h2>
   <p class="sec-sub">Narrow on purpose: one job, one eval set, one number you can trust at the end of it.</p>
   <div class="plans">
     <article class="plan lead" data-reveal>
       <h3>Pilot<small>ONE KIND OF WRITING · FOUR WEEKS · FIXED FEE</small></h3>
       <p>We gather and grade your examples, tune the adapter, wire the gate to the files that matter, and score it blind against the base model and a frontier model.</p>
       <ul><li>The adapter, on your box, in a standard format</li><li>The gate, with your source list and rules</li><li>The eval set and the blind scorecard</li><li>The log your security team can read</li></ul>
-      <a href="contact.html?need=tune" class="btn btn-ok">Scope a pilot <span class="arr" aria-hidden="true">→</span></a>
+      <a href="contact.html?need=tune" class="btn btn-fill">Scope a pilot <span class="arr" aria-hidden="true">→</span></a>
     </article>
     <article class="plan" data-reveal>
       <h3>Program<small>A KIND A MONTH · ROLLING</small></h3>
@@ -146,12 +348,18 @@
       <a href="contact.html" class="btn btn-ghost">Talk it through</a>
     </article>
   </div>
-</div></section><section class="cta"><div class="container">
-  <h2 data-reveal>Bring one letter <span class="ok">you can't get wrong.</span></h2>
-  <p data-reveal>We'll tune on the ones you've already sent, wire the gate to the files behind them, and show you the graded difference in four weeks.</p>
-  <a href="contact.html" class="btn btn-honey" data-reveal>Book a walkthrough <span class="arr" aria-hidden="true">→</span></a>
 </div></section>
-</main>
+
+<!-- cta -->
+<section class="cta" id="demo">
+  <div class="container">
+    <h2 data-reveal>Bring one letter <span class="amber">you can't get wrong.</span></h2>
+    <p data-reveal>We'll tune on the ones you've already sent, wire the gate to the files behind them, and show you the graded difference in four weeks.</p>
+    <a href="contact.html" class="btn btn-honey" data-reveal>Book a walkthrough <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<!-- footer -->
 <footer id="company">
   <div class="container foot-grid">
     <div>
@@ -180,83 +388,431 @@
     <span>EVERY CLAIM · TRACED TO A LINE</span>
   </div>
 </footer>
-<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask yourwriting</button>
-<div class="cw" id="cw" role="dialog" aria-label="Chat with yourwriting.ai">
-  <div class="cw-head"><div><b><i></i>yourwriting.ai</b><small>SCRIPTED · A PERSON REPLIES ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
-  <div class="cw-log" id="cwLog"></div>
-  <div class="cw-quick"><button type="button">Local or API?</button><button type="button">Pricing</button><button type="button">Security</button><button type="button">The gate</button></div>
-  <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>
-</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="assets/site.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
 <script>
 (function(){
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var hasGSAP = typeof window.gsap !== "undefined" && typeof window.ScrollTrigger !== "undefined";
+  var motionOK = !reduce && hasGSAP;
+  if (motionOK) document.documentElement.classList.add("motion-ok");
+
+  /* nav + progress */
+  var nav = document.getElementById("nav"),
+      progress = document.getElementById("scrollProgress");
+  function onScroll(){
+    nav.classList.toggle("scrolled", window.scrollY > 24);
+    if (!window.__shPinned) { var shEl = document.querySelector(".sh"); if (shEl) nav.classList.toggle("nav-dark", window.scrollY > shEl.offsetHeight - 85); }
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (progress && max > 0) progress.style.width = (window.scrollY / max * 100) + "%";
+  }
+  window.addEventListener("scroll", onScroll, { passive:true });
+  onScroll();
+
+  /* mobile menu */
+  var toggle = document.getElementById("menuToggle"),
+      overlay = document.getElementById("menuOverlay"),
+      closeBtn = document.getElementById("menuClose");
+  function setMenu(open){
+    overlay.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+  toggle.addEventListener("click", function(){ setMenu(true); });
+  closeBtn.addEventListener("click", function(){ setMenu(false); });
+  overlay.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+
+  /* smooth scroll */
+  var lenis = null;
+  if (!reduce && typeof window.Lenis !== "undefined") {
+    lenis = new Lenis({ duration: 0.85, smoothWheel: true });
+    if (hasGSAP) {
+      lenis.on("scroll", ScrollTrigger.update);
+      gsap.ticker.add(function(t){ lenis.raf(t * 1000); });
+      gsap.ticker.lagSmoothing(0);
+    } else {
+      (function raf(t){ lenis.raf(t); requestAnimationFrame(raf); })(0);
+    }
+    document.documentElement.classList.add("lenis");
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener("click", function(e){
+        var id = a.getAttribute("href");
+        if (id.length < 2) return;
+        var el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        lenis.scrollTo(el, { offset: -60 });
+      });
+    });
+  }
+
+  /* reveals */
+  if (motionOK && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add("revealed"); io.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -12% 0px", threshold: 0.01 });
+    document.querySelectorAll("[data-reveal]").forEach(function(el){ io.observe(el); });
+  }
+
+  if (hasGSAP) {
+    gsap.registerPlugin(ScrollTrigger);
+    var mm = gsap.matchMedia();
+
+
+    /* hero footage: all clips stacked, ← → switch, choice remembered */
+    (function(){
+      var vids = Array.prototype.slice.call(document.querySelectorAll("#shFrame video.sh-video")), lbl = document.getElementById("shVidLbl"), nav = document.getElementById("shVnav");
+      if (vids.length < 2 || !nav) return;
+      var i = Math.max(0, vids.findIndex(function(v){ return v.classList.contains("on"); }));
+      try { var k = localStorage.getItem("yw-hero-vid"); var j = vids.findIndex(function(v){ return v.dataset.vid === k; }); if (j >= 0) i = j; } catch (e) {}
+      function show(n){
+        i = (n + vids.length) % vids.length;
+        vids.forEach(function(v, x){ var on = x === i; v.classList.toggle("on", on); if (on) { v.preload = "auto"; var p = v.play(); p && p.catch && p.catch(function(){}); } else { v.pause(); } });
+        lbl.textContent = (i + 1) + " / " + vids.length + " · " + vids[i].dataset.vid.toUpperCase();
+        try { localStorage.setItem("yw-hero-vid", vids[i].dataset.vid); } catch (e) {}
+      }
+      show(i);
+      var flashT; function flash(){ nav.classList.add("show"); clearTimeout(flashT); flashT = setTimeout(function(){ nav.classList.remove("show"); }, 1600); }
+      nav.querySelectorAll("button").forEach(function(b){ b.addEventListener("click", function(){ show(i + Number(b.dataset.dir)); flash(); }); });
+      document.addEventListener("keydown", function(e){
+        if (/INPUT|TEXTAREA|SELECT/.test(document.activeElement && document.activeElement.tagName)) return;
+        if (e.key === "ArrowRight") { show(i + 1); flash(); e.preventDefault(); } else if (e.key === "ArrowLeft") { show(i - 1); flash(); e.preventDefault(); }
+      });
+    })();
+    /* hero: the frame — created first (document order) */
+    var shProgressNav = 0.08;
+    mm.add("(min-width: 961px) and (prefers-reduced-motion: no-preference)", function(){
+      var stage = document.getElementById("shStage"), rig = document.getElementById("shRig");
+      var ghost = document.getElementById("shGhost");
+      window.__shPinned = true;
+      function fitTo(el, dockId, mode){
+        var dock = document.getElementById(dockId);
+        var rw = el.offsetWidth, rh = el.offsetHeight;
+        var rcx = el.offsetLeft + rw/2, rcy = el.offsetTop + rh/2;
+        // walk the dock up to the stage for its layout position
+        var dcx = 0, dcy = 0, n = dock;
+        while (n && n !== stage){
+          dcx += n.offsetLeft; dcy += n.offsetTop;
+          if (n !== dock && n.classList.contains("sc-board")) { dcx -= n.offsetWidth / 2; dcy -= n.offsetHeight / 2; } /* board is translate(-50%,-50%) */
+          n = n.offsetParent;
+        }
+        var dw = dock.offsetWidth, dh = dock.offsetHeight;
+        if (dock.classList.contains("centered")) { /* translate(-50%,-50%) docks: offsetLeft is already the center */ }
+        else { dcx += dw/2; dcy += dh/2; }
+        var s = mode === "tall" ? dh / rw : dw / rw;
+        var band = mode === "band" ? Math.max(0.12, Math.min(1, dh / (rh * s))) : 1;
+        return { dx: dcx - rcx, dy: dcy - rcy, s: s, band: band, clip: "inset(" + ((1 - band) / 2 * 100).toFixed(2) + "% 0% " + ((1 - band) / 2 * 100).toFixed(2) + "% 0% round 8px)" };
+      }
+      var q = function(sel){ return stage.querySelectorAll(sel); };
+      var tl = gsap.timeline({
+        defaults: { ease: "none" },
+        scrollTrigger: {
+          trigger: ".sh", start: "top top", end: "+=7600", refreshPriority: 10,
+          pin: true, scrub: 0.5, anticipatePin: 1, invalidateOnRefresh: true,
+          onUpdate: function(self){ nav.classList.toggle("nav-dark", self.progress > shProgressNav); }
+        }
+      });
+      /* the turn */
+      tl.to(".sh-h1", { autoAlpha: 0, y: -40, duration: 0.10, ease: "power2.in" }, 0);
+      tl.to("#shCue", { autoAlpha: 0, duration: 0.05 }, 0);
+      tl.to("#shBg", { autoAlpha: 0, duration: 0.14 }, 0.03);
+      tl.to(rig, { scale: 0.42, rotationY: -24, rotationX: 8, y: function(){ return -0.10 * window.innerHeight; }, duration: 0.30, ease: "power2.inOut" }, 0.04);
+      tl.to(".sh-scrim2", { opacity: 0.55, duration: 0.2 }, 0.08);
+      tl.fromTo(".sh-wire", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 0.12);
+      tl.fromTo(".sh-wire .w", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.16, stagger: 0.006 }, 0.13);
+      tl.fromTo(".sh-wire .t, .sh-wire text", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.06, stagger: 0.004 }, 0.22);
+      tl.fromTo(".sh-plane", { z: 0, x: 0, y: 0, autoAlpha: 0 }, { z: function(i){ return -(i + 1) * 90; }, x: function(i){ return (i + 1) * 60; }, y: function(i){ return -(i + 1) * 8; }, autoAlpha: 0.95, duration: 0.14, stagger: 0.02, ease: "power2.out" }, 0.20);
+      tl.fromTo("#shAct", { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.09, ease: "power2.out" }, 0.30);
+      /* scene */
+      (function(tl, rig, ghost, fitTo, q){
+
+        /* straight to the desk: no act-1 line, no plane stack — the frame goes from the wire straight onto the monitor */
+        tl.set("#elS", { autoAlpha: 1 }, 0.28);
+        tl.fromTo("#elS .el-wall", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.10, stagger: 0.01 }, 0.30);
+        tl.fromTo("#elS .el-floor, #elS .el-desk", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.10, stagger: 0.01 }, 0.34);
+        tl.fromTo("#elS .el-mon", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.08, stagger: 0.01 }, 0.40);
+        tl.to(rig, { rotationY: 0, rotationX: 0, x: function(){ return fitTo(rig, "dockB").dx; }, y: function(){ return fitTo(rig, "dockB").dy; }, scale: function(){ return fitTo(rig, "dockB").s; }, duration: 0.16, ease: "power2.inOut" }, 0.42);
+        tl.to([".sh-wire", "#shAct"], { autoAlpha: 0, duration: 0.06 }, 0.44);
+        tl.to(".sh-scrim2", { opacity: 0.85, duration: 0.05 }, 0.56);
+        tl.fromTo(".rx-ui", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 0.60);
+        tl.fromTo("#elS .el-panel", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.08, stagger: 0.02 }, 0.62);
+        tl.to({}, { duration: 0.04 });
+        /* act 2: the cabinet panel slides open; the box is behind it */
+        tl.to("#elS .el-panel", { x: 150, autoAlpha: 0, duration: 0.10, ease: "power2.inOut" }, 0.74);
+
+        tl.fromTo("#elS .el-tw", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.08, stagger: 0.01 }, 0.8);
+        tl.fromTo("#elS .el-tw-t", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.03 }, 0.88);
+        tl.to("#elS .el-led", { autoAlpha: 1, duration: 0.02 }, 0.89);
+        tl.fromTo("#elS .el-cable", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.07, stagger: 0.02 }, 0.9);
+        tl.fromTo("#obBoard .sc-step-head", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.03 }, 0.92);
+        tl.fromTo("#elS .ld1", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.05 }, 0.9400000000000001);
+        tl.fromTo("#st1", { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.05 }, 0.9600000000000001);
+        tl.fromTo("#elS .ld2", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.05 }, 1.02);
+        tl.fromTo("#st2", { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.05 }, 1.04);
+        tl.fromTo("#elS .ld3", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.05 }, 1.1);
+        tl.fromTo("#st3", { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.05 }, 1.12);
+
+        /* act 3: hinge — the drawing falls flat about its floor line, the plan stands up in its place */
+        tl.to(rig, { autoAlpha: 0, duration: 0.06 }, 1.22);
+        tl.to("#elS", { rotationX: -90, autoAlpha: 0, transformOrigin: "50% 67.14%", duration: 0.16, ease: "power2.in" }, 1.22);
+        tl.fromTo("#plS", { rotationX: 90, autoAlpha: 0, transformOrigin: "50% 67.14%" }, { rotationX: 0, autoAlpha: 1, duration: 0.16, ease: "power2.out" }, 1.32);
+
+        tl.to(["#obBoard .sc-step", "#obBoard .sc-step-head"], { autoAlpha: 0, duration: 0.04 }, 1.2);
+        tl.fromTo("#plS .pl-bld", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.08 }, 1.42);
+        tl.fromTo("#plS .pl-wall", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.06, stagger: 0.01 }, 1.47);
+        tl.fromTo("#plS .pl-ws", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.05, stagger: 0.004 }, 1.5);
+        tl.to("#plS .pl-node", { autoAlpha: 1, duration: 0.03 }, 1.56);
+        tl.fromTo("#plS .pl-link", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.06, stagger: 0.008 }, 1.5699999999999998);
+        tl.fromTo("#plS .pl-gate, #plS .pl-glink", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.05, stagger: 0.01 }, 1.64);
+        tl.fromTo("#plS .pl-rn", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.05, stagger: 0.004 }, 1.67);
+        tl.fromTo("#plS .pl-rlink", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.07, stagger: 0.02 }, 1.7);
+        tl.set("#plS .pl-rlink", { strokeDasharray: "0.03 0.02" }, 1.7799999999999998);
+        tl.set("#plS .pl-dash:not(.pl-band)", { strokeDasharray: "0.02 0.012" }, 1.54);
+        tl.set("#plS .pl-band", { strokeDasharray: "0.01 0.008" }, 1.8299999999999998);
+        tl.fromTo("#plS .pl-band", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.06 }, 1.76);
+        tl.fromTo("#plS .pl-fm", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.06, stagger: 0.003 }, 1.79);
+        tl.fromTo("#plS .pl-flink", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.06, stagger: 0.015 }, 1.8399999999999999);
+        tl.set("#plS .pl-flink", { strokeDasharray: "0.03 0.02" }, 1.92);
+        tl.fromTo("#plS .pl-t", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.03, stagger: 0.006 }, 1.8199999999999998);
+        tl.set("#plS .pl-pulse", { opacity: 1, attr: { class: "pl-pulse on" } }, 1.9);
+        tl.fromTo(".sc-act.a3", { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.07, ease: "power2.out" }, 1.92);
+        tl.to({}, { duration: 0.06 });
+
+      })(tl, rig, ghost, fitTo, q);
+      return function(){ window.__shPinned = false; tl.scrollTrigger && tl.scrollTrigger.kill(); tl.kill(); gsap.set([rig, ghost, ".sh-plane", ".sh-wire", "#shBg", ".sh-h1", "#shCue", ".sh-scrim2"], { clearProps: "all" }); };
+    });
+
+    /* anatomy pin — created second (document order) */
+    mm.add("(min-width: 961px) and (prefers-reduced-motion: no-preference)", function(){
+      var plates = gsap.utils.toArray(".plate");
+      var exploded = [250, 190, 140, 95, 50, 0];
+      var items = gsap.utils.toArray("#layerList li");
+      var thresholds = [0.10, 0.24, 0.38, 0.52, 0.66, 0.78];
+      function setProgress(p){
+        items.forEach(function(li, i){ li.classList.toggle("active", p > thresholds[i]); });
+        plates.forEach(function(pl, i){ pl.classList.toggle("lit", i >= 2 && p > thresholds[i]); });
+      }
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".anatomy", start: "top top", end: "+=2600", refreshPriority: 8,
+          pin: true, scrub: 0.35, anticipatePin: 1,
+          onUpdate: function(self){ setProgress(self.progress); }
+        }
+      });
+      plates.forEach(function(pl, i){
+        tl.fromTo(pl, { z: i * 16 }, { z: exploded[i], ease: "power2.inOut", duration: 0.72 }, i * 0.05);
+      });
+      tl.fromTo("#stack", { rotationX: 56, rotationZ: -45 }, { rotationX: 60, rotationZ: -37, ease: "none", duration: 1 }, 0);
+      tl.fromTo("#stackShadow", { opacity: 0.5, scale: 1 }, { opacity: 0.2, scale: 1.3, ease: "none", duration: 1 }, 0);
+      return function(){ tl.scrollTrigger && tl.scrollTrigger.kill(); tl.kill(); };
+    });
+
+
+
+    /* cinema: pinned full-bleed photo crossfades — created third (document order) */
+    mm.add("(min-width: 961px) and (prefers-reduced-motion: no-preference)", function(){
+      var section = document.querySelector(".cinema");
+      var slides = gsap.utils.toArray(".cine-slide");
+      var medias = gsap.utils.toArray(".cine-media");
+      var caps = gsap.utils.toArray(".cine-cap");
+      section.classList.add("pinned");
+      gsap.set(slides.slice(1), { autoAlpha: 0 });
+      gsap.set(caps, { autoAlpha: 0, y: 44 });
+      var tl = gsap.timeline({
+        defaults: { ease: "none" },
+        scrollTrigger: {
+          trigger: section, start: "top top", end: "+=3000", refreshPriority: 7,
+          pin: true, scrub: 0.4, anticipatePin: 1
+        }
+      });
+      tl.fromTo(medias[0], { scale: 1.14 }, { scale: 1, duration: 1 }, 0);
+      tl.to(caps[0], { autoAlpha: 1, y: 0, duration: 0.2, ease: "power2.out" }, 0.08);
+      tl.to(caps[0], { autoAlpha: 0, y: -30, duration: 0.18, ease: "power2.in" }, 0.72);
+      tl.to(slides[1], { autoAlpha: 1, duration: 0.24 }, 0.82);
+      tl.fromTo(medias[1], { scale: 1.14 }, { scale: 1, duration: 1 }, 1);
+      tl.to(caps[1], { autoAlpha: 1, y: 0, duration: 0.2, ease: "power2.out" }, 1.1);
+      tl.to(caps[1], { autoAlpha: 0, y: -30, duration: 0.18, ease: "power2.in" }, 1.72);
+      tl.to(slides[2], { autoAlpha: 1, duration: 0.24 }, 1.82);
+      tl.fromTo(medias[2], { scale: 1.14 }, { scale: 1, duration: 1 }, 2);
+      tl.to(caps[2], { autoAlpha: 1, y: 0, duration: 0.2, ease: "power2.out" }, 2.12);
+      return function(){
+        tl.scrollTrigger && tl.scrollTrigger.kill(); tl.kill();
+        section.classList.remove("pinned");
+        gsap.set(slides.concat(medias, caps), { clearProps: "all" });
+      };
+    });
+
+    /* night fold: 3D earth day → night — created fourth (document order) */
+    var nfProgress = 0;
+    var nfSetSun = null;
+    mm.add("(min-width: 961px) and (prefers-reduced-motion: no-preference)", function(){
+      var steps = gsap.utils.toArray("#nfSteps li");
+      function setSteps(p){
+        var idx = p < 0.30 ? 0 : p < 0.68 ? 1 : 2;
+        steps.forEach(function(li, i){ li.classList.toggle("active", i === idx); });
+      }
+      setSteps(0);
+      var st = ScrollTrigger.create({
+        trigger: ".night-fold", start: "top top", end: "+=2600", refreshPriority: 5,
+        pin: true, scrub: 0.35, anticipatePin: 1,
+        onUpdate: function(self){
+          nfProgress = self.progress;
+          setSteps(nfProgress);
+          if (nfSetSun) nfSetSun(nfProgress);
+        }
+      });
+      return function(){ st.kill(); };
+    });
+
+
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function(){ ScrollTrigger.refresh(); });
+    }
+  }
+
+  /* count-ups */
+  var counters = document.querySelectorAll(".count");
+  function runCount(el){
+    var to = parseFloat(el.dataset.to), dec = parseInt(el.dataset.dec || "0", 10);
+    if (reduce) { el.textContent = to.toFixed(dec); return; }
+    var start = null;
+    function step(ts){
+      if (!start) start = ts;
+      var p = Math.min(1, (ts - start) / 1500);
+      var e = 1 - Math.pow(1 - p, 4);
+      el.textContent = (to * e).toFixed(dec);
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ("IntersectionObserver" in window) {
+    var cio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { runCount(en.target); cio.unobserve(en.target); }
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(function(c){ cio.observe(c); });
+  } else {
+    counters.forEach(function(c){ c.textContent = c.dataset.to; });
+  }
+
+
+
+
+  /* 3D earth: shared by the night fold and the horizon hero */
+  function mountEarth(wrapId, fbId, opts){
+    var wrap = document.getElementById(wrapId);
+    if (!wrap || typeof THREE === "undefined") return null;
+    var renderer;
+    try { renderer = new THREE.WebGLRenderer({ antialias:true, alpha:true }); }
+    catch(e){ return; }
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    wrap.appendChild(renderer.domElement);
+    var fb = document.getElementById(fbId);
+    if (fb) fb.style.display = "none";
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(38, 1, 0.1, 10);
+    camera.position.z = 3.1;
+
+    var TEX = "https://cdn.jsdelivr.net/gh/mrdoob/three.js@r149/examples/textures/planets/";
+    var loader = new THREE.TextureLoader();
+    loader.crossOrigin = "anonymous";
+    var dayT = loader.load(TEX + "earth_atmos_2048.jpg");
+    var nightT = loader.load(TEX + "earth_lights_2048.png");
+
+    var uniforms = {
+      dayMap:   { value: dayT },
+      nightMap: { value: nightT },
+      sunDir:   { value: new THREE.Vector3(0, 0.12, 1) }
+    };
+    var mat = new THREE.ShaderMaterial({
+      uniforms: uniforms,
+      vertexShader: [
+        "varying vec2 vUv;",
+        "varying vec3 vNormal;",
+        "void main(){",
+        "  vUv = uv;",
+        "  vNormal = normalize(normalMatrix * normal);",
+        "  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);",
+        "}"
+      ].join("\n"),
+      fragmentShader: [
+        "uniform sampler2D dayMap;",
+        "uniform sampler2D nightMap;",
+        "uniform vec3 sunDir;",
+        "varying vec2 vUv;",
+        "varying vec3 vNormal;",
+        "void main(){",
+        "  vec3 day = texture2D(dayMap, vUv).rgb;",
+        "  vec3 night = texture2D(nightMap, vUv).rgb;",
+        "  vec3 s = normalize(sunDir);",
+        "  float cosA = dot(normalize(vNormal), s);",
+        "  float dayness = smoothstep(-0.18, 0.28, cosA);",
+        "  vec3 dayLit = day * (0.18 + 1.05 * max(cosA, 0.0));",
+        "  vec3 nightLit = night * vec3(1.15, 0.95, 0.72) * 1.9 + day * 0.045;",
+        "  vec3 col = mix(nightLit, dayLit, dayness);",
+        "  float rim = pow(1.0 - abs(vNormal.z), 3.0);",
+        "  col += vec3(0.35, 0.55, 0.95) * rim * 0.35 * dayness;",
+        "  gl_FragColor = vec4(col, 1.0);",
+        "}"
+      ].join("\n")
+    });
+    var earth = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 64), mat);
+    earth.rotation.y = -1.1;
+    scene.add(earth);
+
+    function applySun(p){
+      var a = p * Math.PI * 0.94;
+      uniforms.sunDir.value.set(Math.sin(a), 0.12, Math.cos(a));
+    }
+    if (opts.onReady) opts.onReady(applySun);
+
+    function resize(){
+      var w = wrap.clientWidth, h = wrap.clientHeight;
+      if (!w || !h) return;
+      renderer.setSize(w, h);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    }
+    window.addEventListener("resize", resize); resize();
+
+    if (reduce) {
+      /* still frame: dusk terminator with city lights showing */
+      applySun(opts.stillSun);
+      resize();
+      renderer.render(scene, camera);
+      return applySun;
+    }
+    var clock = new THREE.Clock();
+    var mobileStatic = window.matchMedia("(max-width: 960px)").matches;
+    (function tick(){
+      var dt = clock.getDelta();
+      earth.rotation.y += dt * opts.spin;
+      applySun(opts.progress && !mobileStatic ? opts.progress() : opts.stillSun);
+      renderer.render(scene, camera);
+      requestAnimationFrame(tick);
+    })();
+    return applySun;
+  }
+  mountEarth("nfCanvas", "nfFallback", { stillSun: 0.62, spin: 0.045, progress: function(){ return nfProgress; }, onReady: function(f){ nfSetSun = f; } });
+  mountEarth("heroGlobe", "heroGlobeFallback", { stillSun: 0.56, spin: 0.07 });
+})();
+</script>
+<!-- Stock footage: Pexels (free licence). Fonts: Manrope + DM Mono via Google Fonts; Aeonik (licensed) is first in the stack if installed. -->
+<script>
+(function(){
+  if (typeof window.gsap === "undefined" || typeof window.ScrollTrigger === "undefined") return;
   gsap.registerPlugin(ScrollTrigger);
   var RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  /* ---------------- hero: a draft that checks itself ---------------- */
-  var LETTERS = [
-    { to: "To: Marcus Feld · Reed Logistics", lines: [
-      { t: "Hi Marcus — the March invoice came to $41,880, which covers the two extra pallets you approved on the 14th.", src: "invoices / 2026-03-reed.pdf" },
-      { t: "Your rate is locked until the end of Q3", bad: "no line supports “end of Q3”", fix: "Your rate is locked until 30 June, so nothing changes on the April run.", src: "contracts / reed-2025.pdf §4" },
-      { t: "I've attached the pallet note so you have it on file.", src: "drive / pallet-note-0314.pdf" } ] },
-    { to: "To: Dana Whitfield · Whitfield Dental", lines: [
-      { t: "Thanks for the x-rays — the claim went to Delta on Tuesday under code D2740.", src: "practice / claims-log.csv" },
-      { t: "They usually settle these in about ten days", bad: "no line supports “ten days”", fix: "Delta's last four settlements with us took 18, 21, 19 and 22 days, so plan for three weeks.", src: "practice / settlements-2026.xlsx" },
-      { t: "If anything comes back short, we appeal it at no cost to you.", src: "policy / appeals.md" } ] },
-    { to: "To: Ana Duarte · Duarte & Co", lines: [
-      { t: "Draft two of the proposal is attached; the scope is unchanged from our call.", src: "proposals / duarte-v2.docx" },
-      { t: "The discount we discussed brings it to $18,400", bad: "no line supports “$18,400”", fix: "The 12% partner discount brings it to $19,096 — I'd rather send the real figure than the one from memory.", src: "pricing / 2026-rates.xlsx" },
-      { t: "Happy to walk through it on Thursday if that's easier.", src: "calendar / thu-1400" } ] }
-  ];
-  var body = document.getElementById("phBody"), toEl = document.getElementById("phTo"), footEl = document.getElementById("phFoot"), demo = document.getElementById("phDemo");
-  var cur = 0, raf = 0, timer = 0, paused = false, visible = true;
-  demo.addEventListener("mouseenter", function(){ paused = true; });
-  demo.addEventListener("mouseleave", function(){ paused = false; });
-  new IntersectionObserver(function(e){ visible = e[0].isIntersecting; }, { threshold: .2 }).observe(demo);
-
-  function row(){ var p = document.createElement("p"); p.className = "dl"; p.innerHTML = '<span class="t"></span><br><span class="chip"><i>✓</i><span class="s"></span></span>'; body.appendChild(p); return p; }
-  function chip(p, ok, text){ var c = p.querySelector(".chip"); c.classList.toggle("bad", !ok); c.querySelector("i").textContent = ok ? "✓" : "!"; c.querySelector(".s").textContent = text; c.classList.add("on"); }
-  function play(i){
-    clearTimeout(timer); cancelAnimationFrame(raf); cur = i;
-    var L = LETTERS[i]; toEl.textContent = L.to; body.innerHTML = ""; footEl.textContent = "GATE · CHECKING";
-    if (RM) {
-      L.lines.forEach(function(l){ var p = row(); p.querySelector(".t").textContent = l.fix || l.t; chip(p, true, l.src); });
-      footEl.textContent = "GATE · 3 CLAIMS · 3 SOURCED"; timer = setTimeout(next, 9000); return;
-    }
-    var n = 0;
-    (function line(){
-      if (n >= L.lines.length) { footEl.textContent = "GATE · 3 CLAIMS · 3 SOURCED · 0 UNVERIFIED"; timer = setTimeout(next, 6500); return; }
-      var l = L.lines[n++], p = row(), t = p.querySelector(".t"), start = performance.now();
-      p.classList.add("typing");
-      (function frame(now){
-        var k = Math.min(l.t.length, Math.floor((now - start) / 17));
-        if (t.textContent.length !== k) t.textContent = l.t.slice(0, k);
-        if (k < l.t.length) { raf = requestAnimationFrame(frame); return; }
-        p.classList.remove("typing");
-        if (!l.bad) { setTimeout(function(){ chip(p, true, l.src); line(); }, 420); return; }
-        setTimeout(function(){
-          chip(p, false, l.bad); footEl.textContent = "GATE · CLAIM 2 · NOT IN YOUR FILES";
-          setTimeout(function(){
-            t.textContent = ""; p.classList.add("typing"); var s2 = performance.now();
-            (function fix(now2){
-              var j = Math.min(l.fix.length, Math.floor((now2 - s2) / 14));
-              if (t.textContent.length !== j) t.textContent = l.fix.slice(0, j);
-              if (j < l.fix.length) { raf = requestAnimationFrame(fix); return; }
-              p.classList.remove("typing"); p.classList.add("fixed");
-              chip(p, true, l.src); footEl.textContent = "GATE · CLAIM 2 · REPAIRED FROM FILE";
-              setTimeout(line, 520);
-            })(performance.now());
-          }, 1100);
-        }, 420);
-      })(performance.now());
-    })();
-  }
-  function next(){ if (paused || !visible || document.hidden) { timer = setTimeout(next, 1200); return; } play((cur + 1) % LETTERS.length); }
-  play(0);
-
-  /* ---------------- the gate: claims lift out, come back stamped ---------------- */
+  /* the gate: claims lift out, come back stamped ---------------- */
   var grid = document.getElementById("gateGrid"), wires = document.getElementById("gateWires"), cap = document.getElementById("gateCap");
   var claims = Array.prototype.slice.call(document.querySelectorAll("#gateDoc .claim"));
   var evs = Array.prototype.slice.call(document.querySelectorAll("#gateRail .ev"));
@@ -322,7 +878,7 @@
   var mobile = matchMedia("(max-width: 960px)").matches;
   drawWires();
   ScrollTrigger.create({
-    trigger: "#gatePin", start: mobile ? "top 70%" : "top top", end: mobile ? "bottom 40%" : "+=3200",
+    trigger: "#gatePin", refreshPriority: 9, start: mobile ? "top 70%" : "top top", end: mobile ? "bottom 40%" : "+=3200",
     pin: !mobile && !RM, scrub: RM ? true : 0.6, animation: tl, invalidateOnRefresh: true,
     onRefresh: drawWires, onUpdate: function(st){ resetFrom(st.progress); }
   });
@@ -332,7 +888,7 @@
   var steps = Array.prototype.slice.call(document.querySelectorAll(".forge-step")), names = ["GATHER", "REFINE", "TUNE", "PROVE", "SHIP"];
   var hud = document.getElementById("fgStep"), hudName = document.getElementById("fgName");
   steps.forEach(function(s, i){
-    ScrollTrigger.create({ trigger: s, start: "top 62%", end: "bottom 62%", onToggle: function(st){
+    ScrollTrigger.create({ trigger: s, refreshPriority: 6, start: "top 62%", end: "bottom 62%", onToggle: function(st){
       s.classList.toggle("on", st.isActive);
       if (st.isActive) { hud.textContent = "0" + (i + 1) + " / 05"; hudName.textContent = names[i]; } } });
   });
@@ -389,16 +945,19 @@
   ft.to("#fg5 .s-chip", { opacity: 0, duration: .04 }, 4.50);
   show("#fg5 .fg-led", 4.54, .04); show("#fg5 .s-ver", 4.56, .06); draw("#fg5 .fg-loop", 4.60, .26, .02);
   if (ft.duration() < 5) _to({}, { duration: 5 - ft.duration() }, ft.duration());
-  ScrollTrigger.create({ trigger: "#forgeSteps", start: "top 62%", end: "bottom 62%", scrub: RM ? true : 0.6, animation: ft });
+  ScrollTrigger.create({ trigger: "#forgeSteps", refreshPriority: 6, start: "top 62%", end: "bottom 62%", scrub: RM ? true : 0.6, animation: ft });
 
-  /* ---------------- counters ---------------- */
-  document.querySelectorAll(".count").forEach(function(el){
-    var to = parseFloat(el.dataset.to), dec = parseInt(el.dataset.dec || "0", 10), o = { v: 0 };
-    ScrollTrigger.create({ trigger: el, start: "top 88%", once: true, onEnter: function(){
-      if (RM) { el.textContent = to.toFixed(dec); return; }
-      gsap.to(o, { v: to, duration: 1.5, ease: "power3.out", onUpdate: function(){ el.textContent = o.v.toFixed(dec); } }); } });
-  });
+
+  ScrollTrigger.refresh(); window.addEventListener("load", function(){ ScrollTrigger.refresh(); });
 })();
 </script>
+<button class="cw-btn" id="cwBtn" type="button" aria-expanded="false" aria-controls="cw"><i></i>Ask yourwriting</button>
+<div class="cw" id="cw" role="dialog" aria-label="Chat with yourwriting.ai">
+  <div class="cw-head"><div><b><i></i>yourwriting.ai</b><small>SCRIPTED · A PERSON REPLIES ON THE CONTACT PAGE</small></div><button class="cw-x" id="cwClose" type="button" aria-label="Close chat">✕</button></div>
+  <div class="cw-log" id="cwLog"></div>
+  <div class="cw-quick"><button type="button">Local or API?</button><button type="button">Pricing</button><button type="button">Security</button><button type="button">The gate</button></div>
+  <form class="cw-form" id="cwForm"><input id="cwInput" type="text" placeholder="Ask a question" autocomplete="off" aria-label="Your question"><button type="submit">Send</button></form>
+</div>
+<script src="assets/site.js"></script>
 </body>
 </html>

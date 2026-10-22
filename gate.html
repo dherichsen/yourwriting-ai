@@ -13,9 +13,9 @@
 <meta property="og:url" content="https://yourwriting.ai/gate.html">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/proof.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ctext x=%2716%27 y=%2724%27 text-anchor=%27middle%27 font-family=%27Helvetica,Arial,sans-serif%27 font-size=%2726%27 font-weight=%27600%27 fill=%27%2334c98a%27%3Ey%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=DM+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ctext x=%2716%27 y=%2724%27 text-anchor=%27middle%27 font-family=%27Helvetica,Arial,sans-serif%27 font-size=%2726%27 font-weight=%27600%27 fill=%27%2374a6ff%27%3Ey%3C/text%3E%3C/svg%3E">
 
 </head>
 <body class="sub p-gate">
@@ -23,10 +23,13 @@
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="index.html" class="brand" aria-label="yourwriting.ai home"><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
-    <nav class="nav-links" aria-label="Primary"><a href="index.html#how">How it works</a><a href="gate.html" aria-current="page">The gate</a><a href="about.html">About</a><a href="faq.html">FAQ</a></nav>
-    <div class="nav-actions"><a href="contact.html" class="btn btn-ok nav-cta">Book a walkthrough <span class="arr" aria-hidden="true">→</span></a></div>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#how" >How it works</a><a href="gate.html" aria-current="page">The gate</a><a href="about.html" >About</a><a href="faq.html" >FAQ</a></nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-fill nav-cta">Book a walkthrough</a>
+    </div>
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
   </div>
+  <div class="scroll-progress" aria-hidden="true"><i id="scrollProgress"></i></div>
 </header>
 <div class="menu-overlay" id="menuOverlay">
   <button class="menu-close" id="menuClose">CLOSE ✕</button>
@@ -36,7 +39,7 @@
 <main id="main">
 <section class="page-head"><div class="container">
   <p class="kicker">THE HALLUCINATION GATE</p>
-  <h1>How the gate <span class="ok">decides.</span></h1>
+  <h1>How the gate <span class="amber">decides.</span></h1>
   <p class="sec-sub">A tuned model writes in your voice, which is exactly what makes a wrong figure inside it dangerous. The gate is the part that refuses to let one through — five checks on every draft, before a person sees it.</p>
 </div></section>
 <style>
@@ -60,12 +63,12 @@
   .gf-branch div{border-radius:var(--radius);padding:var(--s-4);font-size:var(--step--1);line-height:1.4}
   .gf-branch b{display:block;margin-bottom:3px;font-size:var(--step-0)}
   .gf-branch .pass{background:oklch(from var(--ok) l c h / .13);border:1px solid oklch(from var(--ok) l c h / .4);color:var(--paper-ink)}
-  .gf-branch .hold{background:oklch(from var(--flag) l c h / .12);border:1px solid oklch(from var(--flag) l c h / .4);color:var(--paper-ink)}
+  .gf-branch .held{background:oklch(from var(--flag) l c h / .12);border:1px solid oklch(from var(--flag) l c h / .4);color:var(--paper-ink)}
   @media (max-width:720px){.gf-rail{grid-template-columns:1fr 1fr}.gf-rail li+li::after{display:none}}
   @media (max-width:560px){.gf-branch{grid-template-columns:1fr}}
 </style>
 <section class="sec"><div class="container">
-  <h2 class="sec-title">The whole gate, <span class="ok">in one picture.</span></h2>
+  <h2 class="sec-title">The whole gate, <span class="amber">in one picture.</span></h2>
   <p class="sec-sub">Five checks and one verdict on every claim. The middle step is the one that decides — and it decides the way a person would: with an answer <em>and</em> how sure it is of it.</p>
   <div class="gflow" data-reveal>
     <ol class="gf-rail">
@@ -85,7 +88,7 @@
       </div>
       <div class="gf-branch">
         <div class="pass"><b>Confident &amp; sourced → clears itself</b>The claim goes out, with its line on the receipt. No one is asked to re-read what the gate already settled.</div>
-        <div class="hold"><b>Wrong, unsourced, or unsure → held for a person</b>It never keeps its guess. A reviewer settles four flagged lines instead of re-reading the whole letter.</div>
+        <div class="held"><b>Wrong, unsourced, or unsure → held for a person</b>It never keeps its guess. A reviewer settles four flagged lines instead of re-reading the whole letter.</div>
       </div>
     </div>
   </div>
@@ -94,7 +97,7 @@
   <ol class="limits" style="max-width:74ch;margin-top:0"><li data-reveal><strong>1 · Split</strong><p style="color:var(--ink);margin-bottom:.6rem">The draft is broken into claims, not sentences.</p><p>A sentence can carry three claims and one opinion. The gate separates them: figures, dates, names, commitments and quotes each become a claim of their own, with the span of text it lives in. Opinions and pleasantries are left alone — there is nothing to check in “happy to help”.</p></li><li data-reveal><strong>2 · Retrieve</strong><p style="color:var(--ink);margin-bottom:.6rem">Each claim is looked up in the sources you named.</p><p>The gate searches only what you pointed it at: the invoice folder, the contract store, the pricing sheet, the policy library, the ticket history. It is not a web search and it has no memory of its own — if the claim is not in your files, there is nowhere else for it to come from.</p></li><li data-reveal><strong>3 · Check</strong><p style="color:var(--ink);margin-bottom:.6rem">Supported, or not in your files. There is no third answer.</p><p>A claim passes when a line in a named file entails it. Close is not good enough: “about ten days” fails against a table whose last four rows are 18, 21, 19 and 22 days. Stale sources fail too — a figure from a superseded contract is flagged with the clause that replaced it.</p></li><li data-reveal><strong>4 · Repair</strong><p style="color:var(--ink);margin-bottom:.6rem">It takes the real line, or it asks.</p><p>A failed claim has two honest endings. Either the file contains the right value and the gate substitutes it, marked so the writer can see what changed, or nothing in your files settles it and the sentence becomes a question: “I'll confirm the date and come back to you today.” The model never gets to keep its guess.</p></li><li data-reveal><strong>5 · Sign</strong><p style="color:var(--ink);margin-bottom:.6rem">The receipt travels with the draft.</p><p>Every claim, the file and line it came from, the ones that were repaired, and the ones a person still has to settle. Your reviewer reads four lines instead of re-reading the letter, and your log keeps the same record for the auditor who asks in eighteen months.</p></li></ol>
 </div></section>
 <section class="sec"><div class="container">
-  <h2 class="sec-title">What a receipt <span class="ok">looks like.</span></h2>
+  <h2 class="sec-title">What a receipt <span class="amber">looks like.</span></h2>
   <p class="sec-sub">It is attached to the draft in your queue and written to the log. Nothing here leaves your building.</p>
   <div class="paper" style="max-width:52rem;margin-top:var(--s-8)">
     <div class="ph-head"><span>RECEIPT · DRAFT 8841</span><span>GATE v0.3 · SIGNED</span></div>
@@ -109,7 +112,7 @@
   </div>
 </div></section>
 <section class="sec"><div class="container">
-  <h2 class="sec-title">What it <span class="ok">costs you.</span></h2>
+  <h2 class="sec-title">What it <span class="amber">costs you.</span></h2>
   <div class="writes" style="margin-top:var(--s-8)">
     <article><h3>Seconds, not minutes</h3><p>Added to every draft before anyone reads it — less than the re-read it replaces, and it runs while the writer moves on.</p><small>ON EVERY DRAFT</small></article>
     <article><h3>A source list</h3><p>Someone in your team has to say which folders count as truth. That hour is the real cost of the gate, and it is the hour that makes it work.</p><small>ONE AFTERNOON, ONCE</small></article>
@@ -117,7 +120,7 @@
   </div>
 </div></section>
 <section class="cta"><div class="container">
-  <h2 data-reveal>Bring one letter <span class="ok">you can't get wrong.</span></h2>
+  <h2 data-reveal>Bring one letter <span class="amber">you can't get wrong.</span></h2>
   <p data-reveal>We'll tune on the ones you've already sent, wire the gate to the files behind them, and show you the graded difference in four weeks.</p>
   <a href="contact.html" class="btn btn-honey" data-reveal>Book a walkthrough <span class="arr" aria-hidden="true">→</span></a>
 </div></section>

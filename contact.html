@@ -13,9 +13,9 @@
 <meta property="og:url" content="https://yourwriting.ai/contact.html">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/proof.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ctext x=%2716%27 y=%2724%27 text-anchor=%27middle%27 font-family=%27Helvetica,Arial,sans-serif%27 font-size=%2726%27 font-weight=%27600%27 fill=%27%2334c98a%27%3Ey%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=DM+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ctext x=%2716%27 y=%2724%27 text-anchor=%27middle%27 font-family=%27Helvetica,Arial,sans-serif%27 font-size=%2726%27 font-weight=%27600%27 fill=%27%2374a6ff%27%3Ey%3C/text%3E%3C/svg%3E">
 
 </head>
 <body class="sub p-contact">
@@ -23,10 +23,13 @@
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="index.html" class="brand" aria-label="yourwriting.ai home"><span class="brand-name">yourwriting<span class="tld">.ai</span></span></a>
-    <nav class="nav-links" aria-label="Primary"><a href="index.html#how">How it works</a><a href="gate.html">The gate</a><a href="about.html">About</a><a href="faq.html">FAQ</a></nav>
-    <div class="nav-actions"><a href="contact.html" class="btn btn-ok nav-cta">Book a walkthrough <span class="arr" aria-hidden="true">→</span></a></div>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#how" >How it works</a><a href="gate.html" >The gate</a><a href="about.html" >About</a><a href="faq.html" >FAQ</a></nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-fill nav-cta">Book a walkthrough</a>
+    </div>
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
   </div>
+  <div class="scroll-progress" aria-hidden="true"><i id="scrollProgress"></i></div>
 </header>
 <div class="menu-overlay" id="menuOverlay">
   <button class="menu-close" id="menuClose">CLOSE ✕</button>
@@ -36,7 +39,7 @@
 <main id="main">
 <section class="page-head"><div class="container">
   <p class="kicker">BOOK A WALKTHROUGH</p>
-  <h1>Tell us what you <span class="ok">have to write.</span></h1>
+  <h1>Tell us what you <span class="amber">have to write.</span></h1>
   <p class="sec-sub">A few lines about your team and the writing you can't get wrong. We reply within one business day with a pilot plan, a scorecard and a quote.</p>
 </div></section>
 <section class="page-body"><div class="container contact-grid">
@@ -54,7 +57,7 @@
         <label class="opt"><input type="radio" name="need" value="unsure"><span>Not sure yet</span></label>
       </div></fieldset>
       <div class="field full"><label for="f-msg">THE WORK</label><textarea id="f-msg" name="message" placeholder="What has to be written, how often, who signs it, and which files hold the facts it has to get right." required></textarea><span class="err">A sentence or two helps us prepare.</span></div>
-      <div class="form-foot"><button class="btn btn-ok" type="submit">Send inquiry <span class="arr">→</span></button><p>No mailing list. One reply, from a person.</p></div>
+      <div class="form-foot"><button class="btn btn-fill" type="submit">Send inquiry <span class="arr">→</span></button><p>No mailing list. One reply, from a person.</p></div>
     </form>
     <div class="form-ok" id="inqOk"><h2>Thanks — it's in.</h2><p id="inqOkP">We'll reply within one business day.</p></div>
   </div>
