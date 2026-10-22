@@ -600,7 +600,7 @@
       }
       var tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".anatomy", start: "top top", end: "+=2600", refreshPriority: 8,
+          trigger: ".anatomy", start: "top top", end: "+=2600", refreshPriority: 9,
           pin: true, scrub: 0.35, anticipatePin: 1,
           onUpdate: function(self){ setProgress(self.progress); }
         }
@@ -878,7 +878,7 @@
   var mobile = matchMedia("(max-width: 960px)").matches;
   drawWires();
   ScrollTrigger.create({
-    trigger: "#gatePin", refreshPriority: 9, start: mobile ? "top 70%" : "top top", end: mobile ? "bottom 40%" : "+=3200",
+    trigger: "#gatePin", refreshPriority: 8, start: mobile ? "top 70%" : "top top", end: mobile ? "bottom 40%" : "+=3200",
     pin: !mobile && !RM, scrub: RM ? true : 0.6, animation: tl, invalidateOnRefresh: true,
     onRefresh: drawWires, onUpdate: function(st){ resetFrom(st.progress); }
   });

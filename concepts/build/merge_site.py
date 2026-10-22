@@ -3,8 +3,8 @@ R = pathlib.Path('/Users/daviderichsen/Apps/Humanizer/yourwriting-ai')
 SP = pathlib.Path('/private/tmp/claude-502/-Users-daviderichsen-Apps/c6bbc8e0-ea03-466a-9099-8b80b9762b2e/scratchpad')
 tech = (R/'concepts/tech/index.html').read_text()
 import subprocess
-def git_head(path): return subprocess.run(['git','-C',str(R),'show','HEAD:'+path],capture_output=True,text=True,check=True).stdout
-proof = git_head('index.html')          # the gate cut as committed
+def git_head(path): return subprocess.run(['git','-C',str(R),'show','4852918:'+path],capture_output=True,text=True,check=True).stdout
+proof = git_head('index.html')          # the gate cut as committed at 4852918 (before the merge)
 
 def between(s, a, b, incl=True):
     i = s.find(a); assert i >= 0, a[:60]
@@ -37,7 +37,7 @@ def nav_for(page):
 
 # ---------------- CSS ----------------
 base_css = (R/'concepts/tech/assets/site.css').read_text()
-adds = (SP/'gate-additions.css').read_text()
+adds = (R/'concepts/build/gate-additions.css').read_text()
 tokens = '''
 /* ================= yourwriting.ai: gate additions on the indigo base ================= */
 :root{
@@ -169,11 +169,11 @@ extra = '''<script>
 })();
 </script>'''
 t = rep1(t, '<button class="cw-btn" id="cwBtn"', extra + '\n<button class="cw-btn" id="cwBtn"')
-# refresh order must follow document order: hero > gate > anatomy > cinema > forge > overnight
+# refresh order must follow document order: hero > anatomy > gate > cinema > forge > overnight
 for old, new in [
   ('trigger: ".sh", start: "top top", end: "+=7600",', 'trigger: ".sh", start: "top top", end: "+=7600", refreshPriority: 10,'),
-  ('trigger: "#gatePin", start: mobile ? "top 70%" : "top top",', 'trigger: "#gatePin", refreshPriority: 9, start: mobile ? "top 70%" : "top top",'),
-  ('trigger: ".anatomy", start: "top top", end: "+=2600",', 'trigger: ".anatomy", start: "top top", end: "+=2600", refreshPriority: 8,'),
+  ('trigger: "#gatePin", start: mobile ? "top 70%" : "top top",', 'trigger: "#gatePin", refreshPriority: 8, start: mobile ? "top 70%" : "top top",'),
+  ('trigger: ".anatomy", start: "top top", end: "+=2600",', 'trigger: ".anatomy", start: "top top", end: "+=2600", refreshPriority: 9,'),
   ('trigger: section, start: "top top", end: "+=3000",', 'trigger: section, start: "top top", end: "+=3000", refreshPriority: 7,'),
   ('ScrollTrigger.create({ trigger: s, start: "top 62%", end: "bottom 62%", onToggle:', 'ScrollTrigger.create({ trigger: s, refreshPriority: 6, start: "top 62%", end: "bottom 62%", onToggle:'),
   ('ScrollTrigger.create({ trigger: "#forgeSteps", start: "top 62%", end: "bottom 62%", scrub:', 'ScrollTrigger.create({ trigger: "#forgeSteps", refreshPriority: 6, start: "top 62%", end: "bottom 62%", scrub:'),
