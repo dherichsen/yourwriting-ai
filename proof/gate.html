@@ -32,6 +32,57 @@
   <h1>How the gate <span class="ok">decides.</span></h1>
   <p class="sec-sub">A tuned model writes in your voice, which is exactly what makes a wrong figure inside it dangerous. The gate is the part that refuses to let one through — five checks on every draft, about 240 ms, on the same box as the model.</p>
 </div></section>
+<style>
+  .gflow{margin-top:var(--s-10)}
+  .gf-rail{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--s-5);list-style:none;padding:0;margin:0}
+  .gf-rail li{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:var(--s-4)}
+  .gf-rail li+li::after{content:"";position:absolute;left:calc(-1 * var(--s-5) + 2px);top:50%;transform:translateY(-50%);border-left:6px solid var(--line-2);border-top:4px solid transparent;border-bottom:4px solid transparent}
+  .gf-n{font-family:var(--mono);font-size:var(--t-micro);color:var(--muted);letter-spacing:var(--track-caps)}
+  .gf-rail b{display:block;margin:8px 0 3px;font-size:var(--step-1);letter-spacing:var(--track)}
+  .gf-rail .l{display:block;color:var(--muted);font-size:var(--step--1);line-height:1.35}
+  .gf-rail li.is-check{border-color:oklch(from var(--ok) l c h / .55);background:oklch(from var(--ok) l c h / .09)}
+  .gf-rail li.is-check .gf-n{color:var(--ok-deep)}
+  .gf-decide{margin-top:var(--s-6);background:var(--paper);color:var(--paper-ink);border-radius:var(--radius-lg);padding:var(--s-6) var(--s-6) var(--s-5)}
+  .gf-decide .h{font-family:var(--mono);font-size:var(--t-micro);letter-spacing:var(--track-caps);color:var(--paper-muted);text-transform:uppercase}
+  .gf-decide p{margin:.55rem 0 0;font-family:var(--serif);font-size:var(--step-1);line-height:1.45}
+  .gf-verdicts{display:flex;flex-wrap:wrap;gap:var(--s-2);margin-top:var(--s-5);font-family:var(--mono);font-size:var(--t-mono)}
+  .gf-v{padding:3px 11px;border-radius:999px;border:1px solid}
+  .gf-v.ok{color:var(--ok-deep);border-color:oklch(from var(--ok) l c h / .45);background:oklch(from var(--ok) l c h / .13)}
+  .gf-v.flag{color:var(--flag);border-color:oklch(from var(--flag) l c h / .45);background:oklch(from var(--flag) l c h / .13)}
+  .gf-branch{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-4);margin-top:var(--s-5)}
+  .gf-branch div{border-radius:var(--radius);padding:var(--s-4);font-size:var(--step--1);line-height:1.4}
+  .gf-branch b{display:block;margin-bottom:3px;font-size:var(--step-0)}
+  .gf-branch .pass{background:oklch(from var(--ok) l c h / .13);border:1px solid oklch(from var(--ok) l c h / .4);color:var(--paper-ink)}
+  .gf-branch .hold{background:oklch(from var(--flag) l c h / .12);border:1px solid oklch(from var(--flag) l c h / .4);color:var(--paper-ink)}
+  @media (max-width:720px){.gf-rail{grid-template-columns:1fr 1fr}.gf-rail li+li::after{display:none}}
+  @media (max-width:560px){.gf-branch{grid-template-columns:1fr}}
+</style>
+<section class="sec"><div class="container">
+  <h2 class="sec-title">The whole gate, <span class="ok">in one picture.</span></h2>
+  <p class="sec-sub">Five checks and one verdict on every claim. The middle step is the one that decides — and it decides the way a person would: with an answer <em>and</em> how sure it is of it.</p>
+  <div class="gflow" data-reveal>
+    <ol class="gf-rail">
+      <li><span class="gf-n">STEP 1</span><b>Split</b><span class="l">Claims, not sentences — figures, dates, names, commitments.</span></li>
+      <li><span class="gf-n">STEP 2</span><b>Retrieve</b><span class="l">Only the files you named. No web, no memory of its own.</span></li>
+      <li class="is-check"><span class="gf-n">STEP 3 · DECIDES</span><b>Check</b><span class="l">A typed verdict + how sure it is.</span></li>
+      <li><span class="gf-n">STEP 4</span><b>Repair</b><span class="l">Swap in the real line, or turn it into a question.</span></li>
+      <li><span class="gf-n">STEP 5</span><b>Sign</b><span class="l">A receipt travels with the draft, claim by claim.</span></li>
+    </ol>
+    <div class="gf-decide">
+      <span class="h">Step 3 · what the check returns</span>
+      <p>Not a paragraph — a <strong>typed verdict</strong> (supported · repaired · held) with a <strong>calibrated confidence</strong>. A verdict is a fixed choice, so the gate can't write a fluent wrong one, and the confidence is honest: what it calls 90% sure is right about 90% of the time. Above the bar it clears the claim itself; below it, a person decides. Nothing is published on a guess.</p>
+      <div class="gf-verdicts">
+        <span class="gf-v ok">SUPPORTED — a line in your files entails it</span>
+        <span class="gf-v ok">REPAIRED — swapped for the real value</span>
+        <span class="gf-v flag">HELD — unsourced or not sure enough</span>
+      </div>
+      <div class="gf-branch">
+        <div class="pass"><b>Confident &amp; sourced → clears itself</b>The claim goes out, with its line on the receipt. No one is asked to re-read what the gate already settled.</div>
+        <div class="hold"><b>Wrong, unsourced, or unsure → held for a person</b>It never keeps its guess. A reviewer settles four flagged lines instead of re-reading the whole letter.</div>
+      </div>
+    </div>
+  </div>
+</div></section>
 <section class="sec"><div class="container">
   <ol class="limits" style="max-width:74ch;margin-top:0"><li data-reveal><strong>1 · Split</strong><p style="color:var(--ink);margin-bottom:.6rem">The draft is broken into claims, not sentences.</p><p>A sentence can carry three claims and one opinion. The gate separates them: figures, dates, names, commitments and quotes each become a claim of their own, with the span of text it lives in. Opinions and pleasantries are left alone — there is nothing to check in “happy to help”.</p></li><li data-reveal><strong>2 · Retrieve</strong><p style="color:var(--ink);margin-bottom:.6rem">Each claim is looked up in the sources you named.</p><p>The gate searches only what you pointed it at: the invoice folder, the contract store, the pricing sheet, the policy library, the ticket history. It is not a web search and it has no memory of its own — if the claim is not in your files, there is nowhere else for it to come from.</p></li><li data-reveal><strong>3 · Check</strong><p style="color:var(--ink);margin-bottom:.6rem">Supported, or not in your files. There is no third answer.</p><p>A claim passes when a line in a named file entails it. Close is not good enough: “about ten days” fails against a table whose last four rows are 18, 21, 19 and 22 days. Stale sources fail too — a figure from a superseded contract is flagged with the clause that replaced it.</p></li><li data-reveal><strong>4 · Repair</strong><p style="color:var(--ink);margin-bottom:.6rem">It takes the real line, or it asks.</p><p>A failed claim has two honest endings. Either the file contains the right value and the gate substitutes it, marked so the writer can see what changed, or nothing in your files settles it and the sentence becomes a question: “I'll confirm the date and come back to you today.” The model never gets to keep its guess.</p></li><li data-reveal><strong>5 · Sign</strong><p style="color:var(--ink);margin-bottom:.6rem">The receipt travels with the draft.</p><p>Every claim, the file and line it came from, the ones that were repaired, and the ones a person still has to settle. Your reviewer reads four lines instead of re-reading the letter, and your log keeps the same record for the auditor who asks in eighteen months.</p></li></ol>
 </div></section>
